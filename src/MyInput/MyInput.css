@@ -1,0 +1,12 @@
+.my-input{
+    font-family: 'Roboto-BoldItalic';
+    border: 2px solid teal;
+    padding: 5px 10px;
+}
+
+.big-input{
+    font-family: 'Roboto-BoldItalic'; 
+    
+    font-size: 30px;
+    padding: 20px;
+}

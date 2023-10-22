@@ -1,0 +1,23 @@
+:root{
+    //Основной шрифт
+    --font-family-main: "RobotoBlackItalic";
+    //Используемые размеры
+    --font-size-headers-title: 30px;
+    --font-size-headers-subtitle: 26px;
+
+    --font-size-content-important: 20px;
+    --font-size-content-regular: 16px;
+    --font-size-content-regularsmall: 14px;
+    --font-size-content-additional: 12px;
+
+    --font-size-footer-important: 20px;
+    --font-size-footer-regular: 16px;
+    --font-size-footer-regularsmall: 14px;
+    --font-size-footer-additional: 12px;
+    //Используемые цвета
+    --font-color-main: rgb(255, 255, 255);
+    --font-color-secondary: rgb(189, 189, 189);
+    --font-color-warning: rgb(255, 145, 0);
+    --font-color-error: rgb(255, 38, 0);
+    --font-color-information: rgb(0, 89, 255);
+}

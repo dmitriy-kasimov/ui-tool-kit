@@ -1,0 +1,13 @@
+.my-button{
+    font-family: "RobotoBlackItalic";
+    padding: 10px 5px;
+    color: black;
+    border: 1px solid black;
+    background: transparent;
+    cursor: pointer;
+}
+
+.big-btn{
+    font-size: 30px;
+    padding: 20px;
+}
