@@ -9,8 +9,9 @@ export const WindowBrowserTabList: FC<WindowBrowserTabListProps> = ({tabs}) => {
     <div className="WindowBrowserTabList">
         {tabs.map(tab => 
           <WindowBrowserTab 
-            key={tab}
-            text={tab}
+            key={tab.name}
+            name={tab.name}
+            onClick={tab.onClick}
           />)}
     </div>
   );

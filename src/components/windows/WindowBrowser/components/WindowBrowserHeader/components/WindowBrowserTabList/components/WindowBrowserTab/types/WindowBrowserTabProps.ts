@@ -1,3 +1,4 @@
 export interface WindowBrowserTabProps{
-    text: string;
+    name: string;
+    onClick: () => void;
 }
