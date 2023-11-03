@@ -1,13 +1,14 @@
+@import '../../styles/effects/glass.scss';
+@import '../../styles/effects/shadows.scss';
+
 .WindowBrowserHeader{
-    width: calc(100% - 10px - 2px);
+    @include glass('light');
+    @include shadow('window');
+
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 10px 5px;
-
-    background: rgba(255,255,255, 0.2);
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    border-radius: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
 }

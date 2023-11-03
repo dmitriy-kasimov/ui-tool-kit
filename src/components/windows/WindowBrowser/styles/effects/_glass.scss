@@ -1,0 +1,10 @@
+/* From https://css.glass */
+@mixin glass($type){
+    @if $type == 'dark'{        background: rgba(0, 0, 0, 0.7);     }
+    @else if $type == 'light'{  background: rgba(255,255,255, 0.2); }
+    
+    border: 1px solid rgba(255, 255, 255, 0.7); 
+
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+}    

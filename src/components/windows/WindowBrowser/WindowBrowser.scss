@@ -1,17 +1,18 @@
+@import './styles/effects/glass.scss';
+@import './styles/effects/shadows.scss';
+
 .WindowBrowser{
+    @include glass('dark');
+    border-radius: var(--uikit-border-radius-window);
+    @include shadow('window');
+
     font-family: var(--font-family-main);
+    color: var(--font-color-main);
 
-    background: rgba(255,255,255, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(13px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-
-    min-height: 30%;
-    max-height: 95%;
-    min-width: 50%;
+    min-height: 50%;
+    max-height: 90%;
+    min-width: 60%;
     max-width: 90%;
-    
-    overflow-y: auto; 
 
+    overflow: hidden;
 }
