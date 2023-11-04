@@ -1,14 +1,16 @@
-@import '../../styles/effects/glass.scss';
-@import '../../styles/effects/shadows.scss';
+@use 'styles/effects/_glasses.scss';
+@use 'styles/effects/_shadows.scss';
+
 
 .WindowBrowserHeader{
-    @include glass('light');
-    @include shadow('window');
+    @include glasses.glass('light');
+    @include shadows.shadowWindow;
+
+    padding: var(--uikit-padding-default);
 
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 10px 5px;
 }

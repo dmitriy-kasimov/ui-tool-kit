@@ -1,10 +1,12 @@
-@import './styles/effects/glass.scss';
-@import './styles/effects/shadows.scss';
+@use 'styles/effects/glasses';
+@use 'styles/effects/shadows';
 
 .WindowBrowser{
-    @include glass('dark');
+    @include glasses.glass('dark', 8px);
     border-radius: var(--uikit-border-radius-window);
-    @include shadow('window');
+    @include shadows.shadowWindow;
+
+    @include shadows.shadowText;
 
     font-family: var(--font-family-main);
     color: var(--font-color-main);
@@ -15,4 +17,5 @@
     max-width: 90%;
 
     overflow: hidden;
+
 }

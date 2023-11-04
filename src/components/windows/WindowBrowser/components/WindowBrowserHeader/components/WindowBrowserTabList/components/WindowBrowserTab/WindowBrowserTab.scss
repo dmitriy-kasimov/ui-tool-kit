@@ -2,18 +2,14 @@
     font-size: var(--font-size-content-important);
     color: var(--font-color-main);
 
-    margin: 0px 5px;
+    margin: var(--uikit-margin-strength);
+    padding: var(--uikit-padding-strength);
 
     cursor: pointer;
-
-    padding: 1rem 1.25rem;
     
     text-decoration: none;
-
     position: relative;
-
     transition: all .3s cubic-bezier(.2, 0, 0, 1);
-
     &:after {
         content: '';
         display: block;
@@ -30,7 +26,7 @@
     }
       
     &:hover {
-        color: #2D2D2D;
+        color: var(--font-color-secondary);
         
         &:after {
             right: 0;

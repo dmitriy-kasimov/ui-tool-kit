@@ -35,6 +35,15 @@ module.exports = {
                   "css-loader",
                   // Compiles Sass to CSS
                   "sass-loader",
+                  {
+                    loader: "sass-loader",
+                    options: {
+                      sassOptions: {
+                        indentWidth: 4,
+                        includePaths: [path.resolve(__dirname, "./src")]
+                      },
+                    },
+                  },
                 ],
             },
             {
