@@ -1,0 +1,18 @@
+:root{
+    //Основной шрифт
+    --uikit-font-family-main: "RobotoRegular";
+    //Используемые размеры
+    --uikit-font-size-title: 34px;
+    --uikit-font-size-subtitle: 30px;
+    --uikit-font-size-important: 22px;
+    --uikit-font-size-regular: 20px;
+    --uikit-font-size-regularsmall: 18px;
+
+    //Используемые цвета
+    --uikit-font-color-main: rgb(230, 230, 230);
+    --uikit-font-color-secondary: rgb(32, 32, 32);
+    --uikit-font-color-warning: rgb(255, 145, 0);
+    --uikit-font-color-error: rgb(255, 38, 0);
+    --uikit-font-color-successfully: rgb(72, 255, 0);
+    --uikit-font-color-information: rgb(0, 89, 255);
+}

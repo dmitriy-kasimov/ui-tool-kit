@@ -1,6 +1,4 @@
 .WindowBrowserTab{
-    font-size: var(--font-size-content-important);
-    color: var(--font-color-main);
 
     margin: var(--uikit-margin-strength);
     padding: var(--uikit-padding-strength);
@@ -26,7 +24,7 @@
     }
       
     &:hover {
-        color: var(--font-color-secondary);
+        color: var(--uikit-font-color-secondary);
         
         &:after {
             right: 0;

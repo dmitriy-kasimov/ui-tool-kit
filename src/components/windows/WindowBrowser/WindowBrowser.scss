@@ -6,11 +6,6 @@
     border-radius: var(--uikit-border-radius-window);
     @include shadows.shadowWindow;
 
-    @include shadows.shadowText;
-
-    font-family: var(--font-family-main);
-    color: var(--font-color-main);
-
     // min-height: 50%;
     max-height: 90%;
     // min-width: 60%;
