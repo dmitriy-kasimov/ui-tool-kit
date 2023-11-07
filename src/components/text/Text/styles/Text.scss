@@ -1,11 +1,13 @@
-@use './styles/classes/font_family';
+@use '../styles/classes/font_family';
 
-@use './styles/classes/font_size';
+@use '../styles/classes/font_size';
 
-@use './styles/classes/font_color';
+@use '../styles/classes/font_color';
 
 @use 'styles/effects/shadows';
 
-.text{
+
+
+.Text{
     @include shadows.shadowText;
 }

@@ -1,5 +1,9 @@
 /* From https://css.glass */
-@mixin glass($type, $blur: 0px){
+@mixin glass(
+                $type, 
+                $blur: 0px, 
+                $radius: var(--uikit-border-radius-window)
+            ){
     @if $type == 'dark'{        background: rgba(0, 0, 0, 0.7);     }
     @else if $type == 'light'{  background: rgba(255,255,255, 0.2); }
     
@@ -7,4 +11,6 @@
 
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
+
+    border-radius: $radius;
 }    

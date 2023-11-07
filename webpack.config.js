@@ -10,7 +10,9 @@ module.exports = {
         clean: true
     },
     resolve: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx'],
+        modules: [ path.resolve(__dirname, "src") ],
+
     },
     externals: {
         react: 'react'

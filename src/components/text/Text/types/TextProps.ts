@@ -1,35 +1,35 @@
 export interface TextProps{
-    children: React.ReactNode;
+    font?: textFont;
+    size?: textSize;
+    color?: textColor;
 
-    font_family?: EFontFamily;
-    font_size?: EFontSize;
-    font_color?: EFontColor;
+    children: React.ReactNode;
 }
 
 // Элементам этих enum есть СООТВЕТСТВУЮЩИЕ css перменные в конфигах шрифтов
 
 // Перечисление семейств используемых шрифтов
-export enum EFontFamily{
-    FONT_FAMILY_MAIN,
+export enum textFont{
+    MAIN,
 }
 
 // Перечисление размеров шрифтов
-export enum EFontSize{
-    FONT_SIZE_TITLE,
-    FONT_SIZE_SUBTITLE,
+export enum textSize {
+    TITLE,
+    SUBTITLE,
 
-    FONT_SIZE_IMPORTANT,
-    FONT_SIZE_REGULAR,
-    FONT_SIZE_REGULARSMALL,
+    IMPORTANT,
+    REGULAR,
+    REGULARSMALL,
 }
 
 // Цвета
-export enum EFontColor{
-    FONT_COLOR_MAIN,
-    FONT_COLOR_SECONDARY,
+export enum textColor{
+    MAIN,
+    SECONDARY,
 
-    FONT_COLOR_WARNING,
-    FONT_COLOR_ERROR,
-    FONT_COLOR_SUCCESSFULLY,
-    FONT_COLOR_INFORMATION,
+    WARNING,
+    ERROR,
+    SUCCESSFULLY,
+    INFORMATION,
 }

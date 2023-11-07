@@ -1,12 +1,10 @@
-import './styles/assets/fonts/index'
 import './styles/index.scss'
 
-import MyButton from "./MyButton/MyButton";
-import MyInput from "./MyInput/MyInput";
-import { WindowBrowser } from './components/windows/WindowBrowser/WindowBrowser';
+import { WindowBrowser } from './components/windows/WindowBrowser';
 
+import { Text, textFont, textSize, textColor } from './components/text/Text';
 export {
-    MyButton,
-    MyInput,
-    WindowBrowser
+    WindowBrowser,
+
+    Text, textFont, textSize, textColor
 }
