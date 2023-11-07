@@ -3,8 +3,8 @@
 
 
 .WindowBrowserHeader{
-    @include glasses.glass('light', $radius:0px);
-    @include shadows.shadowWindow;
+    @include glasses.light($radius:0px);
+    @include shadows.box;
 
     padding: var(--uikit-padding-default);
 

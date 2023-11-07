@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
-
+import path from 'path';
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -17,14 +17,15 @@ const config: StorybookConfig = {
       test: /\.s?css$/,
       sideEffects: true,
       use: [
-          require.resolve("style-loader"),
+          'style-loader',
           {
-              loader: require.resolve("css-loader"),
+              loader: 'css-loader',
               options: {
                   
                   
               },
           },
+          'sass-loader'
       ],
     },],
       }
@@ -37,5 +38,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  
 };
 export default config;

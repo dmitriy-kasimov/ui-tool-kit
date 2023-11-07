@@ -2,12 +2,10 @@
 @use 'styles/effects/shadows';
 
 .WindowBrowser{
-    @include glasses.glass('dark', 8px);
+    @include glasses.dark(8px);
     
-    @include shadows.shadowWindow;
-    // min-height: 50%;
+    @include shadows.box;
     max-height: 90%;
-    // min-width: 60%;
     max-width: 90%;
 
     overflow: hidden;
