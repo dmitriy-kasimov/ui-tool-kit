@@ -11,6 +11,7 @@ export const WindowBrowserTab: FC<WindowBrowserTabProps> = ({name, onClick}) => 
       className="WindowBrowserTab"
     >
       <Text
+        className="WindowBrowserTabText"
         size={textSize.SUBTITLE}
       >
         {name}

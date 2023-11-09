@@ -3,6 +3,8 @@ export interface TextProps{
     size?: textSize;
     color?: textColor;
 
+    className?: string;
+
     children: React.ReactNode;
 }
 

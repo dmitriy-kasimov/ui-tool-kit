@@ -10,25 +10,24 @@ const config: StorybookConfig = {
     "@storybook/addon-styling-webpack",
     "@storybook/preset-scss",
     ({
-      name: "@storybook/addon-styling-webpack",
+        name: "@storybook/addon-styling-webpack",
 
-      options: {
-        rules: [{
-      test: /\.s?css$/,
-      sideEffects: true,
-      use: [
-          'style-loader',
-          {
-              loader: 'css-loader',
-              options: {
-                  
-                  
-              },
-          },
-          'sass-loader'
-      ],
-    },],
-      }
+        options: {
+          rules: [
+            {
+              test: /\.s?css$/,
+              sideEffects: true,
+              use: [
+                'style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {},
+                },
+                'sass-loader'
+              ],
+            },
+          ],
+        }
     })
   ],
   framework: {

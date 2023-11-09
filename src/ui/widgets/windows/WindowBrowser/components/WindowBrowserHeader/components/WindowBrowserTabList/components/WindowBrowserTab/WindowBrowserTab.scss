@@ -1,5 +1,7 @@
+@use 'styles/effects/clickes';
+
 .WindowBrowserTab{
-    color: var(--uikit-font-color-secondary);
+    @include clickes.press;
 
     margin: var(--uikit-margin-strength);
     padding: var(--uikit-padding-strength);
@@ -8,7 +10,10 @@
     
     text-decoration: none;
     position: relative;
-    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transition: all .2s cubic-bezier(.2, 0, 0, 1);
+}
+
+.WindowBrowserTabText{
     &:after {
         content: '';
         display: block;
@@ -18,7 +23,7 @@
         right: 1.25rem;
         left: 1.25rem;
         background-color: #ffffff;
-        transition: all .3s cubic-bezier(.2, 0, 0, 1);
+        transition: all .2s cubic-bezier(.2, 0, 0, 1);
         transform-origin: bottom center;
         z-index: -1;
         border-radius: var(--uikit-border-radius-window);
@@ -33,5 +38,4 @@
             height: 100%;
         }
     }
-
 }

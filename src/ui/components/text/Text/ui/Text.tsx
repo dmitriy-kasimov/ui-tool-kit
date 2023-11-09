@@ -3,13 +3,19 @@ import { TextProps, textColor, textFont, textSize } from "../types/TextProps";
 import '../styles/Text.scss'
 
 export const Text: FC<TextProps> = ({
-                                        children,
                                         size=textSize.REGULAR, 
                                         color=textColor.MAIN,  
                                         font=textFont.MAIN, 
+
+                                        className='',
+
+                                        children,
                                     }) => {
     
     let rootClasses: string[] = ['Text'];
+
+    rootClasses.push(className);
+    
     switch (font) {
         case textFont.MAIN:
             rootClasses.push('text_font_main');

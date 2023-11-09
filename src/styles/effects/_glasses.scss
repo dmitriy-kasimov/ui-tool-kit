@@ -1,11 +1,17 @@
+.glass{
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
 /* From https://css.glass */
 @mixin dark(
                 $blur: 0px, 
                 $radius: var(--uikit-border-radius-window)
             ){
-    background: rgba(0, 0, 0, 0.7);     
+    @extend .glass;
+
+    background: rgba(31, 31, 31, 0.7);
+                   
     
-    border: 1px solid rgba(255, 255, 255, 0.7); 
 
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
@@ -17,10 +23,27 @@
                 $blur: 0px, 
                 $radius: var(--uikit-border-radius-window)
             ){
+                
+    @extend .glass;
 
-    background: rgba(255,255,255, 0.2);
+    background: rgba(0, 0, 0, 0.0);  
 
-    border: 1px solid rgba(255, 255, 255, 0.7); 
+
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+
+    border-radius: $radius;
+}    
+
+@mixin white(
+                $blur: 0px, 
+                $radius: var(--uikit-border-radius-window)
+            ){
+                
+    @extend .glass;
+
+    background: rgba(255, 255, 255, 0.7);  
+
 
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);

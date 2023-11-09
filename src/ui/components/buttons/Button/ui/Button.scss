@@ -1,0 +1,23 @@
+@use 'styles/effects/glasses';
+@use 'styles/effects/clickes';
+@use 'styles/effects/guidance';
+
+.Button{
+    @include glasses.white(2px);
+    @include clickes.press;
+    @include guidance.hover;
+
+    display: inline-flex;
+
+    padding: var(--uikit-padding-strength);
+}
+
+.ButtonPrimary{
+    border: none;
+}
+
+.ButtonOutline{
+    @include glasses.white(0px);
+    border: 2px solid rgb(0, 0, 0); 
+}
+
