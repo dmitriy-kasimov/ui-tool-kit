@@ -1,16 +1,30 @@
 {
     "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
+      "target": "es5",
+      "module": "ESNext",
       "jsx": "react",
+      //обработка js файлов
+      "allowJs": true,
+      "moduleResolution": "node",
       "strict": true,
-      "esModuleInterop": true,
       "lib": ["es2015", "dom"],
       "outDir": "./dist/",
       "sourceMap": true,
       "declaration": true,
       "baseUrl": "src",
+      //Замена common.js на import/export
+      "esModuleInterop": true,
+      //Поддержка export default
+      "allowSyntheticDefaultImports": true,
     },
-    "include": ["src"],
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    },
+    "include": [
+      "./src/**/*.ts",
+      "./src/**/*.tsx"
+    ],
     "exclude": ["node_modules", "dist", "./src/stories"]
   }

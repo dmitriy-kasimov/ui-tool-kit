@@ -1,0 +1,73 @@
+@use 'styles/effects/glasses';
+@use 'styles/effects/shadows';
+
+.icon {
+    fill: red;
+}
+
+.Input{
+    display: flex;
+    align-items: baseline;
+}
+.InputMask{
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+    align-self: flex-start;
+    margin-left: 1rem ;
+}
+.text-field_floating {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+.text-field_floating .text-field__input {
+    @include glasses.white(1px);
+    @include shadows.text;
+
+    border: 1px solid black;
+
+    font-family: var(--uikit-font-family-main);
+    font-size: var(--uikit-font-size-important);
+    color: var(--uikit-font-color-main);
+
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+
+    &:focus{
+        outline: none;
+    }
+}
+.text-field_floating .text-field__counter{
+    align-self: flex-end;
+    margin: var(--uikit-margin-strength);
+}
+.text-field_floating .text-field__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+.text-field_floating .text-field__input::-moz-placeholder {
+    color: transparent;
+}
+.text-field_floating .text-field__input::placeholder {
+    color: transparent;
+}
+.text-field_floating .text-field__input:focus,
+.text-field_floating .text-field__input:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: .625rem;
+}
+.text-field_floating .text-field__input:focus~.text-field__label,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text-field__label {
+    opacity: .65;
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+}
