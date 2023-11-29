@@ -3,32 +3,10 @@ import path from 'path';
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling-webpack",
-    "@storybook/preset-scss",
-    ({
-        name: "@storybook/addon-styling-webpack",
-
-        options: {
-          rules: [
-            {
-              test: /\.s?css$/,
-              sideEffects: true,
-              use: [
-                'style-loader',
-                {
-                    loader: 'css-loader',
-                    options: {},
-                },
-                'sass-loader'
-              ],
-            },
-          ],
-        }
-    })
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-onboarding',
+    '@storybook/addon-interactions',
   ],
   framework: {
     name: "@storybook/react-webpack5",
@@ -37,6 +15,15 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  
+  webpackFinal: async (config) => {
+    if(config.resolve)
+    {
+      config.resolve.modules = [
+        ...(config.resolve.modules || []),
+        path.resolve(__dirname, "..", "src"),
+      ];
+    }
+    return config;
+  },
 };
 export default config;

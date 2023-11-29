@@ -4,20 +4,21 @@ import './Input.scss'
 import { Text, textSize } from "ui/components/text/Text";
 import { Button } from "ui/components/buttons/Button";
 
+import UnmaskText from "styles/assets/icons/unmaskText.svg"
+import MaskText from "styles/assets/icons/maskText.svg"
 
 export const Input: FC<InputProps> = ({
                                         label,
                                         limit,
                                         masked = false,
 
-                                        type='text',
                                         id='text',
-                                    }) =>{
+                                    }) => {
     
     const [count, setCount] = useState<number>(0);
     const [text, setText] = useState<string>('');
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const input: string = e.target.value;
         if(input.length < limit){
             setText(input);
@@ -25,16 +26,23 @@ export const Input: FC<InputProps> = ({
         setCount(input.length)
     }
 
+    const [type, setType] = useState<string>(masked ? 'password' : 'text');
+    const switchMask = () =>{
+        setType( type === 'text' ? 'password' : 'text');
+    }
+
     return(
-        <div className="Input">
+        <span className="Input">
             <div className="text-field text-field_floating">
                 <input 
                     className="text-field__input" 
                     value={text}
-                    onChange={onChange}
+                    onChange={onChangeInput}
                     type={type} 
                     id={id}
                     placeholder=''
+                    autoComplete="off"
+                    spellCheck={false}
                 />
                 <label 
                     className="text-field__label" 
@@ -50,10 +58,26 @@ export const Input: FC<InputProps> = ({
                     <Text size={textSize.REGULARSMALL}>{count} / {limit}</Text>
                 </span>
             </div>
-            <Button className="InputMask">
-                123
-            </Button>
-        </div>
-       
+            {
+                masked 
+                ?
+                    <Button 
+                        className="InputMask"
+                        onClick={switchMask}
+                    >
+                        {
+                            type === 'text' 
+                                ?
+                            <MaskText />
+                                :
+                            <UnmaskText />
+                        }
+                    </Button>
+                :
+                    <>
+                    </>
+            }
+            
+        </span>
     )
 }

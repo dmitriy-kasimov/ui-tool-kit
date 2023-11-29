@@ -27,7 +27,7 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const ButtonPrimary: Story = {
+export const ButtonDefault: Story = {
     args: {
         variant: buttonVariant.PRIMARY,
         children: (<Text>PRIMARY button</Text>),
@@ -35,10 +35,10 @@ export const ButtonPrimary: Story = {
     },
 };
 
-export const ButtonOutline: Story = {
+export const ButtonDisabled: Story = {
   args: {
-      variant: buttonVariant.OUTLINE,
-      children: (<Text>OUTLINE button</Text>),
-      
+      variant: buttonVariant.PRIMARY,
+      children: (<Text>PRIMARY button</Text>),
+      disabled: true
   },
 };

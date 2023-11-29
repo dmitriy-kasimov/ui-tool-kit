@@ -3,27 +3,20 @@ import webpack from 'webpack';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
 
 export function buildLoaders({isDev}): webpack.RuleSetRule[] {
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    };
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|ttf)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],   
+    };
     const cssLoader = buildCssLoaders(isDev);
-    // {
-    //     test: /\.s[ac]ss$/i,
-    //     use: [
-    //       // Creates `style` nodes from JS strings
-    //       "style-loader",
-    //       // Translates CSS into CommonJS
-    //       "css-loader",
-    //       // Compiles Sass to CSS
-    //       "sass-loader",
-    //       {
-    //         loader: "sass-loader",
-    //         options: {
-    //           sassOptions: {
-    //             indentWidth: 4,
-    //             includePaths: [path.resolve(__dirname, "./src")]
-    //           },
-    //         },
-    //       },
-    //     ],
-    // };
 
     const typescriptLoader = {
         test: /\.tsx?$/,
@@ -31,13 +24,11 @@ export function buildLoaders({isDev}): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
-    const fontLoader = {
-        test: /\.ttf$/,
-        type: 'asset/resource',
-    }
     return [
+        fileLoader,
+        svgLoader,
         cssLoader,
         typescriptLoader,
-        fontLoader
+
     ]
 }

@@ -15,7 +15,7 @@ const MyButton: FC<MyButtonProps> = ({
                                         ...props
                                     }) => {
   
-    const rootClasses = ['my-button']
+    const rootClasses = ['btn']
     if(big){
         rootClasses.push('big-btn')
     }       

@@ -8,10 +8,13 @@
       "moduleResolution": "node",
       "strict": true,
       "lib": ["es2015", "dom"],
-      "outDir": "./dist/",
+      "outDir": "./build/",
       "sourceMap": true,
       "declaration": true,
-      "baseUrl": "src",
+      "baseUrl":".",
+      "paths": {
+          "*": ["./src/*"]
+      },
       //Замена common.js на import/export
       "esModuleInterop": true,
       //Поддержка export default
@@ -26,5 +29,5 @@
       "./src/**/*.ts",
       "./src/**/*.tsx"
     ],
-    "exclude": ["node_modules", "dist", "./src/stories"]
+    "exclude": ["node_modules", "build", "./src/stories"]
   }

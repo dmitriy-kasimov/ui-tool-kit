@@ -1,28 +1,54 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 export function buildCssLoaders(isDev: boolean) {
     return {
         test: /\.s[ac]ss$/i,
         use: [
             // Creates `style` nodes from JS strings
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            "style-loader",
             // Translates CSS into CommonJS
-            // "css-loader",
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
             {
-                loader: 'css-loader',
+                loader: "sass-loader",
                 options: {
-                    modules: {
-                        // Если не включает .module, то обрабатывается как обычный css файл
-                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                        // Настройка конечных имен файлов стилей: в dev не будет хешироваться
-                        localIdentName: isDev
-                            ? '[path][name]__[local]--[hash:base64:5]'
-                            : '[hash:base64:8]',
+                    sassOptions: {
+                    indentWidth: 4,
+                    //includePaths: [path.resolve(__dirname, "src")]
                     },
                 },
             },
-            // Compiles Sass to CSS
-            'sass-loader',
         ],
     };
+
+    // {
+    //     test: /\.s[ac]ss$/i,
+    //     use: [
+    //         // Creates `style` nodes from JS strings
+    //         isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+    //         // Translates CSS into CommonJS
+    //         // "css-loader",
+    //         {
+    //             loader: 'css-loader',
+    //             options: {
+    //                 modules: {
+    //                     // Если не включает .module, то обрабатывается как обычный css файл
+    //                     auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+    //                     // Настройка конечных имен файлов стилей: в dev не будет хешироваться
+    //                     localIdentName: isDev
+    //                         ? '[path][name]__[local]--[hash:base64:5]'
+    //                         : '[hash:base64:8]',
+    //                 },
+    //                 sassOptions: {
+    //                     indentWidth: 4,
+    //                     includePaths: [path.resolve(__dirname, "./src")]
+    //                 },
+    //             },
+    //         },
+    //         // Compiles Sass to CSS
+    //         'sass-loader',
+    //     ],
+    // };
 }

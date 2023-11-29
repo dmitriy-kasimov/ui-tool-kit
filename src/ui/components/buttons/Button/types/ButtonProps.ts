@@ -5,8 +5,3 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: buttonVariant;
     children: React.ReactNode;
 }
-
-export enum buttonVariant{
-    PRIMARY,
-    OUTLINE
-}

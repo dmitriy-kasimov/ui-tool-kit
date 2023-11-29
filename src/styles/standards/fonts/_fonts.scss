@@ -1,4 +1,5 @@
 @use '../../assets/fonts/index';
+@use 'styles/effects/shadows';
 
 :root{
     //Основной шрифт
@@ -12,9 +13,17 @@
 
     //Используемые цвета
     --uikit-font-color-main: rgb(230, 230, 230);
-    --uikit-font-color-secondary: rgb(32, 32, 32);
+    --uikit-font-color-secondary: rgb(163, 163, 163);
     --uikit-font-color-warning: rgb(255, 145, 0);
-    --uikit-font-color-error: rgb(255, 38, 0);
-    --uikit-font-color-successfully: rgb(72, 255, 0);
-    --uikit-font-color-information: rgb(0, 89, 255);
+    --uikit-font-color-error: rgb(212, 32, 0);
+    --uikit-font-color-successfully: rgb(56, 197, 0);
+    --uikit-font-color-information: rgb(57, 126, 255);
+}
+
+// Глобально применяемые настройки
+*{
+    font-family: var(--uikit-font-family-main);
+    font-size: var(--uikit-font-size-regular);
+    color: var(--uikit-font-color-main);
+    @include shadows.text;
 }
