@@ -15,7 +15,8 @@ const Tape: FC<TapeProps> = ({title, posts}) => {
             <div className="Tape__content">
                 {
                     posts.map(post => 
-                    <Post 
+                    <Post
+                        key={post.title}
                         title={post.title} 
                         subtitle={post.subtitle}
                     >
