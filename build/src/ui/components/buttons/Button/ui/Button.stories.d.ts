@@ -3,5 +3,5 @@ import { Button } from '../index';
 declare const meta: Meta<typeof Button>;
 export default meta;
 type Story = StoryObj<typeof Button>;
-export declare const ButtonPrimary: Story;
-export declare const ButtonOutline: Story;
+export declare const ButtonDefault: Story;
+export declare const ButtonDisabled: Story;

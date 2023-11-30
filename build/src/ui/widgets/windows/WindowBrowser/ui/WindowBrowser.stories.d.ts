@@ -16,3 +16,4 @@ declare const meta: {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const WindowBrowserReg: Story;
+export declare const WindowBrowser2: Story;

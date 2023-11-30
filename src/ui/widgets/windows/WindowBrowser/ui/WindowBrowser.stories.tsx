@@ -9,6 +9,7 @@ import { Panel } from 'ui/components/panels/Panel';
 import { Button } from 'ui/components/buttons/Button';
 import { Input } from 'ui/components/inputs/Input';
 import { Checkbox } from 'ui/components/checkboxes/Checkbox';
+import { Tape } from 'ui/widgets/Tape';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -57,37 +58,14 @@ export const WindowBrowser2: Story = {
         
         <Text>Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab</Text>
         <Panel>
-        <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
-            <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
-            <br/>
-            <Input label={'Ur nickname'} limit={32}/>
-            <Input label={'Ur mail (optional)'} limit={32}/>
-            <Input label={'Ur pass'} limit={32} masked/>
-            <Input label={'confirm pass'} limit={32} masked/>
-            <br/>
-            <Checkbox> <Text size={textSize.REGULAR}>Accept the rules</Text> </Checkbox>
-            <br/>
-            <Text size={textSize.TITLE}>size: TITLE</Text>
-            <br/>
-            <Text size={textSize.SUBTITLE}>size: SUBTITLE</Text>
-            <br/>
-            <Text size={textSize.IMPORTANT}>size: IMPORTANT</Text>
-            <br/>
-            <Text size={textSize.REGULAR}>size: REGULAR</Text>
-            <br/>
-            <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
-            <br/>
-            <Text color={textColor.MAIN}>color: MAIN</Text>
-            <br/>
-            <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
-            <br/>
-            <Text color={textColor.WARNING}>color: WARNING</Text>
-            <br/>
-            <Text color={textColor.ERROR}>color: ERROR</Text>
-            <br/>
-            <Text color={textColor.SUCCESSFULLY}>color: SUCCESSFULLY</Text>
-            <br/>
-            <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
+         <Tape
+          title='The Rules'
+          posts={[
+            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
+            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
+            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
+          ]}
+         />
         </Panel>
         </>
       )

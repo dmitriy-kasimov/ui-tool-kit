@@ -1,0 +1,30 @@
+.Post{
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--uikit-padding-strength-height);
+    margin: var(--uikit-margin-strength-height);
+
+    border-radius: var(--uikit-border-radius-window);
+
+    background: repeating-linear-gradient(-45deg, 
+        rgb(73, 73, 73) 0.5%, rgb(32, 32, 32) 0.5%,
+        rgb(73, 73, 73) 1%, rgb(32, 32, 32) 1%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.Post__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin: var(--uikit-margin-strength-height);
+}
+
+.Post__header__title{
+    margin-right: 2rem;
+}
+.Post__body{
+    margin-top: 2rem;
+}

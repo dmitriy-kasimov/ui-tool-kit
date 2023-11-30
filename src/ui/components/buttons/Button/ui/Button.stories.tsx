@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, buttonVariant } from '../index';
+import { Button } from '../index';
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/text/Text';
 
@@ -29,16 +29,14 @@ type Story = StoryObj<typeof Button>;
 
 export const ButtonDefault: Story = {
     args: {
-        variant: buttonVariant.PRIMARY,
-        children: (<Text>PRIMARY button</Text>),
+        children: (<Text>Button active</Text>),
         
     },
 };
 
 export const ButtonDisabled: Story = {
   args: {
-      variant: buttonVariant.PRIMARY,
-      children: (<Text>PRIMARY button</Text>),
+      children: (<Text>Button disabled</Text>),
       disabled: true
   },
 };

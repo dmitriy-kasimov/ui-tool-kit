@@ -3,7 +3,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Panel } from '../index';
-import { Button, buttonVariant } from 'ui/components/buttons/Button';
+import { Button } from 'ui/components/buttons/Button';
 import { Input } from 'ui/components/inputs/Input';
 import { Text, textColor, textSize } from 'ui/components/text/Text';
 import { Checkbox } from 'ui/components/checkboxes/Checkbox';
