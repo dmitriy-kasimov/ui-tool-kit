@@ -1,4 +1,4 @@
-import { PostProps } from "ui/components/panels/Post/index";
+import { PostProps } from "../components/Post"; 
 
 export interface TapeProps{
     title: string;

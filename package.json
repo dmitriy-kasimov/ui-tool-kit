@@ -2,7 +2,7 @@
   "name": "ui-tool-kit",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./build/index.js",
   "scripts": {
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -50,6 +50,6 @@
     "react-dom": "*"
   },
   "files": [
-    "dist"
+    "build"
   ]
 }

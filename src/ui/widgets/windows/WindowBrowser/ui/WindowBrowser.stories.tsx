@@ -55,15 +55,14 @@ export const WindowBrowser2: Story = {
       ],
       children: (
         <>
-        
         <Text>Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab</Text>
         <Panel>
          <Tape
-          title='The Rules'
+          title='The latest news'
           posts={[
-            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
-            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
-            {title: '1. Общие положения', subtitle: null, children: (<Text>123</Text>)},
+            {title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
+            {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+            {title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)}
           ]}
          />
         </Panel>

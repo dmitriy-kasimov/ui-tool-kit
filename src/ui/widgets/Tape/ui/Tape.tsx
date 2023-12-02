@@ -4,7 +4,7 @@ import { Text, textSize } from "ui/components/text/Text"
 
 
 import './Tape.scss'
-import { Post } from "ui/components/panels/Post"
+import { Post } from "../components/Post" 
 
 const Tape: FC<TapeProps> = ({title, posts}) => {
     return (
