@@ -1,8 +1,14 @@
 @use 'styles/effects/glasses';
 
+.MaskText{
+    fill: var(--uikit-font-color-main);
+}
+
 .Input{
     display: flex;
     align-items: baseline;
+
+    margin: var(--uikit-margin-strength-height);
 }
 .InputMask{
     height: calc(3.5rem + 2px);
@@ -10,6 +16,7 @@
     padding: 1rem 0.75rem;
     align-self: flex-start;
     margin-left: 0.5rem ;
+    margin-top: 0;
 }
 .text-field_floating {
     position: relative;

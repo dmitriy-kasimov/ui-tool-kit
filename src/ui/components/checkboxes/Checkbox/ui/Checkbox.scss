@@ -2,6 +2,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
+    margin: var(--uikit-margin-strength-height);
 }
 
 .custom-checkbox+label {

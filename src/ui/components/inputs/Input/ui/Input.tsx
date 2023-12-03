@@ -70,7 +70,7 @@ export const Input: FC<InputProps> = ({
                                 ?
                             <MaskText />
                                 :
-                            <UnmaskText />
+                            <UnmaskText scale={1.5}/>
                         }
                     </Button>
                 :

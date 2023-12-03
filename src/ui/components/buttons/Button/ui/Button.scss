@@ -6,7 +6,7 @@
 	display: inline-block;	
 	box-sizing: border-box;
 	padding: 0.5rem 1rem;
-	margin: 0 15px 15px 0;
+	margin: var(--uikit-margin-strength-height);
 	outline: none;
 	border: none;  
 	border-radius: var(--uikit-border-radius-window);
