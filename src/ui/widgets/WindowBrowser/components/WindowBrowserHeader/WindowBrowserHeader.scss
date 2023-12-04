@@ -6,7 +6,7 @@
     @include glasses.light($radius:0px);
     @include shadows.box;
 
-    padding: var(--uikit-padding-default);
+    padding: var(--uikit-padding-strength-width);
 
     width: 100%;
 

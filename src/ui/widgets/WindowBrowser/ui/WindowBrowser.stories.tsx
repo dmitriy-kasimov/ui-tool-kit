@@ -69,37 +69,42 @@ export const WindowBrowser2: Story = {
           </Panel>
 
           <Panel>
-          <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
-              <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
-              <br/>
-              <Input label={'Ur nickname'} limit={32}/>
-              <Input label={'Ur mail (optional)'} limit={32}/>
-              <Input label={'Ur pass'} limit={32} masked/>
-              <Input label={'confirm pass'} limit={32} masked/>
-              <br/>
-              <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
-              <br/>
-              <Text size={textSize.TITLE}>size: TITLE</Text>
-              <br/>
-              <Text size={textSize.SUBTITLE}>size: SUBTITLE</Text>
-              <br/>
-              <Text size={textSize.IMPORTANT}>size: IMPORTANT</Text>
-              <br/>
-              <Text size={textSize.REGULAR}>size: REGULAR</Text>
-              <br/>
-              <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
-              <br/>
-              <Text color={textColor.MAIN}>color: MAIN</Text>
-              <br/>
-              <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
-              <br/>
-              <Text color={textColor.WARNING}>color: WARNING</Text>
-              <br/>
-              <Text color={textColor.ERROR}>color: ERROR</Text>
-              <br/>
-              <Text color={textColor.SUCCESSFULLY}>color: SUCCESSFULLY</Text>
-              <br/>
-              <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
+            
+            <Input label={'Ur nickname'} limit={32}/>
+            <Input label={'Ur mail (optional)'} limit={64}/>
+            <Input label={'Ur pass'} limit={32} masked/>
+            <Input label={'confirm pass'} limit={32} masked/>
+            <br/>
+            <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
+            <br/>
+            <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
+            <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
+            <br/>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+          </Panel>
+
+          <Panel>
+          <Text size={textSize.TITLE}>size: TITLE</Text>
+            <br/>
+            <Text size={textSize.SUBTITLE}>size: SUBTITLE</Text>
+            <br/>
+            <Text size={textSize.IMPORTANT}>size: IMPORTANT</Text>
+            <br/>
+            <Text size={textSize.REGULAR}>size: REGULAR</Text>
+            <br/>
+            <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
+            <br/>
+            <Text color={textColor.MAIN}>color: MAIN</Text>
+            <br/>
+            <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
+            <br/>
+            <Text color={textColor.WARNING}>color: WARNING</Text>
+            <br/>
+            <Text color={textColor.ERROR}>color: ERROR</Text>
+            <br/>
+            <Text color={textColor.SUCCESSFULLY}>color: SUCCESSFULLY</Text>
+            <br/>
+            <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
           </Panel>
         </div>
         </>

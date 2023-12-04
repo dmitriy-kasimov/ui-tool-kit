@@ -1,12 +1,11 @@
 .Panel{
-    width: 500px;
+    width: 450px;
     height: 500px;
 
     margin: var(--uikit-margin-strength-height);
+    padding: var(--uikit-padding-strength-height);
     
     overflow-y: auto;
-
-    padding: var(--uikit-padding-default);
 
     border-radius: var(--uikit-border-radius-window);
 
