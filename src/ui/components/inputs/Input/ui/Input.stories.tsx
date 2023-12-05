@@ -38,7 +38,7 @@ export const InputDefault: Story = {
 export const InputMask: Story = {
   args: {
       label: 'Ur pass',
-      limit: 10,
+      limit: 32,
       masked: true,
   },
 };

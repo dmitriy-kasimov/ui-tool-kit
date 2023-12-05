@@ -33,51 +33,55 @@ export const Input: FC<InputProps> = ({
 
     return(
         <span className="Input">
-            <div className="text-field text-field_floating">
-                <input 
-                    className="text-field__input" 
-                    value={text}
-                    onChange={onChangeInput}
-                    type={type} 
-                    id={id}
-                    placeholder=''
-                    autoComplete="off"
-                    spellCheck={false}
-                />
-                <label 
-                    className="text-field__label" 
-                    htmlFor={id}
-                >
-                    <Text>
-                        {label}
-                    </Text>
-                </label>
-                <span 
-                    className="text-field__counter"
-                >
-                    <Text size={textSize.REGULARSMALL}>{count} / {limit}</Text>
-                </span>
-            </div>
-            {
-                masked 
-                ?
-                    <Button 
-                        className="InputMask"
-                        onClick={switchMask}
+            <div className="Input__Background">
+                <div className="Input__Background__Field">
+                    <input 
+                        className="Input__Background__Field__input" 
+                        value={text}
+                        onChange={onChangeInput}
+                        type={type} 
+                        id={id}
+                        placeholder=''
+                        autoComplete="off"
+                        spellCheck={false}
+                    />
+                    <label 
+                        className="Input__Background__Field__label" 
+                        htmlFor={id}
                     >
-                        {
-                            type === 'text' 
-                                ?
-                            <MaskText />
-                                :
-                            <UnmaskText scale={1.5}/>
-                        }
-                    </Button>
-                :
-                    <>
-                    </>
-            }
-            
+                        <Text>
+                            {label}
+                        </Text>
+                    </label>
+                </div>
+                <div className="Input__Background__SwitcherMask">
+                {
+                    masked 
+                    ?
+                        <div
+                            className="SwitcherMask" 
+                            onClick={switchMask}
+                        >
+                            {
+                                type === 'text' 
+                                    ?
+                                <MaskText />
+                                    :
+                                <UnmaskText scale={1.5}/>
+                            }
+                        </div>
+                    :
+                        <>
+                        </>
+                }
+                </div>
+            </div>
+
+            <span 
+                className="Input__counter"
+            >
+                <Text size={textSize.REGULARSMALL}>{count} / {limit}</Text>
+            </span>
         </span>
     )
 }
