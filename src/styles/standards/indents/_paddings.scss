@@ -4,6 +4,12 @@
 
     --uikit-padding-quad: 0.2rem 0.2rem;
     --uikit-padding-strength-width: 0.5rem 1rem;
-    --uikit-padding-strength-height: 0.3rem 0.2rem;
+
+    //Выделил в переменные, чтобы переиспользовать и избежать магических чисел
+    --uikit-padding-strength-height-h: 0.3rem;
+    --uikit-padding-strength-height-w: 0.2rem;
+    --uikit-padding-strength-height: 
+        var(--uikit-padding-strength-height-h)
+        var(--uikit-padding-strength-height-w);
     
 }

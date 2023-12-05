@@ -7,10 +7,10 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding: var(--uikit-padding-strength-height);
+    //padding: var(--uikit-padding-strength-height);
     margin: var(--uikit-margin-strength-height);
 
-    overflow-y: auto;
+    max-height: calc(100% - (var(--uikit-padding-strength-height-h) * 2));
 }
 
 .Tape__header{
@@ -18,3 +18,6 @@
     justify-content: center;
 }
 
+.Tape__content{
+    overflow-y: auto;
+}

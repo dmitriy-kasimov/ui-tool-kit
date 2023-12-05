@@ -46,7 +46,7 @@ export const WindowBrowserReg: Story = {
     },  
 };
 
-export const WindowBrowser2: Story = {
+export const WindowBrowserGlobal: Story = {
   args: {
       title: 'Заголовок',
       tabs:[
@@ -61,9 +61,12 @@ export const WindowBrowser2: Story = {
           <Tape
             title='The latest news'
             posts={[
-              {title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
+              {title: 'Update to ver 1.0.1', subtitle: '10/27/2024', children: (<Text>• Bug fixed</Text>)},
               {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-              {title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)}
+              {title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)},
+              {title: 'New release date!', subtitle: '10/01/2024', children: (<Text>The server will been starting 10/04/2024 !!!</Text>)},
+              {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+              {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
             ]}
           />
           </Panel>
@@ -74,13 +77,11 @@ export const WindowBrowser2: Story = {
             <Input label={'Ur mail (optional)'} limit={64}/>
             <Input label={'Ur pass'} limit={32} masked/>
             <Input label={'confirm pass'} limit={32} masked/>
-            <br/>
+     
             <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
             <br/>
             <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
             <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
-            <br/>
-            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
           </Panel>
 
           <Panel>

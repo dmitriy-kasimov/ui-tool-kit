@@ -1,3 +1,4 @@
+@use 'styles/effects/glasses';
 .Panel{
     width: 450px;
     height: 500px;
@@ -5,13 +6,14 @@
     margin: var(--uikit-margin-strength-height);
     padding: var(--uikit-padding-strength-height);
     
-    overflow-y: auto;
+    // overflow-y: auto;
 
     border-radius: var(--uikit-border-radius-window);
+    @include glasses.light();
 
-    background: repeating-linear-gradient(45deg, 
-        rgb(73, 73, 73) 0.5%, rgb(32, 32, 32) 0.5%,
-        rgb(73, 73, 73) 1%, rgb(32, 32, 32) 1%
-    );
+    // background: repeating-linear-gradient(45deg, 
+    //     rgb(73, 73, 73) 0.5%, rgb(32, 32, 32) 0.5%,
+    //     rgb(73, 73, 73) 1%, rgb(32, 32, 32) 1%
+    // );
     border: 1px solid rgba(255, 255, 255, 0.2); 
 }
