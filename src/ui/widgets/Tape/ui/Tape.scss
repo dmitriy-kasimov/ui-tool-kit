@@ -3,14 +3,15 @@
 .Tape{
     @include glasses.dark(1px);
 
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
 
     //padding: var(--uikit-padding-strength-height);
     margin: var(--uikit-margin-strength-height);
 
     max-height: calc(100% - (var(--uikit-padding-strength-height-h) * 2));
+    max-height: 700px;
 }
 
 .Tape__header{
@@ -19,5 +20,10 @@
 }
 
 .Tape__content{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
     overflow-y: auto;
+
+    padding: var(--uikit-padding-strength-height);
 }

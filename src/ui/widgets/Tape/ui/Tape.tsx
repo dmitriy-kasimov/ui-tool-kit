@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 import { TapeProps } from "../types/TapeProps"
-import { Text, textSize } from "ui/components/text/Text"
+import { Text, textFont, textSize } from "ui/components/text/Text"
 
 
 import './Tape.scss'
@@ -10,13 +10,19 @@ const Tape: FC<TapeProps> = ({title, posts}) => {
     return (
         <div className="Tape">
             <span className="Tape__header">
-                <Text size={textSize.SUBTITLE}>{title}</Text>
+                <Text 
+                    font={textFont.TITLE}
+                    size={textSize.SUBTITLE}
+                >
+                    {title}
+                </Text>
             </span>
             <div className="Tape__content">
                 {
                     posts.map(post => 
                     <Post
-                        key={post.title}
+                        id={post.id}
+                        key={post.id}
                         title={post.title} 
                         subtitle={post.subtitle}
                     >

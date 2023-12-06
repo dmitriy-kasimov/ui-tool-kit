@@ -20,6 +20,9 @@ export const Text: FC<TextProps> = ({
         case textFont.MAIN:
             rootClasses.push('text_font_main');
             break;
+        case textFont.TITLE:
+            rootClasses.push('text_font_title');
+            break;
         default:
             rootClasses.push('text_font_main');
             break;

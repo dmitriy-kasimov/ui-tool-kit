@@ -4,6 +4,10 @@
 
 .WindowBrowserHeader{
     @include glasses.light($radius:0px);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
     @include shadows.box;
 
     padding: var(--uikit-padding-strength-width);

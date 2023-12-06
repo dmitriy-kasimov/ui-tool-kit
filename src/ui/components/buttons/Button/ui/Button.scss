@@ -9,10 +9,10 @@
 	padding: var(--uikit-padding-strength-width);
 	margin: var(--uikit-margin-strength-height);
 	outline: none;
-	border: none;  
+	border: var(--uikit-border-controls);
 	border-radius: var(--uikit-border-radius-window);
 	text-decoration: none;
-	background-color: #b6b6b6b2;
+	background-color: var(--uikit-background-controls);
 	cursor: pointer;
 
 	user-select: none;

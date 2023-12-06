@@ -13,6 +13,7 @@ export interface TextProps{
 // Перечисление семейств используемых шрифтов
 export enum textFont{
     MAIN,
+    TITLE
 }
 
 // Перечисление размеров шрифтов

@@ -55,59 +55,64 @@ export const WindowBrowserGlobal: Story = {
       ],
       children: (
         <>
-        <Text>Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab</Text>
-        <div style={{display:'flex'}}>
-        <Panel>
-          <Tape
-            title='The latest news'
-            posts={[
-              {title: 'Update to ver 1.0.1', subtitle: '10/27/2024', children: (<Text>• Bug fixed</Text>)},
-              {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-              {title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)},
-              {title: 'New release date!', subtitle: '10/01/2024', children: (<Text>The server will been starting 10/04/2024 !!!</Text>)},
-              {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-              {title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-            ]}
-          />
-          </Panel>
+          <div style={{display:'inline-flex', alignItems:'flex-start'}}>
+            <Panel>
+              <Tape
+                title='The latest news'
+                posts={[
+                  {id: 9, title: 'Update to ver 1.0.1', subtitle: '10/27/2024', children: (<Text>• Bug fixed</Text>)},
+                  {id: 8, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                  {id: 7, title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text><Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>On the 4th of October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Thank you for your waiting, we are sure - we will appreciate our work. </Text>)},
+                  {id: 6, title: 'New release date!', subtitle: '10/01/2024', children: (<Text>The server will been starting 10/04/2024 !!!</Text>)},
+                  {id: 5, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                  {id: 4, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                  {id: 3, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                  {id: 2, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                  {id: 1, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
+                ]}
+              />
+            </Panel>
 
-          <Panel>
-            
-            <Input label={'Ur nickname'} limit={32}/>
-            <Input label={'Ur mail (optional)'} limit={64}/>
-            <Input label={'Ur pass'} limit={32} masked/>
-            <Input label={'confirm pass'} limit={32} masked/>
-     
-            <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
-            <br/>
-            <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
-            <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
-          </Panel>
+            <Panel>
+              <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+                <Input label={'Ur nickname'} limit={32}/>
+                <Input label={'Ur mail (optional)'} limit={64}/>
+                <Input label={'Ur pass'} limit={32} masked/>
+                <Input label={'confirm pass'} limit={32} masked/>
+        
+                <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
+                <br/>
+                <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
+                <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
+              </div>
+            </Panel>
 
-          <Panel>
-          <Text size={textSize.TITLE}>size: TITLE</Text>
-            <br/>
-            <Text size={textSize.SUBTITLE}>size: SUBTITLE</Text>
-            <br/>
-            <Text size={textSize.IMPORTANT}>size: IMPORTANT</Text>
-            <br/>
-            <Text size={textSize.REGULAR}>size: REGULAR</Text>
-            <br/>
-            <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
-            <br/>
-            <Text color={textColor.MAIN}>color: MAIN</Text>
-            <br/>
-            <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
-            <br/>
-            <Text color={textColor.WARNING}>color: WARNING</Text>
-            <br/>
-            <Text color={textColor.ERROR}>color: ERROR</Text>
-            <br/>
-            <Text color={textColor.SUCCESSFULLY}>color: SUCCESSFULLY</Text>
-            <br/>
-            <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
-          </Panel>
-        </div>
+            <Panel>
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
+                  <Text size={textSize.TITLE}>size: TITLE</Text>
+                  <br/>
+                  <Text size={textSize.SUBTITLE}>size: SUBTITLE</Text>
+                  <br/>
+                  <Text size={textSize.IMPORTANT}>size: IMPORTANT</Text>
+                  <br/>
+                  <Text size={textSize.REGULAR}>size: REGULAR</Text>
+                  <br/>
+                  <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
+                  <br/>
+                  <Text color={textColor.MAIN}>color: MAIN</Text>
+                  <br/>
+                  <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
+                  <br/>
+                  <Text color={textColor.WARNING}>color: WARNING</Text>
+                  <br/>
+                  <Text color={textColor.ERROR}>color: ERROR</Text>
+                  <br/>
+                  <Text color={textColor.SUCCESSFULLY}>color: SUCCESSFULLY</Text>
+                  <br/>
+                  <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
+                </div>
+              </Panel>
+          </div>
         </>
       )
   },  

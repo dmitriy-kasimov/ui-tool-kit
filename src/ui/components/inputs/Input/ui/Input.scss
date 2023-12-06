@@ -12,11 +12,10 @@
     .Input__Background{
         display: flex;
         align-items: center;
-
-        background-color: #b6b6b6b2;
+        background-color: var(--uikit-background-controls);
         border-radius: var(--uikit-border-radius-window);
 
-        border: 1px solid black;
+        border: var(--uikit-border-controls);
 
         .Input__Background__Field {
             position: relative;

@@ -5,6 +5,7 @@ import './Post.scss'
 import { Text, textColor, textSize } from "ui/components/text/Text"
 
 export const Post: FC<PostProps> = ({
+                                    id,
                                     title, 
                                     subtitle, 
                                     children

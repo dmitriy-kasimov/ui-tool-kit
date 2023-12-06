@@ -8,6 +8,7 @@ export const WindowBrowserTitle: FC<WindowBrowserTitleProps> = ({text}) => {
   return (
     <span className="WindowBrowserTitle">
         <Text
+          font={textFont.TITLE}
           size={textSize.TITLE}
         >
           {text}

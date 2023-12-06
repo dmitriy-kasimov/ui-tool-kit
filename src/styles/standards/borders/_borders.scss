@@ -1,3 +1,9 @@
 :root{
     --uikit-border-radius-window: 12px;
+
+    //Рамка для окон, панелей и т.п.
+    --uikit-border-window: 1px solid black;
+
+    //Рамка для элементов управления (кнопки, инпуты, чекбоксы и т.п.)
+    --uikit-border-controls: 1px solid var(--uikit-font-color-main);
 }

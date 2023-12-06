@@ -1,6 +1,7 @@
 ::-webkit-scrollbar{
     width: 15px;
-    background-color: #b6b6b6b2;
+    background-color: var(--uikit-background-controls);
+    
     border-radius: var(--uikit-border-radius-window);
 }
 
@@ -11,6 +12,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #afafaf;
+    background-color: var(--uikit-background-controls);
     border-radius: var(--uikit-border-radius-window);
+    border: var(--uikit-border-controls);
 }

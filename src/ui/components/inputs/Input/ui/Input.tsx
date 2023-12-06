@@ -12,7 +12,7 @@ export const Input: FC<InputProps> = ({
                                         limit,
                                         masked = false,
 
-                                        id='text',
+                                        id=label,
                                     }) => {
     
     const [count, setCount] = useState<number>(0);

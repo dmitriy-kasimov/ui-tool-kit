@@ -1,7 +1,9 @@
 @use 'styles/effects/glasses';
 .Panel{
-    width: 450px;
-    height: 500px;
+    // width: 450px;
+    // height: 500px;
+
+    
 
     margin: var(--uikit-margin-strength-height);
     padding: var(--uikit-padding-strength-height);
@@ -15,5 +17,8 @@
     //     rgb(73, 73, 73) 0.5%, rgb(32, 32, 32) 0.5%,
     //     rgb(73, 73, 73) 1%, rgb(32, 32, 32) 1%
     // );
-    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border: var(--uikit-border-window); 
+
+    display: inline-flex;
+    
 }
