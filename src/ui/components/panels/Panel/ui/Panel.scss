@@ -1,9 +1,0 @@
-@use 'styles/effects/glasses';
-.Panel{
-    @include glasses.light();
-
-    margin: var(--uikit-margin-strength-height);
-    padding: var(--uikit-padding-strength-height);
-
-    display: inline-flex;
-}

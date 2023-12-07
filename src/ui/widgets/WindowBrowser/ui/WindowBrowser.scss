@@ -2,7 +2,7 @@
 @use 'styles/effects/shadows';
 
 .WindowBrowser{
-    @include glasses.dark(3px);
+    @include glasses.first();
     
     @include shadows.box;
     max-height: 90%;

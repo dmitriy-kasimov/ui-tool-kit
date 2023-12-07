@@ -3,7 +3,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Post } from '../index';
-import { Text, textColor } from 'ui/components/text/Text';
+import { Text, textColor } from 'ui/components/shared/text/Text';
 
 
 const meta: Meta<typeof Post> = {

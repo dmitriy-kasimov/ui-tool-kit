@@ -3,12 +3,12 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { WindowBrowser } from './WindowBrowser';
-import { Text, textColor, textSize } from 'ui/components/text/Text';
+import { Text, textColor, textSize } from 'ui/components/shared/text/Text';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Panel } from 'ui/components/panels/Panel';
-import { Button } from 'ui/components/buttons/Button';
-import { Input } from 'ui/components/inputs/Input';
-import { Checkbox } from 'ui/components/checkboxes/Checkbox';
+import { Panel } from 'ui/components/forms/panels/Panel';
+import { Button } from 'ui/components/controls/buttons/Button';
+import { Input } from 'ui/components/controls/inputs/Input';
+import { Checkbox } from 'ui/components/controls/checkboxes/Checkbox';
 import { Tape } from 'ui/widgets/Tape';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

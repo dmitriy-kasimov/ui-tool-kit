@@ -3,7 +3,8 @@
 
 
 .WindowBrowserHeader{
-    @include glasses.light($radius:0px);
+    @include glasses.second();
+    border-radius: 0;
     border-top: none;
     border-left: none;
     border-right: none;

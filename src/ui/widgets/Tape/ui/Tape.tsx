@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 import { TapeProps } from "../types/TapeProps"
-import { Text, textFont, textSize } from "ui/components/text/Text"
+import { Text, textFont, textSize } from "ui/components/shared/text/Text"
 
 
 import './Tape.scss'

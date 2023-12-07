@@ -1,4 +1,4 @@
-import { LinkProps } from "ui/components/links/Link";
+import { LinkProps } from "ui/components/controls/links/Link";
 
 export interface NavBarProps{
     links: LinkProps [];

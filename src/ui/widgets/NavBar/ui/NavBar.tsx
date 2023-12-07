@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import './NavBar.scss'
 import { NavBarProps } from "../types/NavBarProps";
 import './NavBar.scss'
-import { Link } from "ui/components/links/Link";
+import { Link } from "ui/components/controls/links/Link";
 
 export const NavBar: FC<NavBarProps> = ({links}) => {
   return (
