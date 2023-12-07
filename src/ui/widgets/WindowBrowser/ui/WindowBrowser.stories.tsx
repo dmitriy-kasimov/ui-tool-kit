@@ -50,7 +50,7 @@ export const WindowBrowserGlobal: Story = {
   args: {
       title: 'Заголовок',
       tabs:[
-          {name:'Вкладка1', onClick() {}},
+          {name:'Вкладка1', onClick() {}, active: true},
           {name:'Вкладка2', onClick() {}},
       ],
       children: (

@@ -1,12 +1,17 @@
+@use 'styles/effects/glasses';
 @use 'styles/effects/clickes';
 
 .Link {
+	@include glasses.controls;
+	
+
+
 	display: inline-block;	
 	box-sizing: border-box;
 	margin: var(--uikit-margin-strength-height);
 	padding: var(--uikit-padding-strength-width);
 	outline: none;
-	border: none;  
+	//border: none;  
 	//border-radius: var(--uikit-border-radius-window);
 	text-decoration: none;
 	//background-color: #b6b6b6b2;
@@ -18,7 +23,12 @@
 
 	text-transform: uppercase;
 
-	box-shadow: 0 5px 0 var(--uikit-font-color-main);
+	
+}
+.LinkActive{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	box-shadow: 0 0.2rem 0 var(--uikit-font-color-main);
 }
 .Link:focus-visible {
 	box-shadow: 0 0 0 0.2rem rgba(232, 243, 255, 0.25);

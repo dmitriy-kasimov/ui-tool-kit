@@ -1,8 +1,10 @@
+@use 'styles/effects/glasses';
+
 ::-webkit-scrollbar{
-    width: 15px;
-    background-color: var(--uikit-background-controls);
-    
-    border-radius: var(--uikit-border-radius-window);
+    @include glasses.controls;
+    border: none;
+
+    width: 15px; 
 }
 
 ::-webkit-scrollbar-track{
@@ -12,7 +14,5 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--uikit-background-controls);
-    border-radius: var(--uikit-border-radius-window);
-    border: var(--uikit-border-controls);
+    @include glasses.controls;
 }

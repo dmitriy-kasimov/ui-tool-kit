@@ -10,12 +10,10 @@
     margin: var(--uikit-margin-strength-height);
 
     .Input__Background{
+        @include glasses.controls;
+
         display: flex;
         align-items: center;
-        background-color: var(--uikit-background-controls);
-        border-radius: var(--uikit-border-radius-window);
-
-        border: var(--uikit-border-controls);
 
         .Input__Background__Field {
             position: relative;

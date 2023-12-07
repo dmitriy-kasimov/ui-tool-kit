@@ -4,11 +4,18 @@ import { LinkProps } from "../types/LinkProps";
 import { Text } from "ui/components/text/Text/ui/Text";
 import { textColor, textFont, textSize } from "ui/components/text/Text/types/TextProps";
 
-export const Link: FC<LinkProps> = ({name, onClick}) => {
+export const Link: FC<LinkProps> = ({
+                                      name, 
+                                      active=false, 
+                                      onClick
+                                    }) => {
+  const rootClasses: string[] = ['Link'];
+  if(active)
+    rootClasses.push('LinkActive');
   return (
     <span 
       onClick={onClick}  
-      className="Link"
+      className={rootClasses.join(' ')}
     >
       <Text
         className="LinkText"

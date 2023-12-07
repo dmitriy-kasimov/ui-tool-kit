@@ -1,52 +1,44 @@
-.glass{
-    border: var(--uikit-border-window); 
-}
-
 /* From https://css.glass */
-@mixin dark(
-                $blur: 0px, 
-                $radius: var(--uikit-border-radius-window)
+@mixin glass(
+            $background, 
+            $blur, 
             ){
-    @extend .glass;
-
-    background: rgba(31, 31, 31, 0.7);
-                   
-    
+          
+    background: $background;
 
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
 
-    border-radius: $radius;
-}    
+
+    border-radius: var(--uikit-border-radius-window);
+
+    border: var(--uikit-border-window);
+};
+
+
+
+@mixin dark(
+                $blur: 0px, 
+                $radius: var(--uikit-border-radius-window)
+            ){
+    @include glass(
+        $background:rgba(31, 31, 31, 0.7), 
+        $blur: $blur
+    );
+}; 
 
 @mixin light(
                 $blur: 0px, 
                 $radius: var(--uikit-border-radius-window)
             ){
-                
-    @extend .glass;
+    @include glass(
+        $background:rgba(0, 0, 0, 0.0), 
+        $blur: $blur
+    );
+};
 
-    background: rgba(0, 0, 0, 0.0);  
-
-
-    backdrop-filter: blur($blur);
-    -webkit-backdrop-filter: blur($blur);
-
-    border-radius: $radius;
-}    
-
-@mixin white(
-                $blur: 0px, 
-                $radius: var(--uikit-border-radius-window)
-            ){
-                
-    @extend .glass;
-
-    background: rgba(255, 255, 255, 0.7);  
-
-
-    backdrop-filter: blur($blur);
-    -webkit-backdrop-filter: blur($blur);
-
-    border-radius: $radius;
-}    
+@mixin controls{
+    border: var(--uikit-border-controls);
+	border-radius: var(--uikit-border-radius-window);
+	background-color: var(--uikit-background-controls);
+}

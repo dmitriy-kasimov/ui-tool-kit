@@ -10,6 +10,7 @@ export const NavBar: FC<NavBarProps> = ({links}) => {
         {links.map(link => 
           <Link 
             key={link.name}
+            active={link.active}
             name={link.name}
             onClick={link.onClick}
           />)}

@@ -1,20 +1,18 @@
-// @use 'styles/effects/glasses';
+@use 'styles/effects/glasses';
 // @use 'styles/effects/clickes';
 // @use 'styles/effects/guidance';
 
 .Button {
-	display: inline-block;	
-	box-sizing: border-box;
-	//padding: 0.5rem 1rem;
+	@include glasses.controls;
+
 	padding: var(--uikit-padding-strength-width);
 	margin: var(--uikit-margin-strength-height);
-	outline: none;
-	border: var(--uikit-border-controls);
-	border-radius: var(--uikit-border-radius-window);
-	text-decoration: none;
-	background-color: var(--uikit-background-controls);
-	cursor: pointer;
 
+	display: inline-block;	
+
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
 	user-select: none;
 	appearance: none;
 	touch-action: manipulation;
@@ -32,25 +30,3 @@
 	pointer-events: none;
 	opacity: 0.65;
 }
-
-
-/*
-.Button{
-    @include glasses.white(2px);
-    @include clickes.press;
-    @include guidance.hover;
-
-    display: inline-flex;
-
-    padding: var(--uikit-padding-strength);
-}
-
-.ButtonPrimary{
-    border: none;
-}
-
-.ButtonOutline{
-    @include glasses.white(0px);
-    border: 2px solid rgb(0, 0, 0); 
-}
-*/
