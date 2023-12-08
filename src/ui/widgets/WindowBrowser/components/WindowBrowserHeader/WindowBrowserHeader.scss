@@ -9,7 +9,7 @@
     border-left: none;
     border-right: none;
 
-    @include shadows.box;
+    @include shadows.form;
 
     padding: var(--uikit-padding-strength-width);
 

@@ -1,5 +1,4 @@
 @use '../../assets/fonts/index';
-@use 'styles/effects/shadows';
 
 :root{
     //Основной шрифт
@@ -26,5 +25,4 @@
     font-family: var(--uikit-font-family-main);
     font-size: var(--uikit-font-size-regular);
     color: var(--uikit-font-color-main);
-    @include shadows.text;
 }

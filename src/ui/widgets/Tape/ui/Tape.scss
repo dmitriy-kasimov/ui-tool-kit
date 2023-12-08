@@ -19,7 +19,7 @@
         border-left: none;
         border-right: none;
     
-        @include shadows.box;
+        @include shadows.form;
     
         display: flex;
         justify-content: center;

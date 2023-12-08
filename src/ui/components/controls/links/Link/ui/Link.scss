@@ -1,10 +1,12 @@
 @use 'styles/effects/glasses';
-@use 'styles/effects/clickes';
+@use 'styles/effects/shadows';
 
 .Link {
 	@include glasses.controls;
 	
-
+	&:hover{
+		@include shadows.control;
+	}
 
 	display: inline-block;	
 	box-sizing: border-box;
@@ -44,44 +46,3 @@
 	pointer-events: none;
 	opacity: 0.65;
 }
-
-
-// .Link{
-//     @include clickes.press;
-
-//     margin: var(--uikit-margin-strength);
-//     padding: var(--uikit-padding-strength);
-
-//     cursor: pointer;
-    
-//     text-decoration: none;
-//     position: relative;
-//     transition: all .2s cubic-bezier(.2, 0, 0, 1);
-// }
-
-// .LinkText{
-//     &:after {
-//         content: '';
-//         display: block;
-//         height: 2px;
-//         position: absolute;
-//         bottom: 0;
-//         right: 1.25rem;
-//         left: 1.25rem;
-//         background-color: #ffffff;
-//         transition: all .2s cubic-bezier(.2, 0, 0, 1);
-//         transform-origin: bottom center;
-//         z-index: -1;
-//         border-radius: var(--uikit-border-radius-window);
-//     }
-      
-//     &:hover {
-//         color: var(--uikit-font-color-secondary);
-        
-//         &:after {
-//             right: 0;
-//             left: 0;
-//             height: 100%;
-//         }
-//     }
-// }

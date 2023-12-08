@@ -4,7 +4,7 @@
 .WindowBrowser{
     @include glasses.first();
     
-    @include shadows.box;
+    @include shadows.form;
     max-height: 90%;
     max-width: 90%;
 
