@@ -1,18 +1,38 @@
 @use 'styles/effects/glasses';
+@use '../controls';
 
 ::-webkit-scrollbar{
-    @include glasses.controls;
+    @include controls.defaultStyles;
+
+    border-radius: var(--uikit-border-radius-controls);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
     border: none;
 
-    width: 15px; 
+    width: 0.5rem; 
 }
 
 ::-webkit-scrollbar-track{
-    border: 3px solid rgba(255,255,255, 0.25);
     box-shadow: inset 0 0 2.5px rgba(0,0,0,0.5);
-    border-radius: var(--uikit-border-radius-window);
+
+    border: 2px solid rgba(255,255,255, 0.25);
+    border-radius: var(--uikit-border-radius-windows);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb{
-    @include glasses.controls;
+    @include controls.defaultStyles;
+
+    border-radius: var(--uikit-border-radius-controls);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+	border: var(--uikit-border-controls);
+
+    &:hover{
+		@include controls.hover;
+	} 
 }

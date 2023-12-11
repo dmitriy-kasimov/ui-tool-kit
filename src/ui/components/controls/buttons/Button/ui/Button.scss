@@ -1,11 +1,15 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
-// @use 'styles/effects/clickes';
-// @use 'styles/effects/guidance';
+@use '../../../controls';
 
 .Button {
-	@include glasses.controls;
-
+	@include controls.defaultStyles;
+	&:hover{
+		@include controls.hover;
+	}
+	&:active{
+		@include controls.active;
+	}
 	padding: var(--uikit-padding-strength-width);
 	margin: var(--uikit-margin-strength-height);
 
@@ -13,29 +17,22 @@
 
 	outline: none;
 	text-decoration: none;
-	cursor: pointer;
 	user-select: none;
 	appearance: none;
 	touch-action: manipulation;
 
-	&:hover{
-        @include shadows.control;
-    }
-    
-    &:focus{
-        @include shadows.control;
-    }
+	border-radius: var(--uikit-border-radius-controls);
+	border: var(--uikit-border-controls);
 }
 .Button:focus-visible {
-	box-shadow: 0 0 0 0.2rem rgba(232, 243, 255, 0.25);
+	@include controls.focus;
 }
-.Button:hover {
-	background-color: #afafaf;
-}
-.Button:active {
-	transform: scale(0.96);
-}
+// .Button:hover {
+// 	background-color: #afafaf;
+// }
+// .Button:active {
+// 	@include controls.active;
+// }
 .Button:disabled {
-	pointer-events: none;
-	opacity: 0.65;
+	@include controls.disabled;
 }

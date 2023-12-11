@@ -10,12 +10,17 @@ export const Link: FC<LinkProps> = ({
                                       onClick
                                     }) => {
   const rootClasses: string[] = ['Link'];
-  if(active)
+
+  if(active){
     rootClasses.push('LinkActive');
+  }
+  else
+    rootClasses.push('LinkPassive');
   return (
-    <span 
+    <button 
       onClick={onClick}  
       className={rootClasses.join(' ')}
+      disabled={rootClasses.includes('LinkActive')}
     >
       <Text
         className="LinkText"
@@ -23,7 +28,7 @@ export const Link: FC<LinkProps> = ({
       >
         {name}
       </Text>
-    </span>
+    </button>
   );
 };
 

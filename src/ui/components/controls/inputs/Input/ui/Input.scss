@@ -1,22 +1,27 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
+@use '../../../controls';
 
-
+.disabled{
+    @include controls.disabled;
+}
 .Input{
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
-
     margin: var(--uikit-margin-strength-height);
-
+    
     .Input__Background{
-        @include glasses.controls;
+        @include controls.defaultStyles;
         &:hover{
-            @include shadows.control;
+            @include controls.hover
         }
-
+        
         display: flex;
         align-items: center;
+
+        border-radius: var(--uikit-border-radius-controls);
+	    border: var(--uikit-border-controls);
 
         .Input__Background__Field {
             position: relative;
@@ -56,20 +61,20 @@
 
 
 .Input__Background__Field__input{
-    @include shadows.text;
-
     background-color: transparent;
 
     border: none;
 
     font-size: var(--uikit-font-size-important);
-
     height: calc(3.5rem + 2px);
     line-height: 1.25;
     padding: 0.75rem 0.5rem;
+
     &:focus{
         outline: none;
     }
+
+    
 }
 
 

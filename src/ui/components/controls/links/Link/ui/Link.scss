@@ -1,48 +1,46 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
+@use '../../../controls';
 
 .Link {
-	@include glasses.controls;
-	
-	&:hover{
-		@include shadows.control;
-	}
+	@include controls.defaultStyles;
 
 	display: inline-block;	
-	box-sizing: border-box;
+
 	margin: var(--uikit-margin-strength-height);
 	padding: var(--uikit-padding-strength-width);
+
+	border-radius: var(--uikit-border-radius-controls);
+	border: var(--uikit-border-controls);
+
 	outline: none;
-	//border: none;  
-	//border-radius: var(--uikit-border-radius-window);
+	text-transform: uppercase;
 	text-decoration: none;
-	//background-color: #b6b6b6b2;
-	cursor: pointer;
 
 	user-select: none;
 	appearance: none;
 	touch-action: manipulation;
-
-	text-transform: uppercase;
-
-	
 }
 .LinkActive{
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	box-shadow: 0 0.2rem 0 var(--uikit-font-color-main);
 }
+.LinkPassive{
+	&:hover{
+		@include controls.hover;
+	}
+	&:active{
+		@include controls.active;
+	}
+}
 .Link:focus-visible {
-	box-shadow: 0 0 0 0.2rem rgba(232, 243, 255, 0.25);
+	@include controls.focus;
 }
-.Link:hover {
-	background-color: #afafaf;
-}
-.Link:active {
-	box-shadow: none;
-	transform: scale(0.96);
-}
+// .Link:focus-visible {
+// 	box-shadow: 0 0 0 0.2rem rgba(232, 243, 255, 0.25);
+// }
+
 .Link:disabled {
-	pointer-events: none;
-	opacity: 0.65;
+	@include controls.disabled;
 }

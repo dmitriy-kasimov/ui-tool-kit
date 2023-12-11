@@ -2,7 +2,6 @@ import React, {ChangeEvent, FC, useState} from "react";
 import { InputProps } from "../types/InputProps";
 import './Input.scss'
 import { Text, textSize } from "ui/components/shared/text/Text";
-import { Button } from "ui/components/controls/buttons/Button";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
@@ -10,13 +9,14 @@ import MaskText from "styles/assets/icons/maskText.svg"
 export const Input: FC<InputProps> = ({
                                         label,
                                         limit,
-                                        masked = false,
 
-                                        id=label,
+                                        defaultValue='',
+                                        disabled=false,
+                                        masked = false,
                                     }) => {
     
     const [count, setCount] = useState<number>(0);
-    const [text, setText] = useState<string>('');
+    const [text, setText] = useState<string>(defaultValue);
 
     const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const input: string = e.target.value;
@@ -31,8 +31,13 @@ export const Input: FC<InputProps> = ({
         setType( type === 'text' ? 'password' : 'text');
     }
 
+
+    const rootClasses: string[] = ['Input'];
+    console.log(disabled);
+    if(disabled)
+        rootClasses.push('disabled');
     return(
-        <span className="Input">
+        <span className={rootClasses.join(' ')}>
             <div className="Input__Background">
                 <div className="Input__Background__Field">
                     <input 
@@ -40,14 +45,15 @@ export const Input: FC<InputProps> = ({
                         value={text}
                         onChange={onChangeInput}
                         type={type} 
-                        id={id}
+                        id={label}
                         placeholder=''
                         autoComplete="off"
                         spellCheck={false}
+                        disabled={disabled}
                     />
                     <label 
                         className="Input__Background__Field__label" 
-                        htmlFor={id}
+                        htmlFor={label}
                     >
                         <Text>
                             {label}

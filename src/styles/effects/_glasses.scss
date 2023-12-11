@@ -10,53 +10,47 @@
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
 
-    border-radius: var(--uikit-border-radius-window);
+    // border: var(--uikit-border-windows);
+    // border-radius: var(--uikit-border-radius-windows);
 };
 
 /*
     Названия миксинов - уровень вложенности блоков
-
 */
 // Главная панель
 @mixin first{
     @include glass(
         $background:rgba(31, 31, 31, 0.7), 
     );
-    border: var(--uikit-border-window);
 }; 
 // Располагается внутри главной панели (first)
 @mixin second{
     @include glass(
         $background:rgba(0, 0, 0, 0.0), 
     );
-    border: var(--uikit-border-window);
 };
 // Располагается внутри second
 @mixin third{
     @include glass(
         $background:#4d4d4d77
     );
-    border: var(--uikit-border-window);
 }
 // Располагается внутри third
 @mixin fourth{
     @include glass(
         $background:#63636377
     );
-    border: var(--uikit-border-window);
 }
 
 // ===
 
-// Элементы управления (инпуты, кнопки)
+// Элементы управления (инпуты, кнопки т. д.)
 @mixin controls{
     @include glass(
-        $background:#7e7e7e77
+        $background: var(--uikit-background-controls)
     );
-
     border: var(--uikit-border-controls);
 
     backdrop-filter: blur(0);
     -webkit-backdrop-filter: blur(0);
 }
-

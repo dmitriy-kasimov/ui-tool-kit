@@ -1,9 +1,9 @@
 .WindowBrowserContent{
-    padding: var(--uikit-padding-strength-height);
+    display: inline-flex;
 
     width: 100%;
 
-    overflow-y: auto;
+    padding: var(--uikit-padding-strength-height);
 
-    display: inline-flex;
+    overflow-y: auto;
 }

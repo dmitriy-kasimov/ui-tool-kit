@@ -2,8 +2,11 @@
 .Panel{
     @include glasses.second();
 
+    display: inline-flex;
+
     margin: var(--uikit-margin-strength-height);
     padding: var(--uikit-padding-strength-height);
 
-    display: inline-flex;
+    border-radius: var(--uikit-border-radius-forms);
+	border: var(--uikit-border-forms);
 }

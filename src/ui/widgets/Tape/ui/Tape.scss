@@ -5,12 +5,12 @@
 
     display: inline-flex;
     flex-direction: column;
-    //justify-content: space-between;
 
-    //padding: var(--uikit-padding-strength-height);
     margin: var(--uikit-margin-strength-height);
 
-    //max-height: calc(100% - (var(--uikit-padding-strength-height-h) * 2));
+    border-radius: var(--uikit-border-radius-forms);
+	border: var(--uikit-border-forms);
+
     max-height: 700px;
 
     .Tape__header{

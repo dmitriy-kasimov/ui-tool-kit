@@ -3,19 +3,18 @@ import './Checkbox.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
 
-const Checkbox: FC<CheckboxProps> = ({children}) => {
+const Checkbox: FC<CheckboxProps> = ({id, children, ...otherProps}) => {
     return(
-        // <span className="Checkbox">
-        //     <input 
-        //         className="Checkbox__box"
-        //         type="checkbox"
-        //     />
-        //     {children}
-        // </span>
-
         <>
-            <input type="checkbox" className="custom-checkbox" id="happy" name="happy" value="yes"/>
-            <label htmlFor="happy">{children}</label>
+            <input 
+                type="checkbox" 
+                className="custom-checkbox" 
+                id={id} 
+                name={id} 
+                value="yes"
+                {...otherProps}
+            />
+            <label htmlFor={id}>{children}</label>
         </>
         
     )

@@ -8,14 +8,18 @@
     border-top: none;
     border-left: none;
     border-right: none;
-
     @include shadows.form;
-
-    padding: var(--uikit-padding-strength-width);
-
-    width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
+
+    padding: var(--uikit-padding-strength-width);
+
+    border-radius: var(--uikit-border-radius-windows);
+	border: var(--uikit-border-windows);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }

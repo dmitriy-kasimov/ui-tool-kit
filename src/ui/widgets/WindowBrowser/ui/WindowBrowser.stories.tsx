@@ -75,12 +75,12 @@ export const WindowBrowserGlobal: Story = {
 
             <Panel>
               <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-                <Input label={'Ur nickname'} limit={32}/>
+                <Input disabled defaultValue={'TR271V0R'} label={'Ur nickname'} limit={32}/>
                 <Input label={'Ur mail (optional)'} limit={64}/>
                 <Input label={'Ur pass'} limit={32} masked/>
                 <Input label={'confirm pass'} limit={32} masked/>
         
-                <Checkbox> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
+                <Checkbox id='rules'> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
                 <br/>
                 <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
                 <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>

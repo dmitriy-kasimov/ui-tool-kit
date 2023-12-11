@@ -1,0 +1,26 @@
+@use 'styles/effects/glasses';
+@use 'styles/effects/shadows';
+
+@mixin defaultStyles{
+    @include glasses.controls;
+
+    cursor: pointer;
+}
+
+@mixin hover{
+    background-color: #afafaf94;
+}
+
+@mixin focus{
+    @include shadows.controls;
+   
+}
+
+@mixin active{
+	transform: scale(0.96);
+}
+
+@mixin disabled{
+    pointer-events: none;
+	opacity: 0.5;
+}
