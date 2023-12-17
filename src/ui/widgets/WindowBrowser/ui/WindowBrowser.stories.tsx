@@ -10,8 +10,7 @@ import { Button } from 'ui/components/controls/buttons/Button';
 import { Input } from 'ui/components/controls/inputs/Input';
 import { Checkbox } from 'ui/components/controls/checkboxes/Checkbox';
 import { Tape } from 'ui/widgets/Tape';
-import Select from 'ui/components/controls/selects/Select/ui/Select';
-import { validationStatus } from 'ui/components/controls';
+import { Select } from 'ui/components/controls/selects/Select';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {

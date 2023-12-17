@@ -7,8 +7,9 @@ const Checkbox: FC<CheckboxProps> = ({
                                         id, 
                                         checked=false, 
                                         onChange, 
-                                        children, 
-                                        ...otherProps
+                                        children,
+                                        disabled=false
+                                        
                                     }) => {
 
     return(
@@ -21,7 +22,7 @@ const Checkbox: FC<CheckboxProps> = ({
                 value="yes"
                 checked={checked}
                 onChange={onChange}
-                {...otherProps}
+                disabled={disabled}
             />
             <label htmlFor={id}>{children}</label>
         </>

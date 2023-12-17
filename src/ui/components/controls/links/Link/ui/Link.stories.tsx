@@ -33,3 +33,11 @@ export const LinkDefault: Story = {
       onClick: () => {},
     },
 };
+
+export const LinkActive: Story = {
+  args: {
+    name: 'Вкладка 1',
+    onClick: () => {},
+    active: true
+  },
+};
