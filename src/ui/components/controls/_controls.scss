@@ -11,7 +11,7 @@
 // Ивенты для элементов управления
 
 @mixin hover{
-    background-color: #afafaf94;
+    background-color: var(--uikit-color-background-control-hover);
 }
 
 @mixin focus{
@@ -31,13 +31,13 @@
 // Валидация для элементов управления
 
 .validationError{
-    border-color: var(--uikit-font-color-error);
+    border-color: var(--uikit-color-error);
 }
 
 .validationWarning{
-    border-color: var(--uikit-font-color-warning);
+    border-color: var(--uikit-color-warning);
 }
 
 .validationSuccessfully{
-    border-color: var(--uikit-font-color-successfully);
+    border-color: var(--uikit-color-successfully);
 }

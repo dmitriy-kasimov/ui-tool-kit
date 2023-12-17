@@ -1,10 +1,18 @@
 :root{
-    --uikit-border-radius-windows: 12px;
-    --uikit-border-windows: 1px solid rgb(0, 0, 0);
+//  Рамки окон
+    --uikit-border-radius-window: 12px;
 
-    --uikit-border-radius-forms: 12px;
-    --uikit-border-forms: 1px solid var(--uikit-color-border-forms);
+    --uikit-border-window: 1px solid var(--uikit-color-border-window);
 
+
+//  Рамки форм
+    --uikit-border-radius-form: 12px;
+
+    --uikit-border-form: 1px solid var(--uikit-color-border-form);
+
+
+//  Рамки элементов управления
     --uikit-border-radius-controls: 12px;
+    
     --uikit-border-controls: 1px solid var(--uikit-font-color-main);
 }

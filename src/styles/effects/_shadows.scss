@@ -1,9 +1,9 @@
 @mixin form{
-    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.233);
+    box-shadow: 0 10px 15px var(--uikit-color-shadow-form);
 }
 
 @mixin controls{
-    $shadow-color: rgba(255, 255, 255, 0.473);
+    $shadow-color: var(--uikit-color-shadow-control);
     $indent: 3px;
     $dispersia: 5px;
 

@@ -1,10 +1,31 @@
 :root{
-    --uikit-color-border-forms: black;
+    --uikit-color-error: rgb(255, 86, 86);
+    --uikit-color-warning: rgb(255, 145, 0);
+    --uikit-color-successfully: rgb(62, 255, 62);
+    --uikit-color-information: rgb(112, 162, 255);
 
-    --uikit-color-background-controls: #7e7e7e77;
-    // --uikit-color-background-controls: #7e7e7e91;
 
-    --uikit-color-border-forms: rgba(128, 128, 128, 0.479);
-    --uikit-color-border-controls: var(--uikit-font-color-main);
-    
+//  Цвета окон
+    --uikit-color-border-window: rgba(128, 128, 128, 0.479);
+
+    --uikit-color-background-window: rgba(31, 31, 31, 0.7);
+
+
+//  Цвета форм
+    --uikit-color-border-form: rgba(128, 128, 128, 0.479);
+
+    --uikit-color-background-block: rgba(0, 0, 0, 0.0);
+    --uikit-color-background-element: #4d4d4d77;
+    --uikit-color-background-modificator: #63636377;
+
+    --uikit-color-shadow-form: rgba(255, 255, 255, 0.233);
+
+
+//  Цвета элементов управления
+    --uikit-color-border-control: var(--uikit-font-color-main);
+
+    --uikit-color-background-control: #7e7e7e77;
+    --uikit-color-background-control-hover: #afafaf94;
+
+    --uikit-color-shadow-control: rgba(255, 255, 255, 0.473);
 }

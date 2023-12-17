@@ -9,7 +9,7 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: var(--uikit-margin-strength-height);
+    margin: var(--uikit-margin-control-strength-height);
 }
 
 .Input__Background{
@@ -57,7 +57,7 @@
 
 .Input__counter{
     align-self: flex-end;
-    margin: var(--uikit-margin-strength);
+    margin: 0 5px;
 }
 
 .Input__Background__Field__input{

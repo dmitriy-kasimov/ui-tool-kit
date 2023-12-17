@@ -1,7 +1,18 @@
 :root{
-    --uikit-margin-strength: 0px 5px;
+//  Внешние отступы для окон
+    --uikit-margin-window-strength-quad: 0.2rem 0.2rem;
+    --uikit-margin-window-strength-width: 0.1rem 0.5rem;
+    --uikit-margin-window-strength-height: 0.3rem 0.15rem;
 
-    --uikit-margin-quad: 0.2rem 0.2rem;
-    --uikit-margin-strength-width: 0.1rem 0.5rem;
-    --uikit-margin-strength-height: 0.3rem 0.15rem;
+
+//  Внешние отступы для форм
+    --uikit-margin-form-strength-quad: 0.2rem 0.2rem;
+    --uikit-margin-form-strength-width: 0.1rem 0.5rem;
+    --uikit-margin-form-strength-height: 0.3rem 0.15rem;
+
+
+//  Внешние отступы для элементов управления
+    --uikit-margin-control-strength-quad: 0.2rem 0.2rem;
+    --uikit-margin-control-strength-width: 0.1rem 0.5rem;
+    --uikit-margin-control-strength-height: 0.3rem 0.15rem;
 }

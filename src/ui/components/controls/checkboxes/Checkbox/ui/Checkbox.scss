@@ -31,8 +31,8 @@
     background-position: center center;
     background-size: 50% 50%;
 
-    margin: var(--uikit-margin-strength-height);
-    padding: var(--uikit-padding-quad);
+    margin: var(--uikit-margin-control-strength-height);
+    padding: var(--uikit-padding-control-strength-quad);
 }
 
 .custom-checkbox:checked+label::before {

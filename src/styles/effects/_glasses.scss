@@ -10,8 +10,8 @@
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
 
-    // border: var(--uikit-border-windows);
-    // border-radius: var(--uikit-border-radius-windows);
+    // border: var(--uikit-border-window);
+    // border-radius: var(--uikit-border-radius-window);
 };
 
 /*
@@ -20,25 +20,25 @@
 // Главная панель
 @mixin first{
     @include glass(
-        $background:rgba(31, 31, 31, 0.7), 
+        $background:var(--uikit-color-background-window)
     );
 }; 
 // Располагается внутри главной панели (first)
 @mixin second{
     @include glass(
-        $background:rgba(0, 0, 0, 0.0), 
+        $background:var(--uikit-color-background-block)
     );
 };
 // Располагается внутри second
 @mixin third{
     @include glass(
-        $background:#4d4d4d77
+        $background:var(--uikit-color-background-element)
     );
 }
 // Располагается внутри third
 @mixin fourth{
     @include glass(
-        $background:#63636377
+        $background:var(--uikit-color-background-modificator)
     );
 }
 

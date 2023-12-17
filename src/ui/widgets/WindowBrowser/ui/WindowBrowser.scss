@@ -12,10 +12,10 @@
     max-height: 90%;
     max-width: 90%;
 
-    margin: var(--uikit-margin-quad);
+    margin: var(--uikit-margin-window-strength-quad);
 
-    border-radius: var(--uikit-border-radius-windows);
-	border: var(--uikit-border-windows);
+    border-radius: var(--uikit-border-radius-window);
+	border: var(--uikit-border-window);
 
     overflow: hidden;
 }

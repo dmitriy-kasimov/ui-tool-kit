@@ -10,8 +10,8 @@
 	&:active{
 		@include controls.active;
 	}
-	padding: var(--uikit-padding-strength-width);
-	margin: var(--uikit-margin-strength-height);
+	padding: var(--uikit-padding-control-strength-width);
+	margin: var(--uikit-margin-control-strength-height);
 
 	display: inline-block;	
 

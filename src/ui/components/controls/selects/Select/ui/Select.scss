@@ -11,7 +11,7 @@
   border: var(--uikit-border-controls);
   border-radius: var(--uikit-border-radius-controls);
 
-	margin: var(--uikit-margin-strength-height);
+	margin: var(--uikit-margin-control-strength-height);
 
   z-index: 10;
 }
@@ -36,7 +36,7 @@
   background: none;
   width: 100%;
   border: none;
-  padding: var(--uikit-padding-strength-width);
+  padding: var(--uikit-padding-control-strength-width);
 }
   
 // .Select__wrapper__placeholder[data-status="default"] {

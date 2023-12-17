@@ -1,15 +1,18 @@
 :root{
-    --uikit-padding-default: 10px 5px;
-    --uikit-padding-strength: 1rem 1.25rem;
+//  Внутренние отступы для окон
+    --uikit-padding-window-strength-quad: 0.2rem 0.2rem;
+    --uikit-padding-window-strength-width: 0.1rem 0.5rem;
+    --uikit-padding-window-strength-height: 0.3rem 0.15rem;
 
-    --uikit-padding-quad: 0.1rem 0.1rem;
-    --uikit-padding-strength-width: 0.5rem 1rem;
 
-    //Выделил в переменные, чтобы переиспользовать и избежать магических чисел
-    --uikit-padding-strength-height-h: 0.3rem;
-    --uikit-padding-strength-height-w: 0.2rem;
-    --uikit-padding-strength-height: 
-        var(--uikit-padding-strength-height-h)
-        var(--uikit-padding-strength-height-w);
-    
+//  Внутренние отступы для форм
+    --uikit-padding-form-strength-quad: 0.2rem 0.2rem;
+    --uikit-padding-form-strength-width: 0.1rem 0.5rem;
+    --uikit-padding-form-strength-height: 0.3rem 0.2rem;
+
+
+//  Внутренние отступы для элементов управления
+    --uikit-padding-control-strength-quad: 0.1rem 0.1rem;
+    --uikit-padding-control-strength-width: 0.5rem 1rem;
+    --uikit-padding-control-strength-height: 0.3rem 0.15rem;
 }
