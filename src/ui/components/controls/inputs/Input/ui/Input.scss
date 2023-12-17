@@ -10,55 +10,55 @@
     flex-direction: column;
     align-items: flex-end;
     margin: var(--uikit-margin-strength-height);
-    
-    .Input__Background{
-        @include controls.defaultStyles;
-        &:hover{
-            @include controls.hover
-        }
-        
-        display: flex;
-        align-items: center;
+}
 
-        border-radius: var(--uikit-border-radius-controls);
-	    border: var(--uikit-border-controls);
-
-        .Input__Background__Field {
-            position: relative;
-        
-            display: flex;
-            flex-direction: column;
-
-            .Input__Background__Field__label {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                padding: 1rem .75rem;
-                pointer-events: none;
-                border: 1px solid transparent;
-                transform-origin: 0 0;
-                transition: opacity .15s ease-in-out, transform .15s ease-in-out;
-            }
-        }
-
-        .Input__Background__SwitcherMask{
-            margin-right: 0.5rem;
-
-            .SwitcherMask{
-                cursor: pointer;
-                &:active{
-                    transform: scale(0.96);
-                }
-            }
-        }
+.Input__Background{
+    @include controls.defaultStyles;
+    &:hover{
+        @include controls.hover
     }
-    .Input__counter{
-        align-self: flex-end;
-        margin: var(--uikit-margin-strength);
+    
+    display: flex;
+    align-items: center;
+
+    border-radius: var(--uikit-border-radius-controls);
+    border: var(--uikit-border-controls);
+}
+
+.Input__Background__Field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    .Input__Background__Field__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 1rem .75rem;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .15s ease-in-out, transform .15s ease-in-out;
     }
 }
 
+.Input__Background__SwitcherMask{
+    margin-right: 0.5rem;
+
+    .SwitcherMask{
+        cursor: pointer;
+        &:active{
+            transform: scale(0.96);
+        }
+    }
+}
+
+.Input__counter{
+    align-self: flex-end;
+    margin: var(--uikit-margin-strength);
+}
 
 .Input__Background__Field__input{
     background-color: transparent;

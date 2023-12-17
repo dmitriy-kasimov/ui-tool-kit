@@ -3,9 +3,12 @@
 
 @mixin defaultStyles{
     @include glasses.controls;
-
+    
+    user-select: none;
     cursor: pointer;
 }
+
+// Ивенты для элементов управления
 
 @mixin hover{
     background-color: #afafaf94;
@@ -23,4 +26,18 @@
 @mixin disabled{
     pointer-events: none;
 	opacity: 0.5;
+}
+
+// Валидация для элементов управления
+
+.validationError{
+    border-color: var(--uikit-font-color-error);
+}
+
+.validationWarning{
+    border-color: var(--uikit-font-color-warning);
+}
+
+.validationSuccessfully{
+    border-color: var(--uikit-font-color-successfully);
 }

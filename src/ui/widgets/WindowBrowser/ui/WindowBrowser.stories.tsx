@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -10,6 +10,8 @@ import { Button } from 'ui/components/controls/buttons/Button';
 import { Input } from 'ui/components/controls/inputs/Input';
 import { Checkbox } from 'ui/components/controls/checkboxes/Checkbox';
 import { Tape } from 'ui/widgets/Tape';
+import Select from 'ui/components/controls/selects/Select/ui/Select';
+import { validationStatus } from 'ui/components/controls';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -46,6 +48,21 @@ export const WindowBrowserReg: Story = {
     },  
 };
 
+
+const options = [
+    { "title": "янв", "value": "01" },
+    { "title": "фев", "value": "02" },
+    { "title": "мар", "value": "03" },
+    { "title": "апр", "value": "04" },
+    { "title": "май", "value": "05" },
+    { "title": "июн", "value": "06" },
+    { "title": "июл", "value": "07" },
+    { "title": "авг", "value": "08" },
+    { "title": "сен", "value": "09" },
+    { "title": "окт", "value": "10" },
+    { "title": "ноя", "value": "11" },
+    { "title": "дек", "value": "12" }
+];
 export const WindowBrowserGlobal: Story = {
   args: {
       title: 'Заголовок',
@@ -75,12 +92,18 @@ export const WindowBrowserGlobal: Story = {
 
             <Panel>
               <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-                <Input disabled defaultValue={'TR271V0R'} label={'Ur nickname'} limit={32}/>
-                <Input label={'Ur mail (optional)'} limit={64}/>
-                <Input label={'Ur pass'} limit={32} masked/>
-                <Input label={'confirm pass'} limit={32} masked/>
-        
-                <Checkbox id='rules'> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
+                <Input value='TR271V0R' onChange={() => {}} disabled label={'Ur nickname'} limit={32}/>
+                <Input value='' onChange={() => {}} label={'Ur mail (optional)'} limit={64}/>
+                <Input value='' onChange={() => {}} label={'Ur pass'} limit={32} masked/>
+                <Input value='' onChange={() => {}} label={'confirm pass'} limit={32} masked/>
+                <Select
+                    mode='rows'
+                    options={options}
+                    selected={null}
+                    onChange={() => {}}
+                    placeholder='Выберите месяц'
+                />
+                <Checkbox id='rules' onChange={()=>{}}> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
                 <br/>
                 <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
                 <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>

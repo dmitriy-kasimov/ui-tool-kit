@@ -16,6 +16,7 @@
 .custom-checkbox+label::before {
     @include controls.defaultStyles;
 
+    border: var(--uikit-border-controls);
     border-radius: 0.25em;
 
     content: '';

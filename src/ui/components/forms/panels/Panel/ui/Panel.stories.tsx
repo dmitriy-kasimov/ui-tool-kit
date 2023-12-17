@@ -29,12 +29,12 @@ export const PanelDefault: Story = {
     args: {
         children: (
           <>
-           
+            
           </>
         ),
     },
 };
-const defaultStr: string = 'Lorem ipsum dolor sit amet';
+
 export const PanelGlobal: Story = {
     args: {
         children: (
@@ -47,7 +47,7 @@ export const PanelGlobal: Story = {
             <Input label={'Ur pass'} limit={32} masked/>
             <Input label={'confirm pass'} limit={32} masked/>
             <br/>
-            <Checkbox> <Text size={textSize.REGULAR}>{defaultStr}</Text> </Checkbox>
+            <Checkbox id='zhupa'> <Text size={textSize.REGULAR}>Check the tape</Text> </Checkbox>
             <br/>
             <Text size={textSize.TITLE}>size: TITLE</Text>
             <br/>

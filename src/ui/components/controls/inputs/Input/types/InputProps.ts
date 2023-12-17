@@ -1,10 +1,14 @@
-import { InputHTMLAttributes } from "react";
+import { ChangeEvent, InputHTMLAttributes } from "react";
+import { validationStatus } from "ui/components/controls";
 
 export interface InputProps  extends InputHTMLAttributes<HTMLInputElement> {
+    value: string;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+
     label: string;
     limit: number;
-
-    defaultValue?: string;
+  
+    valid?: validationStatus;
     disabled?: boolean;
     masked?: boolean;
 }

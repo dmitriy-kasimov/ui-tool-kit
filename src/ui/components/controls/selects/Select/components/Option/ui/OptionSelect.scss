@@ -1,0 +1,22 @@
+@use '../../../../../controls';
+
+.OptionSelect__option {
+    @include controls.defaultStyles;
+
+    border: none;
+
+    padding: var(--uikit-padding-strength-width);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: none; 
+}
+  
+.OptionSelect__option[aria-selected="true"] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.OptionSelect__option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

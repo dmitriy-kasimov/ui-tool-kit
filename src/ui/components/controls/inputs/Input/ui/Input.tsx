@@ -5,25 +5,31 @@ import { Text, textSize } from "ui/components/shared/text/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
+import { getValidationClasses, validationStatus } from "ui/components/controls";
 
 export const Input: FC<InputProps> = ({
+                                        value,     
+                                        onChange,
+                                        
                                         label,
                                         limit,
-
-                                        defaultValue='',
+                                        
+                                        valid=validationStatus.DEFAULT,
                                         disabled=false,
                                         masked = false,
                                     }) => {
     
     const [count, setCount] = useState<number>(0);
-    const [text, setText] = useState<string>(defaultValue);
+    const [text, setText] = useState<string>(value);
 
     const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const input: string = e.target.value;
-        if(input.length < limit){
+        if(input.length <= limit){
             setText(input);
+            setCount(input.length)
+
+            onChange(e);
         }
-        setCount(input.length)
     }
 
     const [type, setType] = useState<string>(masked ? 'password' : 'text');
@@ -33,12 +39,17 @@ export const Input: FC<InputProps> = ({
 
 
     const rootClasses: string[] = ['Input'];
-    console.log(disabled);
+    rootClasses.push(getValidationClasses(valid));
+    
     if(disabled)
         rootClasses.push('disabled');
+
+    const inputBackgroundClasses: string[] = ['Input__Background'];
+    inputBackgroundClasses.push(getValidationClasses(valid));
+
     return(
         <span className={rootClasses.join(' ')}>
-            <div className="Input__Background">
+            <div className={inputBackgroundClasses.join(' ')}>
                 <div className="Input__Background__Field">
                     <input 
                         className="Input__Background__Field__input" 
