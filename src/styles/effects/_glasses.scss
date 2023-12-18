@@ -45,7 +45,7 @@
 // ===
 
 // Элементы управления (инпуты, кнопки т. д.)
-@mixin controls{
+@mixin control{
     @include glass(
         $background: var(--uikit-background-controls)
     );

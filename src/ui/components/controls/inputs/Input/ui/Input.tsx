@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FC, useState} from "react";
 import { InputProps } from "../types/InputProps";
 import './Input.scss'
-import { Text, textSize } from "ui/components/shared/text/Text";
+import { Text, textColor, textSize } from "ui/components/shared/text/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
@@ -71,7 +71,40 @@ export const Input: FC<InputProps> = ({
                         </Text>
                     </label>
                 </div>
-                <div className="Input__Background__SwitcherMask">
+                <button 
+                    className="Input__Background__SwitcherMask"
+                    onClick={switchMask}
+                > 
+                {
+                    masked 
+                    ?
+                        <>
+                            {
+                                type === 'text' 
+                                    ?
+                                <MaskText />
+                                    :
+                                <UnmaskText />
+                            }
+                        </>
+                    :
+                        <>
+                        </>
+                }
+                </button>
+            </div>
+
+            <span 
+                className="Input__counter"
+            >
+                <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{count} / {limit}</Text>
+            </span>
+        </span>
+    )
+}
+
+/*
+            <div className="Input__Background__SwitcherMask">
                 {
                     masked 
                     ?
@@ -91,14 +124,5 @@ export const Input: FC<InputProps> = ({
                         <>
                         </>
                 }
-                </div>
             </div>
-
-            <span 
-                className="Input__counter"
-            >
-                <Text size={textSize.REGULARSMALL}>{count} / {limit}</Text>
-            </span>
-        </span>
-    )
-}
+*/

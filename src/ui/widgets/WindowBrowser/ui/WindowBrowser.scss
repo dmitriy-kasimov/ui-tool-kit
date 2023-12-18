@@ -3,7 +3,7 @@
 
 .WindowBrowser{
     @include glasses.first();
-    @include shadows.form;
+    @include shadows.window;
 
     display: inline-flex;
     flex-direction: column;

@@ -24,7 +24,8 @@ export const Link: FC<LinkProps> = ({
     >
       <Text
         className="LinkText"
-        size={textSize.IMPORTANT}
+        font={textFont.TITLE}
+        size={textSize.REGULAR}
       >
         {name}
       </Text>

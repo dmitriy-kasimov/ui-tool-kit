@@ -1,8 +1,12 @@
+@mixin window{
+    box-shadow: 0 10px 15px var(--uikit-color-shadow-form);
+}
+
 @mixin form{
     box-shadow: 0 10px 15px var(--uikit-color-shadow-form);
 }
 
-@mixin controls{
+@mixin control{
     $shadow-color: var(--uikit-color-shadow-control);
     $indent: 3px;
     $dispersia: 5px;

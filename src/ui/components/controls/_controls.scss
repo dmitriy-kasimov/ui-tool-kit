@@ -1,8 +1,10 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
+@use 'styles/effects/anims';
 
 @mixin defaultStyles{
-    @include glasses.controls;
+    @include anims.control;
+    @include glasses.control;
     
     user-select: none;
     cursor: pointer;
@@ -15,7 +17,7 @@
 }
 
 @mixin focus{
-    @include shadows.controls;
+    @include shadows.control;
    
 }
 

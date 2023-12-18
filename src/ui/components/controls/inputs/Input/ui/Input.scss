@@ -45,13 +45,14 @@
 }
 
 .Input__Background__SwitcherMask{
-    margin-right: 0.5rem;
+    background: transparent;
+    border: none;
 
-    .SwitcherMask{
-        cursor: pointer;
-        &:active{
-            transform: scale(0.96);
-        }
+    margin-right: 0.5rem;
+    cursor: pointer;
+
+    &:active{
+        transform: scale(0.9);
     }
 }
 

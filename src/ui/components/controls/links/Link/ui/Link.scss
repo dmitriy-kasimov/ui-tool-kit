@@ -36,9 +36,6 @@
 .Link:focus-visible {
 	@include controls.focus;
 }
-// .Link:focus-visible {
-// 	box-shadow: 0 0 0 0.2rem rgba(232, 243, 255, 0.25);
-// }
 
 .Link:disabled {
 	@include controls.disabled;
