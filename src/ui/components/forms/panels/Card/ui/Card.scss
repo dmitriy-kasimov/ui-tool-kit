@@ -1,5 +1,5 @@
 @use 'styles/effects/glasses';
-.Panel{
+.Card{
     @include glasses.second();
 
     display: inline-flex;

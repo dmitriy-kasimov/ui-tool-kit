@@ -4,16 +4,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
-import { Panel } from '../index';
+import { Card } from '../index';
 import { Button } from 'ui/components/controls/buttons/Button';
-import { Input } from 'ui/components/controls/inputs/Input';
+import { TextField } from 'ui/components/controls/inputs/TextField';
 import { Text, textColor, textSize } from 'ui/components/shared/text/Text';
-import { Checkbox } from 'ui/components/controls/checkboxes/Checkbox';
+import { Checkbox } from 'ui/components/controls/inputs/Checkbox';
 
 
-const meta: Meta<typeof Panel> = {
-    title: 'components/Panel',
-    component: Panel,
+const meta: Meta<typeof Card> = {
+    title: 'components/Card',
+    component: Card,
     decorators: [
       (Story) => (
         decoratorBackground(Story)
@@ -30,9 +30,9 @@ const meta: Meta<typeof Panel> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Panel>;
+type Story = StoryObj<typeof Card>;
 
-export const PanelWithContent: Story = {
+export const CardWithContent: Story = {
     args: {
         children: (
           <div style={{display: 'flex', flexDirection: 'column'}}>

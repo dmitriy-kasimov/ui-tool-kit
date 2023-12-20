@@ -1,15 +1,17 @@
-import React, {FC} from "react";
-import { PanelProps } from "../types/PanelProps";
-import './Panel.scss'
-import { Checkbox } from "ui/components/controls/checkboxes/Checkbox";
-//import Select from "ui/components/controls/selects/Select/ui/Select";
+import React, {FC, useState} from "react";
+import { CardProps } from "../types/CardProps";
+import './Card.scss'
+import { Switcher } from "ui/components/controls/inputs/Switcher";
+// import { Checkbox } from "ui/components/controls/inputs/Checkbox";
+// import { Slider } from "ui/components/controls/inputs/Slider";
+//import Select from "ui/components/controls/inputs/Select/ui/Select";
 
-export const Panel: FC<PanelProps> = ({
+export const Card: FC<CardProps> = ({
                                         className = '', 
                                         children
                                     }) => {
     
-    const rootClasses: string[] = ['Panel'];
+    const rootClasses: string[] = ['Card'];
     rootClasses.push(className);
     
     // const [month, setMonthValue] = useState('');
@@ -33,7 +35,11 @@ export const Panel: FC<PanelProps> = ({
     // ];
     // const selectedMonth = options.find((item) => item.value === month);                                   
 
-    
+    // const [value, setValue] = useState(0);
+    // const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setValue(Number(e.target.value))
+    // }
+    const [value, setValue] = useState(false);
     return(
         <>
             {/* <div style={{width: 250, margin: 'auto'}}>
@@ -45,7 +51,18 @@ export const Panel: FC<PanelProps> = ({
                     placeholder='Выберите месяц'
                 />
             </div> */}
-
+                {/* <Slider
+                  value={value}
+                  onChange={changeHandler}
+                  label='Neck'
+                  min={0}
+                  max={10}
+                  step={1}
+                /> */}
+                <Switcher
+                  value={value}
+                  onChange={() => setValue(!value)}
+                id={'123'}/>
             <div className={rootClasses.join(' ')}>
                 {children}
             </div>

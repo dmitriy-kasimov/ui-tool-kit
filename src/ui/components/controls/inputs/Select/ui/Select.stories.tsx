@@ -37,6 +37,16 @@ export const SelectDefault: Story = {
     },
 };
 
+export const SelectDisabled: Story = {
+    args: {
+        selected: null,
+        options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
+        placeholder: 'select tool',
+        mode: 'rows',
+        disabled: true
+    },
+};
+
 export const SelectValidationError: Story = {
     args: {
         valid: validationStatus.ERROR,

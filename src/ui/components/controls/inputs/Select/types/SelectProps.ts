@@ -9,6 +9,7 @@ export type SelectProps = {
     onChange?: (selected: Option['value']) => void;
     onClose?: () => void;
     valid?: validationStatus;
+    disabled?: boolean;
 }
 
 export type Option = {

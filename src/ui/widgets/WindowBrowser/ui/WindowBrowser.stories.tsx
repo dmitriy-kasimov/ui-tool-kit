@@ -5,12 +5,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { WindowBrowser } from './WindowBrowser';
 import { Text, textColor, textSize } from 'ui/components/shared/text/Text';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Panel } from 'ui/components/forms/panels/Panel';
+import { Card } from 'ui/components/forms/panels/Card';
 import { Button } from 'ui/components/controls/buttons/Button';
-import { Input } from 'ui/components/controls/inputs/Input';
-import { Checkbox } from 'ui/components/controls/checkboxes/Checkbox';
+import { TextField } from 'ui/components/controls/inputs/TextField';
+import { Checkbox } from 'ui/components/controls/inputs/Checkbox';
 import { Tape } from 'ui/widgets/Tape';
-import { Select } from 'ui/components/controls/selects/Select';
+import { Select } from 'ui/components/controls/inputs/Select';
+import { Slider } from 'ui/components/controls/inputs/Slider';
+import { Switcher } from 'ui/components/controls/inputs/Switcher';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -72,7 +74,7 @@ export const WindowBrowserGlobal: Story = {
       children: (
         <>
           <div style={{display:'inline-flex', alignItems:'flex-start'}}>
-            <Panel>
+            <Card>
               <Tape
                 title='The latest news'
                 posts={[
@@ -87,14 +89,25 @@ export const WindowBrowserGlobal: Story = {
                   {id: 1, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
                 ]}
               />
-            </Panel>
+            </Card>
 
-            <Panel>
+            <Card>
               <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-                <Input value='TR271V0R' onChange={() => {}} disabled label={'Ur nickname'} limit={32}/>
-                <Input value='' onChange={() => {}} label={'Ur mail (optional)'} limit={64}/>
-                <Input value='' onChange={() => {}} label={'Ur pass'} limit={32} masked/>
-                <Input value='' onChange={() => {}} label={'confirm pass'} limit={32} masked/>
+                <TextField value='TR271V0R' onChange={() => {}} disabled label={'Ur nickname'} limit={32}/>
+                <TextField value='' onChange={() => {}} label={'Ur mail (optional)'} limit={64}/>
+                <TextField value='' onChange={() => {}} label={'Ur pass'} limit={32} masked/>
+                <TextField value='' onChange={() => {}} label={'confirm pass'} limit={32} masked/>
+                <Slider 
+                  value={5}
+                  onChange={() => {}}
+                  min={0}
+                  max={10}
+                  step={1}
+                />
+                <Switcher 
+                  value={true}
+                  onChange={() => {}}
+                id={'123'}/>
                 <Select
                     mode='rows'
                     options={options}
@@ -107,9 +120,9 @@ export const WindowBrowserGlobal: Story = {
                 <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
                 <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
               </div>
-            </Panel>
+            </Card>
 
-            <Panel>
+            <Card>
               <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
                   <Text size={textSize.TITLE}>size: TITLE</Text>
                   <br/>
@@ -133,7 +146,7 @@ export const WindowBrowserGlobal: Story = {
                   <br/>
                   <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
                 </div>
-              </Panel>
+              </Card>
           </div>
         </>
       )

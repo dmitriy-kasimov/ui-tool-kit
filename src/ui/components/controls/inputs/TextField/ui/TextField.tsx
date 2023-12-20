@@ -1,13 +1,13 @@
 import React, {ChangeEvent, FC, useState} from "react";
-import { InputProps } from "../types/InputProps";
-import './Input.scss'
+import { TextFieldProps } from "../types/TextFieldProps";
+import './TextField.scss'
 import { Text, textColor, textSize } from "ui/components/shared/text/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 
-export const Input: FC<InputProps> = ({
+export const TextField: FC<TextFieldProps> = ({
                                         value,     
                                         onChange,
                                         
@@ -22,7 +22,7 @@ export const Input: FC<InputProps> = ({
     const [count, setCount] = useState<number>(0);
     const [text, setText] = useState<string>(value);
 
-    const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeTextField = (e: ChangeEvent<HTMLInputElement>) => {
         const input: string = e.target.value;
         if(input.length <= limit){
             setText(input);
@@ -38,23 +38,23 @@ export const Input: FC<InputProps> = ({
     }
 
 
-    const rootClasses: string[] = ['Input'];
+    const rootClasses: string[] = ['TextField'];
     rootClasses.push(getValidationClasses(valid));
     
     if(disabled)
         rootClasses.push('disabled');
 
-    const inputBackgroundClasses: string[] = ['Input__Background'];
+    const inputBackgroundClasses: string[] = ['TextField__Background'];
     inputBackgroundClasses.push(getValidationClasses(valid));
 
     return(
         <span className={rootClasses.join(' ')}>
             <div className={inputBackgroundClasses.join(' ')}>
-                <div className="Input__Background__Field">
+                <div className="TextField__Background__Field">
                     <input 
-                        className="Input__Background__Field__input" 
+                        className="TextField__Background__Field__input" 
                         value={text}
-                        onChange={onChangeInput}
+                        onChange={onChangeTextField}
                         type={type} 
                         id={label}
                         placeholder=''
@@ -63,7 +63,7 @@ export const Input: FC<InputProps> = ({
                         disabled={disabled}
                     />
                     <label 
-                        className="Input__Background__Field__label" 
+                        className="TextField__Background__Field__label" 
                         htmlFor={label}
                     >
                         <Text>
@@ -72,7 +72,7 @@ export const Input: FC<InputProps> = ({
                     </label>
                 </div>
                 <button 
-                    className="Input__Background__SwitcherMask"
+                    className="TextField__Background__SwitcherMask"
                     onClick={switchMask}
                 > 
                 {
@@ -95,7 +95,7 @@ export const Input: FC<InputProps> = ({
             </div>
 
             <span 
-                className="Input__counter"
+                className="TextField__counter"
             >
                 <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{count} / {limit}</Text>
             </span>
@@ -104,7 +104,7 @@ export const Input: FC<InputProps> = ({
 }
 
 /*
-            <div className="Input__Background__SwitcherMask">
+            <div className="TextField__Background__SwitcherMask">
                 {
                     masked 
                     ?

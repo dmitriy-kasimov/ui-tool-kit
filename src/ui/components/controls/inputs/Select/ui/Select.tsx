@@ -19,6 +19,7 @@ const Select = (props: SelectProps) => {
         onChange,
         onClose,
         valid = validationStatus.DEFAULT,
+        disabled = false
     } = props;
 
     const placeholderRef = useRef<HTMLDivElement>(null);
@@ -69,6 +70,8 @@ const Select = (props: SelectProps) => {
 
     const rootClasses: string[] = ['Select__wrapper'];
     rootClasses.push(getValidationClasses(valid));
+    if(disabled)
+      rootClasses.push('disabled');
     
     return (
         <div

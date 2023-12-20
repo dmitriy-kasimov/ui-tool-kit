@@ -2,14 +2,14 @@ import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from '../index';
+import { TextField } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/text/Text';
 import { validationStatus } from 'ui/components/controls';
 
-const meta: Meta<typeof Input> = {
-    title: 'components/Input',
-    component: Input,
+const meta: Meta<typeof TextField> = {
+    title: 'components/TextField',
+    component: TextField,
     decorators: [
       (Story) => (
         decoratorBackground(Story)
@@ -26,9 +26,9 @@ const meta: Meta<typeof Input> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof TextField>;
 
-export const InputDefault: Story = {
+export const TextFieldDefault: Story = {
     args: {
         label: 'Ur name',
         limit: 10,
@@ -36,7 +36,7 @@ export const InputDefault: Story = {
     },
 };
 
-export const InputValidationError: Story = {
+export const TextFieldValidationError: Story = {
   args: {
       label: 'Ur name',
       limit: 10,
@@ -44,21 +44,21 @@ export const InputValidationError: Story = {
   },
 };
 
-export const InputValidationWarning: Story = {
+export const TextFieldValidationWarning: Story = {
   args: {
       label: 'Ur name',
       limit: 10,
       valid: validationStatus.WARNING
   },
 };
-export const InputValidationSuccessfully: Story = {
+export const TextFieldValidationSuccessfully: Story = {
   args: {
       label: 'Ur name',
       limit: 10,
       valid: validationStatus.SUCCESSFULLY
   },
 };
-export const InputDisabled: Story = {
+export const TextFieldDisabled: Story = {
   args: {
       label: 'Ur name',
       limit: 10,
@@ -66,7 +66,7 @@ export const InputDisabled: Story = {
   },
 };
 
-export const InputMask: Story = {
+export const TextFieldMask: Story = {
   args: {
       label: 'Ur pass',
       limit: 32,

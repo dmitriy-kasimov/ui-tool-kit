@@ -1,8 +1,8 @@
 import { ChangeEvent, InputHTMLAttributes } from "react";
 import { validationStatus } from "ui/components/controls";
 
-//export interface InputProps  extends InputHTMLAttributes<HTMLInputElement> {
-export interface InputProps {
+//export interface TextFieldProps  extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps {
     value: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 

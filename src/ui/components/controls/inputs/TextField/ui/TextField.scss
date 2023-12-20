@@ -5,14 +5,14 @@
 .disabled{
     @include controls.disabled;
 }
-.Input{
+.TextField{
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
     margin: var(--uikit-margin-control-strength-height);
 }
 
-.Input__Background{
+.TextField__Background{
     @include controls.defaultStyles;
     &:hover{
         @include controls.hover
@@ -25,13 +25,13 @@
     border: var(--uikit-border-controls);
 }
 
-.Input__Background__Field {
+.TextField__Background__Field {
     position: relative;
 
     display: flex;
     flex-direction: column;
 
-    .Input__Background__Field__label {
+    .TextField__Background__Field__label {
         position: absolute;
         top: 0;
         left: 0;
@@ -44,7 +44,7 @@
     }
 }
 
-.Input__Background__SwitcherMask{
+.TextField__Background__SwitcherMask{
     background: transparent;
     border: none;
 
@@ -56,12 +56,12 @@
     }
 }
 
-.Input__counter{
+.TextField__counter{
     align-self: flex-end;
     margin: 0 5px;
 }
 
-.Input__Background__Field__input{
+.TextField__Background__Field__input{
     background-color: transparent;
 
     border: none;
@@ -79,19 +79,19 @@
 }
 
 
-.Input__Background__Field__input::-moz-placeholder {
+.TextField__Background__Field__input::-moz-placeholder {
     color: transparent;
 }
-.Input__Background__Field__input::placeholder {
+.TextField__Background__Field__input::placeholder {
     color: transparent;
 }
-.Input__Background__Field__input:focus,
-.Input__Background__Field__input:not(:placeholder-shown) {
+.TextField__Background__Field__input:focus,
+.TextField__Background__Field__input:not(:placeholder-shown) {
     padding-top: 1.625rem;
     padding-bottom: .625rem;
 }
-.Input__Background__Field__input:focus~.Input__Background__Field__label,
-.Input__Background__Field__input:not(:placeholder-shown)~.Input__Background__Field__label {
+.TextField__Background__Field__input:focus~.TextField__Background__Field__label,
+.TextField__Background__Field__input:not(:placeholder-shown)~.TextField__Background__Field__label {
     opacity: .65;
     transform: scale(.85) translateY(-.75rem) translateX(.15rem);
 }
