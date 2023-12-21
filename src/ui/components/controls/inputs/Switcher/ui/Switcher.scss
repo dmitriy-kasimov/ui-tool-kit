@@ -49,7 +49,7 @@
 }
 
 .Switcher__input__checked + .Switcher__label {
-    background: var(--uikit-color-successfully-light);
+    background: var(--uikit-color-is-active);
 }
 
 .Switcher__input__checked + .Switcher__label:after {

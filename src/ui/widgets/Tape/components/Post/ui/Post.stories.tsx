@@ -7,7 +7,7 @@ import { Text, textColor } from 'ui/components/shared/text/Text';
 
 
 const meta: Meta<typeof Post> = {
-    title: 'components/Post',
+    title: 'widgets/Tape/Post',
     component: Post,
     parameters: {
         layout: 'centered',

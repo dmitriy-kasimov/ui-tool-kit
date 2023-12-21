@@ -6,7 +6,7 @@ import './Switcher.scss'
 const Switcher:FC<SwitcherProps> = ({id, value, onChange, disabled}) => {
   
     const rootClasses: string[] = ['Switcher'];
-    if(value)
+    if(disabled)
         rootClasses.push('disabled');
     
     const inputClasses: string[] = ['Switcher__input'];

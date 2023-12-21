@@ -25,7 +25,7 @@ const Slider: FC<SliderProps> = ({
       />
       <span className="Slider__info">
         <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{min}</Text>
-        <Text color={textColor.SECONDARY}>{value}</Text>
+        <Text >{value}</Text>
         <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{max}</Text>
       </span>
     </span>
