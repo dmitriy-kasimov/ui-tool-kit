@@ -1,7 +1,6 @@
 @use 'styles/effects/glasses';
 .Card{
-    @include glasses.sectionBlock();
-
+    @include glasses.section();
     display: inline-flex;
 
     margin: var(--uikit-margin-section-strength-height);

@@ -3,7 +3,7 @@
             $background, 
             ){
 
-    $blur: 3px;
+    $blur: 5px;
                 
     background: $background;
 
@@ -15,28 +15,31 @@
     Названия миксинов - уровень вложенности блоков
 */
 
-// Главная панель
+
 @mixin window{
     @include glass(
         $background:var(--uikit-color-background-window)
     );
 }; 
-// Располагается внутри главной панели (first)
-@mixin sectionBlock{
+
+@mixin section{
     @include glass(
-        $background:var(--uikit-color-background-section-block)
+        $background:var(--uikit-background-section)
     );
 };
-// Располагается внутри second
+@mixin sectionBlock{
+    @include glass(
+        $background:var(--uikit-background-section-block)
+    );
+};
 @mixin sectionElement{
     @include glass(
-        $background:var(--uikit-color-background-section-element)
+        $background:var(--uikit-background-section-element)
     );
 }
-// Располагается внутри third
 @mixin sectionModificator{
     @include glass(
-        $background:var(--uikit-color-background-section-modificator)
+        $background:var(--uikit-background-section-modificator)
     );
 }
 

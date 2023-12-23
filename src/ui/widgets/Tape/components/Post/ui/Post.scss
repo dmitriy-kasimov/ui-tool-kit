@@ -1,8 +1,9 @@
 @use 'styles/effects/glasses';
 .Post{
+    @include glasses.sectionModificator;
     max-width: 600px;
 
-    @include glasses.sectionModificator;
+
     border: none;
 
     display: flex;

@@ -40,7 +40,7 @@
         pointer-events: none;
         border: 1px solid transparent;
         transform-origin: 0 0;
-        transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
     }
 }
 
@@ -66,10 +66,10 @@
 
     border: none;
 
-    font-size: var(--uikit-font-size-important);
+    font-size: var(--uikit-font-size-regular);
     height: calc(3.5rem + 2px);
     line-height: 1.25;
-    padding: 0.75rem 0.5rem;
+    padding-left: 0.5rem;
 
     &:focus{
         outline: none;

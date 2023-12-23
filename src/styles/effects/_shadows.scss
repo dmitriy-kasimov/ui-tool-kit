@@ -1,9 +1,26 @@
 @mixin window{
-    box-shadow: 0 10px 15px var(--uikit-color-shadow-section);
+    $shadow-color: var(--uikit-color-shadow-window);
+    $indent: 10px;
+    $dispersia: 15px;
+
+    box-shadow: 
+                0   $indent     $dispersia $shadow-color,
+                0   -1*$indent  $dispersia $shadow-color,
+                $indent     0   $dispersia $shadow-color,
+                -1*$indent  0   $dispersia $shadow-color;
 }
 
 @mixin section{
-    box-shadow: 0 10px 15px var(--uikit-color-shadow-section);
+    box-shadow: 0 10px 20px var(--uikit-color-shadow-section);
+}
+@mixin sectionBlock{
+    box-shadow: 0 8px 17px var(--uikit-color-shadow-section);
+}
+@mixin sectionElement{
+    box-shadow: 0 6px 13px var(--uikit-color-shadow-section);
+}
+@mixin sectionModificator{
+    box-shadow: 0 4px 10px var(--uikit-color-shadow-section);
 }
 
 @mixin control{
