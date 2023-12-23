@@ -3,12 +3,12 @@
 
 
 .WindowBrowserHeader{
-    @include glasses.second();
+    @include glasses.sectionBlock();
     border-radius: 0;
     border-top: none;
     border-left: none;
     border-right: none;
-    @include shadows.form;
+    @include shadows.section;
 
     display: flex;
     justify-content: space-between;

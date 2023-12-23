@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextField } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Text } from 'ui/components/shared/text/Text';
+import { Text } from 'ui/components/shared/Text';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof TextField> = {

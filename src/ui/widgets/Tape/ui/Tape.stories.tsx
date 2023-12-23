@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Tape } from '../index';
-import { Text, textColor, textSize } from 'ui/components/shared/text/Text';
+import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 
 const meta: Meta<typeof Tape> = {

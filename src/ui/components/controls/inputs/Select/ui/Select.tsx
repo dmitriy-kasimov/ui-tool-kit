@@ -5,7 +5,7 @@ import './Select.scss'
 
 import ArrowDown from 'styles/assets/icons/arrowDown.svg'
 import OptionSelect from '../components/Option/ui/OptionSelect';
-import { Text } from 'ui/components/shared/text/Text';
+import { Text } from 'ui/components/shared/Text';
 import { getValidationClasses, validationStatus } from 'ui/components/controls';
 
 const Select = (props: SelectProps) => {

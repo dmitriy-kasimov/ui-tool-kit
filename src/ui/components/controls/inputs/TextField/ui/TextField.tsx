@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FC, useState} from "react";
 import { TextFieldProps } from "../types/TextFieldProps";
 import './TextField.scss'
-import { Text, textColor, textSize } from "ui/components/shared/text/Text";
+import { Text, textColor, textSize } from "ui/components/shared/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"

@@ -2,7 +2,7 @@ import React, {FC} from "react"
 import { PostProps } from "../types/PostProps"
 
 import './Post.scss'
-import { Text, textColor, textSize } from "ui/components/shared/text/Text"
+import { Text, textColor, textSize } from "ui/components/shared/Text"
 
 export const Post: FC<PostProps> = ({
                                     id,

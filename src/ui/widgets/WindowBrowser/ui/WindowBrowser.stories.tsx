@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { WindowBrowser } from './WindowBrowser';
-import { Text, textColor, textSize } from 'ui/components/shared/text/Text';
+import { Text, textColor, textSize } from 'ui/components/shared/Text';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Card } from 'ui/components/forms/panels/Card';
+import { Card } from 'ui/components/sections/Card';
 import { Button } from 'ui/components/controls/buttons/Button';
 import { TextField } from 'ui/components/controls/inputs/TextField';
 import { Checkbox } from 'ui/components/controls/inputs/Checkbox';

@@ -1,9 +1,9 @@
 @mixin window{
-    box-shadow: 0 10px 15px var(--uikit-color-shadow-form);
+    box-shadow: 0 10px 15px var(--uikit-color-shadow-section);
 }
 
-@mixin form{
-    box-shadow: 0 10px 15px var(--uikit-color-shadow-form);
+@mixin section{
+    box-shadow: 0 10px 15px var(--uikit-color-shadow-section);
 }
 
 @mixin control{

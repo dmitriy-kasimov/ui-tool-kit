@@ -1,8 +1,8 @@
 import React, {FC} from "react";
 import './Link.scss'
 import { LinkProps } from "../types/LinkProps";
-import { Text } from "ui/components/shared/text/Text/ui/Text";
-import { textColor, textFont, textSize } from "ui/components/shared/text/Text/types/TextProps";
+import { Text } from "ui/components/shared/Text/ui/Text";
+import { textColor, textFont, textSize } from "ui/components/shared/Text/types/TextProps";
 
 export const Link: FC<LinkProps> = ({
                                       name, 

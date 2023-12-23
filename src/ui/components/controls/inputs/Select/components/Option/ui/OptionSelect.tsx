@@ -4,7 +4,7 @@ import { MouseEventHandler } from "react";
 import { Option } from "../../../types/SelectProps";
 
 import './OptionSelect.scss';
-import { Text } from "ui/components/shared/text/Text";
+import { Text } from "ui/components/shared/Text";
 
 
 type OptionProps = {

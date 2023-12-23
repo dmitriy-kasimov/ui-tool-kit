@@ -1,25 +1,25 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
 .Tape{
-    @include glasses.third;
+    @include glasses.sectionElement;
 
     display: inline-flex;
     flex-direction: column;
 
-    margin: var(--uikit-margin-form-strength-height);
+    margin: var(--uikit-margin-section-strength-height);
 
-    border-radius: var(--uikit-border-radius-form);
-	border: var(--uikit-border-form);
+    border-radius: var(--uikit-border-radius-section);
+	border: var(--uikit-border-section);
 
     max-height: 700px;
 
     .Tape__header{
-        @include glasses.second;
+        @include glasses.sectionBlock;
         border-top: none;
         border-left: none;
         border-right: none;
     
-        @include shadows.form;
+        @include shadows.section;
     
         display: flex;
         justify-content: center;
@@ -31,6 +31,6 @@
         align-items: flex-start;
         overflow-y: auto;
     
-        padding: var(--uikit-padding-form-strength-height);
+        padding: var(--uikit-padding-section-strength-height);
     };
 };

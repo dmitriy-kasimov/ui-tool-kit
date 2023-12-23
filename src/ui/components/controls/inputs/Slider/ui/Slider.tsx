@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import './Slider.scss'
-import { Text, textColor, textSize } from "ui/components/shared/text/Text";
+import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 
 const Slider: FC<SliderProps> = ({

@@ -1,7 +1,14 @@
 :root{
-    //Бэкграунд элементов управления
-    --uikit-background-controls: var(--uikit-color-background-control);
+    // Бэкграунд окон
+    --uikit-background-window: var(--uikit-color-background-window);
 
-    --uikit-background-content: #4d4d4d77;
-    --uikit-background-content2: #63636377;
+
+    // Бэкграунд секций
+    --uikit-background-section-block: var(--uikit-color-background-section-block);
+    --uikit-background-section-element: var(--uikit-color-background-section-element);
+    --uikit-background-section-modificator: var(--uikit-color-background-section-modificator);
+
+
+    // Бэкграунд элементов управления
+    --uikit-background-control: var(--uikit-color-background-control);
 }

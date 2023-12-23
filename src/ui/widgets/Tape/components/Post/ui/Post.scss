@@ -2,16 +2,16 @@
 .Post{
     max-width: 600px;
 
-    @include glasses.fourth;
+    @include glasses.sectionModificator;
     border: none;
 
     display: flex;
     flex-direction: column;
 
-    padding: var(--uikit-padding-form-strength-height);
-    margin: var(--uikit-margin-form-strength-width);   
+    padding: var(--uikit-padding-section-strength-height);
+    margin: var(--uikit-margin-section-strength-width);   
 
-    border-radius: var(--uikit-border-radius-form);
+    border-radius: var(--uikit-border-radius-section);
 }
 
 .Post__header{
@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    margin: var(--uikit-margin-form-strength-height);
+    margin: var(--uikit-margin-section-strength-height);
 }
 
 .Post__header__title{
@@ -27,5 +27,5 @@
 }
 .Post__body{
     margin-top: 0.5rem;
-    padding: var(--uikit-padding-form-strength-height);
+    padding: var(--uikit-padding-section-strength-height);
 }

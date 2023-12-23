@@ -9,36 +9,34 @@
 
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
-
-    // border: var(--uikit-border-window);
-    // border-radius: var(--uikit-border-radius-window);
 };
 
 /*
     Названия миксинов - уровень вложенности блоков
 */
+
 // Главная панель
-@mixin first{
+@mixin window{
     @include glass(
         $background:var(--uikit-color-background-window)
     );
 }; 
 // Располагается внутри главной панели (first)
-@mixin second{
+@mixin sectionBlock{
     @include glass(
-        $background:var(--uikit-color-background-block)
+        $background:var(--uikit-color-background-section-block)
     );
 };
 // Располагается внутри second
-@mixin third{
+@mixin sectionElement{
     @include glass(
-        $background:var(--uikit-color-background-element)
+        $background:var(--uikit-color-background-section-element)
     );
 }
 // Располагается внутри third
-@mixin fourth{
+@mixin sectionModificator{
     @include glass(
-        $background:var(--uikit-color-background-modificator)
+        $background:var(--uikit-color-background-section-modificator)
     );
 }
 
@@ -47,7 +45,7 @@
 // Элементы управления (инпуты, кнопки т. д.)
 @mixin control{
     @include glass(
-        $background: var(--uikit-background-controls)
+        $background: var(--uikit-background-control)
     );
     //border: var(--uikit-border-controls);
 

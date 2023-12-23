@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Checkbox } from '../index';
-import { Text } from 'ui/components/shared/text/Text';
+import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Checkbox> = {
     title: 'components/Checkbox',
