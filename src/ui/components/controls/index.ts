@@ -6,8 +6,8 @@ export enum validationStatus{
 }
 
 export const getValidationClasses = (valid: validationStatus): string => {
-
     let result: string = '';
+    
     switch (valid) {
         case validationStatus.DEFAULT:
             break;

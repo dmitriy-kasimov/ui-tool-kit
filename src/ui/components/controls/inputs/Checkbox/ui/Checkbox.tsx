@@ -8,15 +8,15 @@ const Checkbox: FC<CheckboxProps> = ({
                                         checked=false, 
                                         onChange, 
                                         children,
-                                        disabled=false
-                                        
-                                    }) => {
+                                        disabled=false,
 
+                                    }) => {
+   
     return(
-        <>
-            <input 
+        <span>
+            <input
+                className='Checkbox__input'
                 type="checkbox" 
-                className="custom-checkbox" 
                 id={id} 
                 name={id} 
                 value="yes"
@@ -24,8 +24,8 @@ const Checkbox: FC<CheckboxProps> = ({
                 onChange={onChange}
                 disabled={disabled}
             />
-            <label htmlFor={id}>{children}</label>
-        </>
+            <label htmlFor={id} className='checkbox__label'>{children}</label>
+        </span>
         
     )
 }

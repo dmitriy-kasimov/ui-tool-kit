@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import './Slider.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
+import { getValidationClasses, validationStatus } from "ui/components/controls";
 
 const Slider: FC<SliderProps> = ({
                                   value, 
@@ -9,12 +10,18 @@ const Slider: FC<SliderProps> = ({
                                   min, 
                                   max, 
                                   step,
-                                  disabled=false
+                                  disabled=false,
+                                  valid=validationStatus.DEFAULT
                                 }) => {
-  return (
+  
+    const inputClasses: string[] = ['Slider__input'];
+    inputClasses.push(getValidationClasses(valid));
+    
+    
+    return (
     <span className="Slider">
       <input
-          className="Slider__input" 
+          className={inputClasses.join(' ')}
           value={value}
           onChange={onChange}
           min={min} 

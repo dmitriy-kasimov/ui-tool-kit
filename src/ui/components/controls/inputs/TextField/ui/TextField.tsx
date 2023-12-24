@@ -102,27 +102,3 @@ export const TextField: FC<TextFieldProps> = ({
         </span>
     )
 }
-
-/*
-            <div className="TextField__Background__SwitcherMask">
-                {
-                    masked 
-                    ?
-                        <div
-                            className="SwitcherMask" 
-                            onClick={switchMask}
-                        >
-                            {
-                                type === 'text' 
-                                    ?
-                                <MaskText />
-                                    :
-                                <UnmaskText scale={1.5}/>
-                            }
-                        </div>
-                    :
-                        <>
-                        </>
-                }
-            </div>
-*/

@@ -73,7 +73,7 @@ export const WindowBrowserGlobal: Story = {
       ],
       children: (
         <>
-          <div style={{display:'inline-flex', alignItems:'flex-start'}}>
+          <div style={{display:'inline-flex', alignItems:'flex-start', flexWrap:'wrap'}}>
             <Card>
               <Tape
                 title='The latest news'
@@ -101,7 +101,7 @@ export const WindowBrowserGlobal: Story = {
                   value={5}
                   onChange={() => {}}
                   min={0}
-                  max={10}
+                  max={100}
                   step={1}
                 />
                 <Switcher 
@@ -109,7 +109,6 @@ export const WindowBrowserGlobal: Story = {
                   onChange={() => {}}
                 id={'123'}/>
                 <Select
-                    mode='rows'
                     options={options}
                     selected={null}
                     onChange={() => {}}
@@ -133,7 +132,10 @@ export const WindowBrowserGlobal: Story = {
                   <Text size={textSize.REGULAR}>size: REGULAR</Text>
                   <br/>
                   <Text size={textSize.REGULARSMALL}>size: REGULARSMALL</Text>
-                  <br/>
+                </div>
+            </Card>
+            <Card>
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
                   <Text color={textColor.MAIN}>color: MAIN</Text>
                   <br/>
                   <Text color={textColor.SECONDARY}>color: SECONDARY</Text>
@@ -146,7 +148,7 @@ export const WindowBrowserGlobal: Story = {
                   <br/>
                   <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
                 </div>
-              </Card>
+            </Card>
           </div>
         </>
       )

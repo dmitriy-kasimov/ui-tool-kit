@@ -33,7 +33,6 @@ export const SelectDefault: Story = {
         selected: null,
         options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
         placeholder: 'select tool',
-        mode: 'rows',
     },
 };
 
@@ -42,7 +41,6 @@ export const SelectDisabled: Story = {
         selected: null,
         options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
         placeholder: 'select tool',
-        mode: 'rows',
         disabled: true
     },
 };
@@ -53,7 +51,6 @@ export const SelectValidationError: Story = {
         selected: null,
         options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
         placeholder: 'select tool',
-        mode: 'rows',
     },
 };
 
@@ -64,7 +61,6 @@ export const SelectValidationWarning: Story = {
         selected: null,
         options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
         placeholder: 'select tool',
-        mode: 'rows',
     },
 };
 
@@ -74,6 +70,5 @@ export const SelectValidationSuccessfully: Story = {
         selected: null,
         options: [{title: 'Storybook', value: '1'},{title: 'Loki', value: '2'}],
         placeholder: 'select tool',
-        mode: 'rows',
     },
 };

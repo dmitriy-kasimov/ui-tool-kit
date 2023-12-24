@@ -1,4 +1,3 @@
-import { ChangeEvent, InputHTMLAttributes } from "react";
 
 //export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 export interface CheckboxProps{
@@ -7,4 +6,5 @@ export interface CheckboxProps{
     onChange: () => void;
     children: React.ReactNode;
     disabled?: boolean;
+
 }

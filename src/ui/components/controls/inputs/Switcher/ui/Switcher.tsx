@@ -2,8 +2,15 @@ import React, { FC } from "react";
 import { SwitcherProps } from "../types/SwitcherProps";
 
 import './Switcher.scss'
+import { getValidationClasses, validationStatus } from "ui/components/controls";
 
-const Switcher:FC<SwitcherProps> = ({id, value, onChange, disabled}) => {
+const Switcher:FC<SwitcherProps> = ({
+                                        id, 
+                                        value, 
+                                        onChange, 
+                                        disabled, 
+                                        valid=validationStatus.DEFAULT
+                                    }) => {
   
     const rootClasses: string[] = ['Switcher'];
     if(disabled)
@@ -11,7 +18,10 @@ const Switcher:FC<SwitcherProps> = ({id, value, onChange, disabled}) => {
     
     const inputClasses: string[] = ['Switcher__input'];
         if(value)
-        inputClasses.push('Switcher__input__checked');
+            inputClasses.push('Switcher__input__checked');
+
+    const labelClasses: string[] = ['Switcher__label'];
+    labelClasses.push(getValidationClasses(valid));
 
     return (
         <span className={rootClasses.join(' ')}>
@@ -21,7 +31,7 @@ const Switcher:FC<SwitcherProps> = ({id, value, onChange, disabled}) => {
                 id={id} 
                 onClick={onChange}
             />
-            <label className="Switcher__label" htmlFor={id}>Toggle</label>
+            <label className={labelClasses.join(' ')} htmlFor={id}>Toggle</label>
         </span>
     )
 };

@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { validationStatus } from "ui/components/controls";
 
 export interface SliderProps{
     value: number;
@@ -9,4 +10,6 @@ export interface SliderProps{
     step: number;
 
     disabled?: boolean;
+
+    valid?: validationStatus;
 }

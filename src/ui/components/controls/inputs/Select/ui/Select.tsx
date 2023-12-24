@@ -11,10 +11,8 @@ import { getValidationClasses, validationStatus } from 'ui/components/controls';
 const Select = (props: SelectProps) => {
   
     const {
-        mode = 'rows',
         options,
         placeholder,
-        status = 'default',
         selected,
         onChange,
         onClose,
@@ -78,7 +76,6 @@ const Select = (props: SelectProps) => {
           className={rootClasses.join(' ')}
           ref={rootRef}
           data-is-active={isOpen}
-          data-mode={mode}
         >
           <div className={'Select__wrapper__arrow'}>
             <ArrowDown />
@@ -86,7 +83,6 @@ const Select = (props: SelectProps) => {
           <div
             className={'Select__wrapper__placeholder'}
             ref={placeholderRef}
-            data-status={status}
             data-selected={!!selected?.value}
             onClick={handlePlaceHolderClick}
             role='button'

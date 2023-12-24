@@ -6,6 +6,7 @@ import { decoratorBackground } from '../../../../../../../.storybook/decorators/
 
 import { Checkbox } from '../index';
 import { Text } from 'ui/components/shared/Text';
+import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof Checkbox> = {
     title: 'components/Checkbox',

@@ -32,10 +32,6 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  
- 
-  //line-height: 20px;
-
 
   background: none;
   width: 100%;
@@ -43,31 +39,12 @@
   padding: var(--uikit-padding-control-strength-width);
 }
   
-// .Select__wrapper__placeholder[data-status="default"] {
-//   border: 1px solid rgba(0, 0, 0, 0.6);
-// }
 
-// .Select__wrapper__placeholder[data-status="invalid"] {
-//   border: 1px solid rgba(255, 0, 0, 1);
-// }
-
-// .Select__wrapper__placeholder[data-selected="true"] {
-//   color: rgb(0, 0, 0);
-// }
 
 .Select__wrapper[data-is-active="true"] .Select__wrapper__arrow {
   transform: rotate(180deg);
   margin-top: -6px;
 }
-
-// .Select__wrapper[data-is-active="true"] .Select__wrapper__placeholder {
-//   border: 1px solid #0022f5;
-// }
-
-// .Select__wrapper:not([data-is-active="true"])
-//   .Select__wrapper__placeholder:not([data-status="invalid"]):hover {
-//   border: 1px solid rgba(0, 0, 0, 0.2);
-// }
 
 .Select__wrapper__select {
   @include controls.defaultStyles;
@@ -83,14 +60,3 @@
 
   list-style: none;
 }
-
-
-
-.Select__wrapper[data-mode="cells"] .Select__wrapper__select {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.Select__wrapper[data-mode="cells"] .option {
-  justify-content: center;
-}
-  
