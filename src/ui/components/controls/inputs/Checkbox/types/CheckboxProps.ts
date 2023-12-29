@@ -4,7 +4,7 @@ export interface CheckboxProps{
     id: string;
     checked?: boolean;
     onChange: () => void;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     disabled?: boolean;
 
 }

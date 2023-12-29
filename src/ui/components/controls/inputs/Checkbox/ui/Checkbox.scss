@@ -1,5 +1,4 @@
 @use 'styles/effects/glasses';
-@use 'styles/effects/shadows';
 @use '../../../controls';
 
 .Checkbox__input {
@@ -29,7 +28,10 @@
   width: 1em;
   height: 1em; 
 
-  content: '';   
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;   
 }
 
 .Checkbox__input:checked+.checkbox__label::before {

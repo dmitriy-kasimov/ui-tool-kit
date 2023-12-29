@@ -1,0 +1,10 @@
+@use '../../../controls';
+.RadioGroup{
+    display: inline-flex;
+    flex-direction: column;
+
+    margin: var(--uikit-margin-control-strength-height);
+    &:disabled{
+        @include controls.disabled;
+    }
+}

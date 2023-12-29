@@ -9,7 +9,7 @@ export const Card: FC<CardProps> = ({
     
     const rootClasses: string[] = ['Card'];
     rootClasses.push(className);
-    
+
     return(
         <>
             <div className={rootClasses.join(' ')}>

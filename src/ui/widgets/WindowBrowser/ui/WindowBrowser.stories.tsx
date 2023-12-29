@@ -13,6 +13,8 @@ import { Tape } from 'ui/widgets/Tape';
 import { Select } from 'ui/components/controls/inputs/Select';
 import { Slider } from 'ui/components/controls/inputs/Slider';
 import { Switcher } from 'ui/components/controls/inputs/Switcher';
+import { RadioGroup } from 'ui/components/controls/inputs/RadioGroup';
+import { ProgressBar } from 'ui/components/shared/ProgressBar';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -97,30 +99,42 @@ export const WindowBrowserGlobal: Story = {
                 <TextField value='' onChange={() => {}} label={'Ur mail (optional)'} limit={64}/>
                 <TextField value='' onChange={() => {}} label={'Ur pass'} limit={32} masked/>
                 <TextField value='' onChange={() => {}} label={'confirm pass'} limit={32} masked/>
-                <Slider 
-                  value={5}
-                  onChange={() => {}}
-                  min={0}
-                  max={100}
-                  step={1}
-                />
-                <Switcher 
-                  value={true}
-                  onChange={() => {}}
-                id={'123'}/>
-                <Select
-                    options={options}
-                    selected={null}
-                    onChange={() => {}}
-                    placeholder='Выберите месяц'
-                />
-                <Checkbox id='rules' onChange={()=>{}}> <Text size={textSize.REGULAR}>Check the rules</Text> </Checkbox>
-                <br/>
-                <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
-                <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
               </div>
             </Card>
-
+            <Card>
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
+                <Slider 
+                    value={5}
+                    onChange={() => {}}
+                    min={0}
+                    max={100}
+                    step={1}
+                  />
+                  <Switcher 
+                    value={true}
+                    onChange={() => {}}
+                  id={'123'}/>
+                  <Select
+                      options={options}
+                      selected={null}
+                      onChange={() => {}}
+                      placeholder='Выберите месяц'
+                  />
+                  <Checkbox id='rules' onChange={()=>{}}><Text size={textSize.REGULAR}>Check the rules</Text></Checkbox>
+                  <br/>
+                  <Button><Text size={textSize.IMPORTANT}>Active</Text></Button>
+                  <Button disabled><Text size={textSize.IMPORTANT}>Disabled</Text></Button>
+                  <RadioGroup 
+                    name='stories_test'
+                    onChange={()=>{}}
+                    options={[
+                      {value: 'male', description: 'Male'},
+                      {value: 'female', description: 'Female'},
+                      {value: 'trans', description: 'Hz', disabled:true},
+                    ]}
+                  />
+              </div>
+            </Card>
             <Card>
               <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
                   <Text size={textSize.TITLE}>size: TITLE</Text>
@@ -148,6 +162,9 @@ export const WindowBrowserGlobal: Story = {
                   <br/>
                   <Text color={textColor.INFORMATION}>color: INFORMATION</Text>
                 </div>
+            </Card>
+            <Card>
+              <ProgressBar />
             </Card>
           </div>
         </>
