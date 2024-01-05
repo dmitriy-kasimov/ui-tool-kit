@@ -14,7 +14,7 @@ import { Select } from 'ui/components/controls/inputs/Select';
 import { Slider } from 'ui/components/controls/inputs/Slider';
 import { Switcher } from 'ui/components/controls/inputs/Switcher';
 import { RadioGroup } from 'ui/components/controls/inputs/RadioGroup';
-import { ProgressBar } from 'ui/components/shared/ProgressBar';
+import { ProgressBar, ProgressBarType } from 'ui/components/shared/ProgressBar';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -164,7 +164,20 @@ export const WindowBrowserGlobal: Story = {
                 </div>
             </Card>
             <Card>
-              <ProgressBar />
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
+                <ProgressBar max={100} value={30}/>
+                <ProgressBar max={100} value={45}/>
+                <ProgressBar max={100} value={55}/>
+                <ProgressBar max={100} value={75}/>
+                <ProgressBar max={100} value={100}/>
+                <div style={{display:'flex'}}>
+                  <ProgressBar type={ProgressBarType.VERTICAL} max={100} value={30}/>
+                  <ProgressBar type={ProgressBarType.VERTICAL} max={100} value={45}/>
+                  <ProgressBar type={ProgressBarType.VERTICAL} max={100} value={55}/>
+                  <ProgressBar type={ProgressBarType.VERTICAL} max={100} value={75}/>
+                  <ProgressBar type={ProgressBarType.VERTICAL} max={100} value={100}/>
+                </div>
+              </div>
             </Card>
           </div>
         </>
