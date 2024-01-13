@@ -1,0 +1,15 @@
+.Table__caption{
+    background: var(--uikit-background-section-element);
+
+    border-bottom: var(--uikit-border-section-element);
+    border-radius:  var(--uikit-border-radius-section) 
+                    var(--uikit-border-radius-section) 
+                    0 
+                    0;
+
+    
+    padding: var(--uikit-padding-section-strength-height);
+    // display: inline-flex;
+    // justify-content: center;
+    // align-items: center;
+}

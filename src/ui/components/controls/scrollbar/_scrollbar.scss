@@ -5,12 +5,10 @@
     @include controls.defaultStyles;
 
     border-radius: var(--uikit-border-radius-control);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
     border: none;
 
     width: 0.5rem; 
+    height: 0.5rem;
 }
 
 ::-webkit-scrollbar-track{
@@ -18,21 +16,19 @@
 
     border: 2px solid rgba(255,255,255, 0.25);
     border-radius: var(--uikit-border-radius-window);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb{
     @include controls.defaultStyles;
 
     border-radius: var(--uikit-border-radius-control);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
 	border: var(--uikit-border-controls);
 
     &:hover{
 		@include controls.hover;
 	} 
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }

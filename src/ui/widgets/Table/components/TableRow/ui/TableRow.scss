@@ -1,0 +1,13 @@
+.Table__row{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--uikit-padding-section-strength-height);
+
+    &:nth-child(even){
+        border-radius:  var(--uikit-border-radius-section) ;
+        background: var(--uikit-background-section-modificator);
+    }
+}

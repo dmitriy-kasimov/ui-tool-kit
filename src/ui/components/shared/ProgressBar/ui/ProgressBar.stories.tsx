@@ -26,9 +26,37 @@ const meta: Meta<typeof ProgressBar> = {
 export default meta;
 type Story = StoryObj<typeof ProgressBar>;
 
-export const ProgressBarDefault: Story = {
+export const ProgressBarF: Story = {
     args: {
       max: 100,
       value: 30
     },
+};
+
+export const ProgressBarD: Story = {
+  args: {
+    max: 100,
+    value: 48
+  },
+};
+
+export const ProgressBarC: Story = {
+  args: {
+    max: 100,
+    value: 55
+  },
+};
+
+export const ProgressBarB: Story = {
+  args: {
+    max: 100,
+    value: 80
+  },
+};
+
+export const ProgressBarA: Story = {
+  args: {
+    max: 100,
+    value: 100
+  },
 };

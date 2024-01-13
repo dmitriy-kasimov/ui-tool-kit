@@ -1,8 +1,8 @@
 :root{
-    --uikit-color-error: rgb(255, 0, 0);
+    --uikit-color-error: rgb(255, 72, 26);
     --uikit-color-warning: rgb(255, 162, 41);
     --uikit-color-successfully: rgb(0, 199, 0);
-    --uikit-color-information: rgb(21, 122, 255);
+    --uikit-color-information: rgb(37, 168, 255);
 
     --uikit-color-is-active: rgba(0, 255, 0, 0.39);
 
@@ -13,23 +13,23 @@
     --uikit-color-progress-a: rgba(0, 255, 0, 0.7);
 
 //  Цвета окон
-    --uikit-color-border-window: rgba(30, 30, 30, 0.4);
+    --uikit-color-border-window: rgba(30, 30, 30, 0.3);
 
-    --uikit-color-background-window: rgba(50, 50, 50, 0.3);
+    --uikit-color-background-window: rgba(70, 70, 70, 0.6);
 
     --uikit-color-shadow-window: rgba(0, 0, 0, 0.808);
 
 
 //  Цвета секций
-    --uikit-color-border-section: rgba(35, 35, 35, 0.35);
-    --uikit-color-border-section-block: rgba(40, 40, 40, 0.3);
+    --uikit-color-border-section: rgba(35, 35, 35, 0.1);
+    --uikit-color-border-section-block: rgba(40, 40, 40, 0.2);
     --uikit-color-border-section-element: rgba(40, 40, 40, 0.3);
-    --uikit-color-border-section-modificator: rgba(45, 45, 45, 0.3);
+    --uikit-color-border-section-modificator: rgba(45, 45, 45, 0.4);
 
-    --uikit-color-background-section: rgba(45, 45, 45, 0.3);
-    --uikit-color-background-section-block: rgba(40, 40, 40, 0.3);
-    --uikit-color-background-section-element: rgba(35, 35, 35, 0.35);
-    --uikit-color-background-section-modificator: rgba(30, 30, 30, 0.4);
+    --uikit-color-background-section: rgba(60, 60, 60, 0.3);
+    --uikit-color-background-section-block: rgba(50, 50, 50, 0.35);
+    --uikit-color-background-section-element: rgba(40, 40, 40, 0.5);
+    --uikit-color-background-section-modificator: rgba(35, 35, 35, 0.55);
 
     --uikit-color-shadow-section: rgba(255, 255, 255, 0.582);
     --uikit-color-shadow-section-block: rgba(255, 255, 255, 0.582);

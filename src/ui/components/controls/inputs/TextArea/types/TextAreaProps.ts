@@ -1,7 +1,8 @@
 import { ChangeEvent, InputHTMLAttributes } from "react";
 import { validationStatus } from "ui/components/controls";
 
-export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement>{
+type HTMLTextAreaProps = Omit<InputHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
+export interface TextAreaProps extends HTMLTextAreaProps{
     value: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 
@@ -10,5 +11,8 @@ export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement>{
   
     valid?: validationStatus;
     disabled?: boolean;
-    masked?: boolean;
+
+    rows?:number;
+    cols?:number;
+
 }

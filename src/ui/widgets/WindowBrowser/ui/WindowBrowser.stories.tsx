@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { WindowBrowser } from './WindowBrowser';
-import { Text, textColor, textSize } from 'ui/components/shared/Text';
+import { Text, textColor, textFont, textSize } from 'ui/components/shared/Text';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Card } from 'ui/components/sections/Card';
 import { Button } from 'ui/components/controls/buttons/Button';
@@ -15,6 +15,17 @@ import { Slider } from 'ui/components/controls/inputs/Slider';
 import { Switcher } from 'ui/components/controls/inputs/Switcher';
 import { RadioGroup } from 'ui/components/controls/inputs/RadioGroup';
 import { ProgressBar, ProgressBarType } from 'ui/components/shared/ProgressBar';
+
+import { Table } from 'ui/widgets/Table';
+import { TableCaption } from 'ui/widgets/Table/components/TableCaption';
+import { TableHead } from 'ui/widgets/Table/components/TableHead';
+import { TableRow } from 'ui/widgets/Table/components/TableRow';
+import { TableData } from 'ui/widgets/Table/components/TableData';
+import { TableBody } from 'ui/widgets/Table/components/TableBody';
+import { TableContent } from 'ui/widgets/Table/components/TableContent';
+import { TextArea } from 'ui/components/controls/inputs/TextArea';
+
+
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -66,6 +77,43 @@ const options = [
     { "title": "ноя", "value": "11" },
     { "title": "дек", "value": "12" }
 ];
+
+const onlinePlayers = [
+  {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
+  {id: 1, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
+  {id: 2, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
+  {id: 3, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
+  {id: 4, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
+  {id: 5, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
+  {id: 6, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
+  {id: 7, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
+  {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
+  {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
+  {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
+  {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
+  {id: 1, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
+  {id: 2, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
+  {id: 3, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
+  {id: 4, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
+  {id: 5, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
+  {id: 6, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
+  {id: 7, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
+  {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
+  {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
+  {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
+  {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
+  {id: 1, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
+  {id: 2, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
+  {id: 3, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
+  {id: 4, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
+  {id: 5, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
+  {id: 6, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
+  {id: 7, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
+  {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
+  {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
+  {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
+];
+
 export const WindowBrowserGlobal: Story = {
   args: {
       title: 'Заголовок',
@@ -99,6 +147,7 @@ export const WindowBrowserGlobal: Story = {
                 <TextField value='' onChange={() => {}} label={'Ur mail (optional)'} limit={64}/>
                 <TextField value='' onChange={() => {}} label={'Ur pass'} limit={32} masked/>
                 <TextField value='' onChange={() => {}} label={'confirm pass'} limit={32} masked/>
+                <TextArea value='' onChange={()=>{}} label={'Describe your char'} limit={150}/>
               </div>
             </Card>
             <Card>
@@ -179,6 +228,41 @@ export const WindowBrowserGlobal: Story = {
                 </div>
               </div>
             </Card>
+
+            <Card>
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'flex-start'}}>
+                <Table>
+                    <TableCaption>
+                        <Text font={textFont.TITLE} size={textSize.IMPORTANT}>online players</Text>
+                    </TableCaption>
+
+                    <TableContent>
+                      <TableHead>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Score</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Status</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ping (ms)</Text></TableData>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {onlinePlayers.map(player => 
+                          <TableRow>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>{player.id}</Text></TableData>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>{player.nickname}</Text></TableData>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.rank}</Text></TableData>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.score}</Text></TableData>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text>{player.status}</Text></TableData>
+                            <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text>{player.ping}</Text></TableData>
+                          </TableRow>
+                        )}
+                      </TableBody>
+                    </TableContent>
+                </Table>
+              </div>
+            </Card>  
           </div>
         </>
       )
