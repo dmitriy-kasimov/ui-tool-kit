@@ -1,18 +1,27 @@
+/*
+    In this document described the standards for margins.
+*/
 :root{
-//  Внешние отступы для окон
+//  windows
     --uikit-margin-window-strength-quad: 0.2rem 0.2rem;
     --uikit-margin-window-strength-width: 0.1rem 0.5rem;
     --uikit-margin-window-strength-height: 0.3rem 0.15rem;
 
 
-//  Внешние отступы для секций
+//  sections
     --uikit-margin-section-strength-quad: 0.2rem 0.2rem;
     --uikit-margin-section-strength-width: 0.1rem 0.5rem;
     --uikit-margin-section-strength-height: 0.3rem 0.15rem;
 
 
-//  Внешние отступы для элементов управления
+//  controls
     --uikit-margin-control-strength-quad: 0.2rem 0.2rem;
     --uikit-margin-control-strength-width: 0.1rem 0.5rem;
     --uikit-margin-control-strength-height: 0.3rem 0.15rem;
+
+
+//  utils
+    --uikit-margin-util-strength-quad: 0.2rem 0.2rem;
+    --uikit-margin-util-strength-width: 0.1rem 0.5rem;
+    --uikit-margin-util-strength-height: 0.3rem 0.15rem;
 }

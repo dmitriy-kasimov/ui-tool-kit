@@ -1,6 +1,23 @@
 @mixin control{
-    -webkit-transition: all 0.3s ease;;
-    -moz-transition: all 0.3s ease;;
-    -o-transition: all 0.3s ease;;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+
+@mixin util{
+    -webkit-transition: 0.3s transform;
+    -moz-transition: 0.3s transform;
+    -o-transition: 0.3s transform;
+    transition: 0.3s transform;
+    transform: scale(0.5);
+}
+
+@mixin utilOpened{
+    transform: scale(1);
+}
+
+@mixin utilClosing{
+    transform: scale(0.2);
 }

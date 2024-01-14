@@ -1,15 +1,23 @@
+/*
+    In this document described the standards for backgrounds.
+*/
 :root{
-    // Бэкграунд окон
+//  windows
     --uikit-background-window: var(--uikit-color-background-window);
 
 
-    // Бэкграунд секций
+//  sections
     --uikit-background-section: var(--uikit-color-background-section);
     --uikit-background-section-block: var(--uikit-color-background-section-block);
     --uikit-background-section-element: var(--uikit-color-background-section-element);
     --uikit-background-section-modificator: var(--uikit-color-background-section-modificator);
 
 
-    // Бэкграунд элементов управления
+//  controls
     --uikit-background-control: var(--uikit-color-background-control);
+
+
+//  utils
+    --uikit-background-util-overlay: var(--uikit-color-background-util-overlay);
+    --uikit-background-util-content: var(--uikit-color-background-util-content);
 }

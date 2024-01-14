@@ -26,6 +26,7 @@ import { TableContent } from 'ui/widgets/Table/components/TableContent';
 import { TextArea } from 'ui/components/controls/inputs/TextArea';
 import { Loader } from 'ui/components/shared/Loader';
 import { LoaderSize } from 'ui/components/shared/Loader/types/LoaderProps';
+import { UITest } from 'ui/utils/UITest';
 
 
 
@@ -263,30 +264,6 @@ export const WindowBrowserGlobal: Story = {
                       </TableBody>
                     </TableContent>
                 </Table>
-
-                <Table>
-                    <TableCaption>
-                        <Text font={textFont.TITLE} size={textSize.IMPORTANT}>The best players</Text>
-                    </TableCaption>
-
-                    <TableContent>
-                      <TableHead>
-                        <TableRow>
-                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
-                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
-                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
-                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Score</Text></TableData>
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                      <Loader
-                        size={LoaderSize.BIG}
-                      >
-                        <Text>Loading...</Text>
-                      </Loader>
-                      </TableBody>
-                    </TableContent>
-                </Table>
               </div>
             </Card>  
 
@@ -307,6 +284,12 @@ export const WindowBrowserGlobal: Story = {
                 >
                   <Text>Loading...</Text>
                 </Loader>
+              </div>
+            </Card>  
+
+            <Card>
+              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'center'}}>
+                <UITest />
               </div>
             </Card>  
           </div>

@@ -10,8 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
 .Loader__box-small{
     width: 2em;
@@ -29,11 +27,9 @@
 
 .Loader__box__loader {
     color: var(--uikit-font-color-main);
-    
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    //position: relative;
     text-indent: -9999em;
     animation: mulShdSpin 1.3s infinite linear;
     transform: translateZ(0);

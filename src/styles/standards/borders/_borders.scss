@@ -1,11 +1,14 @@
+/*
+    In this document described the standards for borders.
+*/
 :root{
-//  Рамки окон
+//  windows
     --uikit-border-radius-window: 12px;
 
     --uikit-border-window: 1px solid var(--uikit-color-border-window);
 
 
-//  Рамки секций
+//  sections
     --uikit-border-radius-section: 12px;
 
     --uikit-border-section: 1px solid var(--uikit-color-border-section);
@@ -14,8 +17,13 @@
     --uikit-border-section-modificator: 1px solid var(--uikit-color-border-section-modificator);
 
 
-//  Рамки элементов управления
+//  controls
     --uikit-border-radius-control: 12px;
     
     --uikit-border-controls: 1px solid var(--uikit-font-color-main);
+
+
+//  utils
+    --uikit-border-radius-util-content: 12px;
+    --uikit-border-util-content: 1px solid var(--uikit-color-border-util-content);
 }
