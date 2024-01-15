@@ -7,14 +7,17 @@ import { classNames } from "lib/classNames/classNames";
 
 export const NavBar: FC<NavBarProps> = ({links, className=''}) => {
   return (
-    <div className={classNames('NavBar', {}, [className])}>
+    <ul className={classNames('NavBar', {}, [className])}>
         {links.map(link => 
-          <Link 
+          <li 
             key={link.name}
-            active={link.active}
-            name={link.name}
-            onClick={link.onClick}
-          />)}
-    </div>
+            className="NavBar__link"
+          >
+            <Link 
+              name={link.name}
+              onClick={link.onClick}
+            />
+          </li>)}
+    </ul>
   );
 };

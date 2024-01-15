@@ -3,40 +3,33 @@
 @use '../../../controls';
 
 .Link {
-	@include controls.defaultStyles;
-
-	display: inline-block;	
-
 	margin: var(--uikit-margin-control-strength-height);
-	padding: var(--uikit-padding-control-strength-width);
 
-	border-radius: var(--uikit-border-radius-control);
-	border: var(--uikit-border-controls);
-
+	color: inherit;
 	outline: none;
-	text-transform: uppercase;
 	text-decoration: none;
+	transition: .3s ease;
+
+	background: transparent;
+	box-shadow: none;
+
+	border: none;
+	text-transform: uppercase;
 
 	appearance: none;
 	touch-action: manipulation;
+
+	cursor: pointer;
 }
-.LinkActive{
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	box-shadow: 0 0.2rem 0 var(--uikit-font-color-main);
-}
-.LinkPassive{
-	&:hover{
-		@include controls.hover;
-	}
-	&:active{
-		@include controls.active;
-	}
-}
+
 .Link:focus-visible {
 	@include controls.focus;
 }
 
 .Link:disabled {
 	@include controls.disabled;
+}
+
+.Link:active {
+	@include controls.active;
 }

@@ -2,6 +2,20 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
 
-    margin: var(--uikit-margin-section-strength-width);
-}
+    .NavBar__link{
+        margin: 0 .75em;
+        
+    }
+    &:hover {
+        .Link{
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 2px 0 0 var(--uikit-font-color-main);
+            };
+        };
+    }
+};
