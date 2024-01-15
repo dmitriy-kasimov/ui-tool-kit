@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import { TextProps, textColor, textFont, textSize } from "../types/TextProps";
 import '../styles/Text.scss'
+import { classNames } from "lib/classNames/classNames";
 
 export const Text: FC<TextProps> = ({
                                         size=textSize.REGULAR, 
@@ -12,8 +13,7 @@ export const Text: FC<TextProps> = ({
                                         children,
                                     }) => {
     
-    let rootClasses: string[] = ['Text'];
-
+    let rootClasses: string[] = [];
     rootClasses.push(className);
     
     switch (font) {
@@ -74,7 +74,7 @@ export const Text: FC<TextProps> = ({
     }
 
     return (
-        <span className={rootClasses.join(' ')}>
+        <span className={classNames('Text', {}, rootClasses)}>
             {children}
         </span>
     )

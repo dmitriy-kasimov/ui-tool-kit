@@ -8,6 +8,8 @@ export interface RadioGroupProps{
     options: RadioGroupOptions[];
     
     disabled?: boolean;
+
+    className?: string;
 }
 
 interface RadioGroupOptions{

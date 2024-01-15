@@ -3,18 +3,20 @@ import { RadioGroupProps } from "../types/RadioGroupProps";
 import RadioGroupOption from "../components/RadioGroupOption/RadioGroupOption";
 
 import './RadioGroup.scss'
+import { classNames } from "lib/classNames/classNames";
 const RadioGroup: FC<RadioGroupProps> = ({
                                             onChange,
                                             name, 
                                             options,   
                                             disabled = false,
+                                            className=''
                                         }) => {
-    
-    const rootClasses: string[] = ['RadioGroup'];
-    if(disabled)
-        rootClasses.push('disabled');
+
+    const mods: Record<string, boolean>={
+        disabled
+    }
     return (
-        <div className={rootClasses.join(' ')}>
+        <div className={classNames('RadioGroup', mods, [className])}>
             {options?.map(option => 
                 <RadioGroupOption 
                     key={option.value}

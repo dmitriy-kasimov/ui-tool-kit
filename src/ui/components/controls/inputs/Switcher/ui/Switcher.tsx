@@ -3,35 +3,30 @@ import { SwitcherProps } from "../types/SwitcherProps";
 
 import './Switcher.scss'
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { classNames } from "lib/classNames/classNames";
 
 const Switcher:FC<SwitcherProps> = ({
                                         id, 
                                         value, 
                                         onChange, 
-                                        disabled, 
-                                        valid=validationStatus.DEFAULT
+                                        disabled=false, 
+                                        valid=validationStatus.DEFAULT,
+                                        className=''
                                     }) => {
-  
-    const rootClasses: string[] = ['Switcher'];
-    if(disabled)
-        rootClasses.push('disabled');
-    
-    const inputClasses: string[] = ['Switcher__input'];
-        if(value)
-            inputClasses.push('Switcher__input__checked');
-
-    const labelClasses: string[] = ['Switcher__label'];
-    labelClasses.push(getValidationClasses(valid));
+                            
+    const mods: Record<string, boolean> = {
+        value
+    }
 
     return (
-        <span className={rootClasses.join(' ')}>
+        <span className={classNames('Switcher', {disabled}, [className])}>
             <input 
-                className={inputClasses.join(' ')} 
+                className={classNames('Switcher__input', {Switcher__input__checked: value})} 
                 type="checkbox" 
                 id={id} 
                 onClick={onChange}
             />
-            <label className={labelClasses.join(' ')} htmlFor={id}>Toggle</label>
+            <label className={classNames('Switcher__label', {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
         </span>
     )
 };

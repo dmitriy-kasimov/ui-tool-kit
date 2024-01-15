@@ -7,4 +7,5 @@ export interface CheckboxProps{
     children?: React.ReactNode;
     disabled?: boolean;
 
+    className?: string;
 }

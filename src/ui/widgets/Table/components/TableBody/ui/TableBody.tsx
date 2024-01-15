@@ -1,12 +1,15 @@
 import React, {FC} from "react";
 import './TableBody.scss'
+import { classNames } from "lib/classNames/classNames";
 
 interface TableBodyProps{
     children: React.ReactNode;
+
+    className?:string;
 }
-const TableBody:FC <TableBodyProps> = ({children}) => {
+const TableBody:FC <TableBodyProps> = ({children, className=''}) => {
   return (
-    <tbody className="Table__body">
+    <tbody className={classNames('Table__body', {}, [className])}>
       {children}
     </tbody>
   )

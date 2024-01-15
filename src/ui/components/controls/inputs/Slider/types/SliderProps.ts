@@ -12,4 +12,6 @@ export interface SliderProps{
     disabled?: boolean;
 
     valid?: validationStatus;
+
+    className?: string;
 }

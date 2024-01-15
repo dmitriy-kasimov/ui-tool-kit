@@ -1,13 +1,15 @@
 import React, {FC} from "react";
 import './TableCaption.scss'
+import { classNames } from "lib/classNames/classNames";
 
 interface TableCaptionProps{
     children: React.ReactNode;
+    className?:string;
 }
 
-const TableCaption:FC<TableCaptionProps> = ({children}) => {
+const TableCaption:FC<TableCaptionProps> = ({children, className=''}) => {
   return (
-    <caption className="Table__caption">
+    <caption className={classNames('Table__caption', {}, [className])}>
         {children}
     </caption>
   )

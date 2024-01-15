@@ -15,4 +15,5 @@ export interface TextAreaProps extends HTMLTextAreaProps{
     rows?:number;
     cols?:number;
 
+    className?:string;
 }

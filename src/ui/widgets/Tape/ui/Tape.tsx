@@ -5,10 +5,11 @@ import { Text, textFont, textSize } from "ui/components/shared/Text"
 
 import './Tape.scss'
 import { Post } from "../components/Post" 
+import { classNames } from "lib/classNames/classNames"
 
-const Tape: FC<TapeProps> = ({title, posts}) => {
+const Tape: FC<TapeProps> = ({title, posts, className=''}) => {
     return (
-        <div className="Tape">
+        <div className={classNames('Tape', {}, [className])}>
             <span className="Tape__header">
                 <Text 
                     font={textFont.TITLE}

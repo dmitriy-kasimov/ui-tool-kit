@@ -1,10 +1,11 @@
 import React, {FC} from "react";
 import './WindowBrowserContent.scss'
 import { WindowBrowserContentProps } from "./types/WindowBrowserContentProps";
+import { classNames } from "lib/classNames/classNames";
 
-export const WindowBrowserContent: FC<WindowBrowserContentProps> = ({children}) => {
+export const WindowBrowserContent: FC<WindowBrowserContentProps> = ({children, className=''}) => {
   return (
-    <div className="WindowBrowserContent">
+    <div className={classNames('WindowBrowserContent', {}, [className])}>
         {children}
     </div>
   );

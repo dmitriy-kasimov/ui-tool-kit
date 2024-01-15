@@ -2,6 +2,7 @@ import React, {FC} from "react";
 import './Button.scss'
 import { ButtonProps } from "../types/ButtonProps";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { classNames } from "lib/classNames/classNames";
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
@@ -11,14 +12,10 @@ export const Button: FC<ButtonProps> = (props) => {
         ...otherProps
     } = props;
 
-    const rootClasses: string[] = ['Button'];
-    rootClasses.push(getValidationClasses(valid));
-    rootClasses.push(className);        
-
     return(
         <button 
             type="button"
-            className={rootClasses.join(' ')}
+            className={ classNames('Button', {}, [ className, getValidationClasses(valid) ]) }
             {...otherProps}
         >
             {children}

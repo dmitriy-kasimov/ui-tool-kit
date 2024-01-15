@@ -13,7 +13,7 @@
     //color: var(--primary-color);
 }
 
-.overlay {
+.Modal__overlay {
     background: var(--uikit-background-util-overlay);
 
     width: 100%;
@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-.content {
+.Modal__overlay__content {
     @include glasses.util;
     @include anims.util;
 
@@ -43,13 +43,13 @@
     opacity: 1;
     z-index: var(--uikit-z-index-util);
 
-    .content {
+    .Modal__overlay__content {
         @include anims.utilOpened;
     }
 }
 
 .isClosing {
-    .content {
+    .Modal__overlay__content {
         @include anims.utilClosing;
     }
 }

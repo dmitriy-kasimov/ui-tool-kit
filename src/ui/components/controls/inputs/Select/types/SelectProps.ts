@@ -10,6 +10,8 @@ export type SelectProps = {
 
     valid?: validationStatus;
     disabled?: boolean;
+
+    className?: string;
 }
 
 export type Option = {

@@ -1,14 +1,16 @@
 import React, {FC} from "react";
 import { LoaderProps, LoaderSize } from "../types/LoaderProps";
 import './Loader.scss'
+import { classNames } from "lib/classNames/classNames";
 
 const Loader: FC<LoaderProps> = ({
                                     size=LoaderSize.MIDDLE,
-                                    children=null
+                                    children=null,
+                                    className=''
                                 }) => {
   
-    const loaderBoxClasses = ['Loader__box'];
-    const loaderBoxLoaderClasses = ['Loader__box__loader'];
+    const loaderBoxClasses = [];
+    const loaderBoxLoaderClasses = [];
     switch(size){
         case LoaderSize.SMALL:
             loaderBoxClasses.push('Loader__box-small');
@@ -23,13 +25,14 @@ const Loader: FC<LoaderProps> = ({
             loaderBoxLoaderClasses.push('Loader__box__loader-big');
             break;
         default:
-
+            loaderBoxClasses.push('Loader__box-middle');
+            loaderBoxLoaderClasses.push('Loader__box__loader-middle');
     }
 
     return (
-    <div className="Loader">
-        <div className={loaderBoxClasses.join(' ')}>
-            <span className={loaderBoxLoaderClasses.join(' ')} />
+    <div className={classNames('Loader', {}, [className])}>
+        <div className={classNames('Loader__box', {}, loaderBoxClasses)}>
+            <span className={classNames('Loader__box__loader', {}, loaderBoxLoaderClasses)} />
         </div>   
         {children}
     </div>

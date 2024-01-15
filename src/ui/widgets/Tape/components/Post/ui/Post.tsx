@@ -3,16 +3,18 @@ import { PostProps } from "../types/PostProps"
 
 import './Post.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text"
+import { classNames } from "lib/classNames/classNames"
 
 export const Post: FC<PostProps> = ({
                                     id,
                                     title, 
                                     subtitle, 
-                                    children
+                                    children,
+                                    className=''
                                     }) => {
     
     return(
-        <div className="Post">
+        <div className={classNames('Post', {}, [className])}>
             <div className="Post__header">
                 <Text 
                     className="Post__header__title"

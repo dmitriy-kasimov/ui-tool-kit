@@ -6,6 +6,7 @@ import { Text, textColor, textSize } from "ui/components/shared/Text";
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { classNames } from "lib/classNames/classNames";
 
 export const TextField: FC<TextFieldProps> = ({
                                         value,     
@@ -17,6 +18,7 @@ export const TextField: FC<TextFieldProps> = ({
                                         valid=validationStatus.DEFAULT,
                                         disabled=false,
                                         masked = false,
+                                        className = '',
                                         ...otherProps
                                     }) => {
     
@@ -39,18 +41,9 @@ export const TextField: FC<TextFieldProps> = ({
     }
 
 
-    const rootClasses: string[] = ['TextField'];
-    rootClasses.push(getValidationClasses(valid));
-    
-    if(disabled)
-        rootClasses.push('disabled');
-
-    const inputBackgroundClasses: string[] = ['TextField__Background'];
-    inputBackgroundClasses.push(getValidationClasses(valid));
-
     return(
-        <span className={rootClasses.join(' ')}>
-            <div className={inputBackgroundClasses.join(' ')}>
+        <span className={classNames('TextField', {disabled}, [className])}>
+            <div className={classNames('TextField__Background', {}, [getValidationClasses(valid)])}>
                 <div className="TextField__Background__Field">
                     <input 
                         className="TextField__Background__Field__input" 

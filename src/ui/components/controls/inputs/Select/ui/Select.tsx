@@ -7,6 +7,7 @@ import ArrowDown from 'styles/assets/icons/arrowDown.svg'
 import OptionSelect from '../components/Option/ui/OptionSelect';
 import { Text } from 'ui/components/shared/Text';
 import { getValidationClasses, validationStatus } from 'ui/components/controls';
+import { classNames } from 'lib/classNames/classNames';
 
 const Select = (props: SelectProps) => {
   
@@ -17,7 +18,8 @@ const Select = (props: SelectProps) => {
         onChange,
         onClose,
         valid = validationStatus.DEFAULT,
-        disabled = false
+        disabled = false,
+        className = ''
     } = props;
 
     const placeholderRef = useRef<HTMLDivElement>(null);
@@ -66,14 +68,12 @@ const Select = (props: SelectProps) => {
         setIsOpen((prev) => !prev);
     };
 
-    const rootClasses: string[] = ['Select__wrapper'];
-    rootClasses.push(getValidationClasses(valid));
-    if(disabled)
-      rootClasses.push('disabled');
-    
+    const mods: Record<string, boolean> = {
+      disabled
+    }
     return (
         <div
-          className={rootClasses.join(' ')}
+          className={classNames('Select__wrapper', mods, [className, getValidationClasses(valid)])}
           ref={rootRef}
           data-is-active={isOpen}
         >

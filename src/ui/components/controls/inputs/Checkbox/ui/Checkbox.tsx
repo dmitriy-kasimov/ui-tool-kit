@@ -2,6 +2,7 @@ import React, {FC} from "react";
 import './Checkbox.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
+import { classNames } from "lib/classNames/classNames";
 
 const Checkbox: FC<CheckboxProps> = ({
                                         id, 
@@ -9,13 +10,13 @@ const Checkbox: FC<CheckboxProps> = ({
                                         onChange, 
                                         children,
                                         disabled=false,
-
+                                        className=''
                                     }) => {
    
     return(
         <span>
             <input
-                className='Checkbox__input'
+                className={classNames('Checkbox__input', {}, [className])}
                 type="checkbox" 
                 id={id} 
                 name={id} 

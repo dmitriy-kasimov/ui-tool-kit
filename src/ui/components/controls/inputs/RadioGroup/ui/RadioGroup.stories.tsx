@@ -27,7 +27,18 @@ const meta: Meta<typeof RadioGroup> = {
 export default meta;
 type Story = StoryObj<typeof RadioGroup>;
 
-export const RadioGroupTest: Story = {
+export const RadioGroupDefault: Story = {
+    args: {
+        name:'gender',
+        options: [
+            {value: 'male',description: 'Муж'},
+            {value: 'female',description: 'Жен'},
+            {value: 'hz',description: 'pidor', disabled:true},
+        ],
+    },
+};
+
+export const RadioGroupDisabled: Story = {
     args: {
         name:'gender',
         options: [

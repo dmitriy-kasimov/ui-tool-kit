@@ -3,6 +3,7 @@ import './Slider.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { classNames } from "lib/classNames/classNames";
 
 const Slider: FC<SliderProps> = ({
                                   value, 
@@ -11,17 +12,14 @@ const Slider: FC<SliderProps> = ({
                                   max, 
                                   step,
                                   disabled=false,
-                                  valid=validationStatus.DEFAULT
+                                  valid=validationStatus.DEFAULT,
+                                  className=''
                                 }) => {
-  
-    const inputClasses: string[] = ['Slider__input'];
-    inputClasses.push(getValidationClasses(valid));
     
-    
-    return (
+  return (
     <span className="Slider">
       <input
-          className={inputClasses.join(' ')}
+          className={classNames('Slider__input', {}, [className, getValidationClasses(valid)])}
           value={value}
           onChange={onChange}
           min={min} 

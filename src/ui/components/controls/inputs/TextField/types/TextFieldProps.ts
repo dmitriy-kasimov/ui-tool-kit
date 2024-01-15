@@ -11,4 +11,6 @@ export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement>{
     valid?: validationStatus;
     disabled?: boolean;
     masked?: boolean;
+
+    className?:string;
 }

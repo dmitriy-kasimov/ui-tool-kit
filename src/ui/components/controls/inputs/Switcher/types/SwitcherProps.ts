@@ -9,4 +9,6 @@ export interface SwitcherProps{
     disabled?: boolean;
 
     valid?: validationStatus;
+
+    className?: string;
 }

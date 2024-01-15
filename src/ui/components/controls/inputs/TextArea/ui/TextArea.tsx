@@ -4,6 +4,7 @@ import './TextArea.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { classNames } from "lib/classNames/classNames";
 
 export const TextArea: FC<TextAreaProps> = ({
                                         value,     
@@ -16,6 +17,7 @@ export const TextArea: FC<TextAreaProps> = ({
                                         disabled=false,
                                         rows=5,
                                         cols=25,
+                                        className='',
                                         ...otherProps
                                     }) => {
     
@@ -32,18 +34,9 @@ export const TextArea: FC<TextAreaProps> = ({
         }
     }
 
-    const rootClasses: string[] = ['TextArea'];
-    rootClasses.push(getValidationClasses(valid));
-    
-    if(disabled)
-        rootClasses.push('disabled');
-
-    const inputBackgroundClasses: string[] = ['TextArea__Background'];
-    inputBackgroundClasses.push(getValidationClasses(valid));
-
     return(
-        <span className={rootClasses.join(' ')}>
-            <div className={inputBackgroundClasses.join(' ')}>
+        <span className={classNames('TextArea', {disabled}, [className])}>
+            <div className={classNames('TextArea__Background', {}, [getValidationClasses(valid)])}>
                 <div className="TextArea__Background__Field">
                     <textarea 
                         className="TextArea__Background__Field__input" 

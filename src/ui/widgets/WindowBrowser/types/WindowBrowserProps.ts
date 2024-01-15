@@ -5,4 +5,6 @@ export interface WindowBrowserProps{
     title: string;
     tabs: LinkProps[];
     children?: React.ReactNode;
+
+    className?:string;
 }

@@ -2,10 +2,15 @@ import React, {FC} from "react";
 import { ProgressBarProps, ProgressBarType } from "../types/ProgressBarProps";
 import './ProgressBar.scss';
 import { Text, textColor, textSize } from "ui/components/shared/Text";
+import { classNames } from "lib/classNames/classNames";
 
-const ProgressBar: FC<ProgressBarProps> = ({max, value, type=ProgressBarType.HORIZONTAL}) => {
+const ProgressBar: FC<ProgressBarProps> = ({max, 
+                                            value, 
+                                            type=ProgressBarType.HORIZONTAL, 
+                                            className=''
+                                          }) => {
   
-  const classBg = ['ProgressBar__bg'];
+  const classBg = [];
   const classBar = ['ProgressBar__bar'];
   if(type == ProgressBarType.VERTICAL){
     classBg.push('ProgressBar__bg-vertical');
@@ -16,11 +21,10 @@ const ProgressBar: FC<ProgressBarProps> = ({max, value, type=ProgressBarType.HOR
     classBar.push('ProgressBar__bar-horizontal');
   }
   return (
-    <div className="ProgressBar">
+    <div className={classNames('ProgressBar', {}, [className])}>
       <progress max={max} value={value}></progress>
-      <div className={classBg.join(' ')}>
-          <div className={classBar.join(' ')}>
-            
+      <div className={classNames('ProgressBar__bg', {}, classBg)}>
+          <div className={classNames('ProgressBar__bar', {}, classBar)}>
           </div>
       </div>
       <div className="progress-value">
