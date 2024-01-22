@@ -1,9 +1,14 @@
 @use '../../../controls';
 .RadioGroup{
+    padding: var(--uikit-padding-control-strength-height);
+    margin: var(--uikit-margin-control-strength-height);
+
+    border: var(--uikit-border-controls);
+    border-radius: var(--uikit-border-radius-control);
+
     display: inline-flex;
     flex-direction: column;
 
-    margin: var(--uikit-margin-control-strength-height);
     &:disabled{
         @include controls.disabled;
     }

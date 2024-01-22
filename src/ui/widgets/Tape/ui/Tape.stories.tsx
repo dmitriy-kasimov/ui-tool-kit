@@ -6,6 +6,7 @@ import { decoratorBackground } from '../../../../../.storybook/decorators/decora
 
 import { Tape } from '../index';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
+import { Post } from '../components/Post';
 
 
 const meta: Meta<typeof Tape> = {
@@ -29,29 +30,50 @@ const meta: Meta<typeof Tape> = {
 export default meta;
 type Story = StoryObj<typeof Tape>;
 
-export const TapeDefault: Story = {
+export const TapeWithoutOverflow: Story = {
     args: {
       title: 'The latest news',
-      posts: [
-        {id: 2, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-        {id: 1, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-        {id: 0, title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)}
-      ]
+      children:(
+        <>
+          <Post
+          id={0}
+          title={'Title'}
+          subtitle={'Subtitle'}
+          >
+            <Text>Something about post1</Text>
+          </Post>
+        </> 
+      )
     },
 };
 
-export const TapeScroolable: Story = {
+const posts = [
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+  {id: 0, title: 'Title', subtitle:'something'},
+]
+export const TapeWithOverflow: Story = {
   args: {
     title: 'The latest news',
-    posts: [
-      {id: 7, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 6, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 5, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 4, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 3, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 2, title: 'The server was updated', subtitle: '10/27/2024', children: (<Text>123</Text>)},
-      {id: 1, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-      {id: 0, title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text>In the <Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>4th October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Ty for your waiting, we are sure - we will appreciate our work. </Text>)}
-    ]
+    children:(
+      <>
+       {posts.map((post, index) => <Post
+        id={index}
+        key={index}
+        title={post.title}
+        subtitle={post.subtitle}
+       >
+        <Text>Something about post #{index+1}</Text>
+       </Post>)}
+      </> 
+    )
   },
 };

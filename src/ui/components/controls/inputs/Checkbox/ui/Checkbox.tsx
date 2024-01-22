@@ -3,6 +3,7 @@ import './Checkbox.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
 import { classNames } from "lib/classNames/classNames";
+import { getValidationClasses, validationStatus } from "ui/components/controls";
 
 const Checkbox: FC<CheckboxProps> = ({
                                         id, 
@@ -10,13 +11,14 @@ const Checkbox: FC<CheckboxProps> = ({
                                         onChange, 
                                         children,
                                         disabled=false,
-                                        className=''
+                                        className='',
+                                        valid=validationStatus.DEFAULT
                                     }) => {
    
     return(
-        <span>
+        <span className={classNames('CheckBox', {}, [className])}>
             <input
-                className={classNames('Checkbox__input', {}, [className])}
+                className={classNames('CheckBox__input', {}, [])}
                 type="checkbox" 
                 id={id} 
                 name={id} 
@@ -25,7 +27,10 @@ const Checkbox: FC<CheckboxProps> = ({
                 onChange={onChange}
                 disabled={disabled}
             />
-            <label htmlFor={id} className='checkbox__label'>{children}</label>
+            <label htmlFor={id} className={classNames('CheckBox__checkbox', {}, [getValidationClasses(valid)])}></label>
+            <label htmlFor={id} className={classNames('CheckBox__label', {}, [])}>
+                {children}
+            </label>
         </span>
         
     )

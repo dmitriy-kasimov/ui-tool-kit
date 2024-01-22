@@ -6,30 +6,21 @@ import { textColor, textFont, textSize } from "ui/components/shared/Text/types/T
 import { classNames } from "lib/classNames/classNames";
 
 export const Link: FC<LinkProps> = ({
-                                      name, 
-                                      active=false, 
+                                      children,
                                       onClick,
-                                      className=''
+                                      disabled=false,
+                                      className='',
+                                      ...otherProps
                                     }) => {
 
-
-  const mods: Record<string, boolean> = {
-    LinkActive: active,
-    LinkPassive: !active
-  }
   return (
     <button 
       onClick={onClick}  
-      className={classNames('Link', mods, [className])}
-      disabled={mods.LinkActive}
+      className={classNames('Link', {}, [className])}
+      disabled={disabled}
+      {...otherProps}
     >
-      <Text
-        className="LinkText"
-        font={textFont.TITLE}
-        size={textSize.REGULAR}
-      >
-        {name}
-      </Text>
+      {children}
     </button>
   );
 };

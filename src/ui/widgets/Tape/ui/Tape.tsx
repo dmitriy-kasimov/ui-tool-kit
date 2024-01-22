@@ -4,10 +4,9 @@ import { Text, textFont, textSize } from "ui/components/shared/Text"
 
 
 import './Tape.scss'
-import { Post } from "../components/Post" 
 import { classNames } from "lib/classNames/classNames"
 
-const Tape: FC<TapeProps> = ({title, posts, className=''}) => {
+const Tape: FC<TapeProps> = ({title, children, className=''}) => {
     return (
         <div className={classNames('Tape', {}, [className])}>
             <span className="Tape__header">
@@ -19,17 +18,7 @@ const Tape: FC<TapeProps> = ({title, posts, className=''}) => {
                 </Text>
             </span>
             <div className="Tape__content">
-                {
-                    posts.map(post => 
-                    <Post
-                        id={post.id}
-                        key={post.id}
-                        title={post.title} 
-                        subtitle={post.subtitle}
-                    >
-                        {post.children}
-                    </Post>)
-                }
+                {children}
             </div>
         </div>
     )

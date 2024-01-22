@@ -1,10 +1,10 @@
-import { LinkProps } from "ui/components/controls/links/Link";
-
 
 export interface WindowBrowserProps{
-    title: string;
-    tabs: LinkProps[];
+    title: React.ReactNode;
+    links: React.ReactNode;
     children?: React.ReactNode;
 
     className?:string;
+
+    fullscreen?: boolean;
 }

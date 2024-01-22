@@ -9,4 +9,5 @@ export interface RadioGroupOptionProps{
     description: string;
 
     disabled?: boolean;
+    defaultChecked?: boolean;
 }

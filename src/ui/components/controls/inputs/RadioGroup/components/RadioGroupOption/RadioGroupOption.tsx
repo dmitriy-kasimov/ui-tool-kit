@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import { RadioGroupOptionProps } from "../types/RadioGroupOptionProps";
+import { RadioGroupOptionProps } from "./types/RadioGroupOptionProps";
 import { Text } from "ui/components/shared/Text";
 
 import './RadioGroupOption.scss'
@@ -10,7 +10,8 @@ const RadioGroupOption: FC<RadioGroupOptionProps> = ({
                                                         id,
                                                         name,
                                                         description,
-                                                        disabled
+                                                        disabled,
+                                                        defaultChecked=false
                                                     }) => {
   return (
     <span>
@@ -22,6 +23,7 @@ const RadioGroupOption: FC<RadioGroupOptionProps> = ({
                 id={id}
                 name={name}
                 disabled={disabled}
+                defaultChecked={defaultChecked}
             />
             <label 
                 htmlFor={id}

@@ -33,13 +33,13 @@
 // Валидация для элементов управления
 
 .validationError{
-    border-color: var(--uikit-color-error);
+    @include shadows.validation('error');
 }
 
 .validationWarning{
-    border-color: var(--uikit-color-warning);
+    @include shadows.validation('warning');
 }
 
 .validationSuccessfully{
-    border-color: var(--uikit-color-successfully);
+    @include shadows.validation('successfully');
 }

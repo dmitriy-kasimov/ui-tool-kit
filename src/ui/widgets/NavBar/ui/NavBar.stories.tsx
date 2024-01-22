@@ -5,6 +5,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from './../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { NavBar } from '../index';
+import { Link } from 'ui/components/controls/links/Link';
+import { Text, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof NavBar> = {
     title: 'widgets/NavBar',
@@ -29,10 +31,24 @@ type Story = StoryObj<typeof NavBar>;
 
 export const NavBarDefault: Story = {
     args: {
-     links: [
-        {name: 'Link 1', onClick(){}},
-        {name: 'Link 2', onClick(){}},
-        {name: 'Link 3', onClick(){}},
-     ]
+     children: (
+      <>
+        <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 1</Text></Link>
+        <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 2</Text></Link>
+        <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 3</Text></Link>
+      </>
+     )
     },
+};
+
+export const NavBarWithDisabledLink: Story = {
+  args: {
+   children: (
+    <>
+      <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 1</Text></Link>
+      <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 2</Text></Link>
+      <Link onClick={()=>{}} disabled><Text size={textSize.IMPORTANT}>Link 3</Text></Link>
+    </>
+   )
+  },
 };

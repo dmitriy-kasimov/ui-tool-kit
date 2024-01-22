@@ -47,3 +47,23 @@
                 $indent     0   $dispersia $shadow-color,
                 -1*$indent  0   $dispersia $shadow-color;
 }
+
+@mixin validation($type){
+    $shadow-color: transparent;
+    @if ($type == 'warning') {
+        $shadow-color: var(--uikit-color-warning);
+    } @else if ($type == 'error') {
+        $shadow-color: var(--uikit-color-error);
+    } @else if ($type == 'successfully') {
+        $shadow-color: var(--uikit-color-successfully);
+    }
+    
+    $indent: 1px;
+    $dispersia: 5px;
+
+    box-shadow: 
+                0   $indent     $dispersia $shadow-color,
+                0   -1*$indent  $dispersia $shadow-color,
+                $indent     0   $dispersia $shadow-color,
+                -1*$indent  0   $dispersia $shadow-color;
+}

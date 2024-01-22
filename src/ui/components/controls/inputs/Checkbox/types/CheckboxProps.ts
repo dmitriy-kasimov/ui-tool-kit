@@ -1,3 +1,4 @@
+import { validationStatus } from "ui/components/controls";
 
 //export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 export interface CheckboxProps{
@@ -8,4 +9,6 @@ export interface CheckboxProps{
     disabled?: boolean;
 
     className?: string;
+
+    valid?: validationStatus;
 }

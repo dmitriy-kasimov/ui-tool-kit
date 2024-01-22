@@ -1,7 +1,8 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, InputHTMLAttributes } from "react";
 import { validationStatus } from "ui/components/controls";
 
-export interface SliderProps{
+type HTMLSliderProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+export interface SliderProps extends HTMLSliderProps{
     value: number;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 

@@ -1,4 +1,5 @@
 export interface WindowBrowserTitleProps{
-    text: string;
+    children: React.ReactNode;
+
     className?:string;
 }

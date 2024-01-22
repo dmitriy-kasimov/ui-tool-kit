@@ -5,12 +5,16 @@ import { classNames } from "lib/classNames/classNames";
 
 export const Card: FC<CardProps> = ({
                                         className = '', 
-                                        children
+                                        children,
+                                        ...otherProps
                                     }) => {
     
     return(
         <>
-            <div className={classNames('Card', {}, [className])}>
+            <div 
+                className={classNames('Card', {}, [className])}
+                {...otherProps}
+            >
                 {children}
             </div>
         </>  

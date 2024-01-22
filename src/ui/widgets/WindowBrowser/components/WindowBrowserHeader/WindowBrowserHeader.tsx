@@ -8,8 +8,12 @@ import { classNames } from "lib/classNames/classNames";
 export const WindowBrowserHeader: FC<WindowBrowserHeaderProps> = ({title, tabs, className=''}) => {
   return (
     <div className={classNames('WindowBrowserHeader', {}, [className])}>
-        <WindowBrowserTitle text={title}/>
-        <NavBar links={tabs}/>
+        <WindowBrowserTitle>
+          {title}
+        </WindowBrowserTitle>
+        <NavBar >
+          {tabs}
+        </NavBar>
     </div>
   );
 };

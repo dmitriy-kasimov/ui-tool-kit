@@ -4,19 +4,21 @@ import RadioGroupOption from "../components/RadioGroupOption/RadioGroupOption";
 
 import './RadioGroup.scss'
 import { classNames } from "lib/classNames/classNames";
+import { getValidationClasses, validationStatus } from "ui/components/controls";
 const RadioGroup: FC<RadioGroupProps> = ({
                                             onChange,
                                             name, 
                                             options,   
                                             disabled = false,
-                                            className=''
+                                            className='',
+                                            valid = validationStatus.DEFAULT
                                         }) => {
 
     const mods: Record<string, boolean>={
         disabled
     }
     return (
-        <div className={classNames('RadioGroup', mods, [className])}>
+        <div className={classNames('RadioGroup', mods, [getValidationClasses(valid), className])}>
             {options?.map(option => 
                 <RadioGroupOption 
                     key={option.value}
@@ -29,6 +31,7 @@ const RadioGroup: FC<RadioGroupProps> = ({
                     description={option.description}
 
                     disabled={option.disabled}
+                    defaultChecked={option.defaultChecked}
                 />    
             )}
             

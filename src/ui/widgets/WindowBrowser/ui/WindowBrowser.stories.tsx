@@ -26,7 +26,8 @@ import { TableContent } from 'ui/widgets/Table/components/TableContent';
 import { TextArea } from 'ui/components/controls/inputs/TextArea';
 import { Loader } from 'ui/components/shared/Loader';
 import { LoaderSize } from 'ui/components/shared/Loader/types/LoaderProps';
-import { UITest } from 'ui/utils/UITest';
+import { Link } from 'ui/components/controls/links/Link';
+import { Post } from 'ui/widgets/Tape/components/Post';
 
 
 
@@ -52,15 +53,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const WindowBrowserReg: Story = {
+export const WindowBrowserEmpty: Story = {
     args: {
-        title: 'Заголовок',
-        tabs:[
-            {name:'Вкладка1', onClick() {}},
-            {name:'Вкладка2', onClick() {}},
-        ],
+        title: <Text size={textSize.TITLE} font={textFont.TITLE}>Заголовок</Text>,
+        links: (
+          <>
+            <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 1</Text></Link>
+            <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 2</Text></Link>
+            <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 3</Text></Link>
+          </>
+        ),
         children: (
-          <Text>Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab Here you can see some content from equal tab</Text>
+         <span style={{width:'900px', height:'300px'}}></span>
         )
     },  
 };
@@ -116,32 +120,44 @@ const onlinePlayers = [
   {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
   {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
 ];
-
+const posts = [
+  {id: 6, title: '[Разработка] ', subtitle:'02/11/2021', body: 'Набрал этот текст'},
+  {id: 5, title: '[Разработка] ', subtitle:'01/23/2021', body: 'Вторая система регистрации/авторизации завершена.'},
+  {id: 4, title: '[Разработка] ', subtitle:'01/22/2021', body: 'Первая совместная игра через \nлокальную сеть.'},
+  {id: 3, title: '[Разработка] ', subtitle:'01/19/2021', body: 'Возобновление работ над сервером.'},
+  {id: 2, title: '[Разработка] ', subtitle:'winter 2020', body: 'Остановка всех разработок. Команда из 3х \nчеловек распущена.'},
+  {id: 1, title: '[Разработка] ', subtitle:'autumn 2019', body: 'Разработка Chill-Island и моста к нему.'},
+  {id: 0, title: '[Разработка] ', subtitle:'june 2019', body: 'Зарождение идеи создания проекта.'},
+]
 export const WindowBrowserGlobal: Story = {
   args: {
-      title: 'Заголовок',
-      tabs:[
-          {name:'Вкладка1', onClick() {}, active: true},
-          {name:'Вкладка2', onClick() {}},
-      ],
+      title: <Text size={textSize.TITLE} font={textFont.TITLE}>Заголовок</Text>,
+      links: (
+        <>
+          <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 1</Text></Link>
+          <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 2</Text></Link>
+          <Link onClick={()=>{}} disabled><Text size={textSize.IMPORTANT}>Link 3</Text></Link>
+        </>
+      ),
+      fullscreen: true,
       children: (
         <>
           <div style={{display:'inline-flex', alignItems:'flex-start', flexWrap:'wrap'}}>
             <Card>
               <Tape
                 title='The latest news'
-                posts={[
-                  {id: 9, title: 'Update to ver 1.0.1', subtitle: '10/27/2024', children: (<Text>• Bug fixed</Text>)},
-                  {id: 8, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                  {id: 7, title: 'The server was opened!', subtitle: '10/04/2024', children: (<Text><Text size={textSize.IMPORTANT} color={textColor.SUCCESSFULLY}>On the 4th of October 2024</Text> our server was started! Dear players, welcome to the LAtruckers!!! Thank you for your waiting, we are sure - we will appreciate our work. </Text>)},
-                  {id: 6, title: 'New release date!', subtitle: '10/01/2024', children: (<Text>The server will been starting 10/04/2024 !!!</Text>)},
-                  {id: 5, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                  {id: 4, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                  {id: 3, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                  {id: 2, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                  {id: 1, title: 'Maximum online: 50!', subtitle: '10/15/2024', children: (<Text>123</Text>)},
-                ]}
-              />
+              >
+                 {posts.map((post, index) => 
+                  <Post
+                      id={index}
+                      key={index}
+                      title={post.title}
+                      subtitle={post.subtitle}
+                    >
+                      <Text>{post.body}</Text>
+                    </Post>
+                  )}
+              </Tape>
             </Card>
 
             <Card>
@@ -284,12 +300,6 @@ export const WindowBrowserGlobal: Story = {
                 >
                   <Text>Loading...</Text>
                 </Loader>
-              </div>
-            </Card>  
-
-            <Card>
-              <div style={{display: 'inline-flex', flexDirection: 'column', alignItems:'center'}}>
-                <UITest />
               </div>
             </Card>  
           </div>

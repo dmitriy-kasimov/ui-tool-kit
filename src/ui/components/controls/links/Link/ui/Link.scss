@@ -3,7 +3,7 @@
 @use '../../../controls';
 
 .Link {
-	margin: var(--uikit-margin-control-strength-height);
+	margin: var(--uikit-margin-control-strength-width);
 
 	color: inherit;
 	outline: none;
@@ -20,6 +20,10 @@
 	touch-action: manipulation;
 
 	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0 2px 0 0 var(--uikit-font-color-main);
+	};
 }
 
 .Link:focus-visible {

@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Link } from '../index';
+import { Text, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Link> = {
     title: 'components/Link',
@@ -29,15 +30,15 @@ type Story = StoryObj<typeof Link>;
 
 export const LinkDefault: Story = {
     args: {
-      name: 'Вкладка 1',
+      children: <Text size={textSize.IMPORTANT}>Link 1</Text>,
       onClick: () => {},
     },
 };
 
-export const LinkActive: Story = {
+export const LinkDisabled: Story = {
   args: {
-    name: 'Вкладка 1',
+    children: <Text size={textSize.IMPORTANT}>Link 1</Text>,
     onClick: () => {},
-    active: true
+    disabled: true
   },
 };

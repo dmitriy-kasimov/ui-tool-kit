@@ -1,3 +1,43 @@
+/*
+  * Источник: https://habr.com/ru/articles/735224/
+
+
+
+  Пример использования:
+
+  export default FunctionalComponent = () => {
+    const options = [
+      { "title": "янв", "value": "01" },
+      { "title": "фев", "value": "02" },
+      { "title": "мар", "value": "03" },
+      { "title": "апр", "value": "04" },
+      { "title": "май", "value": "05" },
+      { "title": "июн", "value": "06" },
+      { "title": "июл", "value": "07" },
+      { "title": "авг", "value": "08" },
+      { "title": "сен", "value": "09" },
+      { "title": "окт", "value": "10" },
+      { "title": "ноя", "value": "11" },
+      { "title": "дек", "value": "12" }
+    ];
+
+    const [month, setMonth] = useState('');
+    const handleChangeDate = (value: string) =>{
+      setMonth(value);
+    }
+    const selectedMonth = options.find(item => item.value === month);
+
+    return (
+       <Select
+          placeholder='Выберите месяц'
+          options={options}
+          selected={selectedMonth || null}
+          onChange={handleChangeDate}
+        />
+    )
+  }
+*/
+
 import React, {FC, MouseEventHandler, useEffect, useRef, useState} from 'react';
 import { Option, SelectProps } from '../types/SelectProps';
 
