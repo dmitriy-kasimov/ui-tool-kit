@@ -28,6 +28,8 @@ import { Tape } from "ui/widgets/Tape";
 import { Post } from "ui/widgets/Tape/components/Post";
 import { WindowBrowser } from "ui/widgets/WindowBrowser";
 
+import './UITest.scss';
+
 const UITest = () => {
   
     const [isModal, setIsModal] = useState(false);
@@ -342,7 +344,7 @@ const UITest = () => {
                       <Text font={textFont.TITLE} size={textSize.SUBTITLE}>Validations</Text>
                   </TableCaption>
 
-                  <TableContent>
+                  <TableContent className="Table__Big">
                     <TableHead>
                       <TableRow>
                         <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Компонент</Text></TableData>
