@@ -34,12 +34,15 @@
 
 .validationError{
     @include shadows.validation('error');
+    border-color: var(--uikit-color-error);
 }
 
 .validationWarning{
     @include shadows.validation('warning');
+    border-color: var(--uikit-color-warning);
 }
 
 .validationSuccessfully{
     @include shadows.validation('successfully');
+    border-color: var(--uikit-color-successfully);
 }

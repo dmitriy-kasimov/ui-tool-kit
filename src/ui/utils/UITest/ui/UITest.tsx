@@ -28,6 +28,12 @@ import { Tape } from "ui/widgets/Tape";
 import { Post } from "ui/widgets/Tape/components/Post";
 import { WindowBrowser } from "ui/widgets/WindowBrowser";
 
+import IconLink from 'styles/assets/icons/link.svg';
+import IconWarning from 'styles/assets/icons/warning.svg';
+import IconError from 'styles/assets/icons/error.svg';
+import IconSuccessfully from 'styles/assets/icons/successfully.svg';
+import IconInfo from 'styles/assets/icons/info.svg';
+
 import './UITest.scss';
 
 const UITest = () => {
@@ -111,13 +117,14 @@ const UITest = () => {
           title={<Text font={textFont.TITLE} size={textSize.TITLE}>All items</Text>}
           links={(
             <>
-              <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 1</Text></Link>
-              <Link onClick={()=>{}}><Text size={textSize.IMPORTANT}>Link 2</Text></Link>
-              <Link onClick={()=>{}} disabled><Text size={textSize.IMPORTANT}>Link 3</Text></Link>
+              <Link onClick={()=>{}}><IconLink /> <Text font={textFont.TITLE} size={textSize.IMPORTANT}>Link 1</Text></Link>
+              <Link onClick={()=>{}}><IconLink /> <Text font={textFont.TITLE} size={textSize.IMPORTANT}>Link 2</Text></Link>
+              <Link onClick={()=>{}} disabled><IconLink /> <Text font={textFont.TITLE} size={textSize.IMPORTANT}>Link 3</Text></Link>
             </>
           )}
+          fullscreen
         >
-          <div style={{display:'inline-flex', flexWrap:'wrap'}}>
+          <div style={{display:'inline-flex', flexWrap:'wrap', alignItems:'flex-start'}}>
             <Card>
               <Tape
                 title='The latest news'
@@ -171,6 +178,25 @@ const UITest = () => {
                 <Link style={{alignSelf:'flex-end'}} onClick={()=>{}} ><Text>Уже есть аккаунт?</Text></Link>
               </form>
             </Card>
+            
+            <Card style={{display:'flex', flexDirection:'column'}}>
+              <span style={{display: 'flex', alignItems:'center'}}>
+                  <IconWarning />
+                  <Text>Icon warning</Text>
+              </span>
+              <span style={{display: 'flex', alignItems:'center'}}>
+              <IconError />
+                  <Text>Icon error</Text>
+              </span>
+              <span style={{display: 'flex', alignItems:'center'}}>
+              <IconSuccessfully />
+                  <Text>Icon successfully</Text>
+              </span>
+              <span style={{display: 'flex', alignItems:'center'}}>
+              <IconInfo />
+                  <Text>Icon info</Text>
+              </span>  
+            </Card>
             <Card>
               <div>
                 <div style={{display:'flex', flexDirection:'column'}}>
@@ -207,6 +233,7 @@ const UITest = () => {
                 </div>
               </div>
             </Card>
+            
             <Card style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
               <TextArea 
                 label="Describe your character"
@@ -243,6 +270,7 @@ const UITest = () => {
               />
               <Link onClick={handleChangeSwitcher}><Text>Переключить Switcher</Text></Link>
             </Card>
+           
             <Card style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
                 <div style={{display:'flex', flexDirection:'column'}}>
                   <ProgressBar 
@@ -301,6 +329,7 @@ const UITest = () => {
                   onChange={e => setSliderValueProgress(Number(e.target.value))}
                 />
             </Card>
+            
             <Card>
               <NavBar>
                 <Link onClick={onShowModal}><Text size={textSize.REGULAR}>Список игроков</Text></Link>
@@ -337,341 +366,342 @@ const UITest = () => {
                       </TableContent>
                   </Table>
               </Modal>
-          </Card>
-          <Card>
-              <Table>
-                  <TableCaption>
-                      <Text font={textFont.TITLE} size={textSize.SUBTITLE}>Validations</Text>
-                  </TableCaption>
+            </Card>
+            
+            <Card>
+                <Table>
+                    <TableCaption>
+                        <Text font={textFont.TITLE} size={textSize.SUBTITLE}>Validations</Text>
+                    </TableCaption>
 
-                  <TableContent className="Table__Big">
-                    <TableHead>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Компонент</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Дефолт</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Предупреждение</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ошибка</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Успешно</Text></TableData>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>TextField</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextField 
-                            valid={validationStatus.DEFAULT}
-                            value={regForm.email}
-                            onChange={e => setRegForm({...regForm, email: e.target.value})}
-                            limit={32}
-                            label="Эл. почта"
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextField 
-                            valid={validationStatus.WARNING}
-                            value={regForm.email}
-                            onChange={e => setRegForm({...regForm, email: e.target.value})}
-                            limit={32}
-                            label="Эл. почта"
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextField 
-                            valid={validationStatus.ERROR}
-                            value={regForm.email}
-                            onChange={e => setRegForm({...regForm, email: e.target.value})}
-                            limit={32}
-                            label="Эл. почта"
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextField 
-                            valid={validationStatus.SUCCESSFULLY}
-                            value={regForm.email}
-                            onChange={e => setRegForm({...regForm, email: e.target.value})}
-                            limit={32}
-                            label="Эл. почта"
-                          />
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Button</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Button style={{alignSelf:'center'}} valid={validationStatus.DEFAULT}><Text>Продолжить</Text></Button>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Button style={{alignSelf:'center'}} valid={validationStatus.WARNING}><Text>Продолжить</Text></Button>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Button style={{alignSelf:'center'}} valid={validationStatus.ERROR}><Text>Продолжить</Text></Button>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Button style={{alignSelf:'center'}} valid={validationStatus.SUCCESSFULLY}><Text>Продолжить</Text></Button>
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>TextArea</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextArea 
-                            valid={validationStatus.DEFAULT}
-                            label="Describe your character"
-                            rows={4}
-                            cols={20}
-                            limit={50}
-                            value={descriptionCharacter}
-                            onChange={e => setDescriptionCharacter(e.target.value)}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextArea 
-                            valid={validationStatus.WARNING}
-                            label="Describe your character"
-                            rows={4}
-                            cols={20}
-                            limit={50}
-                            value={descriptionCharacter}
-                            onChange={e => setDescriptionCharacter(e.target.value)}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextArea 
-                            valid={validationStatus.ERROR}
-                            label="Describe your character"
-                            rows={4}
-                            cols={20}
-                            limit={50}
-                            value={descriptionCharacter}
-                            onChange={e => setDescriptionCharacter(e.target.value)}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <TextArea 
-                            valid={validationStatus.SUCCESSFULLY}
-                            label="Describe your character"
-                            rows={4}
-                            cols={20}
-                            limit={50}
-                            value={descriptionCharacter}
-                            onChange={e => setDescriptionCharacter(e.target.value)}
-                          />
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>RadioGroup</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <RadioGroup
-                            valid={validationStatus.DEFAULT}
-                            name='UItest'
-                            onChange={handleChangeSex}
-                            options={[
-                              {value: 'male', description: 'Male', defaultChecked: true},
-                              {value: 'female', description: 'Female'},
-                              {value: 'trans', description: 'Hz', disabled:true},
-                            ]}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <RadioGroup
-                            valid={validationStatus.WARNING}
-                            name='UItest'
-                            onChange={handleChangeSex}
-                            options={[
-                              {value: 'male', description: 'Male', defaultChecked: true},
-                              {value: 'female', description: 'Female'},
-                              {value: 'trans', description: 'Hz', disabled:true},
-                            ]}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <RadioGroup
-                            valid={validationStatus.ERROR}
-                            name='UItest'
-                            onChange={handleChangeSex}
-                            options={[
-                              {value: 'male', description: 'Male', defaultChecked: true},
-                              {value: 'female', description: 'Female'},
-                              {value: 'trans', description: 'Hz', disabled:true},
-                            ]}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <RadioGroup
-                            valid={validationStatus.SUCCESSFULLY}
-                            name='UItest'
-                            onChange={handleChangeSex}
-                            options={[
-                              {value: 'male', description: 'Male', defaultChecked: true},
-                              {value: 'female', description: 'Female'},
-                              {value: 'trans', description: 'Hz', disabled:true},
-                            ]}
-                          />
-                        </TableData>
-                      </TableRow>
+                    <TableContent className="Table__Big">
+                      <TableHead>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Компонент</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Дефолт</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Предупреждение</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ошибка</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Успешно</Text></TableData>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>TextField</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextField 
+                              valid={validationStatus.DEFAULT}
+                              value={regForm.email}
+                              onChange={e => setRegForm({...regForm, email: e.target.value})}
+                              limit={32}
+                              label="Эл. почта"
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextField 
+                              valid={validationStatus.WARNING}
+                              value={regForm.email}
+                              onChange={e => setRegForm({...regForm, email: e.target.value})}
+                              limit={32}
+                              label="Эл. почта"
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextField 
+                              valid={validationStatus.ERROR}
+                              value={regForm.email}
+                              onChange={e => setRegForm({...regForm, email: e.target.value})}
+                              limit={32}
+                              label="Эл. почта"
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextField 
+                              valid={validationStatus.SUCCESSFULLY}
+                              value={regForm.email}
+                              onChange={e => setRegForm({...regForm, email: e.target.value})}
+                              limit={32}
+                              label="Эл. почта"
+                            />
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Button</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Button style={{alignSelf:'center'}} valid={validationStatus.DEFAULT}><Text>Продолжить</Text></Button>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Button style={{alignSelf:'center'}} valid={validationStatus.WARNING}><Text>Продолжить</Text></Button>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Button style={{alignSelf:'center'}} valid={validationStatus.ERROR}><Text>Продолжить</Text></Button>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Button style={{alignSelf:'center'}} valid={validationStatus.SUCCESSFULLY}><Text>Продолжить</Text></Button>
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>TextArea</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextArea 
+                              valid={validationStatus.DEFAULT}
+                              label="Describe your character"
+                              rows={4}
+                              cols={20}
+                              limit={50}
+                              value={descriptionCharacter}
+                              onChange={e => setDescriptionCharacter(e.target.value)}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextArea 
+                              valid={validationStatus.WARNING}
+                              label="Describe your character"
+                              rows={4}
+                              cols={20}
+                              limit={50}
+                              value={descriptionCharacter}
+                              onChange={e => setDescriptionCharacter(e.target.value)}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextArea 
+                              valid={validationStatus.ERROR}
+                              label="Describe your character"
+                              rows={4}
+                              cols={20}
+                              limit={50}
+                              value={descriptionCharacter}
+                              onChange={e => setDescriptionCharacter(e.target.value)}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <TextArea 
+                              valid={validationStatus.SUCCESSFULLY}
+                              label="Describe your character"
+                              rows={4}
+                              cols={20}
+                              limit={50}
+                              value={descriptionCharacter}
+                              onChange={e => setDescriptionCharacter(e.target.value)}
+                            />
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>RadioGroup</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <RadioGroup
+                              valid={validationStatus.DEFAULT}
+                              name='UItest'
+                              onChange={handleChangeSex}
+                              options={[
+                                {value: 'male', description: 'Male', defaultChecked: true},
+                                {value: 'female', description: 'Female'},
+                                {value: 'trans', description: 'Hz', disabled:true},
+                              ]}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <RadioGroup
+                              valid={validationStatus.WARNING}
+                              name='UItest'
+                              onChange={handleChangeSex}
+                              options={[
+                                {value: 'male', description: 'Male', defaultChecked: true},
+                                {value: 'female', description: 'Female'},
+                                {value: 'trans', description: 'Hz', disabled:true},
+                              ]}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <RadioGroup
+                              valid={validationStatus.ERROR}
+                              name='UItest'
+                              onChange={handleChangeSex}
+                              options={[
+                                {value: 'male', description: 'Male', defaultChecked: true},
+                                {value: 'female', description: 'Female'},
+                                {value: 'trans', description: 'Hz', disabled:true},
+                              ]}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <RadioGroup
+                              valid={validationStatus.SUCCESSFULLY}
+                              name='UItest'
+                              onChange={handleChangeSex}
+                              options={[
+                                {value: 'male', description: 'Male', defaultChecked: true},
+                                {value: 'female', description: 'Female'},
+                                {value: 'trans', description: 'Hz', disabled:true},
+                              ]}
+                            />
+                          </TableData>
+                        </TableRow>
 
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Select</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Select
-                            valid={validationStatus.DEFAULT}
-                            placeholder='Выберите месяц'
-                            options={options}
-                            selected={selectedMonth || null}
-                            onChange={handleChangeDate}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Select
-                            valid={validationStatus.WARNING}
-                            placeholder='Выберите месяц'
-                            options={options}
-                            selected={selectedMonth || null}
-                            onChange={handleChangeDate}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Select
-                            valid={validationStatus.ERROR}
-                            placeholder='Выберите месяц'
-                            options={options}
-                            selected={selectedMonth || null}
-                            onChange={handleChangeDate}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Select
-                            valid={validationStatus.SUCCESSFULLY}
-                            placeholder='Выберите месяц'
-                            options={options}
-                            selected={selectedMonth || null}
-                            onChange={handleChangeDate}
-                          />
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Slider</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Slider 
-                            valid={validationStatus.DEFAULT}
-                            min={0}
-                            max={100}
-                            value={sliderValue}
-                            step={10}
-                            onChange={e => setSliderValue(Number(e.target.value))}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Slider 
-                            valid={validationStatus.WARNING}
-                            min={0}
-                            max={100}
-                            value={sliderValue}
-                            step={10}
-                            onChange={e => setSliderValue(Number(e.target.value))}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Slider 
-                            valid={validationStatus.ERROR}
-                            min={0}
-                            max={100}
-                            value={sliderValue}
-                            step={10}
-                            onChange={e => setSliderValue(Number(e.target.value))}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Slider 
-                            valid={validationStatus.SUCCESSFULLY}
-                            min={0}
-                            max={100}
-                            value={sliderValue}
-                            step={10}
-                            onChange={e => setSliderValue(Number(e.target.value))}
-                          />
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Switcher</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Switcher 
-                            valid={validationStatus.DEFAULT}
-                            id="UItest__Switcher"
-                            value={switcherValue}
-                            onChange={handleChangeSwitcher}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Switcher 
-                            valid={validationStatus.WARNING}
-                            id="UItest__Switcher"
-                            value={switcherValue}
-                            onChange={handleChangeSwitcher}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Switcher 
-                            valid={validationStatus.ERROR}
-                            id="UItest__Switcher"
-                            value={switcherValue}
-                            onChange={handleChangeSwitcher}
-                          />
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Switcher 
-                            valid={validationStatus.SUCCESSFULLY}
-                            id="UItest__Switcher"
-                            value={switcherValue}
-                            onChange={handleChangeSwitcher}
-                          />
-                        </TableData>
-                      </TableRow>
-                      <TableRow>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Checkbox</Text></TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Checkbox 
-                            valid={validationStatus.DEFAULT}
-                            id="ConfirmCheckRules"
-                            checked={checkTheRules}
-                            onChange={toggleCheckTheRules}
-                          >
-                            <Text>check</Text>
-                          </Checkbox>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Checkbox 
-                            valid={validationStatus.WARNING}
-                            id="ConfirmCheckRules"
-                            checked={checkTheRules}
-                            onChange={toggleCheckTheRules}
-                          >
-                            <Text>check</Text>
-                          </Checkbox>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Checkbox 
-                            valid={validationStatus.ERROR}
-                            id="ConfirmCheckRules"
-                            checked={checkTheRules}
-                            onChange={toggleCheckTheRules}
-                          >
-                            <Text>check</Text>
-                          </Checkbox>
-                        </TableData>
-                        <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
-                          <Checkbox 
-                            valid={validationStatus.SUCCESSFULLY}
-                            id="ConfirmCheckRules"
-                            checked={checkTheRules}
-                            onChange={toggleCheckTheRules}
-                          >
-                            <Text>check</Text>
-                          </Checkbox>
-                        </TableData>
-                      </TableRow>
-                    </TableBody>
-                  </TableContent>
-              </Table>
-          </Card>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Select</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Select
+                              valid={validationStatus.DEFAULT}
+                              placeholder='Выберите месяц'
+                              options={options}
+                              selected={selectedMonth || null}
+                              onChange={handleChangeDate}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Select
+                              valid={validationStatus.WARNING}
+                              placeholder='Выберите месяц'
+                              options={options}
+                              selected={selectedMonth || null}
+                              onChange={handleChangeDate}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Select
+                              valid={validationStatus.ERROR}
+                              placeholder='Выберите месяц'
+                              options={options}
+                              selected={selectedMonth || null}
+                              onChange={handleChangeDate}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Select
+                              valid={validationStatus.SUCCESSFULLY}
+                              placeholder='Выберите месяц'
+                              options={options}
+                              selected={selectedMonth || null}
+                              onChange={handleChangeDate}
+                            />
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Slider</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Slider 
+                              valid={validationStatus.DEFAULT}
+                              min={0}
+                              max={100}
+                              value={sliderValue}
+                              step={10}
+                              onChange={e => setSliderValue(Number(e.target.value))}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Slider 
+                              valid={validationStatus.WARNING}
+                              min={0}
+                              max={100}
+                              value={sliderValue}
+                              step={10}
+                              onChange={e => setSliderValue(Number(e.target.value))}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Slider 
+                              valid={validationStatus.ERROR}
+                              min={0}
+                              max={100}
+                              value={sliderValue}
+                              step={10}
+                              onChange={e => setSliderValue(Number(e.target.value))}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Slider 
+                              valid={validationStatus.SUCCESSFULLY}
+                              min={0}
+                              max={100}
+                              value={sliderValue}
+                              step={10}
+                              onChange={e => setSliderValue(Number(e.target.value))}
+                            />
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Switcher</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Switcher 
+                              valid={validationStatus.DEFAULT}
+                              id="UItest__Switcher"
+                              value={switcherValue}
+                              onChange={handleChangeSwitcher}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Switcher 
+                              valid={validationStatus.WARNING}
+                              id="UItest__Switcher"
+                              value={switcherValue}
+                              onChange={handleChangeSwitcher}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Switcher 
+                              valid={validationStatus.ERROR}
+                              id="UItest__Switcher"
+                              value={switcherValue}
+                              onChange={handleChangeSwitcher}
+                            />
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Switcher 
+                              valid={validationStatus.SUCCESSFULLY}
+                              id="UItest__Switcher"
+                              value={switcherValue}
+                              onChange={handleChangeSwitcher}
+                            />
+                          </TableData>
+                        </TableRow>
+                        <TableRow>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Checkbox</Text></TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Checkbox 
+                              valid={validationStatus.DEFAULT}
+                              id="ConfirmCheckRules"
+                              checked={checkTheRules}
+                              onChange={toggleCheckTheRules}
+                            >
+                              <Text>check</Text>
+                            </Checkbox>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Checkbox 
+                              valid={validationStatus.WARNING}
+                              id="ConfirmCheckRules"
+                              checked={checkTheRules}
+                              onChange={toggleCheckTheRules}
+                            >
+                              <Text>check</Text>
+                            </Checkbox>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Checkbox 
+                              valid={validationStatus.ERROR}
+                              id="ConfirmCheckRules"
+                              checked={checkTheRules}
+                              onChange={toggleCheckTheRules}
+                            >
+                              <Text>check</Text>
+                            </Checkbox>
+                          </TableData>
+                          <TableData style={{display:'inline-flex', justifyContent:'center', width: 300}}>
+                            <Checkbox 
+                              valid={validationStatus.SUCCESSFULLY}
+                              id="ConfirmCheckRules"
+                              checked={checkTheRules}
+                              onChange={toggleCheckTheRules}
+                            >
+                              <Text>check</Text>
+                            </Checkbox>
+                          </TableData>
+                        </TableRow>
+                      </TableBody>
+                    </TableContent>
+                </Table>
+            </Card>
           </div>
         </WindowBrowser>
     )
