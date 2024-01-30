@@ -1,3 +1,11 @@
+/*
+    In this document described the standards for z-index.
+*/
 :root{
-    --uikit-z-index-util: 2;
+//  window
+    --uikit-z-index-window: 2;
+
+
+//  util
+    --uikit-z-index-util: 3;
 }

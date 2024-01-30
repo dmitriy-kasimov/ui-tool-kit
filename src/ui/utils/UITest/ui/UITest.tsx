@@ -38,44 +38,54 @@ import './UITest.scss';
 
 const UITest = () => {
   
-    const [isModal, setIsModal] = useState(false);
+  const [windowOpen, setWindowOpen] = useState(false);
 
-    const onCloseModal = useCallback(() => {
-        setIsModal(false);
-    }, []);
+  const onCloseWindow = useCallback(()=>{
+    setWindowOpen(false);
+  },[])
 
-    const onShowModal = useCallback(() => {
-        setIsModal(true);
-    }, []);
+  const onShowWindow = useCallback(()=>{
+    setWindowOpen(true);
+  },[])
+
+  const [isModal, setIsModal] = useState(false);
+
+  const onCloseModal = useCallback(() => {
+      setIsModal(false);
+  }, []);
+
+  const onShowModal = useCallback(() => {
+      setIsModal(true);
+  }, []);
 
 
 
-    /*
-    * наполнители для компонентов
-    */
-    const posts = [
-      {id: 6, title: '[Разработка] ', subtitle:'02/11/2021', body: 'Набрал этот текст'},
-      {id: 5, title: '[Разработка] ', subtitle:'01/23/2021', body: 'Вторая система регистрации/авторизации завершена.'},
-      {id: 4, title: '[Разработка] ', subtitle:'01/22/2021', body: 'Первая совместная игра через \nлокальную сеть.'},
-      {id: 3, title: '[Разработка] ', subtitle:'01/19/2021', body: 'Возобновление работ над сервером.'},
-      {id: 2, title: '[Разработка] ', subtitle:'winter 2020', body: 'Остановка всех разработок. Команда из 3х \nчеловек распущена.'},
-      {id: 1, title: '[Разработка] ', subtitle:'autumn 2019', body: 'Разработка Chill-Island и моста к нему.'},
-      {id: 0, title: '[Разработка] ', subtitle:'june 2019', body: 'Зарождение идеи создания проекта.'},
-    ];
+  /*
+  * наполнители для компонентов
+  */
+  const posts = [
+    {id: 6, title: '[Разработка] ', subtitle:'02/11/2021', body: 'Набрал этот текст'},
+    {id: 5, title: '[Разработка] ', subtitle:'01/23/2021', body: 'Вторая система регистрации/авторизации завершена.'},
+    {id: 4, title: '[Разработка] ', subtitle:'01/22/2021', body: 'Первая совместная игра через \nлокальную сеть.'},
+    {id: 3, title: '[Разработка] ', subtitle:'01/19/2021', body: 'Возобновление работ над сервером.'},
+    {id: 2, title: '[Разработка] ', subtitle:'winter 2020', body: 'Остановка всех разработок. Команда из 3х \nчеловек распущена.'},
+    {id: 1, title: '[Разработка] ', subtitle:'autumn 2019', body: 'Разработка Chill-Island и моста к нему.'},
+    {id: 0, title: '[Разработка] ', subtitle:'june 2019', body: 'Зарождение идеи создания проекта.'},
+  ];
 
-    const options = [
-      { "title": "янв", "value": "01" },
-      { "title": "фев", "value": "02" },
-      { "title": "мар", "value": "03" },
-      { "title": "апр", "value": "04" },
-      { "title": "май", "value": "05" },
-      { "title": "июн", "value": "06" },
-      { "title": "июл", "value": "07" },
-      { "title": "авг", "value": "08" },
-      { "title": "сен", "value": "09" },
-      { "title": "окт", "value": "10" },
-      { "title": "ноя", "value": "11" },
-      { "title": "дек", "value": "12" }
+  const options = [
+    { "title": "янв", "value": "01" },
+    { "title": "фев", "value": "02" },
+    { "title": "мар", "value": "03" },
+    { "title": "апр", "value": "04" },
+    { "title": "май", "value": "05" },
+    { "title": "июн", "value": "06" },
+    { "title": "июл", "value": "07" },
+    { "title": "авг", "value": "08" },
+    { "title": "сен", "value": "09" },
+    { "title": "окт", "value": "10" },
+    { "title": "ноя", "value": "11" },
+    { "title": "дек", "value": "12" }
   ];
     /*
     * состояния для компонентов
@@ -112,8 +122,20 @@ const UITest = () => {
     // useMemo(()=>{
     //   console.log(regForm.email);
     // }, [regForm.email])
+    if(!windowOpen){
+      return (
+        <Button
+          onClick={onShowWindow}
+        >
+          <Text>Open window</Text>
+        </Button>
+      )
+    }
     return (
         <WindowBrowser
+          isOpen={windowOpen}
+          onClose={onCloseWindow}
+          
           title={<Text font={textFont.TITLE} size={textSize.TITLE}>All items</Text>}
           links={(
             <>
@@ -122,7 +144,6 @@ const UITest = () => {
               <Link onClick={()=>{}} disabled><IconLink /> <Text font={textFont.TITLE} size={textSize.IMPORTANT}>Link 3</Text></Link>
             </>
           )}
-          fullscreen
         >
           <div style={{display:'inline-flex', flexWrap:'wrap', alignItems:'flex-start'}}>
             <Card>
@@ -347,7 +368,7 @@ const UITest = () => {
                           <Text font={textFont.TITLE} size={textSize.SUBTITLE}>The vip players</Text>
                       </TableCaption>
 
-                      <TableContent>
+                      {/* <TableContent> */}
                         <TableHead>
                           <TableRow>
                           <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
@@ -357,13 +378,13 @@ const UITest = () => {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                        <Loader
-                          size={LoaderSize.BIG}
-                        >
-                          <Text>Loading...</Text>
-                        </Loader>
+                          <Loader
+                            size={LoaderSize.BIG}
+                          >
+                            <Text>Loading...</Text>
+                          </Loader>
                         </TableBody>
-                      </TableContent>
+                      {/* </TableContent> */}
                   </Table>
               </Modal>
             </Card>

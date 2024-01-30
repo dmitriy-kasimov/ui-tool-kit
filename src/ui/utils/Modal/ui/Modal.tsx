@@ -4,6 +4,7 @@ import React, {
 import './Modal.scss';
 import { Portal } from 'ui/utils/Portal/Portal';
 import { classNames } from 'lib/classNames/classNames';
+import { ANIMATION_DELAY } from 'styles/effects/anims';
 
 interface ModalProps {
     className?: string;
@@ -13,11 +14,9 @@ interface ModalProps {
     lazy?:boolean;
 }
 
-const ANIMATION_DELAY = 300;
-
 export const Modal = (props: ModalProps) => {
     const {
-        className,
+        className='',
         children,
         isOpen=false,
         onClose,
@@ -46,7 +45,7 @@ export const Modal = (props: ModalProps) => {
 
     // Новые ссылки!!!
     // Для сохранения сслыки useCallback
-    const onKeyDown = useCallback((e: KeyboardEvent) => {
+    const onKeyDownCloseModal = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             closeHandler();
         }
@@ -57,17 +56,17 @@ export const Modal = (props: ModalProps) => {
 
     useEffect(() => {
         if (isOpen) {
-            window.addEventListener('keydown', onKeyDown);
+            window.addEventListener('keydown', onKeyDownCloseModal);
         }
         return () => {
             clearTimeout(timerRef.current);
-            window.removeEventListener('keydown', onKeyDown);
+            window.removeEventListener('keydown', onKeyDownCloseModal);
         };
-    }, [isOpen, onKeyDown]);
+    }, [isOpen, onKeyDownCloseModal]);
 
     const mods: Record<string, boolean> = {
-        opened: isOpen,
-        isClosing: isClosing,
+        Modal__opened: isOpen,
+        Modal__isClosing: isClosing,
     };
 
     if (lazy && !isMounted) {
@@ -76,7 +75,7 @@ export const Modal = (props: ModalProps) => {
 
     return (
         <Portal>
-            <div className={classNames('Modal', mods)}>
+            <div className={classNames('Modal', mods, [className])}>
                 <div className={'Modal__overlay'} onClick={closeHandler}>
                     <div
                         className={'Modal__overlay__content'}

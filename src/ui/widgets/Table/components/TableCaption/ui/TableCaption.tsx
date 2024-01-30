@@ -9,9 +9,9 @@ interface TableCaptionProps{
 
 const TableCaption:FC<TableCaptionProps> = ({children, className=''}) => {
   return (
-    <caption className={classNames('Table__caption', {}, [className])}>
+    <span className={classNames('Table__caption', {}, [className])}>
         {children}
-    </caption>
+    </span>
   )
 };
 

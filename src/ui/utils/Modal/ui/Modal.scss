@@ -10,7 +10,6 @@
     opacity: 0;
     pointer-events: none;
     z-index: -1;
-    //color: var(--primary-color);
 }
 
 .Modal__overlay {
@@ -38,7 +37,7 @@
     max-width: 60%;
 }
 
-.opened {
+.Modal__opened {
     pointer-events: auto;
     opacity: 1;
     z-index: var(--uikit-z-index-util);
@@ -48,7 +47,7 @@
     }
 }
 
-.isClosing {
+.Modal__isClosing {
     .Modal__overlay__content {
         @include anims.utilClosing;
     }

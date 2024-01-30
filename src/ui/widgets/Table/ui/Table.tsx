@@ -8,9 +8,7 @@ const Table:FC<TableProps> = ({ children, className='' }) => {
     
     return (
     <div className={classNames('Table', {}, [className])}>
-      <table>
         {children}
-      </table>
     </div>
   )
 };

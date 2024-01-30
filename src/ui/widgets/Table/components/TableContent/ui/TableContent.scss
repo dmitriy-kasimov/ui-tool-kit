@@ -1,10 +1,7 @@
-.Table__Scrollable{
+.Table__Content{
     overflow-x: auto;
     overflow-y: auto;
+    
     max-height: 480px;
     max-width: 640px;
-}
-.Table__TableContent{
-    display: inline-flex;
-    flex-direction: column;
 }

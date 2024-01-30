@@ -7,4 +7,9 @@ export interface WindowBrowserProps{
     className?:string;
 
     fullscreen?: boolean;
+
+    isOpen?: boolean;
+    onClose?: () => void;
+    lazy?:boolean;
+    isClosable?:boolean;
 }

@@ -1,16 +1,39 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
-
+@use 'styles/effects/anims';
 
 .WindowBrowser{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.WindowBrowser__overlay{
+    background: var(--uikit-background-window-overlay);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WindowBrowser__overlay__content{
     @include glasses.window();
     @include shadows.window;
+    @include anims.window;
 
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 
-    max-height: 90%;
+    max-height: 90vh;
     max-width: 90%;
 
     margin: var(--uikit-margin-window-strength-quad);
@@ -19,6 +42,22 @@
 	border: var(--uikit-border-window);
 
     overflow: hidden;
+}
+
+.WindowBrowser__opened {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: var(--uikit-z-index-window);
+
+    .WindowBrowser__overlay__content {
+        @include anims.windowOpened;
+    }
+}
+
+.WindowBrowser__isClosing {
+    .WindowBrowser__overlay__content {
+        @include anims.windowClosing;
+    }
 }
 
 .WindowBrowser__fullscreen{

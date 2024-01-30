@@ -17,7 +17,9 @@
     --uikit-color-progress-a: rgba(0, 255, 0, 0.7);
 
 
-//  windows
+//  window
+    --uikit-color-background-window-overlay: rgba(0,0,0, 0.6);
+
     --uikit-color-border-window: rgba(30, 30, 30, 0.3);
 
     --uikit-color-background-window: rgba(70, 70, 70, 0.6);
@@ -25,7 +27,7 @@
     --uikit-color-shadow-window: rgba(0, 0, 0, 0.808);
 
 
-//  sections
+//  section
     --uikit-color-border-section: rgba(35, 35, 35, 0.1);
     --uikit-color-border-section-block: rgba(40, 40, 40, 0.2);
     --uikit-color-border-section-element: rgba(40, 40, 40, 0.3);
@@ -42,7 +44,7 @@
     --uikit-color-shadow-section-modificator: rgba(255, 255, 255, 0.582);
 
 
-//  controls
+//  control
     --uikit-color-border-control: var(--uikit-font-color-main);
 
     --uikit-color-background-control: #7e7e7e77;
@@ -50,7 +52,7 @@
 
     --uikit-color-shadow-control: rgba(255, 255, 255, 0.473);
 
-//  utils
+//  util
     --uikit-color-background-util-overlay: rgba(0,0,0, 0.4);
 
     --uikit-color-border-util-content: rgba(255,255,255, 0.3);
