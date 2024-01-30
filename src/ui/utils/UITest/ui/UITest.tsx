@@ -35,6 +35,8 @@ import IconSuccessfully from 'styles/assets/icons/successfully.svg';
 import IconInfo from 'styles/assets/icons/info.svg';
 
 import './UITest.scss';
+import { Alert } from "ui/utils/Alert";
+import { AlertType } from "ui/utils/Alert";
 
 const UITest = () => {
   
@@ -58,7 +60,16 @@ const UITest = () => {
       setIsModal(true);
   }, []);
 
+  const [alertShow, setAlertShow] = useState(false);
+  const onShowAlert = useCallback(() => {
+    setAlertShow(true);
+    setTimeout(()=>{onShowSecondAlert()}, 1000)
+  }, []);
 
+  const [secondAlertShow, setSecondAlertShow] = useState(false);
+  const onShowSecondAlert = useCallback(() => {
+    setSecondAlertShow(true);
+  }, []);
 
   /*
   * наполнители для компонентов
@@ -124,11 +135,37 @@ const UITest = () => {
     // }, [regForm.email])
     if(!windowOpen){
       return (
+      <>
+        <Alert 
+          title="Т/С"
+          type={AlertType.SUCCESSFULLY}
+          isOpen={alertShow} 
+          onClose={()=>setAlertShow(false)}
+        >
+          <Text>Двигатель успешно заведен!</Text>
+        </Alert>
+
+        <Alert 
+          title="Т/С"
+          type={AlertType.ERROR}
+          isOpen={secondAlertShow} 
+          onClose={()=>setSecondAlertShow(false)}
+        >
+          <Text>Двигатель заглох...</Text>
+        </Alert>
+
         <Button
           onClick={onShowWindow}
         >
           <Text>Open window</Text>
         </Button>
+        <Button
+          onClick={onShowAlert}
+        >
+          <Text>Open alert</Text>
+        </Button>
+      </>
+       
       )
     }
     return (
@@ -354,10 +391,18 @@ const UITest = () => {
             <Card>
               <NavBar>
                 <Link onClick={onShowModal}><Text size={textSize.REGULAR}>Список игроков</Text></Link>
-                <Link onClick={()=>{}} disabled><Text size={textSize.REGULAR}>Good life</Text></Link>
+                <Link onClick={onShowSecondAlert}><Text size={textSize.REGULAR}>Good life</Text></Link>
                 <Link onClick={()=>{}}><Text size={textSize.REGULAR}>Донаты</Text></Link>
               </NavBar>
 
+              <Alert 
+                title="Т/С"
+                type={AlertType.ERROR}
+                isOpen={secondAlertShow} 
+                onClose={()=>setSecondAlertShow(false)}
+              >
+                <Text>Двигатель заглох...</Text>
+              </Alert>
               <Modal
                   isOpen={isModal}
                   onClose={onCloseModal}
