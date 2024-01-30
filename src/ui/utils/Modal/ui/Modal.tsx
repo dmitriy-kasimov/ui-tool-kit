@@ -43,6 +43,8 @@ export const Modal = (props: ModalProps) => {
         }
     }, [onClose]);
 
+    
+
     // Новые ссылки!!!
     // Для сохранения сслыки useCallback
     const onKeyDownCloseModal = useCallback((e: KeyboardEvent) => {

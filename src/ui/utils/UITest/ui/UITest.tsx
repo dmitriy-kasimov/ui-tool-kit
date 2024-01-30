@@ -37,6 +37,7 @@ import IconInfo from 'styles/assets/icons/info.svg';
 import './UITest.scss';
 import { Alert } from "ui/utils/Alert";
 import { AlertType } from "ui/utils/Alert";
+import { ModalConfirm } from "ui/utils/ModalConfirm";
 
 const UITest = () => {
   
@@ -70,6 +71,15 @@ const UITest = () => {
   const onShowSecondAlert = useCallback(() => {
     setSecondAlertShow(true);
   }, []);
+
+
+  const [modalConfirm, setIsModalConfirm] = useState(false);
+  const onShowModalConfirm = useCallback(() => {
+    setIsModalConfirm(true);
+  }, [])
+  const onCloseModalConfirm = useCallback(() => {
+    setIsModalConfirm(false);
+  }, [])
 
   /*
   * наполнители для компонентов
@@ -163,6 +173,22 @@ const UITest = () => {
           onClick={onShowAlert}
         >
           <Text>Open alert</Text>
+        </Button>
+
+
+
+        <ModalConfirm
+          isOpen={modalConfirm}
+          onClose={onCloseModalConfirm}
+          onConfirm={() => console.log('You successfully confirmed an action!')}
+          title="Покупка грузовика"
+        >
+          <Text>Ты уверен, что хочешь купить модель грузовика «Flatbed» за 2.490.000$ ?</Text>
+        </ModalConfirm>
+        <Button
+          onClick={onShowModalConfirm}
+        >
+          <Text>Open ModalConfirm</Text>
         </Button>
       </>
        
