@@ -77,14 +77,12 @@ const Alert: FC<AlertProps> = ({
   return (
     <Portal>
       <div className={classNames('Alert', mods, [])}>
-        <div className={classNames('Alert__overlay', {}, [])}>
-          <div className={classNames('Alert__overlay__content', {}, [])}>
-            <Text font={textFont.TITLE} size={textSize.REGULAR}>{title}</Text>
-            <div className={classNames('Alert__overlay__content__body', {}, [])}>
-              {iconAlert}
-              <div className={classNames('Alert__overlay__content__body__text', {}, [])}>
-                {children}
-              </div>
+        <div className={classNames('Alert__wrapper', {}, [])}>
+          <Text font={textFont.TITLE} size={textSize.REGULAR}>{title}</Text>
+          <div className={classNames('Alert__wrapper__body', {}, [])}>
+            {iconAlert}
+            <div className={classNames('Alert__wrapper__body__text', {}, [])}>
+              {children}
             </div>
           </div>
         </div>

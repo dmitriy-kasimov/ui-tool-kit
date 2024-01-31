@@ -1,61 +1,65 @@
 @use 'styles/effects/glasses';
 @use 'styles/effects/anims';
 
-.Alert{
+.Notify{
     position: fixed;
     top: 0;
+    bottom: 0;
     right: 0;
-    left: 0;
     opacity: 0;
     pointer-events: none;
     z-index: -1;
 
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15%;
 }
 
-.Alert__wrapper{
+.Notify__wrapper{
     @include glasses.util;
     @include anims.util;
 
-    background: var(--uikit-background-util-content);
+    margin-right: 5%;
+    padding: var(--uikit-padding-util-strength-height);
 
+    background: var(--uikit-background-util-content);
     border: var(--uikit-border-util-content);
     border-radius: var(--uikit-border-radius-util-content);
 
-    margin-top: 1vh;
-    padding: var(--uikit-padding-util-strength-width);
-    
-    max-width: 60%;
+    max-width: 100%;
 
-    display:flex;
+    display:inline-flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
 }
 
-.Alert__wrapper__body{
+.Notify__wrapper__title{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.Alert__wrapper__body__text{
+.Notify__wrapper__title__text{
     margin: var(--uikit-margin-util-strength-width);
 }
 
-.Alert__opened {
+.Notify__wrapper__body{
+    margin: var(--uikit-margin-util-strength-height);
+}
+
+
+.Notify__opened {
     pointer-events: auto;
     opacity: 1;
     z-index: var(--uikit-z-index-util);
 
-    .Alert__wrapper {
+    .Notify__wrapper {
         @include anims.utilOpened;
     }
 }
 
-.Alert__isClosing {
-    .Alert__wrapper {
+.Notify__isClosing {
+    .Notify__wrapper {
         @include anims.utilClosing;
     }
 }

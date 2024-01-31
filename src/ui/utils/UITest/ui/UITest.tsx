@@ -38,6 +38,7 @@ import './UITest.scss';
 import { Alert } from "ui/utils/Alert";
 import { AlertType } from "ui/utils/Alert";
 import { ModalConfirm } from "ui/utils/ModalConfirm";
+import { Notify, NotifyType } from "ui/utils/Notify";
 
 const UITest = () => {
   
@@ -81,6 +82,16 @@ const UITest = () => {
     setIsModalConfirm(false);
   }, [])
 
+  const [notify, setNotify] = useState(false);
+  const onShowNotify = useCallback(() => {
+    setNotify(true);
+    setTimeout(()=>{onShowNotifySecond()}, 1000)
+  }, [])
+
+  const [notifySecond, setNotifySecond] = useState(false);
+  const onShowNotifySecond = useCallback(() => {
+    setNotifySecond(true);
+  }, [])
   /*
   * наполнители для компонентов
   */
@@ -189,6 +200,28 @@ const UITest = () => {
           onClick={onShowModalConfirm}
         >
           <Text>Open ModalConfirm</Text>
+        </Button>
+
+        <Notify
+          type={NotifyType.SUCCESSFULLY}
+          isOpen={notify}
+          title="Finance"
+          onClose={()=>setNotify(false)}
+        >
+          <Text>You are successfully bought the Flatbed!</Text>
+        </Notify>
+        <Notify
+          type={NotifyType.SUCCESSFULLY}
+          isOpen={notifySecond}
+          title="Finance"
+          onClose={()=>setNotifySecond(false)}
+        >
+          <Text>You are successfully sold the Flatbed!</Text>
+        </Notify>
+        <Button
+          onClick={onShowNotify}
+        >
+          <Text>Show notify</Text>
         </Button>
       </>
        
