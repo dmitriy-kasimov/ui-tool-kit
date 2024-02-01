@@ -39,13 +39,15 @@
 @mixin text{
     $shadow-color: rgb(0, 0, 0);
     $indent: 3px;
-    $dispersia: 5px;
+    $dispersia: 3px;
 
-    text-shadow: 
-                0   $indent     $dispersia $shadow-color,
-                0   -1*$indent  $dispersia $shadow-color,
-                $indent     0   $dispersia $shadow-color,
-                -1*$indent  0   $dispersia $shadow-color;
+    // text-shadow: 
+    //             0   $indent     $dispersia $shadow-color,
+    //             0   -1*$indent  $dispersia $shadow-color,
+    //             $indent     0   $dispersia $shadow-color,
+    //             -1*$indent  0   $dispersia $shadow-color;
+
+    text-shadow: $indent $indent $dispersia $shadow-color;
 }
 
 @mixin validation($type){

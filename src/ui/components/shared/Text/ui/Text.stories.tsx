@@ -27,6 +27,13 @@ type Story = StoryObj<typeof meta>;
 const defaultStr: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const TextFontTitle: Story = {
+    args: {
+       font: textFont.TITLE,
+       children: (defaultStr)
+    },  
+};
+
 export const TextFontMain: Story = {
     args: {
        font: textFont.MAIN,
@@ -111,3 +118,4 @@ export const TextColorInformation: Story = {
        children: (defaultStr)
     },  
 };
+

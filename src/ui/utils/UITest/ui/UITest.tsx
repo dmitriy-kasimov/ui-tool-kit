@@ -157,6 +157,13 @@ const UITest = () => {
     if(!windowOpen){
       return (
       <>
+        <Button
+          onClick={onShowWindow}
+        >
+          <Text>Open window</Text>
+        </Button>
+
+
         <Alert 
           title="Т/С"
           type={AlertType.SUCCESSFULLY}
@@ -176,16 +183,10 @@ const UITest = () => {
         </Alert>
 
         <Button
-          onClick={onShowWindow}
-        >
-          <Text>Open window</Text>
-        </Button>
-        <Button
           onClick={onShowAlert}
         >
           <Text>Open alert</Text>
         </Button>
-
 
 
         <ModalConfirm
@@ -201,6 +202,7 @@ const UITest = () => {
         >
           <Text>Open ModalConfirm</Text>
         </Button>
+
 
         <Notify
           type={NotifyType.SUCCESSFULLY}
@@ -257,43 +259,45 @@ const UITest = () => {
                     </Post>
                   )}
               </Tape>
-              <form style={{display:'inline-flex', flexDirection:'column', alignItems:'flex-start'}}>
-                <TextField 
-                  value={regForm.email}
-                  onChange={e => setRegForm({...regForm, email: e.target.value})}
-                  limit={32}
-                  label="Эл. почта"
-                />
-                <TextField 
-                  value={regForm.nickname}
-                  onChange={e => setRegForm({...regForm, nickname: e.target.value})}
-                  limit={32}
-                  label="Имя в игре"
-                />
-                <TextField 
-                  value={regForm.password}
-                  onChange={e => setRegForm({...regForm, password: e.target.value})}
-                  limit={32}
-                  label="Пароль"
-                  masked
-                />
-                <TextField 
-                  value={regForm.confirmPassword}
-                  onChange={e => setRegForm({...regForm, confirmPassword: e.target.value})}
-                  limit={32}
-                  label="Повторите пароль"
-                  masked
-                />
-                <Checkbox 
-                  id="ConfirmCheckRules"
-                  checked={checkTheRules}
-                  onChange={toggleCheckTheRules}
-                >
-                  <Text>Ознакомился с правилами</Text>
-                </Checkbox>
-                <Button style={{alignSelf:'center'}}><Text>Продолжить</Text></Button>
-                <Link style={{alignSelf:'flex-end'}} onClick={()=>{}} ><Text>Уже есть аккаунт?</Text></Link>
-              </form>
+              <Card>
+                <form style={{display:'inline-flex', flexDirection:'column', alignItems:'flex-start'}}>
+                  <TextField 
+                    value={regForm.email}
+                    onChange={e => setRegForm({...regForm, email: e.target.value})}
+                    limit={32}
+                    label="Эл. почта"
+                  />
+                  <TextField 
+                    value={regForm.nickname}
+                    onChange={e => setRegForm({...regForm, nickname: e.target.value})}
+                    limit={32}
+                    label="Имя в игре"
+                  />
+                  <TextField 
+                    value={regForm.password}
+                    onChange={e => setRegForm({...regForm, password: e.target.value})}
+                    limit={32}
+                    label="Пароль"
+                    masked
+                  />
+                  <TextField 
+                    value={regForm.confirmPassword}
+                    onChange={e => setRegForm({...regForm, confirmPassword: e.target.value})}
+                    limit={32}
+                    label="Повторите пароль"
+                    masked
+                  />
+                  <Checkbox 
+                    id="ConfirmCheckRules"
+                    checked={checkTheRules}
+                    onChange={toggleCheckTheRules}
+                  >
+                    <Text>Ознакомился с правилами</Text>
+                  </Checkbox>
+                  <Button style={{alignSelf:'center'}}><Text>Продолжить</Text></Button>
+                  <Link style={{alignSelf:'flex-end'}} onClick={()=>{}} ><Text>Уже есть аккаунт?</Text></Link>
+                </form>
+              </Card>
             </Card>
             
             <Card style={{display:'flex', flexDirection:'column'}}>
@@ -826,6 +830,76 @@ const UITest = () => {
                       </TableBody>
                     </TableContent>
                 </Table>
+            </Card>
+            <Card style={{display:'flex', flexDirection:'column'}}>
+              <Button
+                onClick={onShowWindow}
+              >
+                <Text>Open window</Text>
+              </Button>
+
+
+              <Alert 
+                title="Т/С"
+                type={AlertType.SUCCESSFULLY}
+                isOpen={alertShow} 
+                onClose={()=>setAlertShow(false)}
+              >
+                <Text>Двигатель успешно заведен!</Text>
+              </Alert>
+
+              <Alert 
+                title="Т/С"
+                type={AlertType.ERROR}
+                isOpen={secondAlertShow} 
+                onClose={()=>setSecondAlertShow(false)}
+              >
+                <Text>Двигатель заглох...</Text>
+              </Alert>
+
+              <Button
+                onClick={onShowAlert}
+              >
+                <Text>Open alert</Text>
+              </Button>
+
+
+              <ModalConfirm
+                isOpen={modalConfirm}
+                onClose={onCloseModalConfirm}
+                onConfirm={() => console.log('You successfully confirmed an action!')}
+                title="Покупка грузовика"
+              >
+                <Text>Ты уверен, что хочешь купить модель грузовика «Flatbed» за 2.490.000$ ?</Text>
+              </ModalConfirm>
+              <Button
+                onClick={onShowModalConfirm}
+              >
+                <Text>Open ModalConfirm</Text>
+              </Button>
+
+
+              <Notify
+                type={NotifyType.SUCCESSFULLY}
+                isOpen={notify}
+                title="Finance"
+                onClose={()=>setNotify(false)}
+              >
+                <Text>You are successfully bought the Flatbed!</Text>
+              </Notify>
+              <Notify
+                type={NotifyType.SUCCESSFULLY}
+                isOpen={notifySecond}
+                title="Finance"
+                onClose={()=>setNotifySecond(false)}
+              >
+                <Text>You are successfully sold the Flatbed!</Text>
+              </Notify>
+              <Button
+                onClick={onShowNotify}
+              >
+                <Text>Show notify</Text>
+              </Button>
             </Card>
           </div>
         </WindowBrowser>
