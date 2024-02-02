@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
+  "types": "./build/src",
   "scripts": {
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",

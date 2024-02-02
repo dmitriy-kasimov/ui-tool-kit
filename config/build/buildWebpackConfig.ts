@@ -18,13 +18,16 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         },
         resolve: buildResolvers(options),
         output: {
-            filename: '[name].[contenthash].js',
+            filename: 'index.js',
             path: paths.build,
+            libraryTarget: "umd",
             clean: true,
         },
         plugins: buildPlugins(options),
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
-
+        externals:{
+            react: 'react'
+        }
     };
 }
