@@ -1,7 +1,7 @@
 {
   "name": "@tr271v0r/ui-tool-kit",
-  "version": "1.0.0",
-  "description": "ui tool kit for my server",
+  "version": "1.0.1",
+  "description": "ui tool kit for the server GTA V",
   "main": "./build/index.js",
   "types": "./build/src",
   "scripts": {
