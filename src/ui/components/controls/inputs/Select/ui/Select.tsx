@@ -49,7 +49,7 @@ import { Text } from 'ui/components/shared/Text';
 import { getValidationClasses, validationStatus } from 'ui/components/controls';
 import { classNames } from 'lib/classNames/classNames';
 
-const Select = (props: SelectProps) => {
+const Select: FC<SelectProps> = (props) => {
   
     const {
         options,

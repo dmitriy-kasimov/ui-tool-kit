@@ -1,7 +1,7 @@
 {
-  "name": "ui-tool-kit",
+  "name": "@tr271v0r/ui-tool-kit",
   "version": "1.0.0",
-  "description": "",
+  "description": "ui tool kit for my server",
   "main": "./build/index.js",
   "types": "./build/src",
   "scripts": {

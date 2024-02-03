@@ -1,10 +1,9 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { FC, useCallback, useMemo, useState } from "react";
 import { validationStatus } from "ui/components/controls";
 import { Button } from "ui/components/controls/buttons/Button";
 import { Checkbox } from "ui/components/controls/inputs/Checkbox";
 import { RadioGroup } from "ui/components/controls/inputs/RadioGroup";
 import { Select } from "ui/components/controls/inputs/Select";
-import { Option } from "ui/components/controls/inputs/Select/types/SelectProps";
 import { Slider } from "ui/components/controls/inputs/Slider";
 import { Switcher } from "ui/components/controls/inputs/Switcher";
 import { TextArea } from "ui/components/controls/inputs/TextArea";
@@ -40,7 +39,7 @@ import { AlertType } from "ui/utils/Alert";
 import { ModalConfirm } from "ui/utils/ModalConfirm";
 import { Notify, NotifyType } from "ui/utils/Notify";
 
-const UITest = () => {
+const UITest: FC<{}> = () => {
   
   const [windowOpen, setWindowOpen] = useState(false);
 

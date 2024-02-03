@@ -1,4 +1,5 @@
 import React, {
+    FC,
     useCallback, useEffect, useRef, useState,
 } from 'react';
 import './Modal.scss';
@@ -14,7 +15,7 @@ interface ModalProps {
     lazy?:boolean;
 }
 
-export const Modal = (props: ModalProps) => {
+export const Modal: FC<ModalProps> = (props) => {
     const {
         className='',
         children,

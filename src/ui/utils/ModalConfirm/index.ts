@@ -1,4 +1,4 @@
-import ModalConfirm from "./ui/ModalConfirm";
+import {ModalConfirm} from "./ui/ModalConfirm";
 
 export{
     ModalConfirm

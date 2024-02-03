@@ -7,7 +7,7 @@ import { classNames } from "lib/classNames/classNames";
 import { Text, textColor, textFont, textSize } from "ui/components/shared/Text";
 import { Button } from "ui/components/controls/buttons/Button";
 
-const ModalConfim: FC<ModalConfirmProps> = ({
+export const ModalConfirm: FC<ModalConfirmProps> = ({
                                                 isOpen, 
                                                 onClose, 
                                                 onConfirm,
@@ -51,5 +51,3 @@ const ModalConfim: FC<ModalConfirmProps> = ({
         </Modal>
     )
 };
-
-export default ModalConfim;
