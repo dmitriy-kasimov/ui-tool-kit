@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import { SwitcherProps } from "../types/SwitcherProps";
 
 import './Switcher.scss'
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
-const Switcher:FC<SwitcherProps> = ({
+const Switcher:FC<SwitcherProps> = memo(({
                                         id, 
                                         value, 
                                         onChange, 
@@ -29,6 +29,6 @@ const Switcher:FC<SwitcherProps> = ({
             <label className={classNames('Switcher__label', {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
         </span>
     )
-};
+});
 
 export default Switcher;

@@ -1,9 +1,9 @@
-import React, {FC} from "react";
+import React, {FC, memo} from "react";
 import { TextProps, textColor, textFont, textSize } from "../types/TextProps";
 import '../styles/Text.scss'
 import { classNames } from "lib/classNames/classNames";
 
-export const Text: FC<TextProps> = ({
+export const Text: FC<TextProps> = memo(({
                                         size=textSize.REGULAR, 
                                         color=textColor.MAIN,  
                                         font=textFont.MAIN, 
@@ -78,4 +78,4 @@ export const Text: FC<TextProps> = ({
             {children}
         </span>
     )
-}
+});

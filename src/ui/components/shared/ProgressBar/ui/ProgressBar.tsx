@@ -1,10 +1,10 @@
-import React, {FC} from "react";
+import React, {FC, memo} from "react";
 import { ProgressBarProps, ProgressBarType } from "../types/ProgressBarProps";
 import './ProgressBar.scss';
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { classNames } from "lib/classNames/classNames";
 
-const ProgressBar: FC<ProgressBarProps> = ({max, 
+const ProgressBar: FC<ProgressBarProps> = memo(({max, 
                                             value, 
                                             type=ProgressBarType.HORIZONTAL, 
                                             className=''
@@ -32,6 +32,6 @@ const ProgressBar: FC<ProgressBarProps> = ({max,
       </div>
     </div>
   )
-};
+});
 
 export default ProgressBar;

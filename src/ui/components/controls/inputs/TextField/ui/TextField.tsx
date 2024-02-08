@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC, useState} from "react";
+import React, {ChangeEvent, FC, memo, useState} from "react";
 import { TextFieldProps } from "../types/TextFieldProps";
 import './TextField.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
@@ -8,7 +8,7 @@ import MaskText from "styles/assets/icons/maskText.svg"
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
-export const TextField: FC<TextFieldProps> = ({
+export const TextField: FC<TextFieldProps> = memo(({
                                         value,     
                                         onChange,
                                         
@@ -96,4 +96,4 @@ export const TextField: FC<TextFieldProps> = ({
             </span>
         </span>
     )
-}
+});

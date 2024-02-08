@@ -1,11 +1,11 @@
-import React, {FC} from "react";
+import React, {FC, memo} from "react";
 import './Checkbox.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
 import { classNames } from "lib/classNames/classNames";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 
-const Checkbox: FC<CheckboxProps> = ({
+const Checkbox: FC<CheckboxProps> = memo(({
                                         id, 
                                         checked=false, 
                                         onChange, 
@@ -34,6 +34,6 @@ const Checkbox: FC<CheckboxProps> = ({
         </span>
         
     )
-}
+});
 
 export default Checkbox;

@@ -1,9 +1,9 @@
-import React, {FC} from "react";
+import React, {FC, memo} from "react";
 import { LoaderProps, LoaderSize } from "../types/LoaderProps";
 import './Loader.scss'
 import { classNames } from "lib/classNames/classNames";
 
-const Loader: FC<LoaderProps> = ({
+const Loader: FC<LoaderProps> = memo(({
                                     size=LoaderSize.MIDDLE,
                                     children=null,
                                     className=''
@@ -38,6 +38,6 @@ const Loader: FC<LoaderProps> = ({
     </div>
     
   )
-};
+});
 
 export default Loader;

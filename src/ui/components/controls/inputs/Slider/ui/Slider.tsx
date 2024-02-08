@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 import './Slider.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
-const Slider: FC<SliderProps> = ({
+const Slider: FC<SliderProps> = memo(({
                                   value, 
                                   onChange, 
                                   min, 
@@ -36,6 +36,6 @@ const Slider: FC<SliderProps> = ({
     </span>
    
   )
-};
+});
 
 export default Slider;

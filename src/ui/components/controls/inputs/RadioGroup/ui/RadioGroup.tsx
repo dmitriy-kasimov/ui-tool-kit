@@ -1,11 +1,11 @@
-import React, {FC} from "react";
+import React, {FC, memo} from "react";
 import { RadioGroupProps } from "../types/RadioGroupProps";
 import RadioGroupOption from "../components/RadioGroupOption/RadioGroupOption";
 
 import './RadioGroup.scss'
 import { classNames } from "lib/classNames/classNames";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
-const RadioGroup: FC<RadioGroupProps> = ({
+const RadioGroup: FC<RadioGroupProps> = memo(({
                                             onChange,
                                             name, 
                                             options,   
@@ -37,6 +37,6 @@ const RadioGroup: FC<RadioGroupProps> = ({
             
         </div>
     );
-};
+});
 
 export default RadioGroup;

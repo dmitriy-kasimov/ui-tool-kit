@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC, TextareaHTMLAttributes, useState} from "react";
+import React, {ChangeEvent, FC, TextareaHTMLAttributes, memo, useState} from "react";
 import { TextAreaProps } from "../types/TextAreaProps";
 import './TextArea.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
@@ -6,7 +6,7 @@ import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
-export const TextArea: FC<TextAreaProps> = ({
+export const TextArea: FC<TextAreaProps> = memo(({
                                         value,     
                                         onChange,
                                         
@@ -69,4 +69,4 @@ export const TextArea: FC<TextAreaProps> = ({
             </span>
         </span>
     )
-}
+});

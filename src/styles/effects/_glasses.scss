@@ -3,7 +3,7 @@
             $background, 
             ){
 
-    $blur: 5px;
+    $blur: 0px;
                 
     background: $background;
 
@@ -61,6 +61,6 @@
     );
     //border: var(--uikit-border-controls);
 
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    // backdrop-filter: blur(7px);
+    // -webkit-backdrop-filter: blur(7px);
 }
