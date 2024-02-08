@@ -27,16 +27,16 @@ import { UITest } from './ui/utils/UITest'
 import { NavBar } from './ui/widgets/NavBar'
 import { Table } from './ui/widgets/Table'
 import { Tape } from './ui/widgets/Tape'
-import { Post } from 'ui/widgets/Tape/components/Post'
+import { Post } from './ui/widgets/Tape/components/Post'
 import { WindowBrowser } from './ui/widgets/WindowBrowser'
 
 import { validationStatus } from './ui/components/controls'
 
-import IconWarning from 'styles/assets/icons/warning.svg'
-import IconError from 'styles/assets/icons/error.svg'
-import IconSuccessfully from 'styles/assets/icons/successfully.svg'
-import IconInfo from 'styles/assets/icons/info.svg'
-import IconLink from 'styles/assets/icons/link.svg'
+import IconWarning from './styles/assets/icons/warning.svg'
+import IconError from './styles/assets/icons/error.svg'
+import IconSuccessfully from './styles/assets/icons/successfully.svg'
+import IconInfo from './styles/assets/icons/info.svg'
+import IconLink from './styles/assets/icons/link.svg'
 
 export {
     // components
