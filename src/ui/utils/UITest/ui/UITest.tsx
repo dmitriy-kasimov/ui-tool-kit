@@ -41,7 +41,7 @@ import { Notify, NotifyType } from "ui/utils/Notify";
 
 const UITest: FC<{}> = () => {
   
-  const [windowOpen, setWindowOpen] = useState(false);
+  const [windowOpen, setWindowOpen] = useState(true);
 
   const onCloseWindow = useCallback(()=>{
     setWindowOpen(false);
@@ -150,9 +150,9 @@ const UITest: FC<{}> = () => {
     }
 
     const [sliderValueProgress, setSliderValueProgress] = useState(100);
-    // useMemo(()=>{
-    //   console.log(regForm.email);
-    // }, [regForm.email])
+    useMemo(()=>{
+      console.log(regForm.email);
+    }, [regForm.email])
     if(!windowOpen){
       return (
       <>
@@ -243,7 +243,9 @@ const UITest: FC<{}> = () => {
           )}
         >
           <div style={{display:'inline-flex', flexWrap:'wrap', alignItems:'flex-start'}}>
+          
             <Card>
+           
               <Tape
                 title='The latest news'
               >
@@ -258,9 +260,9 @@ const UITest: FC<{}> = () => {
                     </Post>
                   )}
               </Tape>
-              <Card>
-                <form style={{display:'inline-flex', flexDirection:'column', alignItems:'flex-start'}}>
+              <Card style={{display:'inline-flex', flexDirection:'column', alignItems:'flex-start'}}>
                   <TextField 
+                    key={"Эл. почта"}
                     value={regForm.email}
                     onChange={e => setRegForm({...regForm, email: e.target.value})}
                     limit={32}
@@ -295,7 +297,7 @@ const UITest: FC<{}> = () => {
                   </Checkbox>
                   <Button style={{alignSelf:'center'}}><Text>Продолжить</Text></Button>
                   <Link style={{alignSelf:'flex-end'}} onClick={()=>{}} ><Text>Уже есть аккаунт?</Text></Link>
-                </form>
+                  
               </Card>
             </Card>
             
@@ -355,14 +357,8 @@ const UITest: FC<{}> = () => {
             </Card>
             
             <Card style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
-              <TextArea 
-                label="Describe your character"
-                limit={120}
-                value={descriptionCharacter}
-                onChange={e => setDescriptionCharacter(e.target.value)}
-              />
               <RadioGroup
-                name='UItest'
+                name='UItest123'
                 onChange={handleChangeSex}
                 options={[
                   {value: 'male', description: 'Male', defaultChecked: true},
@@ -370,6 +366,13 @@ const UITest: FC<{}> = () => {
                   {value: 'trans', description: 'Hz', disabled:true},
                 ]}
               />
+              <TextArea 
+                label="Describe your character"
+                limit={120}
+                value={descriptionCharacter}
+                onChange={e => setDescriptionCharacter(e.target.value)}
+              />
+              
               <Select
                 placeholder='Выберите месяц'
                 options={options}
@@ -393,49 +396,59 @@ const UITest: FC<{}> = () => {
            
             <Card style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
                 <div style={{display:'flex', flexDirection:'column'}}>
-                  <ProgressBar 
+                  <ProgressBar
+                    key={1} 
                     value={10}
                     max={100}
                   />
                   <ProgressBar 
+                    key={2} 
                     value={50}
                     max={100}
                   />
                   <ProgressBar 
+                    key={3} 
                     value={60}
                     max={100}
                   />
                   <ProgressBar 
+                    key={4} 
                     value={80}
                     max={100}
                   />
                   <ProgressBar 
+                    key={5} 
                     value={sliderValueProgress}
                     max={100}
                   />
                 </div>
                 <div style={{display:'flex'}}>
-                <ProgressBar 
+                  <ProgressBar 
+                    key={6} 
                     value={10}
                     max={100}
                     type={ProgressBarType.VERTICAL}
                   />
                   <ProgressBar 
+                    key={7} 
                     value={50}
                     max={100}
                     type={ProgressBarType.VERTICAL}
                   />
                   <ProgressBar 
+                    key={8} 
                     value={60}
                     max={100}
                     type={ProgressBarType.VERTICAL}
                   />
                   <ProgressBar 
+                    key={9} 
                     value={80}
                     max={100}
                     type={ProgressBarType.VERTICAL}
                   />
                   <ProgressBar 
+                    key={10} 
                     value={sliderValueProgress}
                     max={100}
                     type={ProgressBarType.VERTICAL}
@@ -475,7 +488,6 @@ const UITest: FC<{}> = () => {
                           <Text font={textFont.TITLE} size={textSize.SUBTITLE}>The vip players</Text>
                       </TableCaption>
 
-                      {/* <TableContent> */}
                         <TableHead>
                           <TableRow>
                           <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
@@ -491,7 +503,6 @@ const UITest: FC<{}> = () => {
                             <Text>Loading...</Text>
                           </Loader>
                         </TableBody>
-                      {/* </TableContent> */}
                   </Table>
               </Modal>
             </Card>
@@ -900,7 +911,7 @@ const UITest: FC<{}> = () => {
                 <Text>Show notify</Text>
               </Button>
             </Card>
-          </div>
+          </div> 
         </WindowBrowser>
     )
 };

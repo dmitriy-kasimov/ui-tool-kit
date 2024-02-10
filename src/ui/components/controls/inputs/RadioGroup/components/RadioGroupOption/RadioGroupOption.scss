@@ -1,7 +1,6 @@
 @use 'styles/effects/glasses';
 @use '../../../../controls';
 .RadioGroup__input {
-    position: absolute;
     z-index: -1;
     opacity: 0;
 }

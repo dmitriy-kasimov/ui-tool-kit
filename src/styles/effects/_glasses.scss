@@ -1,14 +1,12 @@
 /* From https://css.glass */
 @mixin glass(
             $background, 
-            ){
-
-    $blur: 0px;
-                
+            ){ 
     background: $background;
 
-    backdrop-filter: blur($blur);
-    -webkit-backdrop-filter: blur($blur);
+    // $blur: 0;
+    // backdrop-filter: blur($blur);
+    // -webkit-backdrop-filter: blur($blur);
 };
 
 //  windows
@@ -49,8 +47,8 @@
     );
     //border: var(--uikit-border-controls);
 
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
+    // backdrop-filter: blur(0);
+    // -webkit-backdrop-filter: blur(0);
 }
 
 
@@ -59,7 +57,6 @@
     @include glass(
         $background: var(--uikit-background-util-content)
     );
-    //border: var(--uikit-border-controls);
 
     // backdrop-filter: blur(7px);
     // -webkit-backdrop-filter: blur(7px);

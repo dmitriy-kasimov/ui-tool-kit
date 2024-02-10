@@ -7,6 +7,8 @@ import { Text, textFont, textSize } from 'ui/components/shared/Text';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Link } from 'ui/components/controls/links/Link';
 import { Card } from 'ui/components/sections/Card';
+import { TextField } from 'ui/components/controls/inputs/TextField';
+import { ProgressBar } from 'ui/components/shared/ProgressBar';
 
 
 
@@ -60,7 +62,9 @@ export const WindowBrowserFulscreen: Story = {
       ),
       fullscreen: true,
       children: (
-        <></>
+        <>
+       
+        </>
       ),
       isOpen: true,
       onClose: function(){}

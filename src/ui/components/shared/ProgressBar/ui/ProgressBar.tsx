@@ -25,10 +25,10 @@ const ProgressBar: FC<ProgressBarProps> = memo(({max,
       <progress max={max} value={value}></progress>
       <div className={classNames('ProgressBar__bg', {}, classBg)}>
           <div className={classNames('ProgressBar__bar', {}, classBar)}>
+            <div className="progress-value">
+              <Text>{value}%</Text>
+            </div>
           </div>
-      </div>
-      <div className="progress-value">
-        <Text size={textSize.REGULARSMALL}>{value}%</Text>
       </div>
     </div>
   )

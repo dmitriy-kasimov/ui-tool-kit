@@ -19,10 +19,13 @@
 
 //  controls
     --uikit-border-radius-control: 12px;
+
+        --uikit-border-radius-progress-bar: 12px;
+        --uikit-border-radius-progress-bar-bar: 10px;
     
     --uikit-border-controls: 1px solid var(--uikit-font-color-main);
 
-
+    
 //  utils
     --uikit-border-radius-util-content: 12px;
     --uikit-border-util-content: 1px solid var(--uikit-color-border-util-content);

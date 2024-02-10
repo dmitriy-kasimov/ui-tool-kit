@@ -20,11 +20,13 @@
 
 .ProgressBar__bar
 {
-  border-radius: var(--uikit-border-radius-section);
+  border-radius: var(--uikit-border-radius-progress-bar-bar);
 
-  overflow: hidden;
   top: 0;
   left: 0;
+
+  display: flex;
+  justify-content: center;
 }
 .ProgressBar__bar-horizontal{
   width: 0;
@@ -33,13 +35,17 @@
 .ProgressBar__bar-vertical{
   width: 100%;
   height: 0;
+  .progress-value
+  {
+    transform: rotate(-90deg);
+  }
 }
 .progress-value
 {
+  //position: absolute;
+
   display: flex;
   align-self: center;
-
-  position: absolute; 
 }
 
 .ProgressBar__bg
@@ -47,10 +53,10 @@
   padding: 1px;
 
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
 
   border: var(--uikit-border-section-element);
-  border-radius: var(--uikit-border-radius-section);
+  border-radius: var(--uikit-border-radius-progress-bar);
 
   background: var(--uikit-background-section-element);
 
@@ -62,19 +68,11 @@
 }
 .ProgressBar__bg-vertical{
   height: 150px;
-  width: 40px;
+  width: 30px;
+  display: flex;
+  align-items: center;
 }
-// Наводим красоту
-.ProgressBar__bar:after
-{
-  width: 100%;
-  height: 100%;
 
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-}
 // Заполнение прогресса
 .ProgressBar progress[value="1"] ~ .ProgressBar__bg-horizontal .ProgressBar__bar-horizontal
 {

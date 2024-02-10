@@ -131,14 +131,12 @@ export const TableScrollableHorizontal: Story = {
             </TableHead>
             <TableBody>
                 <TableRow>
-                <TableRow>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>1</Text></TableData>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>Vova_VoVaN</Text></TableData>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>Crazy</Text></TableData>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>1401</Text></TableData>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text>Admin</Text></TableData>
                   <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text>87</Text></TableData>
-                </TableRow>
                 </TableRow>
             </TableBody>
           </TableContent>
