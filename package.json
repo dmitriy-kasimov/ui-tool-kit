@@ -55,5 +55,8 @@
   },
   "files": [
     "build"
-  ]
+  ],
+  "dependencies": {
+    "@headlessui/react": "^1.7.18"
+  }
 }
