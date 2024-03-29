@@ -19,6 +19,7 @@
       "esModuleInterop": true,
       //Поддержка export default
       "allowSyntheticDefaultImports": true,
+      "isolatedModules": true
     },
     "ts-node": {
       "compilerOptions": {
