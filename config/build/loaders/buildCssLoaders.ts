@@ -1,27 +1,59 @@
 // import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 // import path from 'path';
 
+
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+
 export function buildCssLoaders(isDev: boolean) {
     return {
         test: /\.s[ac]ss$/i,
         use: [
             // Creates `style` nodes from JS strings
-            "style-loader",
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // Translates CSS into CommonJS
-            "css-loader",
-            // Compiles Sass to CSS
-            "sass-loader",
+            // "css-loader",
             {
-                loader: "sass-loader",
+                loader: 'css-loader',
                 options: {
-                    sassOptions: {
-                    indentWidth: 4,
-                    //includePaths: [path.resolve(__dirname, "src")]
+                    modules: {
+                        // Если не включает .module, то обрабатывается как обычный css файл
+                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+                        // Настройка конечных имен файлов стилей: в dev не будет хешироваться
+                        localIdentName: isDev
+                            ? '[path][name]__[local]--[hash:base64:5]'
+                            : '[hash:base64:8]',
                     },
                 },
             },
+            // Compiles Sass to CSS
+            'sass-loader',
         ],
     };
+}
+
+
+
+// export function buildCssLoaders(isDev: boolean) {
+//     return {
+//         test: /\.s[ac]ss$/i,
+//         use: [
+//             // Creates `style` nodes from JS strings
+//             "style-loader",
+//             // Translates CSS into CommonJS
+//             "css-loader",
+//             // Compiles Sass to CSS
+//             "sass-loader",
+//             {
+//                 loader: "sass-loader",
+//                 options: {
+//                     sassOptions: {
+//                     indentWidth: 4,
+//                     //includePaths: [path.resolve(__dirname, "src")]
+//                     },
+//                 },
+//             },
+//         ],
+//     };
 
     // {
     //     test: /\.s[ac]ss$/i,
@@ -51,4 +83,4 @@ export function buildCssLoaders(isDev: boolean) {
     //         'sass-loader',
     //     ],
     // };
-}
+//}
