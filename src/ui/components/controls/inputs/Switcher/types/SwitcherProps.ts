@@ -4,7 +4,7 @@ export interface SwitcherProps{
     value: boolean;
     onChange: () => void;
 
-    id: string;
+    id?: string;
 
     disabled?: boolean;
 

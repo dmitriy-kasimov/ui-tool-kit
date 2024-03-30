@@ -1,32 +1,32 @@
 import React, { FC, memo } from "react";
 import { SwitcherProps } from "../types/SwitcherProps";
 
-import './Switcher.scss'
+import cls from './Switcher.module.scss'
 import { getValidationClasses, validationStatus } from "ui/components/controls";
-import { classNames } from "lib/classNames/classNames";
+import { Mods, classNames } from "lib/classNames/classNames";
 
 const Switcher:FC<SwitcherProps> = memo(({
-                                        id, 
                                         value, 
                                         onChange, 
+
+                                        id, 
                                         disabled=false, 
                                         valid=validationStatus.DEFAULT,
                                         className=''
                                     }) => {
-                            
-    const mods: Record<string, boolean> = {
-        value
+    
+    const mods: Mods = {
+        [cls.Switcher__input__checked]: value
     }
-
     return (
-        <span className={classNames('Switcher', {disabled}, [className])}>
+        <span className={classNames(cls.Switcher, {disabled}, [className])}>
             <input 
-                className={classNames('Switcher__input', {Switcher__input__checked: value})} 
+                className={classNames(cls.Switcher__input, mods, [])} 
                 type="checkbox" 
                 id={id} 
                 onClick={onChange}
             />
-            <label className={classNames('Switcher__label', {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
+            <label className={classNames(cls.Switcher__label, {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
         </span>
     )
 });
