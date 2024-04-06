@@ -1,9 +1,10 @@
 import React, {FC, memo} from "react";
-import './Checkbox.scss'
+import cls from './Checkbox.module.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
 import { classNames } from "lib/classNames/classNames";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { HStack } from "ui/components/shared/Stack";
 
 const Checkbox: FC<CheckboxProps> = memo(({
                                         id, 
@@ -16,9 +17,9 @@ const Checkbox: FC<CheckboxProps> = memo(({
                                     }) => {
    
     return(
-        <span className={classNames('CheckBox', {}, [className])}>
+        <HStack gap="4" className={classNames('', {}, [className])}>
             <input
-                className={classNames('CheckBox__input', {}, [])}
+                className={classNames(cls.input, {}, [])}
                 type="checkbox" 
                 id={id} 
                 name={id} 
@@ -27,11 +28,11 @@ const Checkbox: FC<CheckboxProps> = memo(({
                 onChange={onChange}
                 disabled={disabled}
             />
-            <label htmlFor={id} className={classNames('CheckBox__checkbox', {}, [getValidationClasses(valid)])}></label>
-            <label htmlFor={id} className={classNames('CheckBox__label', {}, [])}>
+            <label htmlFor={id} className={classNames(cls.checkbox, {}, [getValidationClasses(valid)])}></label>
+            <label htmlFor={id} className={classNames(cls.label, {}, [])}>
                 {children}
             </label>
-        </span>
+        </HStack>
         
     )
 });

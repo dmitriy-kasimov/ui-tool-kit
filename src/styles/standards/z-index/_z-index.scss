@@ -2,11 +2,9 @@
     In this document described the standards for z-index.
 */
 :root{
-//  window
-    --uikit-z-index-window: 2;
-
-
-//  util
-    --uikit-z-index-util-overlay: 100;
-    --uikit-z-index-util: 1000;
+// components
+// widgets
+// utils
+    --uikit-overlay-z-index: 1;
+    --uikit-utils-z-index: 2;
 }

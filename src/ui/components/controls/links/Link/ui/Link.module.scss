@@ -1,0 +1,37 @@
+// @use 'styles/effects/glasses';
+// @use 'styles/effects/shadows';
+@use '../../../controls';
+
+.Link {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+	transition: .3s ease;
+
+	background: transparent;
+	box-shadow: none;
+
+	border: none;
+	text-transform: uppercase;
+
+	appearance: none;
+	touch-action: manipulation;
+
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
+	};
+}
+
+// .Link:focus-visible {
+// 	@include controls.focus;
+// }
+
+.disabled {
+	@include controls.disabled;
+}
+
+// .Link:active {
+// 	@include controls.active;
+// }

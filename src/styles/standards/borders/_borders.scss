@@ -2,31 +2,7 @@
     In this document described the standards for borders.
 */
 :root{
-//  windows
-    --uikit-border-radius-window: 12px;
+    --uikit-border-radius: 12px;
 
-    --uikit-border-window: 1px solid var(--uikit-color-border-window);
-
-
-//  sections
-    --uikit-border-radius-section: 12px;
-
-    --uikit-border-section: 1px solid var(--uikit-color-border-section);
-    --uikit-border-section-block: 1px solid var(--uikit-color-border-section-block);
-    --uikit-border-section-element: 1px solid var(--uikit-color-border-section-element);
-    --uikit-border-section-modificator: 1px solid var(--uikit-color-border-section-modificator);
-
-
-//  controls
-    --uikit-border-radius-control: 12px;
-
-        --uikit-border-radius-progress-bar: 12px;
-        --uikit-border-radius-progress-bar-bar: 10px;
-    
-    --uikit-border-controls: 1px solid var(--uikit-font-color-main);
-
-    
-//  utils
-    --uikit-border-radius-util-content: 12px;
-    --uikit-border-util-content: 1px solid var(--uikit-color-border-util-content);
+    --uikit-button-border: 1px solid var(--uikit-button-border-color);
 }

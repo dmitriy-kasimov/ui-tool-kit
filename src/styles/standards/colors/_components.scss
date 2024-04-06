@@ -1,0 +1,34 @@
+:root{
+// controls
+    --uikit-controls-bg-color: rgba(0, 0, 0, 0.6);
+    --uikit-controls-bg-hover-color: rgba(0, 0, 0, 0.4);
+
+    --uikit-controls-opacity-disabled: 0.7;
+    // buttons
+    --uikit-button-border-color: rgba(0, 0, 0, 0.6);
+    --uikit-button-bg-color-cancel: rgba(255, 0, 0, 0.6);
+    --uikit-button-bg-color-accept: rgba(0, 255, 0, 0.39); 
+    // inputs
+        // Checkbox
+        // RadioGroup
+        // Slider
+        // Switcher
+    --uikit-switcher-bg-color-active: rgba(0, 255, 0, 0.39); 
+        // TextArea
+        // TextField
+    // popups
+    // scroll
+    // links
+// shared
+    // Stack
+    // Skeleton
+    --uikit-skeleton-bg-color: rgba(150, 150, 150, 0.6);
+    --uikit-skeleton-shadow-color: rgba(0, 0, 0, 0.6);
+    // Text
+     --uikit-text-color-main: rgba(255, 255, 255, 1);
+     --uikit-text-color-secondary: rgb(163, 163, 163);
+     --uikit-text-color-warning: rgb(255, 162, 41);
+     --uikit-text-color-error: rgb(255, 72, 26);
+     --uikit-text-color-successfully: rgb(0, 199, 0);
+     --uikit-text-color-information: rgb(37, 168, 255);
+}

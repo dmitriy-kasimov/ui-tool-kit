@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Alert, AlertType } from '../index';
-import { UITest } from 'ui/utils/UITest';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Alert> = {

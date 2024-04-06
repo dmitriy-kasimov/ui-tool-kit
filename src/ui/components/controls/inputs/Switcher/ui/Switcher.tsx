@@ -16,17 +16,17 @@ const Switcher:FC<SwitcherProps> = memo(({
                                     }) => {
     
     const mods: Mods = {
-        [cls.Switcher__input__checked]: value
+        [cls.checked]: value
     }
     return (
-        <span className={classNames(cls.Switcher, {disabled}, [className])}>
+        <span className={classNames(cls.Switcher, {[cls.disabled]: disabled}, [className])}>
             <input 
-                className={classNames(cls.Switcher__input, mods, [])} 
+                className={classNames(cls.input, mods, [])} 
                 type="checkbox" 
                 id={id} 
                 onClick={onChange}
             />
-            <label className={classNames(cls.Switcher__label, {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
+            <label className={classNames(cls.label, {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
         </span>
     )
 });

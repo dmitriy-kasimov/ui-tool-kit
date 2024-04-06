@@ -4,21 +4,21 @@
 
 @mixin defaultStyles{
     @include anims.control;
-    @include glasses.control;
+    //@include glasses.control;
     
     user-select: none;
     cursor: pointer;
+    background: var(--uikit-controls-bg);
 }
 
 // Ивенты для элементов управления
 
 @mixin hover{
-    background-color: var(--uikit-color-background-control-hover);
+    // background: var(--uikit-controls-bg-hover);
 }
 
 @mixin focus{
-    @include shadows.control;
-   
+    // @include shadows.control;
 }
 
 @mixin active{

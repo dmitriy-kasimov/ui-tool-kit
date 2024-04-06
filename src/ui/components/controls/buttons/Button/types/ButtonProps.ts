@@ -1,9 +1,21 @@
 import { ButtonHTMLAttributes } from "react";
 import { validationStatus } from "ui/components/controls";
 
+export enum ButtonTheme{
+    PRIMARY = 'primary',
+    OUTLINE = 'outline',
+    CLEAR = 'clear',
+    CANCEL = 'cancel',
+    ACCEPT = 'accept'
+}
+
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    className?: string;
     children: React.ReactNode;
 
-    valid?: validationStatus;
+    disabled?: boolean;
+    square?: boolean;
+    theme?: ButtonTheme;
+    fullWidth?: boolean;
+    className?: string;
 }
+

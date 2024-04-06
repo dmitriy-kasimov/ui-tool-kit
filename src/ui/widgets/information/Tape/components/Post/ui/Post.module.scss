@@ -1,0 +1,21 @@
+@use 'styles/effects/glasses';
+.Post{
+    max-width: 600px;
+
+    border: none;
+
+    border-radius: var(--uikit-border-radius);
+
+    background: var(--uikit-widgets-items-bg);
+}
+
+.header{
+    
+}
+
+.title{
+    margin-right: 0.5rem;
+}
+.body{
+    padding: var(--uikit-padding-section-strength-height);
+}

@@ -1,27 +1,6 @@
-/*
-    In this document described the standards for paddings.
-*/
 :root{
-//  windows
-    --uikit-padding-window-strength-quad: 0.2rem 0.2rem;
-    --uikit-padding-window-strength-width: 0.1rem 0.5rem;
-    --uikit-padding-window-strength-height: 0.3rem 0.15rem;
-
-
-//  sections
-    --uikit-padding-section-strength-quad: 0.2rem 0.2rem;
-    --uikit-padding-section-strength-width: 0.1rem 0.5rem;
-    --uikit-padding-section-strength-height: 0.3rem 0.2rem;
-
-
-//  controls
-    --uikit-padding-control-strength-quad: 0.1rem 0.1rem;
-    --uikit-padding-control-strength-width: 0.5rem 1rem;
-    --uikit-padding-control-strength-height: 0.3rem 0.15rem;
-
-
-//  utils
-    --uikit-padding-util-strength-quad: 0.1rem 0.1rem;
-    --uikit-padding-util-strength-width: 0.5rem 1rem;
-    --uikit-padding-util-strength-height: 0.3rem 0.15rem;
+    --uikit-padding-4: 4px;
+    --uikit-padding-8: 8px;
+    --uikit-padding-16: 16px;
+    --uikit-padding-32: 32px;
 }

@@ -1,24 +1,3 @@
-/*
-    In this document described the standards for backgrounds.
-*/
-:root{
-//  window
-    --uikit-background-window-overlay: var(--uikit-color-background-window-overlay);
-    --uikit-background-window: var(--uikit-color-background-window);
-
-
-//  section
-    --uikit-background-section: var(--uikit-color-background-section);
-    --uikit-background-section-block: var(--uikit-color-background-section-block);
-    --uikit-background-section-element: var(--uikit-color-background-section-element);
-    --uikit-background-section-modificator: var(--uikit-color-background-section-modificator);
-
-
-//  control
-    --uikit-background-control: var(--uikit-color-background-control);
-
-
-//  util
-    --uikit-background-util-overlay: var(--uikit-color-background-util-overlay);
-    --uikit-background-util-content: var(--uikit-color-background-util-content);
-}
+@use './components';
+@use './widgets';
+@use './utils';

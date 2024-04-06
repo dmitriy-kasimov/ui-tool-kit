@@ -10,7 +10,7 @@ import { useModal } from "lib/hooks/useModal/useModal";
 import { ANIMATION_DELAY } from "styles/effects/anims";
 import { Portal } from "ui/utils/Portal/Portal";
 import { Overlay } from "ui/utils/Overlay/Overlay";
-import { HStack, VStack } from "ui/components/sections/flex/Stack";
+import { HStack, VStack } from "ui/components/shared/Stack";
 
 export const ModalConfirm = (props: ModalConfirmProps) => {
     const {

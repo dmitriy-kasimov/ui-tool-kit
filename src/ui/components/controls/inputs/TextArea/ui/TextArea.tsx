@@ -1,6 +1,6 @@
 import React, {ChangeEvent, FC, TextareaHTMLAttributes, memo, useState} from "react";
 import { TextAreaProps } from "../types/TextAreaProps";
-import './TextArea.scss'
+import cls from './TextArea.module.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 
 import { getValidationClasses, validationStatus } from "ui/components/controls";
@@ -21,52 +21,31 @@ export const TextArea: FC<TextAreaProps> = memo(({
                                         ...otherProps
                                     }) => {
     
-    const [count, setCount] = useState<number>(0);
     const [text, setText] = useState<string>(value);
 
-    const onChangeTextField = (e:any) => {
-        const input: string  = e.target.value;
-        if(input.length <= limit){
-            setText(input);
-            setCount(input.length)
-
-            onChange(e);
-        }
-    }
-
     return(
-        <span className={classNames('TextArea', {disabled}, [className])}>
-            <div className={classNames('TextArea__Background', {}, [getValidationClasses(valid)])}>
-                <div className="TextArea__Background__Field">
-                    <textarea 
-                        className="TextArea__Background__Field__input" 
-                        value={text}
-                        onChange={onChangeTextField}
-                        rows={rows}
-                        cols={cols}
-                        id={label}
-                        placeholder=''
-                        autoComplete="off"
-                        spellCheck={false}
-                        disabled={disabled}
-                        {...otherProps}
-                    />
-                    <label 
-                        className="TextArea__Background__Field__label" 
-                        htmlFor={label}
-                    >
-                        <Text>
-                            {label}
-                        </Text>
-                    </label>
-                </div>
-            </div>
-
-            <span 
-                className="TextArea__counter"
+        <div className={classNames(cls.field, {[cls.disabled]: disabled}, [className, getValidationClasses(valid)])}>
+            <textarea 
+                className={cls.input}
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                rows={rows}
+                cols={cols}
+                id={label}
+                placeholder=''
+                autoComplete="off"
+                spellCheck={false}
+                disabled={disabled}
+                {...otherProps}
+            />
+            <label 
+                className={cls.label} 
+                htmlFor={label}
             >
-                <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{count} / {limit}</Text>
-            </span>
-        </span>
+                <Text>
+                    {label}
+                </Text>
+            </label>
+        </div>
     )
 });

@@ -1,12 +1,15 @@
 import React, {ChangeEvent, FC, memo, useState} from "react";
 import { TextFieldProps } from "../types/TextFieldProps";
-import './TextField.scss'
+import cls from './TextField.module.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
+import { Button } from "ui/components/controls/buttons/Button";
+import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
+import { HStack, VStack } from "ui/components/shared/Stack";
 
 export const TextField: FC<TextFieldProps> = memo(({
                                         value,     
@@ -42,58 +45,50 @@ export const TextField: FC<TextFieldProps> = memo(({
 
 
     return(
-        <span className={classNames('TextField', {disabled}, [className])}>
-            <div className={classNames('TextField__Background', {}, [getValidationClasses(valid)])}>
-                <div className="TextField__Background__Field">
-                    <input 
-                        className="TextField__Background__Field__input" 
-                        value={text}
-                        onChange={onChangeTextField}
-                        type={type} 
-                        id={label}
-                        placeholder=''
-                        autoComplete="off"
-                        spellCheck={false}
-                        disabled={disabled}
-                        {...otherProps}
-                    />
-                    <label 
-                        className="TextField__Background__Field__label" 
-                        htmlFor={label}
-                    >
-                        <Text>
-                            {label}
-                        </Text>
-                    </label>
-                </div>
-                <button 
-                    className="TextField__Background__SwitcherMask"
+        <HStack 
+            align="center"
+            className={classNames(cls.background, {disabled}, [className, getValidationClasses(valid)])}
+        >
+            <VStack className={cls.field}>
+                <input 
+                    className={cls.input}
+                    value={text}
+                    onChange={onChangeTextField}
+                    type={type} 
+                    id={label}
+                    placeholder=''
+                    autoComplete="off"
+                    spellCheck={false}
+                    disabled={disabled}
+                    {...otherProps}
+                />
+                <label 
+                    className={cls.label}
+                    htmlFor={label}
+                >
+                    <Text>
+                        {label}
+                    </Text>
+                </label>
+            </VStack>
+            {masked ? (
+                <Button 
+                    className={cls.btnMask}
                     onClick={switchMask}
+                    theme={ButtonTheme.CLEAR}
+                    square
                 > 
                 {
-                    masked 
-                    ?
-                        <>
-                            {
-                                type === 'text' 
-                                    ?
-                                <MaskText />
-                                    :
-                                <UnmaskText />
-                            }
-                        </>
-                    :
-                        <>
-                        </>
+                    <>
+                        {
+                            type === 'text' ?
+                            <MaskText /> :
+                            <UnmaskText />
+                        }
+                    </>
                 }
-                </button>
-            </div>
-
-            <span 
-                className="TextField__counter"
-            >
-                <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{count} / {limit}</Text>
-            </span>
-        </span>
+                </Button>
+            ) : null}
+        </HStack>
     )
 });

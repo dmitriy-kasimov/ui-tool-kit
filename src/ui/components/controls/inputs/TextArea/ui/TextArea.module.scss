@@ -1,0 +1,60 @@
+// @use 'styles/effects/glasses';
+// @use 'styles/effects/shadows';
+@use '../../../controls';
+
+.disabled{
+    @include controls.disabled;
+}
+
+.field {
+    background: var(--uikit-controls-bg);
+    border-radius: var(--uikit-border-radius);
+    position: relative;
+
+    .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        //height: 100%;
+        padding: 1rem .75rem;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    }
+}
+.input{
+    resize: none;
+
+    background-color: transparent;
+
+    border: none;
+
+    font-size: var(--uikit-font-size-regular);
+    //height: calc(3.5rem + 2px);
+    line-height: 1.25;
+    padding:0 0.5rem;
+
+    &:focus{
+        outline: none;
+    }
+    padding-top: 1.625rem;
+    
+}
+
+
+.input::-moz-placeholder {
+    color: transparent;
+}
+.input::placeholder {
+    color: transparent;
+}
+.input:focus,
+.input:not(:placeholder-shown) {
+    
+}
+.input:focus~.label,
+.input:not(:placeholder-shown)~.label {
+    opacity: .65;
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+}

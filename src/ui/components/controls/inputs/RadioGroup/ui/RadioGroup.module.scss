@@ -1,0 +1,10 @@
+@use '../../../controls';
+.RadioGroup{
+    background: var(--uikit-controls-bg);
+
+    border-radius: var(--uikit-border-radius);
+}
+
+.disabled{
+    @include controls.disabled;
+}

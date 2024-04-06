@@ -6,6 +6,7 @@ import { Button } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text';
 import { validationStatus } from 'ui/components/controls';
+import { ButtonTheme } from '../types/ButtonProps';
 
 const meta: Meta<typeof Button> = {
     title: 'components/Button',
@@ -28,36 +29,64 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const ButtonDefault: Story = {
+export const Normal: Story = {
     args: {
         children: (<Text>Button active</Text>),
-        
     },
 };
 
-export const ButtonValidationError: Story = {
-  args: {
-      children: (<Text>Button active</Text>),
-      valid: validationStatus.ERROR
-  },
-};
-
-export const ButtonValidationWarning: Story = {
-  args: {
-      children: (<Text>Button active</Text>),
-      valid: validationStatus.WARNING
-  },
-};
-
-export const ButtonValidationSuccessfully: Story = {
-  args: {
-      children: (<Text>Button active</Text>),
-      valid: validationStatus.SUCCESSFULLY
-  },
-};
-export const ButtonDisabled: Story = {
+export const Disabled: Story = {
   args: {
       children: (<Text>Button disabled</Text>),
       disabled: true
+  },
+};
+
+export const FullWidth: Story = {
+  args: {
+      children: (<Text>Button fullllll width!</Text>),
+      fullWidth: true
+  },
+};
+
+export const Square: Story = {
+  args: {
+      children: (<Text>no paddings</Text>),
+      square: true
+  },
+};
+
+export const ThemePrimary: Story = {
+  args: {
+      children: (<Text>Click on me!</Text>),
+      theme: ButtonTheme.PRIMARY
+  },
+};
+
+export const ThemeOutline: Story = {
+  args: {
+      children: (<Text>Click on me!</Text>),
+      theme: ButtonTheme.OUTLINE
+  },
+};
+
+export const ThemeClear: Story = {
+  args: {
+      children: (<Text>Click on me!</Text>),
+      theme: ButtonTheme.CLEAR
+  },
+};
+
+export const ThemeAccept: Story = {
+  args: {
+      children: (<Text>Click on me!</Text>),
+      theme: ButtonTheme.ACCEPT
+  },
+};
+
+export const ThemeCancel: Story = {
+  args: {
+      children: (<Text>Click on me!</Text>),
+      theme: ButtonTheme.CANCEL
   },
 };

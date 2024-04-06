@@ -1,9 +1,10 @@
 import React, { FC, memo } from "react";
-import './Slider.scss'
+import cls from './Slider.module.scss'
 import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
+import { HStack, VStack } from "ui/components/shared/Stack";
 
 const Slider: FC<SliderProps> = memo(({
                                   value, 
@@ -17,9 +18,9 @@ const Slider: FC<SliderProps> = memo(({
                                 }) => {
     
   return (
-    <span className="Slider">
+    <VStack className={classNames('', {}, [className])}>
       <input
-          className={classNames('Slider__input', {}, [className, getValidationClasses(valid)])}
+          className={classNames(cls.input, {}, [getValidationClasses(valid)])}
           value={value}
           onChange={onChange}
           min={min} 
@@ -28,12 +29,12 @@ const Slider: FC<SliderProps> = memo(({
           step={step}
           disabled={disabled}
       />
-      <span className="Slider__info">
+      <HStack max justify="between">
         <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{min}</Text>
-        <Text >{value}</Text>
+        <Text>{value}</Text>
         <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{max}</Text>
-      </span>
-    </span>
+      </HStack>
+    </VStack>
    
   )
 });

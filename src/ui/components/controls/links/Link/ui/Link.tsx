@@ -1,8 +1,6 @@
 import React, {FC, memo} from "react";
-import './Link.scss'
+import cls from './Link.module.scss'
 import { LinkProps } from "../types/LinkProps";
-import { Text } from "ui/components/shared/Text/ui/Text";
-import { textColor, textFont, textSize } from "ui/components/shared/Text/types/TextProps";
 import { classNames } from "lib/classNames/classNames";
 
 export const Link: FC<LinkProps> = memo(({
@@ -16,7 +14,7 @@ export const Link: FC<LinkProps> = memo(({
   return (
     <button 
       onClick={onClick}  
-      className={classNames('Link', {}, [className])}
+      className={classNames(cls.Link, {[cls.disabled]: disabled}, [className])}
       disabled={disabled}
       {...otherProps}
     >

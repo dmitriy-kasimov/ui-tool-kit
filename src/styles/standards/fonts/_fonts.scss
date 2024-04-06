@@ -10,19 +10,11 @@
     --uikit-font-size-important: 24px;
     --uikit-font-size-regular: 20px;
     --uikit-font-size-regularsmall: 14px;
-
-    //Используемые цвета
-    --uikit-font-color-main: rgb(230, 230, 230);
-    --uikit-font-color-secondary: rgb(163, 163, 163);
-    --uikit-font-color-warning: var(--uikit-color-warning);
-    --uikit-font-color-error: var(--uikit-color-error);
-    --uikit-font-color-successfully: var(--uikit-color-successfully);
-    --uikit-font-color-information: var(--uikit-color-information);
 }
 
 // Глобально применяемые настройки
 *{
     font-family: var(--uikit-font-family-main);
     font-size: var(--uikit-font-size-regular);
-    color: var(--uikit-font-color-main);
+    color: var(--uikit-text-color-main);
 }

@@ -1,0 +1,24 @@
+:root{
+    // controls
+    --uikit-controls-bg: var(--uikit-controls-bg-color);
+    --uikit-controls-bg-hover: var(--uikit-controls-bg-hover-color);
+        // buttons
+        --uikit-button-bg-cancel: var(--uikit-button-bg-color-cancel);
+        --uikit-button-bg-accept: var(--uikit-button-bg-color-accept); 
+        // inputs
+            // Checkbox
+            // RadioGroup
+            // Slider
+            // Switcher
+        --uikit-switcher-bg-active: var(--uikit-switcher-bg-color-active); 
+            // TextArea
+            // TextField
+        // popups
+        // scroll
+        // links
+    // shared
+        // Stack
+        // Skeleton
+        --uikit-skeleton-bg: linear-gradient(to right, transparent 0%, var(--uikit-skeleton-bg-color) 50%, transparent 100%);
+        // Text
+}

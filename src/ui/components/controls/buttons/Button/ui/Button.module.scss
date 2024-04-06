@@ -1,0 +1,95 @@
+@use '../../../controls';
+.Button {
+	@include controls.defaultStyles;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: var(--uikit-padding-8) var(--uikit-padding-16);
+	
+	border-radius: var(--uikit-border-radius);
+	
+	outline: none;
+	border: none;
+	text-decoration: none;
+	appearance: none;
+	touch-action: manipulation;
+
+	&:hover{
+		@include controls.hover;
+	}
+	&:active{
+		@include controls.active;
+	}
+	&:focus{
+		
+	}
+}
+
+.disabled{
+	@include controls.disabled;
+}
+.primary{
+	background: var(--uikit-controls-bg);
+}
+.outline {
+	border: var(--uikit-button-border);
+	background: transparent;
+}
+.clear {
+	background: none;
+	border: none;
+}
+.cancel {
+	background: var(--uikit-button-bg-cancel);
+}
+.accept {
+	background: var(--uikit-button-bg-accept);
+}
+
+.fullWidth{
+	width: 100%;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+.square {
+	padding: 0;
+}
+
+/*
+	@use '../../../controls';
+
+	.Button {
+		@include controls.defaultStyles;
+		&:hover{
+			@include controls.hover;
+		}
+		&:active{
+			@include controls.active;
+		}
+		padding: var(--uikit-padding-control-strength-width);
+		margin: var(--uikit-margin-control-strength-height);
+
+		display: inline-flex;
+
+		outline: none;
+		text-decoration: none;
+		user-select: none;
+		appearance: none;
+		touch-action: manipulation;
+
+		border-radius: var(--uikit-border-radius-control);
+		border: var(--uikit-border-controls);
+	}
+	.Button:focus-visible {
+		@include controls.focus;
+	}
+
+	.Button:disabled {
+		@include controls.disabled;
+	}
+*/

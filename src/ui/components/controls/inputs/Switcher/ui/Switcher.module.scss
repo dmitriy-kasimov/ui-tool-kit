@@ -1,26 +1,19 @@
 @use '../../../controls';
 
 
-.Switcher{
-    margin: var(--uikit-margin-control-strength-height);
-    &:disabled{
-        @include controls.disabled;
-    }
+.disabled{
+    @include controls.disabled;
 }
 
-.Switcher__input{
-    height: 0;
-    width: 0;
-    visibility: hidden;
+.input{
+    display: none;
 }
   
-.Switcher__label {
+.label {
     @include controls.defaultStyles;
     &:hover{
 		@include controls.hover;
 	}
-    border: var(--uikit-border-controls);
-
     width: 60px;
     height: 30px;
 
@@ -31,15 +24,15 @@
     text-indent: -9999px;
 }
   
-.Switcher__label:after {
-    background: var(--uikit-font-color-main);
+.label:after {
+    background: var(--uikit-controls-bg);
 
     border-radius: 24px;
 
     
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 3px;
+    left: 3px;
     width: 24px;
     height: 24px;
 
@@ -47,15 +40,15 @@
     content: '';
 }
 
-.Switcher__input__checked + .Switcher__label {
-    background: var(--uikit-color-is-active);
+.checked + .label {
+    background: var(--uikit-switcher-bg-color-active);
 }
 
-.Switcher__input__checked + .Switcher__label:after {
-    left: calc(100% - 2px);
+.checked + .label:after {
+    left: calc(100% - 3px);
     transform: translateX(-100%);
 }
 
-.Switcher__label:active:after {
+.label:active:after {
     width: 30px;
 }

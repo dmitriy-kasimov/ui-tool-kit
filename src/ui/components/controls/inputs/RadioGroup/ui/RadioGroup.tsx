@@ -2,9 +2,10 @@ import React, {FC, memo} from "react";
 import { RadioGroupProps } from "../types/RadioGroupProps";
 import RadioGroupOption from "../components/RadioGroupOption/RadioGroupOption";
 
-import './RadioGroup.scss'
+import cls from './RadioGroup.module.scss'
 import { classNames } from "lib/classNames/classNames";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { VStack } from "ui/components/shared/Stack";
 const RadioGroup: FC<RadioGroupProps> = memo(({
                                             onChange,
                                             name, 
@@ -15,10 +16,10 @@ const RadioGroup: FC<RadioGroupProps> = memo(({
                                         }) => {
 
     const mods: Record<string, boolean>={
-        disabled
+        [cls.disabled]: disabled
     }
     return (
-        <div className={classNames('RadioGroup', mods, [getValidationClasses(valid), className])}>
+        <VStack gap={'8'} className={classNames(cls.RadioGroup, mods, [getValidationClasses(valid), className])}>
             {options?.map(option => 
                 <RadioGroupOption 
                     key={option.value}
@@ -35,7 +36,7 @@ const RadioGroup: FC<RadioGroupProps> = memo(({
                 />    
             )}
             
-        </div>
+        </VStack>
     );
 });
 
