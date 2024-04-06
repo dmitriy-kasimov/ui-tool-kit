@@ -11,7 +11,10 @@ const meta: Meta<typeof Disclosure> = {
     decorators: [
       (Story) => (
         decoratorBackground(Story)
-      )
+      ),
+      (Story) => (
+        <div style={{}}><Story /></div>
+      ),
     ],
     parameters: {
         layout: 'centered',

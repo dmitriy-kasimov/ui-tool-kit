@@ -1,0 +1,63 @@
+.Disclosure{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    background: var(--uikit-widgets-bg);
+    width: 500px;
+    border-radius: var(--uikit-border-radius);
+
+    padding: 16px 4px;
+}
+
+
+// .btn {
+//     display:flex;
+//     justify-content: space-between;
+//     padding: 2px 4px;
+//     border-radius: var(--uikit-border-radius);
+//     background: var(--uikit-widgets-items-bg);
+//     text-align: left;
+
+//     width: 100%;
+// }
+
+.arrow{
+    fill: white;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+}
+
+.enter{
+    transition: all 100ms ease-out;
+}
+.enterFrom {
+    transform: scale(95);
+    opacity: 0;
+}
+
+.enterTo {
+    transform: scale(100);
+    opacity: 100;
+}
+
+.leave {
+    transition: all 75ms ease-out;
+}
+.leaveFrom {
+    transform: scale(100);
+    opacity: 100;
+}
+.leaveTo{
+    transform: scale(95);
+    opacity: 0;
+}

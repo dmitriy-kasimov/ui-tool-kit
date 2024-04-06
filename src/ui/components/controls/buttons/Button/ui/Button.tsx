@@ -21,9 +21,6 @@ export const Button: FC<ButtonProps> = memo((props) => {
         [cls.disabled]: disabled,
         [cls.square]: square,
     }
-    useMemo(() => {
-        console.log(mods);
-    }, [mods])
     return(
         <button 
             className={ classNames(cls.Button, mods, [className])}
