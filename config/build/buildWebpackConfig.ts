@@ -24,7 +24,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             clean: true,
         },
         plugins: buildPlugins(options),
-        devtool: isDev ? 'inline-source-map' : undefined,
+        devtool: isDev ? 'eval' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
         externals:{
             react: 'react'
