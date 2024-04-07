@@ -13,30 +13,35 @@ import ArrowDown from 'styles/assets/icons/arrowDown.svg'
 
 
 export const Disclosure = memo((props: DisclousureProps) => {
-    const {className} = props;
+    const {
+        className,
+        items
+    } = props;
     return (
-        <div className={cls.Disclosure}>
+        <div className={classNames(cls.Disclosure, {}, [className])}>
             <VStack gap="8" max>
-                <HDisclosure>
-                    {({ open }) => (
-                        <>
-                            <HDisclosure.Button as={Button} fullWidth className={cls.btn}>
-                                <HStack gap="8" align="center" max justify="between">
-                                    <Text>What is your refund policy?</Text>
-                                    <Icon 
-                                        Svg={ArrowDown}
-                                        className={classNames(cls.arrow, {[cls.open]: open}, [])}
-                                    />
-                                </HStack>
-                            </HDisclosure.Button>
-                            <HDisclosure.Panel className={cls.panel}>
-                                If you're unhappy with your purchase for any reason, email us
-                                within 90 days and we'll refund you in full, no questions asked.
-                            </HDisclosure.Panel>
-                        </>
-                    )}
-                </HDisclosure>
-                <HDisclosure>
+                {items.map((item, index) => (
+                    <HDisclosure>
+                        {({ open }) => (
+                            <>
+                                <HDisclosure.Button as={Button} fullWidth className={cls.btn} key={index}>
+                                    <HStack gap="8" align="center" max justify="between">
+                                        <Text>{item.title}</Text>
+                                        <Icon 
+                                            Svg={ArrowDown}
+                                            className={classNames(cls.arrow, {[cls.open]: open}, [])}
+                                        />
+                                    </HStack>
+                                </HDisclosure.Button>
+                                <HDisclosure.Panel className={cls.panel}>
+                                    {item.description}
+                                </HDisclosure.Panel>
+                            </>
+                        )}
+                    </HDisclosure>
+                ))}
+                
+                {/* <HDisclosure>
                     {({ open }) => (
                         <>
                             <HDisclosure.Button as={Button} fullWidth className={cls.btn}>
@@ -53,7 +58,7 @@ export const Disclosure = memo((props: DisclousureProps) => {
                             </HDisclosure.Panel>
                         </>
                     )}
-                </HDisclosure>
+                </HDisclosure> */}
             </VStack>
         </div>
     );
