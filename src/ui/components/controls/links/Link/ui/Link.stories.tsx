@@ -8,7 +8,7 @@ import { Link } from '../index';
 import { Text, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Link> = {
-    title: 'components/Link',
+    title: 'components/controls/Link',
     component: Link,
     decorators: [
         (Story) => (

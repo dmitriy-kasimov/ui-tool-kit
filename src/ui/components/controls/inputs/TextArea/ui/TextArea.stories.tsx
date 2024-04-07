@@ -7,7 +7,7 @@ import { decoratorBackground } from '../../../../../../../.storybook/decorators/
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof TextArea> = {
-    title: 'components/TextArea',
+    title: 'components/controls/TextArea',
     component: TextArea,
     decorators: [
       (Story) => (

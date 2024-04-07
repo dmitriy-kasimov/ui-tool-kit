@@ -6,7 +6,7 @@ import { ProgressBar, ProgressBarType } from '../index';
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 const meta: Meta<typeof ProgressBar> = {
-    title: 'components/ProgressBar',
+    title: 'widgets/information/ProgressBar',
     component: ProgressBar,
     decorators: [
       (Story) => (

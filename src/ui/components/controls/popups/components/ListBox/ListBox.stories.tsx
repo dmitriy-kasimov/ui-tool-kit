@@ -1,11 +1,15 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { ListBox } from './ListBox';
 
 const meta: Meta<typeof ListBox> = {
-    title: 'shared/ListBox',
+    title: 'components/controls/ListBox',
     component: ListBox,
     decorators: [
+        (Story) => (
+            decoratorBackground(Story)
+        ),
         (Story) => (
             <div style={{ padding: 300 }}><Story /></div>
         ),

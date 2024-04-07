@@ -7,6 +7,7 @@ import { mapDirectionClass } from '../../styles/consts';
 
 import popupCls from '../../styles/popup.module.scss';
 import { DropdownDirection } from '../../types/ui';
+import { VStack } from 'ui/components/shared/Stack';
 
 interface PopoverProps {
     className?: string;
@@ -37,7 +38,10 @@ export const Popover = memo((props: PopoverProps) => {
             <HPopover.Panel
                 className={classNames(cls.panel, {}, menuClasses)}
             >
-                {children}
+                <VStack gap='8' max>
+                    {children}
+                </VStack>
+                
             </HPopover.Panel>
         </HPopover>
     );

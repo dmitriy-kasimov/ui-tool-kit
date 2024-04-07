@@ -18,7 +18,7 @@ import { TableContent } from '../components/TableContent';
 
 
 const meta: Meta<typeof Table> = {
-    title: 'widgets/Table',
+    title: 'widgets/information/Table',
     component: Table,
     decorators: [
         (Story) => (

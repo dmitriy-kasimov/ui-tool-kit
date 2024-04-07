@@ -8,7 +8,7 @@ import { Text } from 'ui/components/shared/Text';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof TextField> = {
-    title: 'components/TextField',
+    title: 'components/controls/TextField',
     component: TextField,
     decorators: [
       (Story) => (

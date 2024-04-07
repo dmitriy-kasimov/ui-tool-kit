@@ -17,7 +17,6 @@ import { Text, textFont, textSize, textColor } from './ui/components/shared/Text
 import { Alert, AlertType } from './ui/utils/Alert'
 import { Modal } from './ui/utils/Modal'
 import {ModalConfirm} from './ui/utils/ModalConfirm/ui/ModalConfirm'
-import { Notify, NotifyType } from './ui/utils/Notify'
 
 import { Navbar } from './ui/widgets/navigation/Navbar/ui/Navbar'
 import { Table } from './ui/widgets/information/Table'
@@ -47,13 +46,12 @@ export {
             // links
             Link,
         // shared
-        ProgressBar, ProgressBarType,
+        ProgressBar,
         Text, textFont, textSize, textColor,
     // utils
     Alert, AlertType,
     Modal,
     ModalConfirm,
-    Notify, NotifyType,
     // widgets
     Navbar,
     Table,

@@ -8,7 +8,7 @@ import { RadioGroup } from '../index';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof RadioGroup> = {
-    title: 'components/RadioGroup',
+    title: 'components/controls/RadioGroup',
     component: RadioGroup,
     decorators: [
         (Story) => (

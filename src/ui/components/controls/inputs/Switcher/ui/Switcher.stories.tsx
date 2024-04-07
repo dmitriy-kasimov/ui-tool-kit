@@ -8,7 +8,7 @@ import { Switcher } from '../index';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof Switcher> = {
-    title: 'components/Switcher',
+    title: 'components/controls/Switcher',
     component: Switcher,
     decorators: [
         (Story) => (

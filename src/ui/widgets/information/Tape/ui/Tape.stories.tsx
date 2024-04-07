@@ -10,7 +10,7 @@ import { Post } from '../components/Post';
 
 
 const meta: Meta<typeof Tape> = {
-    title: 'widgets/Tape',
+    title: 'widgets/information/Tape',
     component: Tape,
     decorators: [
         (Story) => (

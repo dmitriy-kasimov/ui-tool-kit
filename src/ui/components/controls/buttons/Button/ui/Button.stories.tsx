@@ -9,7 +9,7 @@ import { validationStatus } from 'ui/components/controls';
 import { ButtonTheme } from '../types/ButtonProps';
 
 const meta: Meta<typeof Button> = {
-    title: 'components/Button',
+    title: 'components/controls/Button',
     component: Button,
     decorators: [
       (Story) => (

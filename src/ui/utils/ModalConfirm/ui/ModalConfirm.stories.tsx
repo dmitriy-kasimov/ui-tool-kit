@@ -8,7 +8,7 @@ import { ModalConfirm } from '../index';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof ModalConfirm> = {
-    title: 'utils/ModalConfirm',
+    title: 'utils/modal/ModalConfirm',
     component: ModalConfirm,
     decorators: [
         (Story) => (

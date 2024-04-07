@@ -5,7 +5,7 @@ import { Text, textFont, textSize, textColor } from '../index';
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'components/Text',
+  title: 'components/shared/Text',
   component: Text,
   decorators: [
     (Story) => (

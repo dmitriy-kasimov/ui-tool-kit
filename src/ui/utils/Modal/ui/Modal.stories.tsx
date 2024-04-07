@@ -8,7 +8,7 @@ import { Modal } from '../index';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Modal> = {
-    title: 'utils/Modal',
+    title: 'utils/modal/Modal',
     component: Modal,
     decorators: [
         (Story) => (

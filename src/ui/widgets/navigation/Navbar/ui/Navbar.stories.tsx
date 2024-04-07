@@ -9,7 +9,7 @@ import { Link } from 'ui/components/controls/links/Link';
 import { Text, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Navbar> = {
-    title: 'widgets/Navbar',
+    title: 'widgets/navigation/Navbar',
     component: Navbar,
     decorators: [
         (Story) => (

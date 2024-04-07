@@ -1,7 +1,8 @@
 .panel {
-    background: var(--card-bg);
+    background: var(--uikit-controls-bg);
     position: absolute;
     z-index: 10000;
-    border-radius: 8px;
+    
+    border-radius: var(--uikit-border-radius);
     padding: 15px;
 }

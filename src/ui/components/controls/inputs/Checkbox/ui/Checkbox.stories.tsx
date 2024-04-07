@@ -9,7 +9,7 @@ import { Text } from 'ui/components/shared/Text';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof Checkbox> = {
-    title: 'components/Checkbox',
+    title: 'components/controls/Checkbox',
     component: Checkbox,
     decorators: [
         (Story) => (

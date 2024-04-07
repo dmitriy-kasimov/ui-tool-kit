@@ -6,7 +6,7 @@ import { Disclosure } from './Disclosure';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 const meta: Meta<typeof Disclosure> = {
-    title: 'widgets/Disclosure',
+    title: 'widgets/information/Disclosure',
     component: Disclosure,
     decorators: [
       (Story) => (

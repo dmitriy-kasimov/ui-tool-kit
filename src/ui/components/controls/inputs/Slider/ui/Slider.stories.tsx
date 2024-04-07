@@ -8,7 +8,7 @@ import { Slider } from '../index';
 import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof Slider> = {
-    title: 'components/Slider',
+    title: 'components/controls/Slider',
     component: Slider,
     decorators: [
         (Story) => (

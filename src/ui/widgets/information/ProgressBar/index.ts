@@ -3,5 +3,7 @@ import ProgressBar from "./ui/ProgressBar";
 
 export {
     ProgressBar,
+}
+export type {
     ProgressBarType
 }

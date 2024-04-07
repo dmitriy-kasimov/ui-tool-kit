@@ -8,7 +8,7 @@ import { Alert, AlertType } from '../index';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Alert> = {
-    title: 'utils/Alert',
+    title: 'utils/notify/Alert',
     component: Alert,
     decorators: [
         (Story) => (
