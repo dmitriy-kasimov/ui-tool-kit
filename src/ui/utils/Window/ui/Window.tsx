@@ -6,16 +6,19 @@ import { Portal } from 'ui/utils/Portal/Portal';
 import { useModal } from 'lib/hooks/useModal/useModal';
 import { ANIMATION_DELAY } from 'styles/effects/anims';
 import { Overlay } from 'ui/utils/Overlay/Overlay';
+import { HStack } from 'ui/components/shared/Stack';
+import { Sidebar, SidebarItemType } from 'ui/widgets/navigation/Sidebar';
 
 
 interface WindowProps {
     className?: string;
     children?: React.ReactNode;
+    sidebar?: SidebarItemType[];
 
     isOpen?: boolean;
     onClose?: () => void;
     lazy?: boolean;
-    fullscreen?: boolean
+    fullscreen?: boolean;
 };
 
 export const Window = memo((props: WindowProps) => {
@@ -25,7 +28,8 @@ export const Window = memo((props: WindowProps) => {
         isOpen=true,
         onClose,
         lazy = true,
-        fullscreen = false
+        fullscreen = false,
+        sidebar
     } = props;
   
     const {
@@ -41,7 +45,6 @@ export const Window = memo((props: WindowProps) => {
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls.fullscreen]: fullscreen,
     };
 
     if (lazy && !isMounted) {
@@ -52,8 +55,17 @@ export const Window = memo((props: WindowProps) => {
         <Portal>
             <div className={classNames(cls.Window, mods, [className])}>
                 <Overlay onClick={close} />
-                <div className={cls.content}>
-                    {children}
+                <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
+                    {sidebar ?
+                        (<Sidebar 
+                            items={sidebar}
+                        />) :
+                        null
+                    }
+                    
+                    <div className={cls.content}>
+                        {children}
+                    </div>
                 </div>
             </div>
         </Portal>

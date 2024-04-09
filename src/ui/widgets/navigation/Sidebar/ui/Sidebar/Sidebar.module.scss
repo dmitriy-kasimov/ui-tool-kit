@@ -1,0 +1,10 @@
+.Sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--uikit-widgets-bg);
+
+    border-top-left-radius: var(--uikit-border-radius);
+    border-bottom-left-radius: var(--uikit-border-radius);
+}

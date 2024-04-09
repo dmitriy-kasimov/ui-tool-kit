@@ -14,8 +14,10 @@
     align-items: center;
 }
 
-.content {
+.layout {
     @include anims.util;
+
+    display: flex;
 
     background: var(--uikit-utils-bg);
     border-radius: var(--uikit-border-radius);
@@ -26,18 +28,30 @@
     z-index: var(--uikit-z-index-util);
 }
 
+.fullscreen{
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-shrink: 1;
+
+    overflow: auto;
+}
+
 .opened {
     pointer-events: auto;
     opacity: 1;
     z-index: var(--uikit-z-index-util);
 
-    .content {
+    .layout {
         @include anims.utilOpened;
     }
 }
 
 .isClosing {
-    .content {
+    .layout {
         @include anims.utilClosing;
     }
 }
