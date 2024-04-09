@@ -11,6 +11,7 @@ import { ANIMATION_DELAY } from "styles/effects/anims";
 import { Portal } from "ui/utils/Portal/Portal";
 import { Overlay } from "ui/utils/Overlay/Overlay";
 import { HStack, VStack } from "ui/components/shared/Stack";
+import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 
 export const ModalConfirm = (props: ModalConfirmProps) => {
     const {
@@ -61,10 +62,10 @@ export const ModalConfirm = (props: ModalConfirmProps) => {
                             {children}
                         </HStack>
                         <HStack max justify="center" gap="32">
-                            <Button onClick={close}>
+                            <Button theme={ButtonTheme.CANCEL} onClick={close}>
                                 <Text>Отменить</Text>
                             </Button>
-                            <Button onClick={handleConfirm}>
+                            <Button theme={ButtonTheme.ACCEPT} onClick={handleConfirm}>
                                 <Text>Подтвердить</Text>
                             </Button>
                         </HStack>

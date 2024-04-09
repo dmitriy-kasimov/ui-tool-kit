@@ -18,7 +18,7 @@ export const Modal = (props: ModalProps) => {
     const {
         className,
         children,
-        isOpen=false,
+        isOpen=true,
         onClose,
         lazy,
     } = props;

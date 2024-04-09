@@ -1,4 +1,3 @@
-@use 'styles/effects/glasses';
 @use 'styles/effects/anims';
 
 .Modal {
@@ -16,25 +15,20 @@
 }
 
 .content {
-    @include glasses.util;
     @include anims.util;
 
-    background: var(--uikit-background-util-content);
-    border: var(--uikit-border-util-content);
-    border-radius: var(--uikit-border-radius-util-content);
+    background: var(--uikit-utils-bg);
+    border-radius: var(--uikit-border-radius);
 
-    padding: var(--uikit-padding-util-strength-width);
-    border-radius: 12px;
-    
     max-width: 60%;
 
-    z-index: var(--uikit-z-index-util);
+    z-index: var(--uikit-utils-z-index);
 }
 
 .opened {
     pointer-events: auto;
     opacity: 1;
-    z-index: var(--uikit-z-index-util);
+    z-index: var(--uikit-utils-z-index);
 
     .content {
         @include anims.utilOpened;
