@@ -1,0 +1,43 @@
+@use 'styles/effects/anims';
+
+.Window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    @include anims.util;
+
+    background: var(--uikit-utils-bg);
+    border-radius: var(--uikit-border-radius);
+
+    max-width: 60%;
+    min-height: 10vh;
+
+    z-index: var(--uikit-z-index-util);
+}
+
+.opened {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: var(--uikit-z-index-util);
+
+    .content {
+        @include anims.utilOpened;
+    }
+}
+
+.isClosing {
+    .content {
+        @include anims.utilClosing;
+    }
+}
