@@ -33,7 +33,7 @@ export const AlertWarninng: Story = {
        isOpen: true,
        title: 'Warning',
        onClose: () => {},
-       type: AlertType.WARNING,
+       type: 'warning',
        children: (
         <Text>Your pass must be more complex</Text>
        )
@@ -45,7 +45,7 @@ export const AlertError: Story = {
        isOpen: true,
        title: 'Some error',
        onClose: () => {},
-       type: AlertType.ERROR,
+       type: 'error',
        children: (
         <Text>Your pass does not meet the requirments!</Text>
        )
@@ -57,7 +57,7 @@ export const AlertSuccessfully: Story = {
        isOpen: true,
        title: 'Registration',
        onClose: () => {},
-       type: AlertType.SUCCESSFULLY,
+       type: 'successfully',
        children: (
         <Text>At this moment, you is our client, welcome!</Text>
        )
@@ -69,7 +69,7 @@ export const AlertInfo: Story = {
        isOpen: true,
        title: 'Vehicle',
        onClose: () => {},
-       type: AlertType.INFO,
+       type: 'info',
        children: (
         <Text>The engine this car can be improved!</Text>
        )

@@ -1,3 +1,5 @@
+export type AlertType = 'warning' | 'error' | 'successfully' | 'info';
+
 export interface AlertProps{
     children: React.ReactNode;
 
@@ -9,11 +11,4 @@ export interface AlertProps{
 
     title?:string;
     type: AlertType;
-}
-
-export enum AlertType{
-    WARNING = 'WARNING',
-    ERROR = 'ERROR',
-    SUCCESSFULLY = 'SUCCESSFULLY',
-    INFO = 'INFO'
 }

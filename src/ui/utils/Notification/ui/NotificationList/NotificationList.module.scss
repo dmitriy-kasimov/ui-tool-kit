@@ -1,0 +1,14 @@
+.NotificationList {
+    height: 70vh;
+
+    position: absolute;
+    
+    right: 0;
+    top: 50px;
+
+    pointer-events: none;
+    z-index: var(--uikit-utils-notification-z-index);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

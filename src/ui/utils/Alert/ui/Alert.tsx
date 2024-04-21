@@ -1,4 +1,4 @@
-import React, {FC, useCallback, useEffect } from "react";
+import React, {FC, MutableRefObject, useCallback, useEffect, useRef } from "react";
 import { AlertProps, AlertType } from "../types/AlertProps";
 import { classNames } from "lib/classNames/classNames";
 
@@ -16,7 +16,7 @@ import { HStack, VStack } from "ui/components/shared/Stack";
 
 
 const Alert: FC<AlertProps> = (props) => {
-  
+
   const {
     children, 
     lazy,
@@ -27,12 +27,14 @@ const Alert: FC<AlertProps> = (props) => {
     type
   } = props;
 
+  
+
   const getIconAlert = useCallback((type: AlertType) => {
     const iconAlert = {
-      [AlertType.WARNING]: (<IconWarning />),
-      [AlertType.ERROR]: (<IconError />),
-      [AlertType.SUCCESSFULLY]: (<IconSuccessfully />),
-      [AlertType.INFO]: (<IconInfo />),
+      'warning': (<IconWarning />),
+      'error': (<IconError />),
+      'successfully': (<IconSuccessfully />),
+      'info': (<IconInfo />),
     }
     return iconAlert[type];
   }, [type])
@@ -47,9 +49,19 @@ const Alert: FC<AlertProps> = (props) => {
       isOpen,
   });
 
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+  
   useEffect(() => {
-    setTimeout(close, showTime);
-  }, [])
+    timerRef.current = setTimeout(() => {
+      close();
+    }, showTime);   
+  }, [showTime, close])
+
+  useEffect(() => {
+   return () => {
+    clearTimeout(timerRef.current);
+   }
+  }, [isOpen])
 
   const mods: Record<string, boolean> = {
     [cls.isOpen]: isOpen,
@@ -62,7 +74,7 @@ const Alert: FC<AlertProps> = (props) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.Alert, mods, [])}>
+      <div className={classNames(cls.Alert, mods, [])} onClick={close}>
         <VStack className={cls.wrapper} gap='16'>
           <HStack max justify="center" gap="8">
             {getIconAlert(type)}
