@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { SidebarItem } from './SidebarItem';
-import TestIcon from 'styles/assets/icons/successfully.svg'
+import TestIcon from 'styles/assets/icons/success.svg'
 
 const meta: Meta<typeof SidebarItem> = {
     title: 'widgets/information/SidebarItem',

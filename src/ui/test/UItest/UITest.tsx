@@ -9,7 +9,7 @@ import { NotificationItemType } from "ui/utils/Notification/model/types";
 import NotificationItem from "ui/utils/Notification/ui/NotificationItem/NotificationItem";
 import { Button } from "ui/components/controls/buttons/Button";
 import { Text } from "ui/components/shared/Text";
-import { Alert } from "ui/utils/Alert";
+import AlertItem, { Alert, AlertItemType } from "ui/utils/Alert";
 import { Modal } from "ui/utils/Modal";
 
 interface UITestProps {
@@ -50,6 +50,44 @@ let thirdNotification: NotificationItemType = {
 }
 
 
+//
+let firstAlert: AlertItemType = {
+    title: 'Alert 1',
+    showTime: 1500,
+    type: "info",
+    body: (
+        <VStack max gap="8">
+            <Skeleton height={16} width={250} />
+        </VStack>  
+    )
+}
+
+let secondAlert: AlertItemType = {
+    title: 'Alert 2',
+    showTime: 2500,
+    type: "info",
+    body: (
+        <VStack max gap="8">
+            <Skeleton height={16} width={250} />
+            <Skeleton height={16} width={250} />
+        </VStack> 
+    )
+}
+
+let thirdAlert: AlertItemType = {
+    title: 'Alert 3',
+    showTime: 3500,
+    type: "info",
+    body: (
+        <VStack max gap="8">
+            <Skeleton height={16} width={250} />
+            <Skeleton height={16} width={250} />
+            <Skeleton height={16} width={250} />
+        </VStack> 
+    )
+}
+//
+
 
 export const UITest = memo(({className}: UITestProps) => {
 
@@ -86,6 +124,24 @@ export const UITest = memo(({className}: UITestProps) => {
         }
     }, [notifications])
 
+
+    const [alerts, setAlerts] = useState<AlertItemType[]>([]);
+
+    const timerCleanAlerts = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+    useEffect(() => {
+        if(alerts.length > 0){
+            clearTimeout(timerCleanAlerts.current);
+            timerCleanAlerts.current = setTimeout(() => {
+                
+                const array = [...alerts];
+                const elem = array.shift()
+                console.log(elem, ' was deleted by timer');
+                setAlerts(array);
+            }, alerts[0].showTime ?? 1500)
+        } else {
+            clearTimeout(timerCleanAlerts.current);
+        }
+    }, [alerts])
     return (
       
             <div className={classNames(cls.UITest, {}, [className])}>
@@ -111,12 +167,28 @@ export const UITest = memo(({className}: UITestProps) => {
                     }}>
                         <Text>Показать третье уведомление</Text>
                     </Button>
+
+                    <Button onClick={() => {
+                        setAlerts([...alerts, firstAlert]);
+                    }}>
+                        <Text>Показать первый alert</Text>
+                    </Button>
+                    <Button onClick={() => {
+                        setAlerts([...alerts, secondAlert]);
+                    }}>
+                        <Text>Показать второй alert</Text>
+                    </Button>
+                    <Button onClick={() => {
+                        setAlerts([...alerts, thirdAlert]);
+                    }}>
+                        <Text>Показать третий alert</Text>
+                    </Button>
                 </VStack>
 
 
-                <Alert isOpen={alert} lazy type="error" onClose={closeAlert}>
-                    <Text>Alert</Text>
-                </Alert>
+                <Alert 
+                    alert={alerts[0]}
+                />
 
                 <Modal isOpen={modal} lazy onClose={onCloseModal}>
                     <Text>

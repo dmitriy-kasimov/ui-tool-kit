@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import NotificationItem from './NotificationItem';
-import TestIcon from 'styles/assets/icons/successfully.svg'
+import TestIcon from 'styles/assets/icons/success.svg'
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { VStack } from 'ui/components/shared/Stack';
 

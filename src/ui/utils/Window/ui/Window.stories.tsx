@@ -7,7 +7,7 @@ import { decoratorBackground } from '../../../../../.storybook/decorators/decora
 import { Window } from './Window';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { HStack, VStack } from 'ui/components/shared/Stack';
-import TestIcon from 'styles/assets/icons/successfully.svg'
+import TestIcon from 'styles/assets/icons/success.svg'
 
 const meta: Meta<typeof Window> = {
     title: 'utils/modal/Window',

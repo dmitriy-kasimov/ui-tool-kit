@@ -27,7 +27,7 @@ import { validationStatus } from './ui/components/controls'
 
 import IconWarning from './styles/assets/icons/warning.svg'
 import IconError from './styles/assets/icons/error.svg'
-import IconSuccessfully from './styles/assets/icons/successfully.svg'
+import IconSuccessfully from './styles/assets/icons/success.svg'
 import IconInfo from './styles/assets/icons/info.svg'
 import IconLink from './styles/assets/icons/link.svg'
 

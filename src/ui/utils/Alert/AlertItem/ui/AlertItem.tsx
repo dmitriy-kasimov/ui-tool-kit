@@ -1,43 +1,46 @@
 import React, {FC, MutableRefObject, useCallback, useEffect, useRef } from "react";
-import { AlertProps, AlertType } from "../types/AlertProps";
+import { AlertItemProps, AlertItemType, AlertType } from "../types/AlertItemProps";
 import { classNames } from "lib/classNames/classNames";
 
-import cls from './Alert.module.scss';
+import cls from './AlertItem.module.scss';
 import { Portal } from "ui/utils/Portal/Portal";
 import { Text, textFont, textSize } from "ui/components/shared/Text";
 
 import IconWarning from 'styles/assets/icons/warning.svg'
 import IconError from 'styles/assets/icons/error.svg'
-import IconSuccessfully from 'styles/assets/icons/successfully.svg'
+import IconSuccess from 'styles/assets/icons/success.svg'
 import IconInfo from 'styles/assets/icons/info.svg'
 import { useModal } from "lib/hooks/useModal/useModal";
 import { ANIMATION_DELAY } from "styles/effects/anims";
 import { HStack, VStack } from "ui/components/shared/Stack";
+import { Icon } from "ui/components/shared/Icon/Icon";
 
 
-const Alert: FC<AlertProps> = (props) => {
+const getIconAlert = (type?: AlertType): ReturnType<typeof Icon> => {
+  
+  let result: ReturnType<typeof Icon>;
+
+  switch(type){
+    case 'warning':{result = <Icon Svg={IconWarning}/>}
+    case 'error':{result = <Icon Svg={IconError}/>}
+    case 'success':{result = <Icon Svg={IconSuccess}/>}
+    case 'info':{result = <Icon Svg={IconInfo}/>}
+    default: {result = <Icon Svg={IconWarning}/>}
+  }
+
+  return result;
+}
+
+const AlertItem: FC<AlertItemProps> = (props) => {
 
   const {
-    children, 
+    item,
+    className,
     lazy,
-    showTime = 1500,
-    isOpen,
-    onClose,
-    title = 'Уведомление',
-    type
+    onClose
   } = props;
 
-  
-
-  const getIconAlert = useCallback((type: AlertType) => {
-    const iconAlert = {
-      'warning': (<IconWarning />),
-      'error': (<IconError />),
-      'successfully': (<IconSuccessfully />),
-      'info': (<IconInfo />),
-    }
-    return iconAlert[type];
-  }, [type])
+  const isOpen = true;
 
   const {
       isClosing,
@@ -49,20 +52,8 @@ const Alert: FC<AlertProps> = (props) => {
       isOpen,
   });
 
-  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+  // const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
   
-  useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      close();
-    }, showTime);   
-  }, [showTime, close])
-
-  useEffect(() => {
-   return () => {
-    clearTimeout(timerRef.current);
-   }
-  }, [isOpen])
-
   const mods: Record<string, boolean> = {
     [cls.isOpen]: isOpen,
     [cls.isClosing]: isClosing,
@@ -77,12 +68,12 @@ const Alert: FC<AlertProps> = (props) => {
       <div className={classNames(cls.Alert, mods, [])} onClick={close}>
         <VStack className={cls.wrapper} gap='16'>
           <HStack max justify="center" gap="8">
-            {getIconAlert(type)}
-            <Text font={textFont.TITLE} size={textSize.REGULAR}>{title}</Text>
-            {getIconAlert(type)}
+            {getIconAlert(item.type)}
+            <Text font={textFont.TITLE} size={textSize.REGULAR}>{item.title ?? 'Alert'}</Text>
+            {getIconAlert(item.type)}
           </HStack>
           <div className={classNames(cls.description, {}, [])}>
-              {children}
+              {item.body}
           </div>
         </VStack>
       </div>
@@ -90,4 +81,4 @@ const Alert: FC<AlertProps> = (props) => {
   )
 };
 
-export default Alert;
+export default AlertItem;
