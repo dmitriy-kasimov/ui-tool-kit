@@ -4,12 +4,15 @@
     
     border-radius: var(--uikit-border-radius);
 
+    
 
 
     .header{
         border-radius: var(--uikit-border-radius);
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        padding: var(--uikit-padding-xs);
     };
     
     .content{
@@ -20,5 +23,7 @@
         border-top-right-radius: 0;
 
         overflow-y: auto;
+
+        padding: var(--uikit-padding-xs);
     };
 };

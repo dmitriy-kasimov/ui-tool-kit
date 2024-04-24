@@ -12,7 +12,7 @@
 }
 
 .item {
-    padding: 10px 25px;
+    padding: var(--uikit-padding-s) var(--uikit-padding-m);
     width: 100%;
     border: none;
     background: none;

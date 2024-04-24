@@ -15,10 +15,9 @@ export const Post: FC<PostProps> = ({
                                     }) => {
     
     return(
-        <VStack  className={classNames(cls.Post, {}, [className])}>
+        <VStack max className={classNames(cls.Post, {}, [className])}>
             <HStack max justify="between" align="end" className={cls.header}>
                 <Text 
-                    className={cls.title}
                     size={textSize.IMPORTANT}
                 >
                     {title}

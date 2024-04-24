@@ -2,43 +2,43 @@
 .input {
     display: none;
 }
-  /* для элемента label связанного с .input */
-.input+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
+.radioButton,
+.label{
+  cursor: pointer;
 }
-  /* создание в label псевдоэлемента  before со следующими стилями */
-.input+label::before {
+
+.radioButton {
     //@include controls.defaultStyles;
 
     display: inline-block; 
   
     border-radius: 50%;
   
-    width: 1em;
-    height: 1em; 
+    width: 16px;
+    height: 16px; 
+
+    border: 1px solid white;
   
     content: '';
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 60% 60%;   
+    background-size: 100% 100%;   
 }
   /* стили при наведении курсора на радио */
 .input:not(:disabled):not(:checked)+label:hover::before {
     @include controls.hover;
 }
   /* стили для активной радиокнопки (при нажатии на неё) */
-.input:not(:disabled):active+label::before {
+.input:not(:disabled):active+.radioButton {
     @include controls.active;
 }
   /* стили для радиокнопки, находящейся в фокусе */
-.input:focus+label::before {
+.input:focus+.radioButton {
     @include controls.focus;
 }
 
   /* стили для радиокнопки, находящейся в состоянии checked */
-.input:checked+label::before {
+.input:checked+.radioButton {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
   /* стили для радиокнопки, находящейся в состоянии disabled */

@@ -15,7 +15,7 @@ const RadioGroupOption: FC<RadioGroupOptionProps> = ({
                                                         defaultChecked=false
                                                     }) => {
   return (
-    <HStack gap="16" >
+    <HStack gap="8" >
         <input
             className={cls.input} 
             type="radio" 
@@ -26,7 +26,9 @@ const RadioGroupOption: FC<RadioGroupOptionProps> = ({
             disabled={disabled}
             defaultChecked={defaultChecked}
         />
-        <label 
+        <label htmlFor={id} className={cls.radioButton}></label>
+        <label
+            className={cls.label} 
             htmlFor={id}
         >
             <Text>{description}</Text>
