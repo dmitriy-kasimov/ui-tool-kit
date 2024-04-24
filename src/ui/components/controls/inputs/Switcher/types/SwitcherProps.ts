@@ -1,10 +1,9 @@
 import { validationStatus } from "ui/components/controls";
 
 export interface SwitcherProps{
+    id: string;
     value: boolean;
     onChange: () => void;
-
-    id?: string;
 
     disabled?: boolean;
 

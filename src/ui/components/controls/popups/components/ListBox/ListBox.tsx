@@ -9,6 +9,7 @@ import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
 import { Button } from 'ui/components/controls/buttons/Button';
 import { HStack } from 'ui/components/shared/Stack';
+import { Text } from 'ui/components/shared/Text';
 
 export interface ListBoxItem{
     value: string;
@@ -36,7 +37,7 @@ export function ListBox(props: ListBoxProps) {
         defaultValue,
         value,
         readonly=false,
-        direction = 'top right',
+        direction = 'bottom right',
         label,
     } = props;
 
@@ -48,7 +49,7 @@ export function ListBox(props: ListBoxProps) {
         <HStack
             gap="4"
         >
-            {label && <span>{label}</span>}
+            {label && <Text>{label}</Text>}
             <HListBox
                 disabled={readonly}
                 as="div"
@@ -74,14 +75,13 @@ export function ListBox(props: ListBoxProps) {
                             disabled={item.disabled}
                             as={Fragment}
                         >
-                            {({ active, selected }) => (
+                            {({ active }) => (
                                 <li
                                     className={classNames(cls.item, {
                                         [popupCls.active]: active ?? false,
                                         [popupCls.disabled]: item.disabled ?? false,
                                     }, [])}
                                 >
-                                    {selected && '=>' }
                                     {item.content}
                                 </li>
                             )}

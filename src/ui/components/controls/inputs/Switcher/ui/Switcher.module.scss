@@ -25,8 +25,6 @@
 }
   
 .label:after {
-    background: var(--uikit-controls-bg);
-
     border-radius: 24px;
 
     
@@ -38,6 +36,8 @@
 
     transition: 0.3s;
     content: '';
+
+    background-color: var(--uikit-theme-main-color);
 }
 
 .checked + .label {

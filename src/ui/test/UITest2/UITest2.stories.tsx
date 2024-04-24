@@ -4,12 +4,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { decoratorBackground } from '../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
-import { UITest } from './UITest';
+import { UITest2 } from './UITest2';
 import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
-const meta: Meta<typeof UITest> = {
-    title: 'test/utils',
-    component: UITest,
+const meta: Meta<typeof UITest2> = {
+    title: 'test/components',
+    component: UITest2,
     decorators: [
         (Story) => (
           decoratorBackground(Story)
@@ -26,9 +26,9 @@ const meta: Meta<typeof UITest> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof UITest>;
+type Story = StoryObj<typeof UITest2>;
 
-export const Utils: Story = {
+export const ControlsAndShared: Story = {
     args: {
       
     },
