@@ -6,29 +6,29 @@ import { Text, textColor, textSize } from "ui/components/shared/Text";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
-export const TextArea: FC<TextAreaProps> = memo(({
-                                        value,     
-                                        onChange,
-                                        
-                                        label,
-                                        limit,
-                                        
-                                        valid=validationStatus.DEFAULT,
-                                        disabled=false,
-                                        rows=5,
-                                        cols=25,
-                                        className='',
-                                        ...otherProps
-                                    }) => {
+export const TextArea: FC<TextAreaProps> = memo(props => {
     
-    const [text, setText] = useState<string>(value);
+    const {
+        value,     
+        onChange,
+        
+        label,
+        limit,
+        
+        valid=validationStatus.DEFAULT,
+        disabled=false,
+        rows=5,
+        cols=25,
+        className='',
+        ...otherProps
+    } = props;
 
     return(
         <div className={classNames(cls.field, {[cls.disabled]: disabled}, [className, getValidationClasses(valid)])}>
             <textarea 
                 className={cls.input}
-                value={text}
-                onChange={(e) => setText(e.target.value)}
+                value={value}
+                onChange={e => onChange(e.target.value)}
                 rows={rows}
                 cols={cols}
                 id={label}

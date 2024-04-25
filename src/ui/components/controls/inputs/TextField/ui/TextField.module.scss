@@ -1,10 +1,11 @@
 // @use 'styles/effects/glasses';
 // @use 'styles/effects/shadows';
-// @use '../../../controls';
+@use '../../../controls';
 
-// .disabled{
-//     @include controls.disabled;
-// }
+.disabled{
+    @include controls.disabled;
+}
+
 .TextField{
     display: inline-flex;
     flex-direction: column;

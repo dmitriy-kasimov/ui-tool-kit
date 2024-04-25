@@ -8,10 +8,10 @@ import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { VStack } from "ui/components/shared/Stack";
 const RadioGroup: FC<RadioGroupProps> = memo(({
                                             onChange,
-                                            name, 
                                             options,   
                                             disabled = false,
                                             className='',
+                                            name,
                                             valid = validationStatus.DEFAULT
                                         }) => {
 
@@ -23,16 +23,11 @@ const RadioGroup: FC<RadioGroupProps> = memo(({
             {options?.map(option => 
                 <RadioGroupOption 
                     key={option.value}
-                    name={name}
-                    
-                    value={option.value}
-                    onChange={onChange}
-                    
                     id={option.value}
-                    description={option.description}
-
-                    disabled={option.disabled}
-                    defaultChecked={option.defaultChecked}
+                    item={option}
+                    name={name}
+                   
+                    onChange={onChange} 
                 />    
             )}
             

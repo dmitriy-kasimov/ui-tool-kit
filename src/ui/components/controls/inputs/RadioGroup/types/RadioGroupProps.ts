@@ -1,24 +1,13 @@
 import { ChangeEvent } from "react";
 import { validationStatus } from "ui/components/controls";
+import { RadioGroupOptionType } from "../components/RadioGroupOption/types/RadioGroupOptionProps";
 
 export interface RadioGroupProps{
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-
     name: string;
-
-    options: RadioGroupOptions[];
+    onChange: (value: string) => void;
+    options: RadioGroupOptionType[];
     
     disabled?: boolean;
-
     className?: string;
-
     valid?: validationStatus;
-}
-
-interface RadioGroupOptions{
-    value: string;
-    description: string;
-
-    disabled?: boolean;
-    defaultChecked?:boolean;
 }

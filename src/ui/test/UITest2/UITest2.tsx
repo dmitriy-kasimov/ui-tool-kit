@@ -15,18 +15,19 @@ import { Dropdown } from "ui/components/controls/popups/components/Dropdown/Drop
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { ListBox } from "ui/components/controls/popups/components/ListBox/ListBox";
 import { Popover } from "ui/components/controls/popups/components/Popover/Popover";
+import { RadioGroupOptionType } from "ui/components/controls/inputs/RadioGroup/components/RadioGroupOption/types/RadioGroupOptionProps";
 
 export const UITest2 = memo(() => {
     const [checkbox, setCheckbox] = useState(false);
 
-    const radioGroupOptions = [
-        {value: 'male',description: 'Муж'},
-        {value: 'female',description: 'Жен'},
-        {value: 'hz',description: 'pidor', disabled:true},
+    const radioGroupOptions: RadioGroupOptionType[] = [
+        {value: 'admin', description: 'Администратор'},
+        {value: 'architecturer', description: 'Архитектор'},
+        {value: 'root', description: 'root', disabled:true},
     ];
-    const [sex, setSex] = useState('');
-    const handleChangeSex = (e: React.ChangeEvent<HTMLInputElement>) =>{
-      setSex(e.target.value)
+    const [sex, setSex] = useState('architecturer');
+    const handleChangeSex = (value: string) =>{
+      setSex(value)
     }
     useMemo(() => {
         console.log('current value for variable sex is', sex);
@@ -79,10 +80,9 @@ export const UITest2 = memo(() => {
                 </Checkbox>
 
                 <RadioGroup 
-                    name="gender"
+                    name={'admins'}
                     options={radioGroupOptions}
                     onChange={handleChangeSex}
-
                 />
             </HStack>
 
@@ -90,9 +90,9 @@ export const UITest2 = memo(() => {
                 <Slider 
                     max={10}
                     min={0}
-                    step={2}
+                    step={1}
                     value={sliderValue}
-                    onChange={e => setSliderValue(Number(e.target.value))}
+                    onChange={setSliderValue}
                 />
 
                 <Switcher 
@@ -105,14 +105,14 @@ export const UITest2 = memo(() => {
             <HStack gap="8" max>
                 <TextField 
                     value={textFieldValue}
-                    onChange={e => setTextFieldValue(e.target.value)}
+                    onChange={setTextFieldValue}
                     label="TextField"
                     limit={32}
                     masked
                 />
                 <TextArea 
                     value={textAreaValue}
-                    onChange={e => setTextAreaValue(e.target.value)}
+                    onChange={setTextAreaValue}
                     label="TextArea"
                     limit={64}
                 />

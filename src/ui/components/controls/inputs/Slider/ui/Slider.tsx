@@ -22,7 +22,7 @@ const Slider: FC<SliderProps> = memo(({
       <input
           className={classNames(cls.input, {}, [getValidationClasses(valid)])}
           value={value}
-          onChange={onChange}
+          onChange={e => onChange(Number(e.target.value))}
           min={min} 
           max={max} 
           type="range" 

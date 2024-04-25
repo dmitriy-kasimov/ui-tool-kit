@@ -11,50 +11,39 @@ import { Button } from "ui/components/controls/buttons/Button";
 import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 import { HStack, VStack } from "ui/components/shared/Stack";
 
-export const TextField: FC<TextFieldProps> = memo(({
-                                        value,     
-                                        onChange,
-                                        
-                                        label,
-                                        limit,
-                                        
-                                        valid=validationStatus.DEFAULT,
-                                        disabled=false,
-                                        masked = false,
-                                        className = '',
-                                        ...otherProps
-                                    }) => {
+export const TextField: FC<TextFieldProps> = memo(props => {
     
-    const [count, setCount] = useState<number>(0);
-    const [text, setText] = useState<string>(value);
-
-    const onChangeTextField = (e: ChangeEvent<HTMLInputElement>) => {
-        const input: string = e.target.value;
-        if(input.length <= limit){
-            setText(input);
-            setCount(input.length)
-
-            onChange(e);
-        }
-    }
+    const {
+        value,     
+        onChange,
+        
+        label,
+        limit,
+        
+        valid=validationStatus.DEFAULT,
+        disabled=false,
+        masked = false,
+        className = '',
+        ...otherProps
+    } = props;
 
     const [type, setType] = useState<string>(masked ? 'password' : 'text');
     const switchMask = () =>{
         setType( type === 'text' ? 'password' : 'text');
     }
 
-
     return(
         <HStack 
             align="center"
-            className={classNames(cls.background, {disabled}, [className, getValidationClasses(valid)])}
+            className={classNames(cls.background, {[cls.disabled]: disabled}, [className, getValidationClasses(valid)])}
         >
             <VStack className={cls.field}>
                 <input 
                     className={cls.input}
-                    value={text}
-                    onChange={onChangeTextField}
+                    value={value}
+                    onChange={e => onChange(e.target.value)}
                     type={type} 
+                    maxLength={limit}
                     id={label}
                     placeholder=''
                     autoComplete="off"

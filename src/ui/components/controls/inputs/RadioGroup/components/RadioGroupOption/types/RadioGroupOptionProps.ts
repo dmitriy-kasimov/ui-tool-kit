@@ -1,13 +1,17 @@
 import { ChangeEvent } from "react";
 
-export interface RadioGroupOptionProps{
+export type RadioGroupOptionType = {
     value: string;
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-
-    id: string;
-    name: string;
     description: string;
 
     disabled?: boolean;
     defaultChecked?: boolean;
+}
+
+export interface RadioGroupOptionProps{
+    id: string;
+    name: string;
+
+    item: RadioGroupOptionType;
+    onChange: (value: string) => void;   
 }

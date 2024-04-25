@@ -4,7 +4,7 @@ import { validationStatus } from "ui/components/controls";
 type HTMLTextAreaProps = Omit<InputHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 export interface TextAreaProps extends HTMLTextAreaProps{
     value: string;
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    onChange: (value: string) => void;
 
     label: string;
     limit: number;
