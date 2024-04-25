@@ -107,7 +107,7 @@ export const UITest2 = memo(() => {
                     value={textFieldValue}
                     onChange={setTextFieldValue}
                     label="TextField"
-                    limit={32}
+                    limit={20}
                     masked
                 />
                 <TextArea 

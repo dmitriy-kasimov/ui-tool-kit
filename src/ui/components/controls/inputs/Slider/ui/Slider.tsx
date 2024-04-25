@@ -18,7 +18,7 @@ const Slider: FC<SliderProps> = memo(({
                                 }) => {
     
   return (
-    <VStack className={classNames('', {}, [className])}>
+    <HStack gap="4" className={classNames('', {}, [className])}>
       <input
           className={classNames(cls.input, {}, [getValidationClasses(valid)])}
           value={value}
@@ -29,12 +29,8 @@ const Slider: FC<SliderProps> = memo(({
           step={step}
           disabled={disabled}
       />
-      <HStack max justify="between">
-        <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{min}</Text>
-        <Text>{value}</Text>
-        <Text size={textSize.REGULARSMALL} color={textColor.SECONDARY}>{max}</Text>
-      </HStack>
-    </VStack>
+      <Text>{value}</Text>
+    </HStack>
    
   )
 });

@@ -6,13 +6,6 @@
     @include controls.disabled;
 }
 
-.TextField{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: var(--uikit-margin-control-strength-height);
-}
-
 .background{
     // @include controls.defaultStyles;
     // &:hover{
@@ -24,7 +17,7 @@
 
     border-radius: var(--uikit-border-radius);
     background: var(--uikit-controls-bg);
-    padding: 0 0.5rem;
+    padding: var(--uikit-padding-xxs) var(--uikit-padding-s);
 }
 
 .field {
@@ -35,17 +28,12 @@
         top: 0;
         left: 0;
         height: 100%;
-        padding: 1rem .75rem;
+        padding-top: 0.2rem;
         pointer-events: none;
         border: 1px solid transparent;
         transform-origin: 0 0;
         transition: opacity .3s ease-in-out, transform .3s ease-in-out;
     }
-}
-
-.btnMask{
-    background: transparent;
-    border: none;
 }
 
 .input{
@@ -54,9 +42,10 @@
     border: none;
 
     font-size: var(--uikit-font-size-important);
-    height: calc(3.5rem + 2px);
-    line-height: 1.25;
+    height: calc(3rem);
+    //line-height: 2.25;
 
+    width: 200px;
 
     &:focus{
         outline: none;
@@ -78,5 +67,5 @@
 .input:focus~.label,
 .input:not(:placeholder-shown)~.label {
     opacity: .65;
-    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+    transform: scale(.85) translateY(-.2rem) translateX(.15rem);
 }

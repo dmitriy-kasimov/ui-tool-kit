@@ -10,6 +10,7 @@ import { classNames } from "lib/classNames/classNames";
 import { Button } from "ui/components/controls/buttons/Button";
 import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 import { HStack, VStack } from "ui/components/shared/Stack";
+import { Icon } from "ui/components/shared/Icon/Icon";
 
 export const TextField: FC<TextFieldProps> = memo(props => {
     
@@ -34,6 +35,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
 
     return(
         <HStack 
+            justify="between"
             align="center"
             className={classNames(cls.background, {[cls.disabled]: disabled}, [className, getValidationClasses(valid)])}
         >
@@ -62,7 +64,6 @@ export const TextField: FC<TextFieldProps> = memo(props => {
             </VStack>
             {masked ? (
                 <Button 
-                    className={cls.btnMask}
                     onClick={switchMask}
                     theme={ButtonTheme.CLEAR}
                     square
@@ -71,8 +72,8 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     <>
                         {
                             type === 'text' ?
-                            <MaskText /> :
-                            <UnmaskText />
+                            <Icon Svg={MaskText} width={32} height={32}/> :
+                            <Icon Svg={UnmaskText} width={32} height={32}/>
                         }
                     </>
                 }
