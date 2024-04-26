@@ -17,7 +17,7 @@ const meta: Meta<typeof Checkbox> = {
         )
       ],
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 
     tags: ['autodocs'],

@@ -15,7 +15,7 @@ const meta: Meta<typeof Button> = {
       )
     ],
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 
     tags: ['autodocs'],
