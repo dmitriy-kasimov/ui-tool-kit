@@ -26,6 +26,6 @@ export const PostDefault: Story = {
     args: {
        title: 'The server was opened in OBT mood!',
        subtitle: '10/04/2016',
-       children: (<Text color={textColor.WARNING}>It's magic!</Text>)
+       children: (<Text color='warning'>It's magic!</Text>)
     },
 };

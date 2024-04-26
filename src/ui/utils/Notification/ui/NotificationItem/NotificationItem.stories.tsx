@@ -32,10 +32,8 @@ type Story = StoryObj<typeof NotificationItem>;
 
 export const Normal: Story = {
     args: {
-      isOpen: true,
-      showTime: 2000,
       onClose: () => {},
-      item:  {title: 'Title', body: (
+      item:  {title: 'Title', id: '1', body: (
         <VStack gap='8' align='center'>
             <Skeleton width={60} height={60} border='50%'/>
             <Skeleton width={200} height={30}/>

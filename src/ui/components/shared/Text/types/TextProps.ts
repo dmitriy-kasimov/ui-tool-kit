@@ -10,29 +10,11 @@ export interface TextProps{
 
 // Элементам этих enum есть СООТВЕТСТВУЮЩИЕ css перменные в конфигах шрифтов
 
-// Перечисление семейств используемых шрифтов
-export enum textFont{
-    MAIN,
-    TITLE
-}
+// Типы шрифтов по назначению
+export type textFont = 'main' | 'title';
 
 // Перечисление размеров шрифтов
-export enum textSize {
-    TITLE,
-    SUBTITLE,
+export type textSize = 'title' | 'subtitle' | 'important' | 'regular' | 'regularsmall';
 
-    IMPORTANT,
-    REGULAR,
-    REGULARSMALL,
-}
-
-// Цвета
-export enum textColor{
-    MAIN,
-    SECONDARY,
-
-    WARNING,
-    ERROR,
-    SUCCESSFULLY,
-    INFORMATION,
-}
+// Типы шрифтов по цвету
+export type textColor = 'main' | 'secondary' | 'warning' | 'error' | 'success' | 'info';

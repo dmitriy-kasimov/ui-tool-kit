@@ -96,19 +96,19 @@ export const UITest3 = () => {
                 id={1}
             >
                 <VStack max gap="4">
-                <Text font={textFont.TITLE} size={textSize.TITLE}>Шрифт Roboto для заголовоков, размер: TITLE</Text>
-                <Text font={textFont.TITLE} size={textSize.SUBTITLE}>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
-                <Text font={textFont.TITLE} size={textSize.IMPORTANT}>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
-                <Text font={textFont.TITLE} size={textSize.REGULAR}>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
-                <Text font={textFont.TITLE} size={textSize.REGULARSMALL}>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
+                <Text font='title' size='title'>Шрифт Roboto для заголовоков, размер: TITLE</Text>
+                <Text font='title' size='subtitle'>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
+                <Text font='title' size='important'>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
+                <Text font='title' size='regular'>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
+                <Text font='title' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
 
             
-                <Text font={textFont.TITLE} color={textColor.MAIN}>Шрифт Roboto для заголовоков, тема: основной</Text>
-                <Text font={textFont.TITLE} color={textColor.SECONDARY}>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
-                <Text font={textFont.TITLE} color={textColor.WARNING}>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
-                <Text font={textFont.TITLE} color={textColor.ERROR}>Шрифт Roboto для заголовоков, тема: ошибка</Text>
-                <Text font={textFont.TITLE} color={textColor.SUCCESSFULLY}>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
-                <Text font={textFont.TITLE} color={textColor.INFORMATION}>Шрифт Roboto для заголовоков, тема: информация</Text>
+                <Text font='title' color='main'>Шрифт Roboto для заголовоков, тема: основной</Text>
+                <Text font='title' color='secondary'>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
+                <Text font='title' color='warning'>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
+                <Text font='title' color='error'>Шрифт Roboto для заголовоков, тема: ошибка</Text>
+                <Text font='title' color='success'>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
+                <Text font='title' color='info'>Шрифт Roboto для заголовоков, тема: информация</Text>
                 </VStack>
             </Post>
 
@@ -118,36 +118,36 @@ export const UITest3 = () => {
                 id={1}
             >
                 <VStack max gap="4">
-                <Text font={textFont.MAIN} size={textSize.TITLE}>Шрифт Roboto основной, размер: TITLE</Text>
-                <Text font={textFont.MAIN} size={textSize.SUBTITLE}>Шрифт Roboto основной, размер: SUBTITLE</Text>
-                <Text font={textFont.MAIN} size={textSize.IMPORTANT}>Шрифт Roboto основной, размер: IMPORTANT</Text>
-                <Text font={textFont.MAIN} size={textSize.REGULAR}>Шрифт Roboto основной, размер: REGULAR</Text>
-                <Text font={textFont.MAIN} size={textSize.REGULARSMALL}>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
+                <Text font='main' size='title'>Шрифт Roboto основной, размер: TITLE</Text>
+                <Text font='main' size='subtitle'>Шрифт Roboto основной, размер: SUBTITLE</Text>
+                <Text font='main' size='important'>Шрифт Roboto основной, размер: IMPORTANT</Text>
+                <Text font='main' size='regular'>Шрифт Roboto основной, размер: REGULAR</Text>
+                <Text font='main' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
             
-                <Text font={textFont.MAIN} color={textColor.MAIN}>Шрифт Roboto основной, тема: основной</Text>
-                <Text font={textFont.MAIN} color={textColor.SECONDARY}>Шрифт Roboto основной, тема: второстепенный</Text>
-                <Text font={textFont.MAIN} color={textColor.WARNING}>Шрифт Roboto основной, тема: предупреждение</Text>
-                <Text font={textFont.MAIN} color={textColor.ERROR}>Шрифт Roboto основной, тема: ошибка</Text>
-                <Text font={textFont.MAIN} color={textColor.SUCCESSFULLY}>Шрифт Roboto основной, тема: успешно выполнено</Text>
-                <Text font={textFont.MAIN} color={textColor.INFORMATION}>Шрифт Roboto основной, тема: информация</Text>
+                <Text font='main' color='main'>Шрифт Roboto основной, тема: основной</Text>
+                <Text font='main' color='secondary'>Шрифт Roboto основной, тема: второстепенный</Text>
+                <Text font='main' color='warning'>Шрифт Roboto основной, тема: предупреждение</Text>
+                <Text font='main' color='error'>Шрифт Roboto основной, тема: ошибка</Text>
+                <Text font='main' color='success'>Шрифт Roboto основной, тема: успешно выполнено</Text>
+                <Text font='main' color='info'>Шрифт Roboto основной, тема: информация</Text>
                 </VStack>
             </Post>
         </Tape>
 
         <Table>
           <TableCaption>
-              <Text font={textFont.TITLE} size={textSize.IMPORTANT}>online players</Text>
+              <Text font='title' size='important'>online players</Text>
           </TableCaption>
 
           <TableContent>
             <TableHead>
               <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ping (ms)</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
               </TableRow>
             </TableHead>
             <TableBody>

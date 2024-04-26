@@ -5,8 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text';
-import { validationStatus } from 'ui/components/controls';
-import { ButtonTheme } from '../types/ButtonProps';
 
 const meta: Meta<typeof Button> = {
     title: 'components/controls/Button',
@@ -56,37 +54,37 @@ export const Square: Story = {
   },
 };
 
-export const ThemePrimary: Story = {
+export const VariantPrimary: Story = {
   args: {
       children: (<Text>Click on me!</Text>),
-      theme: ButtonTheme.PRIMARY
+      variant: 'primary'
   },
 };
 
-export const ThemeOutline: Story = {
+export const VariantOutline: Story = {
   args: {
       children: (<Text>Click on me!</Text>),
-      theme: ButtonTheme.OUTLINE
+      variant: 'outline'
   },
 };
 
-export const ThemeClear: Story = {
+export const VariantClear: Story = {
   args: {
       children: (<Text>Click on me!</Text>),
-      theme: ButtonTheme.CLEAR
+      variant: 'clear'
   },
 };
 
-export const ThemeAccept: Story = {
+export const VariantAccept: Story = {
   args: {
       children: (<Text>Click on me!</Text>),
-      theme: ButtonTheme.ACCEPT
+      variant: 'accept'
   },
 };
 
-export const ThemeCancel: Story = {
+export const VariantCancel: Story = {
   args: {
       children: (<Text>Click on me!</Text>),
-      theme: ButtonTheme.CANCEL
+      variant: 'cancel'
   },
 };

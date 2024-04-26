@@ -6,7 +6,7 @@ export {
 }
 
 
-export {
+export type{
     textFont,
     textSize,
     textColor

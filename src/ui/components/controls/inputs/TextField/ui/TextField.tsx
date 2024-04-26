@@ -8,7 +8,6 @@ import MaskText from "styles/assets/icons/maskText.svg"
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 import { Button } from "ui/components/controls/buttons/Button";
-import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Icon } from "ui/components/shared/Icon/Icon";
 
@@ -65,7 +64,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
             {masked ? (
                 <Button 
                     onClick={switchMask}
-                    theme={ButtonTheme.CLEAR}
+                    variant='clear'
                     square
                 > 
                 {

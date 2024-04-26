@@ -18,13 +18,13 @@ export const Post: FC<PostProps> = ({
         <VStack max className={classNames(cls.Post, {}, [className])}>
             <HStack max justify="between" align="end" className={cls.header}>
                 <Text 
-                    size={textSize.IMPORTANT}
+                    size='important'
                 >
                     {title}
                 </Text>
                 <Text 
-                    size={textSize.REGULARSMALL} 
-                    color={textColor.SECONDARY}
+                    size='regularsmall' 
+                    color='secondary'
                 >
                     {subtitle}
                 </Text>

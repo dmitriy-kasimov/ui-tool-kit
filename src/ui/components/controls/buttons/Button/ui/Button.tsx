@@ -1,7 +1,6 @@
-import React, {FC, memo,  useMemo} from "react";
+import React, {FC, memo} from "react";
 import cls from './Button.module.scss'
-import { ButtonProps, ButtonTheme } from "../types/ButtonProps";
-import { getValidationClasses, validationStatus } from "ui/components/controls";
+import { ButtonProps } from "../types/ButtonProps";
 import { Mods, classNames } from "lib/classNames/classNames";
 
 export const Button: FC<ButtonProps> = memo((props) => {
@@ -9,21 +8,20 @@ export const Button: FC<ButtonProps> = memo((props) => {
         children,
         square=false,
         disabled=false,
-        theme = ButtonTheme.PRIMARY,
+        variant = 'primary',
         fullWidth = false,
         className = '',
         ...otherProps
     } = props;
 
     const mods: Mods = {
-        [cls[theme]]: true,
         [cls.fullWidth]: fullWidth,
         [cls.disabled]: disabled,
         [cls.square]: square,
     }
     return(
         <button 
-            className={ classNames(cls.Button, mods, [className])}
+            className={ classNames(cls.Button, mods, [className, cls[variant]])}
             type="button"
             {...otherProps}
         >

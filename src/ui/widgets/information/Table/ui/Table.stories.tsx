@@ -78,18 +78,18 @@ export const TableScrollableHorizontalVertical: Story = {
        children: (
         <>
           <TableCaption>
-              <Text font={textFont.TITLE} size={textSize.IMPORTANT}>online players</Text>
+              <Text font='title' size='important'>online players</Text>
           </TableCaption>
 
           <TableContent>
             <TableHead>
               <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ping (ms)</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -115,18 +115,18 @@ export const TableScrollableHorizontal: Story = {
        children: (
         <>
           <TableCaption>
-              <Text font={textFont.TITLE} size={textSize.IMPORTANT}>online players</Text>
+              <Text font='title' size='important'>online players</Text>
           </TableCaption>
 
           <TableContent>
             <TableHead>
               <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Ping (ms)</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -150,14 +150,14 @@ export const TableScrollableVertical: Story = {
        children: (
         <>
           <TableCaption>
-              <Text font={textFont.TITLE} size={textSize.IMPORTANT}>online players</Text>
+              <Text font='title' size='important'>online players</Text>
           </TableCaption>
           <TableContent>
             <TableHead>
               <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font={textFont.TITLE} size={textSize.REGULAR}>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font={textFont.TITLE} size={textSize.REGULAR}>Rank</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
+                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
               </TableRow>
             </TableHead>
             <TableBody>

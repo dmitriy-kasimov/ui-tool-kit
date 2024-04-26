@@ -1,17 +1,14 @@
-import React, { FC } from "react";
+import React  from "react";
 import cls from './ModalConfirm.module.scss'
-
-import { Modal } from "ui/utils/Modal";
 import { ModalConfirmProps } from "../types/ModalConfirmProps";
 import { Mods, classNames } from "lib/classNames/classNames";
-import { Text, textColor, textFont, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 import { Button } from "ui/components/controls/buttons/Button";
 import { useModal } from "lib/hooks/useModal/useModal";
 import { ANIMATION_DELAY } from "styles/effects/anims";
 import { Portal } from "ui/utils/Portal/Portal";
 import { Overlay } from "ui/utils/Overlay/Overlay";
 import { HStack, VStack } from "ui/components/shared/Stack";
-import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 
 export const ModalConfirm = (props: ModalConfirmProps) => {
     const {
@@ -62,10 +59,10 @@ export const ModalConfirm = (props: ModalConfirmProps) => {
                             {children}
                         </HStack>
                         <HStack max justify="center" gap="32">
-                            <Button theme={ButtonTheme.CANCEL} onClick={close}>
+                            <Button variant="cancel" onClick={close}>
                                 <Text>Отменить</Text>
                             </Button>
-                            <Button theme={ButtonTheme.ACCEPT} onClick={handleConfirm}>
+                            <Button variant="accept" onClick={handleConfirm}>
                                 <Text>Подтвердить</Text>
                             </Button>
                         </HStack>

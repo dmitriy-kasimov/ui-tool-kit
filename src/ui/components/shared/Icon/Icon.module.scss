@@ -1,7 +1,17 @@
 .Icon {
+    color: rgb(230, 230, 230);
     fill: rgb(230, 230, 230);
 }
 
-.inverted {
-    fill: none;
+.button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button:hover .Icon {
+    color: rgb(126, 126, 126);
 }

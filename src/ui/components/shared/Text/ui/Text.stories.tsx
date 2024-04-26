@@ -29,21 +29,21 @@ const defaultStr: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing e
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const TextFontTitle: Story = {
     args: {
-       font: textFont.TITLE,
+       font: 'title',
        children: (defaultStr)
     },  
 };
 
 export const TextFontMain: Story = {
     args: {
-       font: textFont.MAIN,
+       font: 'main',
        children: (defaultStr)
     },  
 };
 
 export const TextSizeTitle: Story = {
     args: {
-       size: textSize.TITLE,
+       size: 'title',
        children: (defaultStr)
     },  
 };
@@ -51,70 +51,70 @@ export const TextSizeTitle: Story = {
 
 export const TextSizeSubtitle: Story = {
     args: {
-       size: textSize.SUBTITLE,
+       size: 'subtitle',
        children: (defaultStr)
     },  
 };
 
 export const TextSizeImportant: Story = {
     args: {
-       size: textSize.IMPORTANT,
+       size: 'important',
        children: (defaultStr)
     },  
 };
 
 export const TextSizeRegular: Story = {
     args: {
-       size: textSize.REGULAR,
+       size: 'regular',
        children: (defaultStr)
     },  
 };
 
 export const TextSizeRegularsmall: Story = {
     args: {
-       size: textSize.REGULARSMALL,
+       size: 'regularsmall',
        children: (defaultStr)
     },  
 };
 
 export const TextColorMain: Story = {
     args: {
-       color: textColor.MAIN,
+       color: 'main',
        children: (defaultStr)
     },  
 };
 
 export const TextColorSecondary: Story = {
     args: {
-       color: textColor.SECONDARY,
+       color: 'secondary',
        children: (defaultStr)
     },  
 };
 
 export const TextColorWarning: Story = {
     args: {
-       color: textColor.WARNING,
+       color: 'warning',
        children: (defaultStr)
     },  
 };
 
 export const TextColorError: Story = {
     args: {
-       color: textColor.ERROR,
+       color: 'error',
        children: (defaultStr)
     },  
 };
 
-export const TextColorSuccessfully: Story = {
+export const TextColorSuccess: Story = {
     args: {
-       color: textColor.SUCCESSFULLY,
+       color: 'success',
        children: (defaultStr)
     },  
 };
 
-export const TextColorInformation: Story = {
+export const TextColorInfo: Story = {
     args: {
-       color: textColor.INFORMATION,
+       color: 'info',
        children: (defaultStr)
     },  
 };

@@ -12,8 +12,8 @@ const Tape: FC<TapeProps> = ({title, children, className=''}) => {
         <VStack justify="start" className={classNames(cls.Tape, {}, [className])}>
             <HStack max justify="center" className={cls.header}>
                 <Text 
-                    font={textFont.TITLE}
-                    size={textSize.SUBTITLE}
+                    font='title'
+                    size='subtitle'
                 >
                     {title}
                 </Text>

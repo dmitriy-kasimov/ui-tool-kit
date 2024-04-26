@@ -69,7 +69,7 @@ const AlertItem: FC<AlertItemProps> = (props) => {
         <VStack className={cls.wrapper} gap='16'>
           <HStack max justify="center" gap="8">
             {getIconAlert(item.type)}
-            <Text font={textFont.TITLE} size={textSize.REGULAR}>{item.title ?? 'Alert'}</Text>
+            <Text font='title' size='regular'>{item.title ?? 'Alert'}</Text>
             {getIconAlert(item.type)}
           </HStack>
           <div className={classNames(cls.description, {}, [])}>

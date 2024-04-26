@@ -12,13 +12,13 @@ import { TextField } from './ui/components/controls/inputs/TextField'
 import { Link } from './ui/components/controls/links/Link'
 
 import { ProgressBar, ProgressBarType } from './ui/widgets/information/ProgressBar'
-import { Text, textFont, textSize, textColor } from './ui/components/shared/Text'
+import { Text } from './ui/components/shared/Text'
 
-import { Alert, AlertType } from './ui/utils/Alert'
+
 import { Modal } from './ui/utils/Modal'
 import {ModalConfirm} from './ui/utils/ModalConfirm/ui/ModalConfirm'
 
-import { Navbar } from './ui/widgets/navigation/Navbar/ui/Navbar'
+
 import { Table } from './ui/widgets/information/Table'
 import { Tape } from './ui/widgets/information/Tape'
 import { Post } from './ui/widgets/information/Tape/components/Post'
@@ -47,13 +47,13 @@ export {
             Link,
         // shared
         ProgressBar,
-        Text, textFont, textSize, textColor,
+        Text, 
     // utils
-    Alert, AlertType,
+
     Modal,
     ModalConfirm,
     // widgets
-    Navbar,
+
     Table,
     Tape, Post,
     // others

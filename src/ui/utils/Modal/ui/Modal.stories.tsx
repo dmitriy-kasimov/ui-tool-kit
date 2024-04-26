@@ -31,6 +31,6 @@ type Story = StoryObj<typeof Modal>;
 export const ModalOpen: Story = {
     args: {
        isOpen:true,
-       children: <Text size={textSize.TITLE} color={textColor.INFORMATION}>The modal window was successfully started!</Text>
+       children: <Text size='title' color='info'>The modal window was successfully started!</Text>
     },
 };
