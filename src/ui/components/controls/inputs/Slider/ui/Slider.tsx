@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import cls from './Slider.module.scss'
-import { Text, textColor, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";

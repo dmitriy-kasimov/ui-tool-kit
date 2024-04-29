@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { FC, useMemo } from "react";
 import { classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Sidebar.module.scss';
@@ -7,7 +7,7 @@ import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 
-export const Sidebar = memo((props: SidebarProps) => {
+export const Sidebar: FC<SidebarProps> = memo((props) => {
   const {
     className,
     items

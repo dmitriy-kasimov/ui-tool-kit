@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Link } from '../index';
-import { Text, textSize } from 'ui/components/shared/Text';
+import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Link> = {
     title: 'components/controls/Link',
@@ -13,10 +13,10 @@ const meta: Meta<typeof Link> = {
     decorators: [
         (Story) => (
           decoratorBackground(Story)
-        )
+        ),
       ],
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 
     tags: ['autodocs'],
@@ -31,14 +31,12 @@ type Story = StoryObj<typeof Link>;
 export const LinkDefault: Story = {
     args: {
       children: <Text size='important'>Link 1</Text>,
-      onClick: () => {},
     },
 };
 
 export const LinkDisabled: Story = {
   args: {
     children: <Text size='important'>Link 1</Text>,
-    onClick: () => {},
     disabled: true
   },
 };

@@ -2,14 +2,13 @@ import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import { classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './UITest.module.scss';
-import { NotificationList } from "ui/utils/Notification/ui/NotificationList/NotificationList";
+import { NotificationList } from "ui/utils/Notification";
 import { VStack } from "ui/components/shared/Stack";
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
-import { NotificationItemType } from "ui/utils/Notification/model/types";
-import NotificationItem from "ui/utils/Notification/ui/NotificationItem/NotificationItem";
+import { NotificationItemType } from "ui/utils/Notification";
 import { Button } from "ui/components/controls/buttons/Button";
 import { Text } from "ui/components/shared/Text";
-import AlertItem, { Alert, AlertItemType } from "ui/utils/Alert";
+import { Alert, AlertItemType } from "ui/utils/Alert";
 import { Modal } from "ui/utils/Modal";
 
 interface UITestProps {

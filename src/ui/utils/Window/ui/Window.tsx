@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Mods, classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Window.module.scss';
@@ -8,20 +8,10 @@ import { ANIMATION_DELAY } from 'styles/effects/anims';
 import { Overlay } from 'ui/utils/Overlay/Overlay';
 import { HStack } from 'ui/components/shared/Stack';
 import { Sidebar, SidebarItemType } from 'ui/widgets/navigation/Sidebar';
+import { WindowProps } from '../types/WindowProps';
 
 
-interface WindowProps {
-    className?: string;
-    children?: React.ReactNode;
-    sidebar?: SidebarItemType[];
-
-    isOpen?: boolean;
-    onClose?: () => void;
-    lazy?: boolean;
-    fullscreen?: boolean;
-};
-
-export const Window = memo((props: WindowProps) => {
+export const Window: FC<WindowProps> = memo((props) => {
     const {
         className,
         children,

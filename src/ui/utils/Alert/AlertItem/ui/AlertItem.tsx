@@ -1,10 +1,10 @@
-import React, {FC, MutableRefObject, useCallback, useEffect, useRef } from "react";
-import { AlertItemProps, AlertItemType, AlertType } from "../types/AlertItemProps";
+import React, {FC} from "react";
+import { AlertItemProps, AlertType } from "../types/AlertItemProps";
 import { classNames } from "lib/classNames/classNames";
 
 import cls from './AlertItem.module.scss';
 import { Portal } from "ui/utils/Portal/Portal";
-import { Text, textFont, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 
 import IconWarning from 'styles/assets/icons/warning.svg'
 import IconError from 'styles/assets/icons/error.svg'
@@ -31,7 +31,7 @@ const getIconAlert = (type?: AlertType): ReturnType<typeof Icon> => {
   return result;
 }
 
-const AlertItem: FC<AlertItemProps> = (props) => {
+export const AlertItem: FC<AlertItemProps> = (props) => {
 
   const {
     item,
@@ -80,5 +80,3 @@ const AlertItem: FC<AlertItemProps> = (props) => {
     </Portal>
   )
 };
-
-export default AlertItem;

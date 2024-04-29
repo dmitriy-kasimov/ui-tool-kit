@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text, textFont, textSize, textColor } from '../index';
+import { Text } from '../index';
 
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

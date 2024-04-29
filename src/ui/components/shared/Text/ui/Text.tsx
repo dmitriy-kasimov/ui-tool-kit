@@ -1,7 +1,7 @@
 import React, {FC, memo} from "react";
-import { TextProps, textColor, textFont, textSize } from "../types/TextProps";
-import cls from'../styles/Text.module.scss'
-import { Mods, classNames } from "lib/classNames/classNames";
+import { TextProps } from "../types/TextProps";
+import cls from'./styles/Text.module.scss'
+import { classNames } from "lib/classNames/classNames";
 
 export const Text: FC<TextProps> = memo((props) => {
     const {

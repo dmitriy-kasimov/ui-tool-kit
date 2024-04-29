@@ -11,7 +11,7 @@ import { TextArea } from './ui/components/controls/inputs/TextArea'
 import { TextField } from './ui/components/controls/inputs/TextField'
 import { Link } from './ui/components/controls/links/Link'
 
-import { ProgressBar, ProgressBarType } from './ui/widgets/information/ProgressBar'
+import { ProgressBar } from './ui/widgets/information/ProgressBar'
 import { Text } from './ui/components/shared/Text'
 
 
@@ -21,7 +21,6 @@ import {ModalConfirm} from './ui/utils/ModalConfirm/ui/ModalConfirm'
 
 import { Table } from './ui/widgets/information/Table'
 import { Tape } from './ui/widgets/information/Tape'
-import { Post } from './ui/widgets/information/Tape/components/Post'
 
 import { validationStatus } from './ui/components/controls'
 
@@ -55,7 +54,7 @@ export {
     // widgets
 
     Table,
-    Tape, Post,
+    Tape,
     // others
     validationStatus,
     // icons

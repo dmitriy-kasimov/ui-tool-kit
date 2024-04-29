@@ -4,7 +4,7 @@ import { memo } from "react";
 import { Disclosure } from "ui/components/controls/accordions/Disclousure/ui/Disclosure/Disclosure";
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { HStack, VStack } from "ui/components/shared/Stack";
-import { Text, textColor, textFont, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 import { ProgressBar } from "ui/widgets/information/ProgressBar";
 import { Table } from "ui/widgets/information/Table";
 import { TableBody } from "ui/widgets/information/Table/components/TableBody";
@@ -13,8 +13,7 @@ import { TableContent } from "ui/widgets/information/Table/components/TableConte
 import { TableData } from "ui/widgets/information/Table/components/TableData";
 import { TableHead } from "ui/widgets/information/Table/components/TableHead";
 import { TableRow } from "ui/widgets/information/Table/components/TableRow";
-import { Tape } from "ui/widgets/information/Tape";
-import { Post } from "ui/widgets/information/Tape/components/Post";
+import { PostType, Tape } from "ui/widgets/information/Tape";
 
 const onlinePlayers = [
     {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
@@ -50,6 +49,42 @@ const onlinePlayers = [
     {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
     {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
     {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
+];
+
+const posts: PostType[] = [
+  {id: '1', title: 'Основной шрифт', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text font='main' size='title'>Шрифт Roboto основной, размер: TITLE</Text>
+      <Text font='main' size='subtitle'>Шрифт Roboto основной, размер: SUBTITLE</Text>
+      <Text font='main' size='important'>Шрифт Roboto основной, размер: IMPORTANT</Text>
+      <Text font='main' size='regular'>Шрифт Roboto основной, размер: REGULAR</Text>
+      <Text font='main' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
+  
+      <Text font='main' color='main'>Шрифт Roboto основной, тема: основной</Text>
+      <Text font='main' color='secondary'>Шрифт Roboto основной, тема: второстепенный</Text>
+      <Text font='main' color='warning'>Шрифт Roboto основной, тема: предупреждение</Text>
+      <Text font='main' color='error'>Шрифт Roboto основной, тема: ошибка</Text>
+      <Text font='main' color='success'>Шрифт Roboto основной, тема: успешно выполнено</Text>
+      <Text font='main' color='info'>Шрифт Roboto основной, тема: информация</Text>
+      </VStack>
+  )},
+  {id: '2', title: 'Шрифт для заголовков', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text font='title' size='title'>Шрифт Roboto для заголовоков, размер: TITLE</Text>
+      <Text font='title' size='subtitle'>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
+      <Text font='title' size='important'>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
+      <Text font='title' size='regular'>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
+      <Text font='title' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
+
+  
+      <Text font='title' color='main'>Шрифт Roboto для заголовоков, тема: основной</Text>
+      <Text font='title' color='secondary'>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
+      <Text font='title' color='warning'>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
+      <Text font='title' color='error'>Шрифт Roboto для заголовоков, тема: ошибка</Text>
+      <Text font='title' color='success'>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
+      <Text font='title' color='info'>Шрифт Roboto для заголовоков, тема: информация</Text>
+      </VStack>
+  )}
 ];
 
 export const UITest3 = () => {
@@ -88,51 +123,9 @@ export const UITest3 = () => {
         </HStack>
 
         <Tape
-            title="Новые шрифты!"
-        >
-            <Post
-                title="Roboto для заголовков!"
-                subtitle={'04/24/24'}
-                id={1}
-            >
-                <VStack max gap="4">
-                <Text font='title' size='title'>Шрифт Roboto для заголовоков, размер: TITLE</Text>
-                <Text font='title' size='subtitle'>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
-                <Text font='title' size='important'>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
-                <Text font='title' size='regular'>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
-                <Text font='title' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
-
-            
-                <Text font='title' color='main'>Шрифт Roboto для заголовоков, тема: основной</Text>
-                <Text font='title' color='secondary'>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
-                <Text font='title' color='warning'>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
-                <Text font='title' color='error'>Шрифт Roboto для заголовоков, тема: ошибка</Text>
-                <Text font='title' color='success'>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
-                <Text font='title' color='info'>Шрифт Roboto для заголовоков, тема: информация</Text>
-                </VStack>
-            </Post>
-
-            <Post
-                title="Roboto основной!"
-                subtitle={'04/24/24'}
-                id={1}
-            >
-                <VStack max gap="4">
-                <Text font='main' size='title'>Шрифт Roboto основной, размер: TITLE</Text>
-                <Text font='main' size='subtitle'>Шрифт Roboto основной, размер: SUBTITLE</Text>
-                <Text font='main' size='important'>Шрифт Roboto основной, размер: IMPORTANT</Text>
-                <Text font='main' size='regular'>Шрифт Roboto основной, размер: REGULAR</Text>
-                <Text font='main' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
-            
-                <Text font='main' color='main'>Шрифт Roboto основной, тема: основной</Text>
-                <Text font='main' color='secondary'>Шрифт Roboto основной, тема: второстепенный</Text>
-                <Text font='main' color='warning'>Шрифт Roboto основной, тема: предупреждение</Text>
-                <Text font='main' color='error'>Шрифт Roboto основной, тема: ошибка</Text>
-                <Text font='main' color='success'>Шрифт Roboto основной, тема: успешно выполнено</Text>
-                <Text font='main' color='info'>Шрифт Roboto основной, тема: информация</Text>
-                </VStack>
-            </Post>
-        </Tape>
+            title="Шрифтов завезли!"
+            posts={posts}
+        />
 
         <Table>
           <TableCaption>

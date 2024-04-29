@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 import { classNames } from 'lib/classNames/classNames';
 import cls from './Overlay.module.scss';
 
@@ -7,7 +7,7 @@ interface OverlayProps {
     onClick?: () => void;
 }
 
-export const Overlay = memo((props: OverlayProps) => {
+export const Overlay: FC<OverlayProps> = memo((props) => {
     const {
         className,
         onClick,

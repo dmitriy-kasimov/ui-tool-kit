@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { memo } from 'react';
 import { classNames } from 'lib/classNames/classNames';
 import cls from './Icon.module.scss';
@@ -21,7 +21,7 @@ interface ClickableIconProps extends IconBaseProps {
 
 type IconProps = NonClickableIconProps | ClickableIconProps;
 
-export const Icon = memo((props: IconProps) => {
+export const Icon: FC<IconProps> = memo((props) => {
     const {
         className,
         Svg,

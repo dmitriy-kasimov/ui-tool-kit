@@ -4,8 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
-import AlertItem  from './AlertItem';
-import { Text, textColor, textSize } from 'ui/components/shared/Text';
+import {AlertItem}  from './AlertItem';
 import { VStack } from 'ui/components/shared/Stack';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 

@@ -1,7 +1,7 @@
 import React, {FC, memo} from "react";
 import { ProgressBarProps, ProgressBarType } from "../types/ProgressBarProps";
 import cls from './ProgressBar.module.scss';
-import { Text, textColor, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 import { classNames } from "lib/classNames/classNames";
 
 const ProgressBar: FC<ProgressBarProps> = memo(({max, 

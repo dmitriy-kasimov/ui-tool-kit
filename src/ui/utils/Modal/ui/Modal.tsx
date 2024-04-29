@@ -1,20 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Mods, classNames } from 'lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { Portal } from '../../Portal/Portal';
 import { Overlay } from '../../Overlay/Overlay';
 import { useModal } from 'lib/hooks/useModal/useModal';
 import { ANIMATION_DELAY } from 'styles/effects/anims';
+import { ModalProps } from '../types/ModalProps';
 
-interface ModalProps {
-    className?: string;
-    children?: React.ReactNode;
-    isOpen?: boolean;
-    onClose?: () => void;
-    lazy?:boolean;
-}
-
-export const Modal = (props: ModalProps) => {
+export const Modal: FC<ModalProps> = (props) => {
     const {
         className,
         children,

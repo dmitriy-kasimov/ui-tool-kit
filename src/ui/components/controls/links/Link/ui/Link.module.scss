@@ -3,21 +3,14 @@
 @use '../../../controls';
 
 .Link {
-	color: inherit;
-	outline: none;
-	text-decoration: none;
 	transition: .3s ease;
+	text-transform: uppercase;
+	cursor: pointer;
 
+	outline: none;
 	background: transparent;
 	box-shadow: none;
-
 	border: none;
-	text-transform: uppercase;
-
-	appearance: none;
-	touch-action: manipulation;
-
-	cursor: pointer;
 
 	&:hover {
 		box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
@@ -28,10 +21,10 @@
 // 	@include controls.focus;
 // }
 
-.disabled {
+.Link:disabled {
 	@include controls.disabled;
 }
 
-// .Link:active {
-// 	@include controls.active;
-// }
+.Link:active {
+	@include controls.active;
+}

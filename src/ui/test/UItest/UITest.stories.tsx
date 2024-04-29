@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { UITest } from './UITest';
-import { Text, textColor, textSize } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof UITest> = {
     title: 'test/utils',

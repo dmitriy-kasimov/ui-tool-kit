@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ProgressBar, ProgressBarType } from '../index';
+import { ProgressBar } from '../index';
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 const meta: Meta<typeof ProgressBar> = {

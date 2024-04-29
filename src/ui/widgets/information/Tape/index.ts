@@ -1,5 +1,3 @@
-import Tape from "./ui/Tape";
+export type {PostType} from './Post/types/PostProps';
 
-export {
-    Tape
-}
+export {Tape} from './Tape/ui/Tape';

@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { FC }  from "react";
 import cls from './ModalConfirm.module.scss'
 import { ModalConfirmProps } from "../types/ModalConfirmProps";
 import { Mods, classNames } from "lib/classNames/classNames";
@@ -10,7 +10,7 @@ import { Portal } from "ui/utils/Portal/Portal";
 import { Overlay } from "ui/utils/Overlay/Overlay";
 import { HStack, VStack } from "ui/components/shared/Stack";
 
-export const ModalConfirm = (props: ModalConfirmProps) => {
+export const ModalConfirm: FC<ModalConfirmProps> = (props) => {
     const {
         isOpen, 
         onClose, 

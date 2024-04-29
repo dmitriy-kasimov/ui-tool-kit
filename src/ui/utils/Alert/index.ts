@@ -1,6 +1,3 @@
-export {Alert} from './Alert/Alert';
-
-import AlertItem from './AlertItem/ui/AlertItem'
-export default AlertItem;
+export {Alert} from './Alert/ui/Alert';
 
 export type { AlertItemType } from './AlertItem/types/AlertItemProps'

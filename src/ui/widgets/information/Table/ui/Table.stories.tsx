@@ -6,7 +6,7 @@ import { decoratorBackground } from '../../../../../../.storybook/decorators/dec
 
 import { Table } from '../index';
 
-import { Text, textFont, textSize } from 'ui/components/shared/Text';
+import { Text } from 'ui/components/shared/Text';
 import { TableBody } from '../components/TableBody';
 import { TableRow } from '../components/TableRow';
 import { TableData } from '../components/TableData';

@@ -11,10 +11,10 @@ import { Switcher } from "ui/components/controls/inputs/Switcher";
 import { TextField } from "ui/components/controls/inputs/TextField";
 import { TextArea } from "ui/components/controls/inputs/TextArea";
 import { Link } from "ui/components/controls/links/Link";
-import { Dropdown } from "ui/components/controls/popups/components/Dropdown/Dropdown";
+import { Dropdown } from "ui/components/controls/popups";
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
-import { ListBox } from "ui/components/controls/popups/components/ListBox/ListBox";
-import { Popover } from "ui/components/controls/popups/components/Popover/Popover";
+import { ListBox } from "ui/components/controls/popups";
+import { Popover } from "ui/components/controls/popups";
 import { RadioGroupOptionType } from "ui/components/controls/inputs/RadioGroup/components/RadioGroupOption/types/RadioGroupOptionProps";
 
 export const UITest2 = memo(() => {
