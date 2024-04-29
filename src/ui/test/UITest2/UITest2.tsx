@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { memo } from "react";
 import  cls  from './UITest2.module.scss';
 import { Button } from "ui/components/controls/buttons/Button";
-import { Text, textColor, textFont, textSize } from "ui/components/shared/Text";
+import { Text } from "ui/components/shared/Text";
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Checkbox } from "ui/components/controls/inputs/Checkbox";
 import { RadioGroup } from "ui/components/controls/inputs/RadioGroup";

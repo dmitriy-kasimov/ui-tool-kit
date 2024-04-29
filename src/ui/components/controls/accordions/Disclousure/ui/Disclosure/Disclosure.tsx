@@ -1,15 +1,15 @@
-import React, { useMemo } from "react";
+import React, { LegacyRef, forwardRef, useMemo } from "react";
 import { classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Disclosure.module.scss';
-import { DisclousureProps } from "./types/DisclosureProps";
-import { Disclosure as HDisclosure, Transition} from '@headlessui/react'
+import { DisclousureProps } from "../../types/DisclosureProps";
+import { Disclosure as HDisclosure } from '@headlessui/react'
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Button } from "ui/components/controls/buttons/Button";
-import { ButtonTheme } from "ui/components/controls/buttons/Button/types/ButtonProps";
 import { Text } from "ui/components/shared/Text";
 import { Icon } from "ui/components/shared/Icon/Icon";
 import ArrowDown from 'styles/assets/icons/arrowDown.svg'
+import { DisclosureButton } from "../DisclosureButton/DisclosureButton";
 
 
 export const Disclosure = memo((props: DisclousureProps) => {
@@ -21,15 +21,17 @@ export const Disclosure = memo((props: DisclousureProps) => {
         <div className={classNames(cls.Disclosure, {}, [className])}>
             <VStack gap="8" max>
                 {items.map((item, index) => (
-                    <HDisclosure>
+                    <HDisclosure key={index}>
                         {({ open }) => (
                             <>
-                                <HDisclosure.Button as={Button} fullWidth className={cls.btn} key={index}>
+                                <HDisclosure.Button as={DisclosureButton} >
                                     <HStack gap="8" align="center" max justify="between">
-                                        <Text>{item.title}</Text>
+                                        <Text font="title">{item.title}</Text>
                                         <Icon 
                                             Svg={ArrowDown}
                                             className={classNames(cls.arrow, {[cls.open]: open}, [])}
+                                            width={24}
+                                            height={24}
                                         />
                                     </HStack>
                                 </HDisclosure.Button>

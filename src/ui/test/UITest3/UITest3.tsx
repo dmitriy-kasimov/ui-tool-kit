@@ -1,10 +1,10 @@
 
 import React from "react";
 import { memo } from "react";
+import { Disclosure } from "ui/components/controls/accordions/Disclousure/ui/Disclosure/Disclosure";
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Text, textColor, textFont, textSize } from "ui/components/shared/Text";
-import { Disclosure } from "ui/widgets/information/Disclousure/Disclosure";
 import { ProgressBar } from "ui/widgets/information/ProgressBar";
 import { Table } from "ui/widgets/information/Table";
 import { TableBody } from "ui/widgets/information/Table/components/TableBody";
@@ -58,11 +58,11 @@ export const UITest3 = () => {
         <Disclosure
             items={[
                 {
-                  title: (<Text>The rule #1</Text>), 
+                  title: 'The rule #1', 
                   description: (<Text>Sometnhing very looooooooooooooooong </Text>),
                 },
                 {
-                  title: (<Text>The rule #2 [main rule]</Text>), 
+                  title: 'The rule #2 [main rule]', 
                   description: (<VStack gap='8' max>
                     <Skeleton width={150} height={40}/>
                     <Skeleton width={250} height={30}/>

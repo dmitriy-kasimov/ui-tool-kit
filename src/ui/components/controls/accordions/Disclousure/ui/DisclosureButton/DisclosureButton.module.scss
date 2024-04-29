@@ -1,0 +1,35 @@
+@use '../../../../controls';
+
+.DisclosureButton {
+    @include controls.defaultStyles;
+
+    width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: var(--uikit-padding-s) var(--uikit-padding-m);
+	
+	border-radius: var(--uikit-border-radius);
+	
+	outline: none;
+	border: none;
+	text-decoration: none;
+	appearance: none;
+	touch-action: manipulation;
+
+	&:hover{
+		@include controls.hover;
+	}
+	&:active{
+		@include controls.active;
+	}
+	&:focus{
+		
+	}
+}
+
+.DisclosureButton:disabled{
+	@include controls.disabled;
+}

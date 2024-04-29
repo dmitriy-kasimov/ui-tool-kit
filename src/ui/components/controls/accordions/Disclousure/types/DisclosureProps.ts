@@ -1,5 +1,5 @@
 export type DisclousureItem = {
-    title: React.ReactNode;
+    title: string;
     description: React.ReactNode;
 }
 

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, LegacyRef } from "react";
 
 export type ButtonTheme = 'primary' | 'outline' | 'clear' | 'cancel' | 'accept';
 
