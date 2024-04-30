@@ -1,8 +1,5 @@
 
 import React from "react";
-import { memo } from "react";
-import { Disclosure } from "ui/components/controls/accordions/Disclousure/ui/Disclosure/Disclosure";
-import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { ProgressBar } from "ui/widgets/information/ProgressBar";
@@ -90,25 +87,6 @@ const posts: PostType[] = [
 export const UITest3 = () => {
   return (
     <VStack max gap="8">
-        <Disclosure
-            items={[
-                {
-                  title: 'The rule #1', 
-                  description: (<Text>Sometnhing very looooooooooooooooong </Text>),
-                },
-                {
-                  title: 'The rule #2 [main rule]', 
-                  description: (<VStack gap='8' max>
-                    <Skeleton width={150} height={40}/>
-                    <Skeleton width={250} height={30}/>
-                    <Skeleton width={250} height={30}/>
-                    <Skeleton width={250} height={250}/>
-                    <Skeleton width={250} height={30}/>
-                  </VStack>),
-                }
-              ]}
-        />
-
         <HStack max gap="16">
             <ProgressBar 
                 max={100}

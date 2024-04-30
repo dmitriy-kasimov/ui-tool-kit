@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useMemo } from 'react';
 import { Fragment } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import cls from './ListBox.module.scss';
@@ -11,7 +11,7 @@ import { Text } from 'ui/components/shared/Text';
 import { ListBoxProps } from '../types/ListBoxProps';
 
 
-export const ListBox: FC<ListBoxProps> = memo((props) => {
+export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
     const {
         className,
         items,
@@ -26,6 +26,11 @@ export const ListBox: FC<ListBoxProps> = memo((props) => {
     const optionsClasses = [
         mapDirectionClass[direction],
     ];
+
+    const selectedItem = useMemo(() => {
+        return items?.find((item) => item.value === value);
+    }, [items, value]);
+
 
     return (
         <HStack
@@ -43,7 +48,7 @@ export const ListBox: FC<ListBoxProps> = memo((props) => {
                     className={cls.trigger}
                 >
                     <Button disabled={readonly}>
-                        {value ?? defaultValue}
+                        {selectedItem?.content ?? defaultValue}
                     </Button>
 
                 </HListBox.Button>

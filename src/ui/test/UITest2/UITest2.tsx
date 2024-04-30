@@ -16,6 +16,7 @@ import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { ListBox } from "ui/components/controls/popups";
 import { Popover } from "ui/components/controls/popups";
 import { RadioGroupOptionType } from "ui/components/controls/inputs/RadioGroup/components/RadioGroupOption/types/RadioGroupOptionProps";
+import { Disclosure } from "ui/components/controls/accordions/Disclousure";
 
 export const UITest2 = memo(() => {
     const [checkbox, setCheckbox] = useState(false);
@@ -68,6 +69,25 @@ export const UITest2 = memo(() => {
 
     return (
         <VStack max gap="8" className={cls.UITest2}>
+            <Disclosure
+                items={[
+                    {
+                    title: 'The rule #1', 
+                    description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+                    },
+                    {
+                    title: 'The rule #2 [main rule]', 
+                    description: (<VStack gap='8' max>
+                        <Skeleton width={150} height={40}/>
+                        <Skeleton width={250} height={30}/>
+                        <Skeleton width={250} height={30}/>
+                        <Skeleton width={250} height={250}/>
+                        <Skeleton width={250} height={30}/>
+                    </VStack>),
+                    }
+                ]}
+            />
+
             <Button><Text>Click</Text></Button>
 
             <HStack gap="8" max>
