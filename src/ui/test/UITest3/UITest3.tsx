@@ -4,12 +4,7 @@ import { HStack, VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { ProgressBar } from "ui/widgets/information/ProgressBar";
 import { Table } from "ui/widgets/information/Table";
-import { TableBody } from "ui/widgets/information/Table/components/TableBody";
-import { TableCaption } from "ui/widgets/information/Table/components/TableCaption";
-import { TableContent } from "ui/widgets/information/Table/components/TableContent";
-import { TableData } from "ui/widgets/information/Table/components/TableData";
-import { TableHead } from "ui/widgets/information/Table/components/TableHead";
-import { TableRow } from "ui/widgets/information/Table/components/TableRow";
+import { TableBodyRow } from "ui/widgets/information/Table";
 import { PostType, Tape } from "ui/widgets/information/Tape";
 
 const onlinePlayers = [
@@ -24,28 +19,17 @@ const onlinePlayers = [
     {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
     {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
     {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
-    {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
-    {id: 1, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
-    {id: 2, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
-    {id: 3, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
-    {id: 4, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
-    {id: 5, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
-    {id: 6, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
-    {id: 7, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
-    {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
-    {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
-    {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
-    {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
-    {id: 1, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
-    {id: 2, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
-    {id: 3, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
-    {id: 4, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
-    {id: 5, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
-    {id: 6, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
-    {id: 7, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
-    {id: 8, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
-    {id: 9, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
-    {id: 10, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
+    {id: 11, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},
+    {id: 12, nickname: '[M]aTRi[X]', rank: 'Мастер', score: 195, status: 'Гл. администратор', ping: 15},
+    {id: 13, nickname: 'Le[G]ion_kirov_43rus', rank: 'Легенда', score: 1685, status: 'Хелпер', ping: 124},
+    {id: 14, nickname: 'Dima_Kasim', rank: 'Новичок', score: 212, status: 'Администратор', ping: 224},
+    {id: 15, nickname: 'Evil_Pryzrak', rank: 'Никто', score: 100, status: 'Игрок', ping: 160},
+    {id: 16, nickname: 'SmartOryx60', rank: 'Crazy', score: 228, status: 'Игрок', ping: 56},
+    {id: 17, nickname: 'CloudyShark30', rank: 'Новичок', score: 200, status: 'Игрок', ping: 44},
+    {id: 18, nickname: 'Pi0ner', rank: 'Мастер', score: 51, status: 'Игрок', ping: 190},
+    {id: 19, nickname: 'Alan_Masti', rank: 'Crazy', score: 567, status: 'Игрок', ping: 37},
+    {id: 20, nickname: 'LaRGe', rank: 'Crazy', score: 1010, status: 'Игрок', ping: 15},
+    {id: 21, nickname: 'M1RoN', rank: 'Crazy', score: 1000, status: 'Architector', ping: 13},
 ];
 
 const posts: PostType[] = [
@@ -104,37 +88,27 @@ export const UITest3 = () => {
             title="Шрифтов завезли!"
             posts={posts}
         />
-
-        <Table>
-          <TableCaption>
-              <Text font='title' size='important'>online players</Text>
-          </TableCaption>
-
-          <TableContent>
-            <TableHead>
-              <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {onlinePlayers.map(player => 
-                <TableRow>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>{player.id}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>{player.nickname}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.rank}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.score}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text>{player.status}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text>{player.ping}</Text></TableData>
-                </TableRow>
-              )}
-            </TableBody>
-          </TableContent> 
-        </Table>
+        <Table
+          caption={<Text font='title' size='important'>online players</Text>}
+          heads={[
+            {columnId: 'id', columnName: 'ID', width: 50},
+            {columnId: 'name', columnName: 'Name', width: 200},
+            {columnId: 'rank', columnName: 'Rank', width: 100},
+            {columnId: 'score', columnName: 'Score', width: 100},
+            {columnId: 'status', columnName: 'Status', width: 175},
+            {columnId: 'ping', columnName: 'Ping (ms)', width: 150},
+          ]}
+          body={onlinePlayers.map<TableBodyRow>(player => 
+            [
+              {columnId: 'id', content: <Text>{player.id}</Text>},
+              {columnId: 'name', content: <Text>{player.nickname}</Text>},
+              {columnId: 'rank', content: <Text>{player.rank}</Text>},
+              {columnId: 'score', content: <Text>{player.score}</Text>},
+              {columnId: 'status', content: <Text>{player.status}</Text>},
+              {columnId: 'ping', content: <Text>{player.ping}</Text>},
+            ]
+          )}
+        />
     </VStack>
   );
 };

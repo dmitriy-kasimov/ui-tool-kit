@@ -1,5 +1,3 @@
-import Table from "./ui/Table";
+export type {TableBodyRow} from './types/TableProps'
 
-export{
-    Table
-}
+export {Table} from './ui/Table'
