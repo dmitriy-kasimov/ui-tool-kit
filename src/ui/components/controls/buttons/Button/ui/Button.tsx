@@ -11,6 +11,8 @@ export const Button: FC<ButtonProps> = memo((props) => {
         variant = 'primary',
         fullWidth = false,
         className = '',
+        addonLeft,
+        addonRight,
         ...otherProps
     } = props;
 
@@ -18,6 +20,7 @@ export const Button: FC<ButtonProps> = memo((props) => {
         [cls.fullWidth]: fullWidth,
         [cls.disabled]: disabled,
         [cls.square]: square,
+        [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
     }
     return(
         <button 
@@ -25,7 +28,9 @@ export const Button: FC<ButtonProps> = memo((props) => {
             type="button"
             {...otherProps}
         >
+            <div className={cls.addonLeft}>{addonLeft}</div>
             {children}
+            <div className={cls.addonRight}>{addonRight}</div>
         </button>
     )
 });

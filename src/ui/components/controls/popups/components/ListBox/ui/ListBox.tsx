@@ -9,7 +9,8 @@ import { Button } from 'ui/components/controls/buttons/Button';
 import { HStack } from 'ui/components/shared/Stack';
 import { Text } from 'ui/components/shared/Text';
 import { ListBoxProps } from '../types/ListBoxProps';
-
+import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
+import { Icon } from 'ui/components/shared/Icon';
 
 export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
     const {
@@ -47,7 +48,7 @@ export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
                 <HListBox.Button
                     className={cls.trigger}
                 >
-                    <Button disabled={readonly}>
+                    <Button disabled={readonly} addonRight={<Icon Svg={ArrowBottom} width={24} height={24}/>}>
                         {selectedItem?.content ?? defaultValue}
                     </Button>
 

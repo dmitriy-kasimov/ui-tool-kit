@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, LegacyRef } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 export type ButtonTheme = 'primary' | 'outline' | 'clear' | 'cancel' | 'accept';
 
@@ -10,5 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonTheme;
     fullWidth?: boolean;
     className?: string;
+    addonLeft?: ReactNode;
+    addonRight?: ReactNode;
 }
 

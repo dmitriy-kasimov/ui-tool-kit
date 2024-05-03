@@ -18,6 +18,13 @@
 
 	&:hover{
 		@include controls.hover;
+
+		// TODO
+		.addonLeft svg,
+        .addonRight svg {
+            color: green;
+            fill: green;
+        }
 	}
 	&:active{
 		@include controls.active;
@@ -25,6 +32,18 @@
 	&:focus{
 		
 	}
+}
+
+.addonLeft,
+.addonRight {
+    display: flex;
+}
+
+// TODO
+.addonLeft svg,
+.addonRight svg {
+    color: red;
+	fill: red;
 }
 
 .disabled{

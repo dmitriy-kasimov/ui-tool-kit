@@ -9,7 +9,7 @@ import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 import { Button } from "ui/components/controls/buttons/Button";
 import { HStack, VStack } from "ui/components/shared/Stack";
-import { Icon } from "ui/components/shared/Icon/Icon";
+import { Icon } from "ui/components/shared/Icon";
 
 export const TextField: FC<TextFieldProps> = memo(props => {
     
@@ -71,8 +71,8 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     <>
                         {
                             type === 'text' ?
-                            <Icon Svg={MaskText} width={32} height={32}/> :
-                            <Icon Svg={UnmaskText} width={32} height={32}/>
+                            <Icon Svg={MaskText} width={32} height={32} fill={'rgb(230, 230, 230)'}/> :
+                            <Icon Svg={UnmaskText} width={32} height={32} fill={'rgb(230, 230, 230)'}/>
                         }
                     </>
                 }

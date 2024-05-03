@@ -9,7 +9,7 @@ import { Text } from "ui/components/shared/Text";
 import { Icon } from "ui/components/shared/Icon/Icon";
 import ArrowDown from 'styles/assets/icons/arrowDown.svg'
 import { DisclosureButton } from "../DisclosureButton/DisclosureButton";
-
+import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 
 export const Disclosure: FC<DisclousureProps> = memo((props) => {
     const {
@@ -27,10 +27,10 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                                     <HStack gap="8" align="center" max justify="between">
                                         <Text font="title">{item.title}</Text>
                                         <Icon 
-                                            Svg={ArrowDown}
+                                            Svg={ArrowBottom}
                                             className={classNames(cls.arrow, {[cls.open]: open}, [])}
-                                            width={24}
-                                            height={24}
+                                            width={32}
+                                            height={32}
                                         />
                                     </HStack>
                                 </HDisclosure.Button>

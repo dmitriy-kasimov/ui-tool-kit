@@ -17,6 +17,8 @@ import { ListBox } from "ui/components/controls/popups";
 import { Popover } from "ui/components/controls/popups";
 import { RadioGroupOptionType } from "ui/components/controls/inputs/RadioGroup/components/RadioGroupOption/types/RadioGroupOptionProps";
 import { Disclosure } from "ui/components/controls/accordions/Disclousure";
+import { Icon } from "ui/components/shared/Icon";
+import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 
 export const UITest2 = memo(() => {
     const [checkbox, setCheckbox] = useState(false);
@@ -142,7 +144,7 @@ export const UITest2 = memo(() => {
 
             <HStack gap="8" max>
                 <Dropdown 
-                    trigger={<Button><Text>Dropdown</Text></Button>}
+                    trigger={<Button addonRight={<Icon Svg={ArrowBottom} width={24} height={24} />}><Text>Dropdown</Text></Button>}
                     items={listItems}
                 />
 
@@ -155,7 +157,7 @@ export const UITest2 = memo(() => {
                 />
 
                 <Popover
-                    trigger={<Button><Text>Trigger</Text></Button>}
+                    trigger={<Button addonRight={<Icon Svg={ArrowBottom} width={24} height={24} />}><Text>Trigger</Text></Button>}
                 >
                     <>
                         {popoverItems.map(item => (
