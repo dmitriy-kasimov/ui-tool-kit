@@ -176,32 +176,17 @@ export const UITest2 = memo(() => {
 
    
             <VStack max gap="8">
-                <Text font='title' size='title'>Шрифт Roboto для заголовоков, размер: TITLE</Text>
-                <Text font='title' size='subtitle'>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
-                <Text font='title' size='important'>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
-                <Text font='title' size='regular'>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
-                <Text font='title' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
+                <Text font='xl'>This font for titles, his size is XL</Text>
+                <Text font='l' >This font for titles, his size is L</Text>
+                <Text font='m' >This font for texts, his size is M</Text>
+                <Text font='s' >This font for texts, his size is S</Text>
 
-            
-                <Text font='title' color='main'>Шрифт Roboto для заголовоков, тема: основной</Text>
-                <Text font='title' color='secondary'>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
-                <Text font='title' color='warning'>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
-                <Text font='title' color='error'>Шрифт Roboto для заголовоков, тема: ошибка</Text>
-                <Text font='title' color='success'>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
-                <Text font='title' color='info'>Шрифт Roboto для заголовоков, тема: информация</Text>
-
-                <Text font='main' size='title'>Шрифт Roboto основной, размер: TITLE</Text>
-                <Text font='main' size='subtitle'>Шрифт Roboto основной, размер: SUBTITLE</Text>
-                <Text font='main' size='important'>Шрифт Roboto основной, размер: IMPORTANT</Text>
-                <Text font='main' size='regular'>Шрифт Roboto основной, размер: REGULAR</Text>
-                <Text font='main' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
-            
-                <Text font='main' color='main'>Шрифт Roboto основной, тема: основной</Text>
-                <Text font='main' color='secondary'>Шрифт Roboto основной, тема: второстепенный</Text>
-                <Text font='main' color='warning'>Шрифт Roboto основной, тема: предупреждение</Text>
-                <Text font='main' color='error'>Шрифт Roboto основной, тема: ошибка</Text>
-                <Text font='main' color='success'>Шрифт Roboto основной, тема: успешно выполнено</Text>
-                <Text font='main' color='info'>Шрифт Roboto основной, тема: информация</Text>
+                <Text font='m' color='main'>This text has the main color</Text>
+                <Text font='m' color='secondary'>This text has the secondary color</Text>
+                <Text font='m' color='warning'>This text has the warning color</Text>
+                <Text font='m' color='error'>This text has the error color</Text>
+                <Text font='m' color='success'>This text has the success color</Text>
+                <Text font='m' color='info'>This text has the info color</Text>
             </VStack> 
 
         </VStack>

@@ -16,15 +16,10 @@ export const Post: FC<PostProps> = (props) => {
     return(
         <VStack max className={classNames(cls.Post, {}, [className])}>
             <HStack max justify="between" align="end" className={cls.header}>
-                <Text 
-                    size='important'
-                >
+                <Text font="l">
                     {post.title}
                 </Text>
-                <Text 
-                    size='regularsmall' 
-                    color='secondary'
-                >
+                <Text color='secondary'>
                     {post.subtitle}
                 </Text>
             </HStack>

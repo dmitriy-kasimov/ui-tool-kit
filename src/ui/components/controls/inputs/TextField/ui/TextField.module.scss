@@ -41,7 +41,6 @@
 
     border: none;
 
-    font-size: var(--uikit-font-size-important);
     height: calc(3rem);
     //line-height: 2.25;
 
@@ -61,8 +60,8 @@
 }
 .input:focus,
 .input:not(:placeholder-shown) {
-    padding-top: 1.625rem;
-   
+    // padding-top: 1.625rem;
+    padding-top: 1rem;
 }
 .input:focus~.label,
 .input:not(:placeholder-shown)~.label {

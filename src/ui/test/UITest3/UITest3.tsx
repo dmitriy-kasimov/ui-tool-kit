@@ -33,39 +33,90 @@ const onlinePlayers = [
 ];
 
 const posts: PostType[] = [
-  {id: '1', title: 'Основной шрифт', subtitle: '04/29/2024', description: (
+  {id: '1', title: 'The types of fonts', subtitle: '04/29/2024', description: (
     <VStack max gap="4">
-      <Text font='main' size='title'>Шрифт Roboto основной, размер: TITLE</Text>
-      <Text font='main' size='subtitle'>Шрифт Roboto основной, размер: SUBTITLE</Text>
-      <Text font='main' size='important'>Шрифт Roboto основной, размер: IMPORTANT</Text>
-      <Text font='main' size='regular'>Шрифт Roboto основной, размер: REGULAR</Text>
-      <Text font='main' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
-  
-      <Text font='main' color='main'>Шрифт Roboto основной, тема: основной</Text>
-      <Text font='main' color='secondary'>Шрифт Roboto основной, тема: второстепенный</Text>
-      <Text font='main' color='warning'>Шрифт Roboto основной, тема: предупреждение</Text>
-      <Text font='main' color='error'>Шрифт Roboto основной, тема: ошибка</Text>
-      <Text font='main' color='success'>Шрифт Roboto основной, тема: успешно выполнено</Text>
-      <Text font='main' color='info'>Шрифт Roboto основной, тема: информация</Text>
-      </VStack>
+      <Text font='s' >Font type S (Nunito Sans). Use for texts.</Text>
+      <Text font='s' bold>Font type S (Nunito Sans). Use for texts (bold).</Text>
+      <Text font='m' >Font type M (Nunito Sans). Use for texts.</Text>
+      <Text font='m' bold>Font type M (Nunito Sans). Use for texts (bold).</Text>
+      <Text font='l' >Font type L (Roboto). Use for titles.</Text>
+      <Text font='l' bold>Font type L (Roboto). Use for titles (bold).</Text>
+      <Text font='xl' >Font type XL (Roboto). Use for titles.</Text>
+      <Text font='xl' bold>Font type XL (Roboto). Use for titles (bold).</Text>
+    </VStack>
   )},
-  {id: '2', title: 'Шрифт для заголовков', subtitle: '04/29/2024', description: (
+  {id: '2', title: 'The color specter: main', subtitle: '04/29/2024', description: (
     <VStack max gap="4">
-      <Text font='title' size='title'>Шрифт Roboto для заголовоков, размер: TITLE</Text>
-      <Text font='title' size='subtitle'>Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
-      <Text font='title' size='important'>Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>
-      <Text font='title' size='regular'>Шрифт Roboto для заголовоков, размер: REGULAR</Text>
-      <Text font='title' size='regularsmall'>Шрифт Roboto для заголовоков, размер: REGULARSMALL</Text>
-
-  
-      <Text font='title' color='main'>Шрифт Roboto для заголовоков, тема: основной</Text>
-      <Text font='title' color='secondary'>Шрифт Roboto для заголовоков, тема: второстепенный</Text>
-      <Text font='title' color='warning'>Шрифт Roboto для заголовоков, тема: предупреждение</Text>
-      <Text font='title' color='error'>Шрифт Roboto для заголовоков, тема: ошибка</Text>
-      <Text font='title' color='success'>Шрифт Roboto для заголовоков, тема: успешно выполнено</Text>
-      <Text font='title' color='info'>Шрифт Roboto для заголовоков, тема: информация</Text>
-      </VStack>
-  )}
+      <Text font='s' >The semanthic of colors</Text>
+      <Text font='s' bold>The semanthic of colors</Text>
+      <Text font='m' >The semanthic of colors</Text>
+      <Text font='m' bold>The semanthic of colors</Text>
+      <Text font='l' >The semanthic of colors</Text>
+      <Text font='l' bold>The semanthic of colors</Text>
+      <Text font='xl' >The semanthic of colors</Text>
+      <Text font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
+  {id: '3', title: 'The color specter: secondary', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text color="secondary" font='s' >The semanthic of colors</Text>
+      <Text color="secondary" font='s' bold>The semanthic of colors</Text>
+      <Text color="secondary" font='m' >The semanthic of colors</Text>
+      <Text color="secondary" font='m' bold>The semanthic of colors</Text>
+      <Text color="secondary" font='l' >The semanthic of colors</Text>
+      <Text color="secondary" font='l' bold>The semanthic of colors</Text>
+      <Text color="secondary" font='xl' >The semanthic of colors</Text>
+      <Text color="secondary" font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
+  {id: '4', title: 'The color specter: warning', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text color="warning" font='s' >The semanthic of colors</Text>
+      <Text color="warning" font='s' bold>The semanthic of colors</Text>
+      <Text color="warning" font='m' >The semanthic of colors</Text>
+      <Text color="warning" font='m' bold>The semanthic of colors</Text>
+      <Text color="warning" font='l' >The semanthic of colors</Text>
+      <Text color="warning" font='l' bold>The semanthic of colors</Text>
+      <Text color="warning" font='xl' >The semanthic of colors</Text>
+      <Text color="warning" font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
+  {id: '5', title: 'The color specter: error', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text color="error" font='s' >The semanthic of colors</Text>
+      <Text color="error" font='s' bold>The semanthic of colors</Text>
+      <Text color="error" font='m' >The semanthic of colors</Text>
+      <Text color="error" font='m' bold>The semanthic of colors</Text>
+      <Text color="error" font='l' >The semanthic of colors</Text>
+      <Text color="error" font='l' bold>The semanthic of colors</Text>
+      <Text color="error" font='xl' >The semanthic of colors</Text>
+      <Text color="error" font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
+  {id: '6', title: 'The color specter: success', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text color="success" font='s' >The semanthic of colors</Text>
+      <Text color="success" font='s' bold>The semanthic of colors</Text>
+      <Text color="success" font='m' >The semanthic of colors</Text>
+      <Text color="success" font='m' bold>The semanthic of colors</Text>
+      <Text color="success" font='l' >The semanthic of colors</Text>
+      <Text color="success" font='l' bold>The semanthic of colors</Text>
+      <Text color="success" font='xl' >The semanthic of colors</Text>
+      <Text color="success" font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
+  {id: '7', title: 'The color specter: info', subtitle: '04/29/2024', description: (
+    <VStack max gap="4">
+      <Text color="info" font='s' >The semanthic of colors</Text>
+      <Text color="info" font='s' bold>The semanthic of colors</Text>
+      <Text color="info" font='m' >The semanthic of colors</Text>
+      <Text color="info" font='m' bold>The semanthic of colors</Text>
+      <Text color="info" font='l' >The semanthic of colors</Text>
+      <Text color="info" font='l' bold>The semanthic of colors</Text>
+      <Text color="info" font='xl' >The semanthic of colors</Text>
+      <Text color="info" font='xl' bold>The semanthic of colors</Text>
+    </VStack>
+  )},
 ];
 
 export const UITest3 = () => {
@@ -89,7 +140,7 @@ export const UITest3 = () => {
             posts={posts}
         />
         <Table
-          caption={<Text font='title' size='important'>online players</Text>}
+          caption={<Text font='xl' >Online players</Text>}
           heads={[
             {columnId: 'id', columnName: 'ID', width: 50},
             {columnId: 'name', columnName: 'Name', width: 200},

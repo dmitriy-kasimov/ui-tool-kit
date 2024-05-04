@@ -75,102 +75,18 @@ const onlinePlayers = [
   ];
 export const TableScrollableHorizontalVertical: Story = {
     args: {
-       children: (
-        <>
-          <TableCaption>
-              <Text font='title' size='important'>online players</Text>
-          </TableCaption>
-
-          <TableContent>
-            <TableHead>
-              <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {onlinePlayers.map(player => 
-                <TableRow>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>{player.id}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>{player.nickname}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.rank}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.score}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text>{player.status}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text>{player.ping}</Text></TableData>
-                </TableRow>
-              )}
-            </TableBody>
-          </TableContent>
-        </>  
-       )
+       
     },
 };
 
 export const TableScrollableHorizontal: Story = {
     args: {
-       children: (
-        <>
-          <TableCaption>
-              <Text font='title' size='important'>online players</Text>
-          </TableCaption>
-
-          <TableContent>
-            <TableHead>
-              <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Score</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text font='title' size='regular'>Status</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text font='title' size='regular'>Ping (ms)</Text></TableData>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-                <TableRow>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>1</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>Vova_VoVaN</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>Crazy</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>1401</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 175}}><Text>Admin</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 150}}><Text>87</Text></TableData>
-                </TableRow>
-            </TableBody>
-          </TableContent>
-        </>  
-       )
+       
     },
 };
 
 export const TableScrollableVertical: Story = {
     args: {
-       children: (
-        <>
-          <TableCaption>
-              <Text font='title' size='important'>online players</Text>
-          </TableCaption>
-          <TableContent>
-            <TableHead>
-              <TableRow>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text font='title' size='regular'>ID</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text font='title' size='regular'>Name</Text></TableData>
-                <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text font='title' size='regular'>Rank</Text></TableData>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {onlinePlayers.map(player => 
-                <TableRow>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 50}}><Text>{player.id}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 200}}><Text>{player.nickname}</Text></TableData>
-                  <TableData style={{display:'inline-flex', justifyContent:'center', width: 100}}><Text>{player.rank}</Text></TableData>
-                </TableRow>
-              )}
-            </TableBody>
-          </TableContent>
-        </>  
-       )
+      
     },
 };

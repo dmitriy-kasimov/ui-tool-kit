@@ -21,11 +21,11 @@ const getIconAlert = (type?: AlertType): ReturnType<typeof Icon> => {
   let result: ReturnType<typeof Icon>;
 
   switch(type){
-    case 'warning':{result = <Icon Svg={IconWarning}/>}
-    case 'error':{result = <Icon Svg={IconError}/>}
-    case 'success':{result = <Icon Svg={IconSuccess}/>}
-    case 'info':{result = <Icon Svg={IconInfo}/>}
-    default: {result = <Icon Svg={IconWarning}/>}
+    case 'warning':{result = <Icon Svg={IconWarning} />}
+    case 'error':{result = <Icon Svg={IconError} />}
+    case 'success':{result = <Icon Svg={IconSuccess} />}
+    case 'info':{result = <Icon Svg={IconInfo} />}
+    default: {result = <Icon Svg={IconWarning} />}
   }
 
   return result;
@@ -69,7 +69,7 @@ export const AlertItem: FC<AlertItemProps> = (props) => {
         <VStack className={cls.wrapper} gap='16'>
           <HStack max justify="center" gap="8">
             {getIconAlert(item.type)}
-            <Text font='title' size='regular'>{item.title ?? 'Alert'}</Text>
+            <Text font='xl' >{item.title ?? 'Alert'}</Text>
             {getIconAlert(item.type)}
           </HStack>
           <div className={classNames(cls.description, {}, [])}>

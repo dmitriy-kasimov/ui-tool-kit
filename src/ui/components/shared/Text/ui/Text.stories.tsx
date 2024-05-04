@@ -27,53 +27,32 @@ type Story = StoryObj<typeof meta>;
 const defaultStr: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const TextFontTitle: Story = {
+export const FontS: Story = {
     args: {
-       font: 'title',
+       font: 's',
        children: (defaultStr)
     },  
 };
 
-export const TextFontMain: Story = {
+export const FontM: Story = {
     args: {
-       font: 'main',
+       font: 'm',
        children: (defaultStr)
     },  
 };
 
-export const TextSizeTitle: Story = {
+export const FontL: Story = {
     args: {
-       size: 'title',
-       children: (defaultStr)
+        font: 'l',
+        children: (defaultStr)
     },  
 };
 
 
-export const TextSizeSubtitle: Story = {
+export const FontXL: Story = {
     args: {
-       size: 'subtitle',
-       children: (defaultStr)
-    },  
-};
-
-export const TextSizeImportant: Story = {
-    args: {
-       size: 'important',
-       children: (defaultStr)
-    },  
-};
-
-export const TextSizeRegular: Story = {
-    args: {
-       size: 'regular',
-       children: (defaultStr)
-    },  
-};
-
-export const TextSizeRegularsmall: Story = {
-    args: {
-       size: 'regularsmall',
-       children: (defaultStr)
+        font: 'xl',
+        children: (defaultStr)
     },  
 };
 

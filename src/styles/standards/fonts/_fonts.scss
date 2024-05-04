@@ -2,19 +2,37 @@
 
 :root{
     //Основной шрифт
-    --uikit-font-family-main: "RobotoThin";
-    --uikit-font-family-title: "RobotoRegular";
+    --uikit-font-family-main: "Nunito Sans";
+    --uikit-font-family-title: "Roboto";
+
     //Используемые размеры
     --uikit-font-size-title: 36px;
     --uikit-font-size-subtitle: 30px;
     --uikit-font-size-important: 24px;
     --uikit-font-size-regular: 20px;
     --uikit-font-size-regularsmall: 14px;
+
+
+    --uikit-font-size-s: 12px;
+    --uikit-font-line-s: 20px;
+    --uikit-font-s: var(--uikit-font-size-s) / var(--uikit-font-line-s) var(--uikit-font-family-main);
+
+    --uikit-font-size-m: 16px;
+    --uikit-font-line-m: 24px;
+    --uikit-font-m: var(--uikit-font-size-m) / var(--uikit-font-line-m) var(--uikit-font-family-main);
+
+    --uikit-font-size-l: 24px;
+    --uikit-font-line-l: 32px;
+    --uikit-font-l: var(--uikit-font-size-l) / var(--uikit-font-line-l) var(--uikit-font-family-title);
+
+    --uikit-font-size-xl: 32px;
+    --uikit-font-line-xl: 40px;
+    --uikit-font-xl: var(--uikit-font-size-xl) / var(--uikit-font-line-xl) var(--uikit-font-family-title);
+
 }
 
 // Глобально применяемые настройки
 *{
-    font-family: var(--uikit-font-family-main);
-    font-size: var(--uikit-font-size-regular);
+    font: var(--uikit-font-m);
     color: var(--uikit-text-color-main);
 }

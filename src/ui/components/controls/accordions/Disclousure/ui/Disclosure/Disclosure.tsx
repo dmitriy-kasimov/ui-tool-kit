@@ -25,7 +25,7 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                             <>
                                 <HDisclosure.Button as={DisclosureButton} >
                                     <HStack gap="8" align="center" max justify="between">
-                                        <Text font="title">{item.title}</Text>
+                                        <Text bold font="m">{item.title}</Text>
                                         <Icon 
                                             Svg={ArrowBottom}
                                             className={classNames(cls.arrow, {[cls.open]: open}, [])}

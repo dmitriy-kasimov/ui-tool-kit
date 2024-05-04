@@ -1,8 +1,10 @@
-@use '../styles/classes/font_family';
+@use '../styles/classes/text_font';
 
-@use '../styles/classes/font_size';
+@use '../styles/classes/text_color';
 
-@use '../styles/classes/font_color';
+.bold{
+    font-weight: 700;
+}
 
 //@use 'styles/effects/shadows';
 

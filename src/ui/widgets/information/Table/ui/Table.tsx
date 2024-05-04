@@ -27,7 +27,7 @@ export const Table:FC<TableProps> = memo((props) => {
           key={column.columnId}
           style={{width: column.width}}
         >
-          <Text font='title' size='regular'>{column.columnName}</Text>
+          <Text font='l' >{column.columnName}</Text>
         </TableData>
       ))
     )

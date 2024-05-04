@@ -30,13 +30,13 @@ type Story = StoryObj<typeof Link>;
 
 export const LinkDefault: Story = {
     args: {
-      children: <Text size='important'>Link 1</Text>,
+      children: <Text >Link 1</Text>,
     },
 };
 
 export const LinkDisabled: Story = {
   args: {
-    children: <Text size='important'>Link 1</Text>,
+    children: <Text >Link 1</Text>,
     disabled: true
   },
 };
