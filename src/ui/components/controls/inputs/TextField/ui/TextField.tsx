@@ -71,8 +71,8 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     <>
                         {
                             type === 'text' ?
-                            <Icon Svg={MaskText} width={32} height={32} fill={'rgb(230, 230, 230)'}/> :
-                            <Icon Svg={UnmaskText} width={32} height={32} fill={'rgb(230, 230, 230)'}/>
+                            <Icon Svg={MaskText} width={24} height={24} fill={'rgb(230, 230, 230)'}/> :
+                            <Icon Svg={UnmaskText} width={24} height={24} fill={'rgb(230, 230, 230)'}/>
                         }
                     </>
                 }

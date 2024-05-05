@@ -66,15 +66,9 @@ export const AlertItem: FC<AlertItemProps> = (props) => {
   return (
     <Portal>
       <div className={classNames(cls.Alert, mods, [])} onClick={close}>
-        <VStack className={cls.wrapper} gap='16'>
-          <HStack max justify="center" gap="8">
-            {getIconAlert(item.type)}
-            <Text font='xl' >{item.title ?? 'Alert'}</Text>
-            {getIconAlert(item.type)}
-          </HStack>
-          <div className={classNames(cls.description, {}, [])}>
-              {item.body}
-          </div>
+        <VStack className={classNames(cls.wrapper, {}, [cls[item.type]])} gap='8'>
+            <Text font='l' className={cls.title}>{item.title ?? 'Alert'}</Text>
+            {item.body}
         </VStack>
       </div>
     </Portal>

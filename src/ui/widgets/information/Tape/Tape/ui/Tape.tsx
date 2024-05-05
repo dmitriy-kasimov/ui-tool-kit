@@ -13,7 +13,8 @@ export const Tape: FC<TapeProps> = (props) => {
     const {
         title, 
         posts, 
-        className = ''
+        className = '',
+        maxHeightContent = '700px'
     } = props;
 
     const items = useMemo(() => {

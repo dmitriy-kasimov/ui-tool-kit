@@ -1,6 +1,5 @@
 import React, {FC, memo, useMemo} from "react";
 import { TableBodyRow, TableProps } from "../types/TableProps";
-import './Table.scss'
 import { classNames } from "lib/classNames/classNames";
 import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
@@ -10,6 +9,7 @@ import { TableHead } from "../components/TableHead";
 import { TableRow } from "../components/TableRow";
 import { TableData } from "../components/TableData";
 import { TableBody } from "../components/TableBody";
+import cls from './Table.module.scss'
 
 export const Table:FC<TableProps> = memo((props) => {
   
@@ -17,7 +17,9 @@ export const Table:FC<TableProps> = memo((props) => {
     className,
     caption,
     heads,
-    body
+    body,
+    maxHeightContent  = '480px',
+    maxWidthContent = '640px'
   } = props;
 
   const headColumns = useMemo(() => {
@@ -51,9 +53,9 @@ export const Table:FC<TableProps> = memo((props) => {
   }, [body]);
 
   return (
-    <VStack align="center" className={classNames('Table', {}, [className])}>
+    <VStack align="center" className={classNames(cls.Table, {}, [className])}>
           <TableCaption>{caption}</TableCaption>
-          <TableContent>
+          <TableContent maxWidth={maxWidthContent} maxHeight={maxHeightContent}>
             <TableHead>
               <TableRow>
                 {headColumns}

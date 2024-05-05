@@ -7,7 +7,7 @@
     padding: var(--uikit-padding-xs);
 
     &:nth-child(even){
-        border-radius:  var(--uikit-border-radius-section) ;
-        background: var(--uikit-background-section-modificator);
+       // border-radius:  var(--uikit-border-radius);
+        background: var(--uikit-table-row-bg-color);
     }
 }

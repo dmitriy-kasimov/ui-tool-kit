@@ -50,39 +50,48 @@ let thirdNotification: NotificationItemType = {
 
 
 //
-let firstAlert: AlertItemType = {
+let warnAlert: AlertItemType = {
     title: 'Alert 1',
     showTime: 1500,
-    type: "info",
+    type: "warning",
     body: (
-        <VStack max gap="8">
-            <Skeleton height={16} width={250} />
-        </VStack>  
+        <Text font="m">Текст предупреждения!</Text>
     )
 }
 
-let secondAlert: AlertItemType = {
+let errorAlert: AlertItemType = {
     title: 'Alert 2',
     showTime: 2500,
-    type: "info",
+    type: "error",
     body: (
-        <VStack max gap="8">
-            <Skeleton height={16} width={250} />
-            <Skeleton height={16} width={250} />
-        </VStack> 
+        <Text font="m">Невозможно совершить действие!</Text>
     )
 }
 
-let thirdAlert: AlertItemType = {
+let successAlert: AlertItemType = {
     title: 'Alert 3',
-    showTime: 3500,
+    showTime: 1000,
+    type: "success",
+    body: (
+        <Text font="m">Успешно совершено действие!</Text>
+    )
+}
+
+let infoAlert: AlertItemType = {
+    title: 'Alert 4',
+    showTime: 4000,
     type: "info",
     body: (
-        <VStack max gap="8">
-            <Skeleton height={16} width={250} />
-            <Skeleton height={16} width={250} />
-            <Skeleton height={16} width={250} />
-        </VStack> 
+        <Text font="m">Some information</Text>
+    )
+}
+
+let defaultAlert: AlertItemType = {
+    title: 'Default Alert',
+    showTime: 3000,
+    type: "default",
+    body: (
+        <Text font="m">I dont know why it is...</Text>
     )
 }
 //
@@ -145,42 +154,49 @@ export const UITest = memo(({className}: UITestProps) => {
       
             <div className={classNames(cls.UITest, {}, [className])}>
                 <VStack gap="16">
-                    <Button onClick={showAlert}>
-                        <Text>Показать Alert</Text>
-                    </Button>
                     <Button onClick={onShowModal}>
-                        <Text>Показать Modal</Text>
+                        <Text>show Modal</Text>
                     </Button>
                     <Button onClick={() => {
                         setNotifications([...notifications, firstNotification]);
                     }}>
-                        <Text>Показать первое уведомление</Text>
+                        <Text>show first notification</Text>
                     </Button>
                     <Button onClick={() => {
                         setNotifications([...notifications, secondNotification]);
                     }}>
-                        <Text>Показать второе уведомление</Text>
+                        <Text>show second notification</Text>
                     </Button>
                     <Button onClick={() => {
                         setNotifications([...notifications, thirdNotification]);
                     }}>
-                        <Text>Показать третье уведомление</Text>
+                        <Text>show third notification</Text>
                     </Button>
 
                     <Button onClick={() => {
-                        setAlerts([...alerts, firstAlert]);
+                        setAlerts([...alerts, warnAlert]);
                     }}>
-                        <Text>Показать первый alert</Text>
+                        <Text>Show alert type warning</Text>
                     </Button>
                     <Button onClick={() => {
-                        setAlerts([...alerts, secondAlert]);
+                        setAlerts([...alerts, errorAlert]);
                     }}>
-                        <Text>Показать второй alert</Text>
+                        <Text>Show alert type error</Text>
                     </Button>
                     <Button onClick={() => {
-                        setAlerts([...alerts, thirdAlert]);
+                        setAlerts([...alerts, successAlert]);
                     }}>
-                        <Text>Показать третий alert</Text>
+                        <Text>Show alert type success</Text>
+                    </Button>
+                    <Button onClick={() => {
+                        setAlerts([...alerts, infoAlert]);
+                    }}>
+                        <Text>Show alert type info</Text>
+                    </Button>
+                    <Button onClick={() => {
+                        setAlerts([...alerts, defaultAlert]);
+                    }}>
+                        <Text>Show alert type default</Text>
                     </Button>
                 </VStack>
 

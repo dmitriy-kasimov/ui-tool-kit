@@ -1,10 +1,10 @@
-export type AlertType = 'warning' | 'error' | 'success' | 'info';
+export type AlertType = 'warning' | 'error' | 'success' | 'info' | 'default';
 
 export type AlertItemType = {
     body: React.ReactNode;
+    type: AlertType;
 
     title?: string;
-    type?: AlertType;
     showTime?: number;
 }
 

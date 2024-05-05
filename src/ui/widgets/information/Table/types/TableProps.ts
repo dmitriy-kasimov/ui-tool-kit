@@ -19,4 +19,7 @@ export interface TableProps{
    caption?: ReactElement;
    heads?: TableHeadRow;
    body: TableBodyRow[];
+
+   maxWidthContent?: string;
+   maxHeightContent?: string;
 }

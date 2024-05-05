@@ -15,17 +15,40 @@
     align-items: flex-start;
 }
 
+.title{
+    align-self: center
+}
+
 .wrapper{
     //@include glasses.util;
     @include anims.util;
 
-    background: var(--uikit-utils-bg);
-
+    //background: rgba(37, 168, 255, 0.6);
     border-radius: var(--uikit-border-radius);
     
     max-width: 60%;
 
-    padding: var(--uikit-padding-s);
+    padding: 0 var(--uikit-padding-s);
+}
+
+.default{
+    background: var(--uikit-utils-bg);
+}
+
+.warning{
+    background: var(--uikit-color-warning);
+}
+
+.error{
+    background: var(--uikit-color-error);
+}
+
+.success{
+    background: var(--uikit-color-success);
+}
+
+.info{
+    background: var(--uikit-color-info);
 }
 
 .isOpen {

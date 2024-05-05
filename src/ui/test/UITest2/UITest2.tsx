@@ -49,7 +49,11 @@ export const UITest2 = memo(() => {
     const [textAreaValue, setTextAreaValue] = useState('');
 
 
-
+    const dropdownItems = [
+        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Добавить</Text></HStack>), value: 'add' },
+        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Изменить</Text></HStack>), value: 'change' },
+        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text color="error">Удалить</Text></HStack>), value: 'remove' },
+    ];
     const listItems = [
         { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>M1RoN</Text></HStack>), value: 'M1RoN' },
         { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Alan_Masti</Text></HStack>), value: 'Alan_Masti' },
@@ -145,7 +149,7 @@ export const UITest2 = memo(() => {
             <HStack gap="8" max>
                 <Dropdown 
                     trigger={<Button addonRight={<Icon Svg={ArrowBottom} width={24} height={24} />}><Text>Dropdown</Text></Button>}
-                    items={listItems}
+                    items={dropdownItems}
                 />
 
                 <ListBox 
