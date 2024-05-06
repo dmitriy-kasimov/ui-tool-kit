@@ -1,5 +1,4 @@
 import { ChangeEvent, InputHTMLAttributes } from "react";
-import { validationStatus } from "ui/components/controls";
 
 type HTMLTextAreaProps = Omit<InputHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 export interface TextAreaProps extends HTMLTextAreaProps{
@@ -9,7 +8,6 @@ export interface TextAreaProps extends HTMLTextAreaProps{
     label: string;
     limit: number;
   
-    valid?: validationStatus;
     disabled?: boolean;
 
     rows?:number;

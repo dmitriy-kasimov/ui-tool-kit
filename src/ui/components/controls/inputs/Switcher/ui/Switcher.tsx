@@ -2,7 +2,7 @@ import React, { FC, memo } from "react";
 import { SwitcherProps } from "../types/SwitcherProps";
 
 import cls from './Switcher.module.scss'
-import { getValidationClasses, validationStatus } from "ui/components/controls";
+
 import { Mods, classNames } from "lib/classNames/classNames";
 
 const Switcher:FC<SwitcherProps> = memo(({
@@ -11,7 +11,6 @@ const Switcher:FC<SwitcherProps> = memo(({
 
                                         id, 
                                         disabled=false, 
-                                        valid=validationStatus.DEFAULT,
                                         className=''
                                     }) => {
     
@@ -26,7 +25,7 @@ const Switcher:FC<SwitcherProps> = memo(({
                 id={id} 
                 onClick={onChange}
             />
-            <label className={classNames(cls.label, {}, [getValidationClasses(valid)])} htmlFor={id}>Toggle</label>
+            <label className={classNames(cls.label)} htmlFor={id}>Toggle</label>
         </span>
     )
 });

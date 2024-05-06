@@ -1,10 +1,8 @@
-@use 'styles/effects/glasses';
 @use 'styles/effects/shadows';
 @use 'styles/effects/anims';
 
 @mixin defaultStyles{
     @include anims.control;
-    //@include glasses.control;
     
     user-select: none;
     cursor: pointer;
@@ -28,21 +26,4 @@
 @mixin disabled{
     pointer-events: none;
 	opacity: 0.5;
-}
-
-// Валидация для элементов управления
-
-.validationError{
-    @include shadows.validation('error');
-    border-color: var(--uikit-color-error);
-}
-
-.validationWarning{
-    @include shadows.validation('warning');
-    border-color: var(--uikit-color-warning);
-}
-
-.validationSuccessfully{
-    @include shadows.validation('successfully');
-    border-color: var(--uikit-color-successfully);
 }

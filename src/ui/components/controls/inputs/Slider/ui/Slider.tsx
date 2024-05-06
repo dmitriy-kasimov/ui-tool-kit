@@ -2,7 +2,6 @@ import React, { FC, memo } from "react";
 import cls from './Slider.module.scss'
 import { Text } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
-import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 import { HStack, VStack } from "ui/components/shared/Stack";
 
@@ -13,14 +12,13 @@ const Slider: FC<SliderProps> = memo(({
                                   max, 
                                   step,
                                   disabled=false,
-                                  valid=validationStatus.DEFAULT,
                                   className=''
                                 }) => {
     
   return (
     <HStack gap="4" className={classNames('', {}, [className])}>
       <input
-          className={classNames(cls.input, {}, [getValidationClasses(valid)])}
+          className={classNames(cls.input)}
           value={value}
           onChange={e => onChange(Number(e.target.value))}
           min={min} 

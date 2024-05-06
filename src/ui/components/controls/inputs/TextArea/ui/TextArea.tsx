@@ -3,7 +3,6 @@ import { TextAreaProps } from "../types/TextAreaProps";
 import cls from './TextArea.module.scss'
 import { Text } from "ui/components/shared/Text";
 
-import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { classNames } from "lib/classNames/classNames";
 
 export const TextArea: FC<TextAreaProps> = memo(props => {
@@ -14,8 +13,7 @@ export const TextArea: FC<TextAreaProps> = memo(props => {
         
         label,
         limit,
-        
-        valid=validationStatus.DEFAULT,
+
         disabled=false,
         rows=5,
         cols=25,
@@ -24,7 +22,7 @@ export const TextArea: FC<TextAreaProps> = memo(props => {
     } = props;
 
     return(
-        <div className={classNames(cls.field, {[cls.disabled]: disabled}, [className, getValidationClasses(valid)])}>
+        <div className={classNames(cls.field, {[cls.disabled]: disabled}, [className])}>
             <textarea 
                 className={cls.input}
                 value={value}

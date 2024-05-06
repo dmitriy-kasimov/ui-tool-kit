@@ -22,8 +22,6 @@ import {ModalConfirm} from './ui/utils/ModalConfirm/ui/ModalConfirm'
 import { Table } from './ui/widgets/information/Table'
 import { Tape } from './ui/widgets/information/Tape'
 
-import { validationStatus } from './ui/components/controls'
-
 import IconWarning from './styles/assets/icons/warning.svg'
 import IconError from './styles/assets/icons/error.svg'
 import IconSuccessfully from './styles/assets/icons/success.svg'
@@ -56,7 +54,6 @@ export {
     Table,
     Tape,
     // others
-    validationStatus,
     // icons
     IconWarning,
     IconError,

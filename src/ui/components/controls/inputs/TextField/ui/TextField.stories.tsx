@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TextField } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text';
-import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof TextField> = {
     title: 'components/controls/TextField',
@@ -36,28 +35,6 @@ export const TextFieldDefault: Story = {
     },
 };
 
-export const TextFieldValidationError: Story = {
-  args: {
-      label: 'Ur name',
-      limit: 10,
-      valid: validationStatus.ERROR
-  },
-};
-
-export const TextFieldValidationWarning: Story = {
-  args: {
-      label: 'Ur name',
-      limit: 10,
-      valid: validationStatus.WARNING
-  },
-};
-export const TextFieldValidationSuccessfully: Story = {
-  args: {
-      label: 'Ur name',
-      limit: 10,
-      valid: validationStatus.SUCCESSFULLY
-  },
-};
 export const TextFieldDisabled: Story = {
   args: {
       label: 'Ur name',

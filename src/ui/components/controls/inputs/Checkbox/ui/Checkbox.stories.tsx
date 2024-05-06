@@ -6,7 +6,6 @@ import { decoratorBackground } from '../../../../../../../.storybook/decorators/
 
 import { Checkbox } from '../index';
 import { Text } from 'ui/components/shared/Text';
-import { validationStatus } from 'ui/components/controls';
 
 const meta: Meta<typeof Checkbox> = {
     title: 'components/controls/Checkbox',
@@ -60,40 +59,5 @@ export const CheckboxWithCheckDisabled: Story = {
             
         },
         disabled: true
-    },
-};
-
-export const CheckboxValidWarning: Story = {
-    args: {
-        id: 'storybook',
-        children: (<Text>Максимальные настройки</Text>),
-        valid: validationStatus.WARNING,
-        checked: true,
-        onChange() {
-            
-        },
-    },
-};
-
-export const CheckboxValidError: Story = {
-    args: {
-        id: 'storybook',
-        children: (<Text>Check the user-agreement</Text>),
-        valid: validationStatus.ERROR,
-        onChange() {
-            
-        },
-    },
-};
-
-export const CheckboxValidSuccessfully: Story = {
-    args: {
-        id: 'storybook',
-        children: (<Text>Check the user-agreement</Text>),
-        valid: validationStatus.SUCCESSFULLY,
-        checked: true,
-        onChange() {
-            
-        },
     },
 };

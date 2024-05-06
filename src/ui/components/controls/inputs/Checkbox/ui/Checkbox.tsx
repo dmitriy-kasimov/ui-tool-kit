@@ -3,7 +3,6 @@ import cls from './Checkbox.module.scss'
 
 import { CheckboxProps } from "../types/CheckboxProps";
 import { classNames } from "lib/classNames/classNames";
-import { getValidationClasses, validationStatus } from "ui/components/controls";
 import { HStack } from "ui/components/shared/Stack";
 
 const Checkbox: FC<CheckboxProps> = memo(({
@@ -13,7 +12,6 @@ const Checkbox: FC<CheckboxProps> = memo(({
                                         children,
                                         disabled=false,
                                         className='',
-                                        valid=validationStatus.DEFAULT
                                     }) => {
    
     return(
@@ -28,8 +26,8 @@ const Checkbox: FC<CheckboxProps> = memo(({
                 onChange={onChange}
                 disabled={disabled}
             />
-            <label htmlFor={id} className={classNames(cls.checkbox, {}, [getValidationClasses(valid)])}></label>
-            <label htmlFor={id} className={classNames(cls.label, {}, [])}>
+            <label htmlFor={id} className={cls.checkbox}></label>
+            <label htmlFor={id} className={cls.label}>
                 {children}
             </label>
         </HStack>
