@@ -5,6 +5,7 @@ import { Dropdown } from './Dropdown';
 import { Button } from 'ui/components/controls/buttons/Button';
 import { HStack } from 'ui/components/shared/Stack';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
+import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Dropdown> = {
     title: 'components/controls/Dropdown',
@@ -31,11 +32,9 @@ export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
 const ListItems = [
-    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={170} /></HStack>), value: '1' },
-    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={170} /></HStack>), value: '2' },
-    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={170} /></HStack>), value: '3' },
-    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={170} /></HStack>), value: '4' },
-    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={170} /></HStack>), value: '5' },
+    { content: (<Text>Установить</Text>), value: 'set' },
+    { content: (<Text color='info'>Подробнее</Text>), value: 'info' },
+    { content: (<Text color='error'>Продать</Text>), value: 'sell' },
 ];
 
 export const TopLeft: Story = {

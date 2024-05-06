@@ -14,7 +14,7 @@ const meta: Meta<typeof ProgressBar> = {
       )
     ],
     parameters: {
-        layout: 'centered',
+        layout: 'fullscreen',
     },
 
     tags: ['autodocs'],

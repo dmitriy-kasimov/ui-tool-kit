@@ -2,6 +2,10 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { ListBox } from './ListBox';
+import { HStack } from 'ui/components/shared/Stack';
+import { Skeleton } from 'ui/components/shared/Skeleton';
+import { Text } from 'ui/components/shared/Text';
+import { ListBoxItem } from '../types/ListBoxProps';
 
 const meta: Meta<typeof ListBox> = {
     title: 'components/controls/ListBox',
@@ -27,71 +31,57 @@ const meta: Meta<typeof ListBox> = {
 export default meta;
 type Story = StoryObj<typeof ListBox>;
 
+
+const listItems: ListBoxItem<string>[] = [
+    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>M1RoN</Text></HStack>), value: 'M1RoN' },
+    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Alan_Masti</Text></HStack>), value: 'Alan_Masti' },
+    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Le[G]ion_kirov_43rus</Text></HStack>), value: 'Le[G]ion_kirov_43rus', disabled: true },
+    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>LaRGo</Text></HStack>), value: 'LaRGo' },
+    { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>KonfeTK@</Text></HStack>), value: 'KonfeTK@' },
+];
+
 export const Normal: Story = {
     args: {
-        value: '123',
-        items: [
-            { content: '1asdasdasd23', value: '1' },
-            { content: '1asdasdasd23', value: '2' },
-            { content: '1asdasdasd23', value: '3' },
-            { content: '1asdasdasd23', value: '4' },
-            { content: '1asdasdasd23', value: '5' },
-        ],
+        value: 'M1RoN',
+        items: listItems,
+    },
+};
+
+export const DisabledItem: Story = {
+    args: {
+        value: 'M1RoN',
+        items: listItems,
     },
 };
 
 export const topLeft: Story = {
     args: {
         direction: 'top left',
-        value: '123',
-        items: [
-            { content: '1asdasdasd23', value: '1' },
-            { content: '1asdasdasd23', value: '2' },
-            { content: '1asdasdasd23', value: '3' },
-            { content: '1asdasdasd23', value: '4', disabled: true },
-            { content: '1asdasdasd23', value: '5' },
-        ],
+        value: 'M1RoN',
+        items: listItems,
     },
 };
 
 export const topRight: Story = {
     args: {
         direction: 'top right',
-        value: '123',
-        items: [
-            { content: '1asdasdasd23', value: '1' },
-            { content: '1asdasdasd23', value: '2' },
-            { content: '1asdasdasd23', value: '3' },
-            { content: '1asdasdasd23', value: '4' },
-            { content: '1asdasdasd23', value: '5' },
-        ],
+        value: 'M1RoN',
+        items: listItems,
     },
 };
 
 export const bottomLeft: Story = {
     args: {
         direction: 'bottom left',
-        value: '123',
-        items: [
-            { content: '1asdasdasd23', value: '1' },
-            { content: '1asdasdasd23', value: '2' },
-            { content: '1asdasdasd23', value: '3' },
-            { content: '1asdasdasd23', value: '4' },
-            { content: '1asdasdasd23', value: '5' },
-        ],
+        value: 'M1RoN',
+        items: listItems,
     },
 };
 
 export const bottomRight: Story = {
     args: {
         direction: 'bottom right',
-        value: '123',
-        items: [
-            { content: '1asdasdasd23', value: '1' },
-            { content: '1asdasdasd23', value: '2' },
-            { content: '1asdasdasd23', value: '3' },
-            { content: '1asdasdasd23', value: '4' },
-            { content: '1asdasdasd23', value: '5' },
-        ],
+        value: 'M1RoN',
+        items: listItems,
     },
 };

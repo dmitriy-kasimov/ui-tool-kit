@@ -32,23 +32,56 @@ const meta: Meta<typeof Disclosure> = {
 export default meta;
 type Story = StoryObj<typeof Disclosure>;
 
-export const Normal: Story = {
+export const OneElem: Story = {
     args: {
       items: [
         {
           title: 'The rule #1', 
           description: (<Text>Sometnhing very looooooooooooooooong </Text>),
         },
-        {
-          title: 'The rule #2 [main rule]',
-          description: (<VStack gap='8' max>
-            <Skeleton width={150} height={40}/>
-            <Skeleton width={250} height={30}/>
-            <Skeleton width={250} height={30}/>
-            <Skeleton width={250} height={250}/>
-            <Skeleton width={250} height={30}/>
-          </VStack>),
-        }
       ]
     },
+};
+
+export const TwoElem: Story = {
+  args: {
+    items: [
+      {
+        title: 'The rule #1', 
+        description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+      },
+      {
+        title: 'The rule #2 [main rule]',
+        description: (<VStack gap='8' max>
+          <Skeleton width={150} height={40}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={250}/>
+          <Skeleton width={250} height={30}/>
+        </VStack>),
+      }
+    ]
+  },
+};
+
+export const TwoElemWithDisable: Story = {
+  args: {
+    items: [
+      {
+        title: 'The rule #1', 
+        description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+      },
+      {
+        title: 'The rule #2 [main rule]',
+        disabled: true,
+        description: (<VStack gap='8' max>
+          <Skeleton width={150} height={40}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={250}/>
+          <Skeleton width={250} height={30}/>
+        </VStack>),
+      }
+    ]
+  },
 };

@@ -1,3 +1,5 @@
+@use '../../../../controls';
+
 .Disclosure{
     display: flex;
     flex-direction: column;
@@ -21,4 +23,40 @@
 
 .panel {
     padding-bottom: var(--uikit-padding-m);
+}
+
+
+
+.DisclosureButton {
+    @include controls.defaultStyles;
+
+    width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: var(--uikit-padding-xxs) var(--uikit-padding-s);
+	
+	border-radius: var(--uikit-border-radius);
+	
+	outline: none;
+	border: none;
+	text-decoration: none;
+	appearance: none;
+	touch-action: manipulation;
+
+	&:hover{
+		@include controls.hover;
+	}
+	&:active{
+		@include controls.active;
+	}
+	&:focus{
+		
+	}
+}
+
+.disabled{
+    @include controls.disabled;
 }

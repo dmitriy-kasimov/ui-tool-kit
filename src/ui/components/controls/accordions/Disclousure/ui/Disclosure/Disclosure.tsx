@@ -23,7 +23,7 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                     <HDisclosure key={index}>
                         {({ open }) => (
                             <>
-                                <HDisclosure.Button as={DisclosureButton} >
+                                <HDisclosure.Button as={DisclosureButton} disabled={item.disabled} className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}>
                                     <HStack gap="8" align="center" max justify="between">
                                         <Text bold font="m">{item.title}</Text>
                                         <Icon 
