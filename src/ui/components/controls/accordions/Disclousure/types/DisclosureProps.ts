@@ -8,4 +8,5 @@ export type DisclousureItem = {
 export interface DisclousureProps {
     className?: string;
     items: DisclousureItem[];
+    maxWidth?: string;
 };

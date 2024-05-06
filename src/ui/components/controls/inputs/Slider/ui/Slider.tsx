@@ -12,6 +12,7 @@ const Slider: FC<SliderProps> = memo(({
                                   max, 
                                   step,
                                   disabled=false,
+                                  width='150px',
                                   className=''
                                 }) => {
     
@@ -26,6 +27,7 @@ const Slider: FC<SliderProps> = memo(({
           type="range" 
           step={step}
           disabled={disabled}
+          style={{width}}
       />
       <Text>{value}</Text>
     </HStack>

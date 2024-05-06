@@ -21,6 +21,9 @@ export const TextField: FC<TextFieldProps> = memo(props => {
 
         disabled=false,
         masked = false,
+
+        inputWidth = '200px',
+
         className = '',
         ...otherProps
     } = props;
@@ -48,6 +51,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     autoComplete="off"
                     spellCheck={false}
                     disabled={disabled}
+                    style={{width: inputWidth}}
                     {...otherProps}
                 />
                 <label 

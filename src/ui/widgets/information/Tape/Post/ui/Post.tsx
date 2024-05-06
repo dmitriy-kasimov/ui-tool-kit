@@ -14,7 +14,7 @@ export const Post: FC<PostProps> = (props) => {
     } = props;
 
     return(
-        <VStack className={classNames(cls.Post, {}, [className])}>
+        <div className={classNames(cls.Post, {}, [className])} style={{maxWidth: post.maxWidth ?? '500px'}}>
             <HStack max justify="between" align="end" className={cls.header}>
                 <Text font="l">
                     {post.title}
@@ -26,7 +26,7 @@ export const Post: FC<PostProps> = (props) => {
             <div className={cls.body}>
                 {post.description}
             </div>
-        </VStack>
+        </div>
     )
 }
 

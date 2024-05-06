@@ -3,6 +3,8 @@ export type PostType = {
     title: string;
     subtitle?: string | null;
     description: React.ReactNode;
+
+    maxWidth?: string;
 }
 
 export interface PostProps{

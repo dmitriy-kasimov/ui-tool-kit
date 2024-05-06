@@ -5,5 +5,6 @@ export interface TapeProps{
     posts: PostType[];
 
     maxHeightContent?: string;
+    maxWidthContent?: string;
     className?:string;
 }

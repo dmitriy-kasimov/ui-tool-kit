@@ -11,4 +11,6 @@ export interface SliderProps extends HTMLInputProps{
 
     disabled?: boolean;
     className?: string;
+
+    width?: string;
 }

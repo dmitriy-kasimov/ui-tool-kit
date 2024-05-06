@@ -14,7 +14,8 @@ export const Tape: FC<TapeProps> = (props) => {
         title, 
         posts, 
         className = '',
-        maxHeightContent = '700px'
+        maxHeightContent = '700px',
+        maxWidthContent = '500px'
     } = props;
 
     const items = useMemo(() => {
@@ -35,9 +36,12 @@ export const Tape: FC<TapeProps> = (props) => {
                     {title}
                 </Text>
             </HStack>
-            <VStack gap="8" align="start" className={cls.content}>
+            <div  
+                className={cls.content} 
+                style={{maxHeight: maxHeightContent, maxWidth: maxWidthContent}}
+            >
                 {items}
-            </VStack>
+            </div>
         </VStack>
     )
 }

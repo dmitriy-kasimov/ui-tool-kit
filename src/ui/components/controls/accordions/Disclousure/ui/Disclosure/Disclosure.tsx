@@ -14,10 +14,11 @@ import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 export const Disclosure: FC<DisclousureProps> = memo((props) => {
     const {
         className,
-        items
+        items,
+        maxWidth = '500px'
     } = props;
     return (
-        <div className={classNames(cls.Disclosure, {}, [className])}>
+        <div className={classNames(cls.Disclosure, {}, [className])} style={{maxWidth}}>
             <VStack gap="8" max>
                 {items.map((item, index) => (
                     <HDisclosure key={index}>

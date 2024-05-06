@@ -127,44 +127,48 @@ export const UITest3 = () => {
             <ProgressBar 
                 max={100}
                 value={100}
+                length="200px"
             />
 
             <ProgressBar 
                 max={100}
                 value={100}
                 type="vertical"
+                length="200px"
             />
         </HStack>
-
-        <Tape
-            title="Шрифтов завезли!"
-            posts={posts}
-        />
-        <Table
-          caption={<Text font='xl' >Online players</Text>}
-          heads={[
-            {columnId: 'id', columnName: 'ID', width: 50},
-            {columnId: 'avatar', columnName: 'Ava', width: 30},
-            {columnId: 'name', columnName: 'Name', width: 200},
-            {columnId: 'rank', columnName: 'Rank', width: 100},
-            {columnId: 'score', columnName: 'Score', width: 100},
-            {columnId: 'status', columnName: 'Status', width: 175},
-            {columnId: 'ping', columnName: 'Ping (ms)', width: 150},
-          ]}
-          body={onlinePlayers.map<TableBodyRow>(player => 
-            [
-              {columnId: 'id', content: <Text>{player.id}</Text>},
-              {columnId: 'avatar', content: <Skeleton width={32} height={32} border="50%"/>},
-              {columnId: 'name', content: <Text>{player.nickname}</Text>},
-              {columnId: 'rank', content: <Text>{player.rank}</Text>},
-              {columnId: 'score', content: <Text>{player.score}</Text>},
-              {columnId: 'status', content: <Text>{player.status}</Text>},
-              {columnId: 'ping', content: <Text>{player.ping}</Text>},
-            ]
-          )}
-          maxWidthContent="600px"
-          maxHeightContent="300px"
-        />
+        <HStack max gap="32">
+          <Tape
+              title="Шрифтов завезли!"
+              posts={posts}
+          />
+          <Table
+            caption={<Text font='xl' >Online players</Text>}
+            heads={[
+              {columnId: 'id', columnName: 'ID', width: 50},
+              {columnId: 'avatar', columnName: 'Ava', width: 30},
+              {columnId: 'name', columnName: 'Name', width: 200},
+              {columnId: 'rank', columnName: 'Rank', width: 100},
+              {columnId: 'score', columnName: 'Score', width: 100},
+              {columnId: 'status', columnName: 'Status', width: 175},
+              {columnId: 'ping', columnName: 'Ping (ms)', width: 150},
+            ]}
+            body={onlinePlayers.map<TableBodyRow>(player => 
+              [
+                {columnId: 'id', content: <Text>{player.id}</Text>},
+                {columnId: 'avatar', content: <Skeleton width={32} height={32} border="50%"/>},
+                {columnId: 'name', content: <Text>{player.nickname}</Text>},
+                {columnId: 'rank', content: <Text>{player.rank}</Text>},
+                {columnId: 'score', content: <Text>{player.score}</Text>},
+                {columnId: 'status', content: <Text>{player.status}</Text>},
+                {columnId: 'ping', content: <Text>{player.ping}</Text>},
+              ]
+            )}
+            maxWidthContent="600px"
+            maxHeightContent="300px"
+          />
+        </HStack>
+       
     </VStack>
   );
 };

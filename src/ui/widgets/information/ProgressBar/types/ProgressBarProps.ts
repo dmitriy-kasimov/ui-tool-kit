@@ -4,6 +4,9 @@ export interface ProgressBarProps{
     type?: ProgressBarType;
 
     className?:string;
+
+    length?: string;
+    thickness?: string;
 }
 
 export type ProgressBarType = 'horizontal' | 'vertical';

@@ -11,5 +11,7 @@ export interface TextFieldProps extends HTMLInputProps{
     disabled?: boolean;
     masked?: boolean;
 
+    inputWidth?: string;
+
     className?:string;
 }

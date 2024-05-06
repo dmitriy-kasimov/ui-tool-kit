@@ -92,6 +92,7 @@ export const UITest2 = memo(() => {
                     </VStack>),
                     }
                 ]}
+                maxWidth="300px"
             />
 
             <Button><Text>Click</Text></Button>
@@ -133,7 +134,7 @@ export const UITest2 = memo(() => {
                     value={textFieldValue}
                     onChange={setTextFieldValue}
                     label="TextField"
-                    limit={20}
+                    limit={100}
                     masked
                 />
                 <TextArea 

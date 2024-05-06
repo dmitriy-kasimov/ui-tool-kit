@@ -15,7 +15,9 @@
     };
     
     .content{
-        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
         border-radius: var(--uikit-border-radius);
         border-top-left-radius: 0;
