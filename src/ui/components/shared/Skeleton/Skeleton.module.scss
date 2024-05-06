@@ -2,7 +2,8 @@
     width: 100%;
     height: 50px;
     position: relative;
-    box-shadow: 0 2px 10px 0 var(--uikit-skeleton-shadow-color);
+    box-shadow: 0 2px 10px 0 var(--uikit-controls-bg);
+    background: var(--uikit-controls-bg);
     overflow: hidden;
     border-radius: var(--uikit-border-radius);
     
@@ -14,7 +15,7 @@
         top: 0;
         height: 100%;
         width: 80%;
-        background: var(--uikit-skeleton-bg);
+        background: linear-gradient(to right, transparent 0%, rgba(230,230,230, 0.5) 50%, transparent 100%);
         animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 }

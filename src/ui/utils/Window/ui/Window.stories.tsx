@@ -34,7 +34,7 @@ export const SmallWithoutSidebar: Story = {
     args: {
         isOpen:true,
        
-        children: (
+        content: (
           <VStack gap='32'>
               <Skeleton width={300} height={200}/>
               <Skeleton width={300} height={200}/>
@@ -51,7 +51,7 @@ export const SmallWithSidebar: Story = {
         {Icon: (TestIcon), desciption: 'Link 2', onClick: ()=>{console.log('link 2 has worked!')}},
         {Icon: (TestIcon), desciption: 'Link 3', onClick: ()=>{console.log('link 3 has worked!')}}
       ],
-      children: (
+      content: (
         <VStack gap='32'>
             <Skeleton width={300} height={200}/>
             <Skeleton width={300} height={200}/>
@@ -64,7 +64,7 @@ export const FullscreenWithoutSidebar: Story = {
   args: {
       isOpen:true,
       fullscreen: true,
-      children: (
+      content: (
           <VStack gap='32'>
             <HStack gap='32'>
               <VStack gap='32'>
@@ -109,7 +109,7 @@ export const FullscreenWithSidebar: Story = {
         {Icon: (TestIcon), desciption: 'Link 2', onClick: ()=>{console.log('link 2 has worked!')}},
         {Icon: (TestIcon), desciption: 'Link 3', onClick: ()=>{console.log('link 3 has worked!')}}
       ],
-      children: (
+      content: (
           <VStack gap='32'>
             <HStack gap='32'>
               <VStack gap='32'>

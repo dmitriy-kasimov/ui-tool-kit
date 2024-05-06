@@ -59,23 +59,11 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     </Text>
                 </label>
             </VStack>
-            {masked ? (
-                <Button 
-                    onClick={switchMask}
-                    variant='clear'
-                    square
-                > 
-                {
-                    <>
-                        {
-                            type === 'text' ?
-                            <Icon Svg={MaskText} width={24} height={24} fill={'rgb(230, 230, 230)'}/> :
-                            <Icon Svg={UnmaskText} width={24} height={24} fill={'rgb(230, 230, 230)'}/>
-                        }
-                    </>
-                }
-                </Button>
-            ) : null}
+            {masked && (
+                type === 'text' ?
+                    <Icon Svg={MaskText} clickable onClick={switchMask} width={24} height={24} fill={'rgb(230, 230, 230)'}/> :
+                    <Icon Svg={UnmaskText} clickable onClick={switchMask} width={24} height={24} fill={'rgb(230, 230, 230)'}/>        
+            )}
         </HStack>
     )
 });

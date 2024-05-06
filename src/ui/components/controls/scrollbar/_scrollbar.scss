@@ -22,10 +22,6 @@
 
     border-radius: var(--uikit-border-radius);
     background-color: var(--uikit-theme-main-color);
-
-    &:hover{
-		@include controls.hover;
-	} 
 }
 
 ::-webkit-scrollbar-corner {

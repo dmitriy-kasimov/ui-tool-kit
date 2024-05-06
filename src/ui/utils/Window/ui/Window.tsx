@@ -14,7 +14,7 @@ import { WindowProps } from '../types/WindowProps';
 export const Window: FC<WindowProps> = memo((props) => {
     const {
         className,
-        children,
+        content,
         isOpen=true,
         onClose,
         lazy = true,
@@ -54,7 +54,7 @@ export const Window: FC<WindowProps> = memo((props) => {
                     }
                     
                     <div className={cls.content}>
-                        {children}
+                        {content}
                     </div>
                 </div>
             </div>

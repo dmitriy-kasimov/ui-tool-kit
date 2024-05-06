@@ -6,10 +6,10 @@
 }
 
 .background{
-    // @include controls.defaultStyles;
-    // &:hover{
-    //     @include controls.hover
-    // }
+    @include controls.defaultStyles;
+    &:hover{
+        @include controls.hover
+    }
     
     // display: flex;
     // align-items: center;

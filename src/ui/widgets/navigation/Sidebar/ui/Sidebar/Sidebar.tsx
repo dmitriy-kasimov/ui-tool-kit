@@ -2,7 +2,7 @@ import React, { FC, useMemo } from "react";
 import { classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Sidebar.module.scss';
-import { SidebarProps } from "../../model/types/SidebarProps";
+import { SidebarProps } from "../../types/SidebarProps";
 import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { SidebarItem } from "../SidebarItem/SidebarItem";

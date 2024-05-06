@@ -1,6 +1,7 @@
 @use '../../../controls';
 
 .input {
+    @include controls.defaultStyles;
     background: var(--uikit-controls-bg);
 
     border-radius: var(--uikit-border-radius);
@@ -14,11 +15,14 @@
 
     appearance: none !important;
     -webkit-appearance: none !important;
-}
-.input::-webkit-slider-thumb {
-    @include controls.defaultStyles;
     &:hover{
 		@include controls.hover;
+	}
+}
+.input::-webkit-slider-thumb {
+    
+    &:hover{
+		// @include controls.hover;
 	}
     &:active{
 		@include controls.active;

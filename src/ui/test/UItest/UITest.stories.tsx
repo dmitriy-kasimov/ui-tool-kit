@@ -13,11 +13,11 @@ const meta: Meta<typeof UITest> = {
         (Story) => (
           decoratorBackground(Story)
         ),
-        (Story) => (
-          <div style={{width: 900, height: 1080}}>
-            <Story />
-          </div>
-        )
+        // (Story) => (
+        //   <div style={{width: 900, height: 1080}}>
+        //     <Story />
+        //   </div>
+        // )
       ],
     parameters: {
         layout: 'fullscreen',
