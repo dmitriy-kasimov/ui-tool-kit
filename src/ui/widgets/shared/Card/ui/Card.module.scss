@@ -1,0 +1,60 @@
+.Card {
+    padding: 24px;
+}
+
+.normal {
+    background: var(--uikit-widgets-bg-color);
+}
+
+.outlined {
+    border: 1px solid var(--uikit-text-color-main);
+}
+
+
+.normal {
+    border-radius: var(--uikit-border-radius);
+}
+
+.round {
+    border-radius: 40px;
+}
+
+
+
+.fullWidth {
+    width: 100%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+
+
+.gap_0 {
+    padding: 0;
+}
+
+.gap_xxs {
+    padding: var(--uikit-padding-xxs);
+}
+
+.gap_xs {
+    padding: var(--uikit-padding-xs);
+}
+
+.gap_s {
+    padding: var(--uikit-padding-s);
+}
+
+.gap_m {
+    padding: var(--uikit-padding-m);
+}
+
+.gap_l {
+    padding: var(--uikit-padding-l);
+}
+
+.gap_xl {
+    padding: var(--uikit-padding-xl);
+}
