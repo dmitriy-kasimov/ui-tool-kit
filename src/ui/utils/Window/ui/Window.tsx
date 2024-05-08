@@ -8,8 +8,20 @@ import { ANIMATION_DELAY } from 'styles/effects/anims';
 import { Overlay } from 'ui/utils/Overlay/Overlay';
 import { HStack } from 'ui/components/shared/Stack';
 import { Sidebar, SidebarItemType } from 'ui/widgets/navigation/Sidebar';
-import { WindowProps } from '../types/WindowProps';
+import { AlignContent, JustifyContent, WindowProps } from '../types/WindowProps';
 
+const mapJustifyContentToClass: Record<JustifyContent, string> = {
+    center: 'justify_center',
+    start: 'justify_start',
+    end: 'justify_end',
+    between: 'justify_between'
+} 
+const mapAlignContentToClass: Record<AlignContent, string> = {
+    center: 'align_center',
+    start: 'align_start',
+    end: 'align_end',
+    stretch: 'align_stretch'
+} 
 
 export const Window: FC<WindowProps> = memo((props) => {
     const {
@@ -19,6 +31,8 @@ export const Window: FC<WindowProps> = memo((props) => {
         onClose,
         lazy = true,
         fullscreen = false,
+        alignContent = 'center',
+        justifyContent = 'center',
         sidebar
     } = props;
   
@@ -41,9 +55,12 @@ export const Window: FC<WindowProps> = memo((props) => {
         return null;
     }
 
+    const justifyContentClass = mapJustifyContentToClass[justifyContent];
+    const alignContentClass = mapAlignContentToClass[alignContent];
+
     return (
         <Portal>
-            <div className={classNames(cls.Window, mods, [className])}>
+            <div className={classNames(cls.Window, mods, [className, ])}>
                 <Overlay onClick={close} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
                     {sidebar ?
@@ -53,7 +70,7 @@ export const Window: FC<WindowProps> = memo((props) => {
                         null
                     }
                     
-                    <div className={cls.content}>
+                    <div className={classNames(cls.content, {}, [cls[justifyContentClass], cls[alignContentClass]])}>
                         {content}
                     </div>
                 </div>

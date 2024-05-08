@@ -1,13 +1,19 @@
 import { ReactElement } from "react";
 import { SidebarItemType } from "ui/widgets/navigation/Sidebar";
 
-export interface WindowProps {
-    className?: string;
-    content?: ReactElement;
-    sidebar?: SidebarItemType[];
+export type JustifyContent = 'start' | 'center' | 'end'| 'between';
+export type AlignContent = 'start' | 'center' | 'end' | 'stretch';
 
+export interface WindowProps {
     isOpen?: boolean;
     onClose?: () => void;
-    lazy?: boolean;
+    content?: ReactElement;
+
+    sidebar?: SidebarItemType[];
     fullscreen?: boolean;
+    lazy?: boolean;
+
+    justifyContent?: JustifyContent; 
+    alignContent?: AlignContent;
+    className?: string;
 };
