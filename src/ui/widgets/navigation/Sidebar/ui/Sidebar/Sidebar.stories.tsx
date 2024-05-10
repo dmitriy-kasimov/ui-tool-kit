@@ -6,6 +6,8 @@ import { decoratorBackground } from '../../../../../../../.storybook/decorators/
 
 import { Sidebar } from './Sidebar';
 import TestIcon from 'styles/assets/icons/success.svg'
+import { Icon } from 'ui/components/shared/Icon';
+import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Sidebar> = {
     title: 'widgets/information/Sidebar',
@@ -31,9 +33,9 @@ type Story = StoryObj<typeof Sidebar>;
 export const ModalOpen: Story = {
     args: {
       items: [
-        {Icon: (TestIcon), desciption: 'Link 1', onClick: ()=>{console.log('link 1 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 2', onClick: ()=>{console.log('link 2 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 3', onClick: ()=>{console.log('link 3 has worked!')}}
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ]
     },
 };

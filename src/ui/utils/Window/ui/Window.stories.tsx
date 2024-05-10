@@ -8,6 +8,8 @@ import { Window } from './Window';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { HStack, VStack } from 'ui/components/shared/Stack';
 import TestIcon from 'styles/assets/icons/success.svg'
+import { Icon } from 'ui/components/shared/Icon';
+import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Window> = {
     title: 'utils/modal/Window',
@@ -47,9 +49,9 @@ export const SmallWithSidebar: Story = {
   args: {
       isOpen:true,
       sidebar: [
-        {Icon: (TestIcon), desciption: 'Link 1', onClick: ()=>{console.log('link 1 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 2', onClick: ()=>{console.log('link 2 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 3', onClick: ()=>{console.log('link 3 has worked!')}}
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
         <VStack gap='32'>
@@ -105,9 +107,9 @@ export const FullscreenWithSidebar: Story = {
       isOpen:true,
       fullscreen: true,
       sidebar: [
-        {Icon: (TestIcon), desciption: 'Link 1', onClick: ()=>{console.log('link 1 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 2', onClick: ()=>{console.log('link 2 has worked!')}},
-        {Icon: (TestIcon), desciption: 'Link 3', onClick: ()=>{console.log('link 3 has worked!')}}
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
           <VStack gap='32'>
