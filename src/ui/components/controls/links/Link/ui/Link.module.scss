@@ -12,13 +12,10 @@
 	border: none;
 
 	&:hover {
+		@include controls.hover;
 		box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
 	};
 }
-
-// .Link:focus-visible {
-// 	@include controls.focus;
-// }
 
 .Link:disabled {
 	@include controls.disabled;
