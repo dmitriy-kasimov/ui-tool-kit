@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "ui/components/controls/buttons/Button";
 import { TextArea } from "ui/components/controls/inputs/TextArea";
 import { TextField } from "ui/components/controls/inputs/TextField";
+import { Skeleton } from "ui/components/shared/Skeleton";
 import { HStack, VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { Window } from "ui/utils/Window";
@@ -89,6 +90,8 @@ export const UITestInteg = memo(() => {
                                 posts={posts}
                             />
                             <VStack max gap="32">
+                                <Skeleton width={50} height={50} border="50%"/>
+                                <Skeleton width={"100%"} height={32}/>
                                 <VStack max gap="8">
                                     <TextField 
                                         value={name}

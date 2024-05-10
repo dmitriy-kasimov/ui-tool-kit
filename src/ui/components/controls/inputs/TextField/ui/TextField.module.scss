@@ -1,6 +1,17 @@
 // @use 'styles/effects/shadows';
 @use '../../../controls';
 
+.eyeButton{
+    fill: var(--uikit-theme-main-color);
+
+    &:hover{
+        @include controls.hover;
+    }
+    &:active{
+        @include controls.active;
+    }
+}
+
 .disabled{
     @include controls.disabled;
 }
@@ -8,11 +19,8 @@
 .background{
     @include controls.defaultStyles;
     &:hover{
-        @include controls.hover
+        @include controls.hover;
     }
-    
-    // display: flex;
-    // align-items: center;
 
     border-radius: var(--uikit-border-radius);
     background: var(--uikit-controls-bg);
@@ -43,6 +51,7 @@
     height: calc(3rem);
     //line-height: 2.25;
 
+   
     &:focus{
         outline: none;
     }

@@ -21,7 +21,7 @@
     @include controls.defaultStyles;
 
     border-radius: var(--uikit-border-radius);
-    background-color: var(--uikit-theme-main-color);
+    background: var(-uikit-controls-bg);
 }
 
 ::-webkit-scrollbar-corner {

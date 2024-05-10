@@ -12,7 +12,8 @@
 // Ивенты для элементов управления
 
 @mixin hover{
-    background: var(--uikit-controls-bg-hover-color);
+    //background: var(--uikit-controls-bg-hover-color);
+    opacity: 0.87;
 }
 
 @mixin focus{

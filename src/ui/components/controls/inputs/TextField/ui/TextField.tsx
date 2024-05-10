@@ -33,6 +33,13 @@ export const TextField: FC<TextFieldProps> = memo(props => {
         setType( type === 'text' ? 'password' : 'text');
     }
 
+    const EyeButtonProps = {
+        clickable: true, 
+        onClick: switchMask, 
+        width: 24, 
+        height:24, 
+    };
+
     return(
         <HStack 
             justify="between"
@@ -65,8 +72,8 @@ export const TextField: FC<TextFieldProps> = memo(props => {
             </VStack>
             {masked && (
                 type === 'text' ?
-                    <Icon Svg={MaskText} clickable onClick={switchMask} width={24} height={24} fill={'rgb(230, 230, 230)'}/> :
-                    <Icon Svg={UnmaskText} clickable onClick={switchMask} width={24} height={24} fill={'rgb(230, 230, 230)'}/>        
+                    <Icon Svg={MaskText} className={cls.eyeButton} {...EyeButtonProps}/> :
+                    <Icon Svg={UnmaskText} className={cls.eyeButton}  {...EyeButtonProps}/>        
             )}
         </HStack>
     )
