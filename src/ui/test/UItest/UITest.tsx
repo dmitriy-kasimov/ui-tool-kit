@@ -153,7 +153,6 @@ export const UITest = memo(({className}: UITestProps) => {
                 
                 const array = [...alerts];
                 const elem = array.shift()
-                console.log(elem, ' was deleted by timer');
                 setAlerts(array);
             }, alerts[0].showTime ?? 1500)
         } else {

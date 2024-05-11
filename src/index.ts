@@ -66,6 +66,18 @@ export {Window} from './ui/utils/Window/index';
 
 
 
-// other
+// libs
 export {classNames} from './lib/classNames/classNames';
-export {useModal} from './lib/hooks/useModal/useModal';
+export type {Mods} from './lib/classNames/classNames';
+
+
+
+// assets
+import ArrowBottomIcon from './styles/assets/icons/arrow-bottom.svg';
+import MaskTextIcon from './styles/assets/icons/maskText.svg';
+import UnmaskTextIcon from './styles/assets/icons/unmaskText.svg';
+export {
+    ArrowBottomIcon,
+    MaskTextIcon,
+    UnmaskTextIcon
+};

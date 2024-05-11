@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { memo } from "react";
 import  cls  from './UITest2.module.scss';
 import { Button } from "ui/components/controls/buttons/Button";
@@ -11,12 +11,12 @@ import { Switcher } from "ui/components/controls/inputs/Switcher";
 import { TextField } from "ui/components/controls/inputs/TextField";
 import { TextArea } from "ui/components/controls/inputs/TextArea";
 import { Link } from "ui/components/controls/links/Link";
-import { Dropdown } from "ui/components/controls/popups";
+import { Dropdown, DropdownItem, ListBoxItem } from "ui/components/controls/popups";
 import { Skeleton } from "ui/components/shared/Skeleton/Skeleton";
 import { ListBox } from "ui/components/controls/popups";
 import { Popover } from "ui/components/controls/popups";
 import { RadioGroupOptionType } from "ui/components/controls/inputs/RadioGroup/components/RadioGroupOption/types/RadioGroupOptionProps";
-import { Disclosure } from "ui/components/controls/accordions/Disclousure";
+import { Disclosure, DisclousureItem } from "ui/components/controls/accordions/Disclousure";
 import { Icon } from "ui/components/shared/Icon";
 import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
 
@@ -25,18 +25,13 @@ export const UITest2 = memo(() => {
 
     const radioGroupOptions: RadioGroupOptionType[] = [
         {value: 'admin', description: 'Администратор'},
-        {value: 'architecturer', description: 'Архитектор'},
+        {value: 'architecturer', description: 'Архитектор', defaultChecked: true},
         {value: 'root', description: 'root', disabled:true},
     ];
     const [sex, setSex] = useState('architecturer');
     const handleChangeSex = (value: string) =>{
       setSex(value)
     }
-    useMemo(() => {
-        console.log('current value for variable sex is', sex);
-    }, [sex])
-
-
 
     const [sliderValue, setSliderValue] = useState(0);
 
@@ -48,26 +43,102 @@ export const UITest2 = memo(() => {
 
     const [textAreaValue, setTextAreaValue] = useState('');
 
+    const disclosureItems: DisclousureItem[] = [
+        {
+            title: 'The rule #1', 
+            description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+        },
+        {
+            title: 'The rule #2 [main rule]', 
+            description: (<VStack gap='8' max>
+                <Skeleton width={150} height={40}/>
+                <Skeleton width={250} height={30}/>
+                <Skeleton width={250} height={30}/>
+                <Skeleton width={250} height={250}/>
+                <Skeleton width={250} height={30}/>
+            </VStack>),
+        },
+        {
+            title: 'Try to open me ))', 
+            description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+            disabled: true
+        },
+    ];
 
-    const dropdownItems = [
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Добавить</Text></HStack>), value: 'add' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Изменить</Text></HStack>), value: 'change' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text color="error">Удалить</Text></HStack>), value: 'remove' },
+    const dropdownItems: DropdownItem[] = [
+        { 
+            content: (
+                <HStack gap="8">
+                    <Skeleton height={30} width={30} border='50%'/> 
+                    <Text>Добавить</Text>
+                </HStack>
+            ), 
+            onClick: () => console.log('Add') 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                <Text>Изменить</Text></HStack>
+            ), 
+            onClick: () => console.log('Changed') 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                <Text color="error">Удалить</Text></HStack>
+            ), 
+            onClick: () => console.log('Removed') 
+        },
     ];
-    const listItems = [
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>M1RoN</Text></HStack>), value: 'M1RoN' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Alan_Masti</Text></HStack>), value: 'Alan_Masti' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>Le[G]ion_kirov_43rus</Text></HStack>), value: 'Le[G]ion_kirov_43rus' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>LaRGo</Text></HStack>), value: 'LaRGo' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Text>KonfeTK@</Text></HStack>), value: 'KonfeTK@' },
+    const listBoxItems: ListBoxItem<string>[] = [
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                    <Text>M1RoN</Text>
+                </HStack>
+            ), 
+            value: 'M1RoN' 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                    <Text>Alan_Masti</Text>
+                </HStack>
+            ), 
+            value: 'Alan_Masti' 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                    <Text>Le[G]ion_kirov_43rus</Text>
+                </HStack>
+            ), 
+            value: 'Le[G]ion_kirov_43rus' 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                    <Text>LaRGo</Text>
+                </HStack>
+            ), 
+            value: 'LaRGo' 
+        },
+        { 
+            content: (
+                <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+                    <Text>KonfeTK@</Text>
+                </HStack>
+            ), 
+            value: 'KonfeTK@' 
+        },
     ];
-    const popoverItems = [
-        { content: (<Skeleton height={70} width={200} />), value: '1' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '2' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '3' },
-        { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '4' },
-        { content: (<HStack gap="8"><Skeleton height={50} width={50} border='50%'/> <Skeleton height={40} width={150} /></HStack>), value: '5' },
-    ];
+    // const popoverItems = [
+    //     { content: (<Skeleton height={70} width={200} />), value: '1' },
+    //     { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '2' },
+    //     { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '3' },
+    //     { content: (<HStack gap="8"><Skeleton height={30} width={30} border='50%'/> <Skeleton height={30} width={100} /></HStack>), value: '4' },
+    //     { content: (<HStack gap="8"><Skeleton height={50} width={50} border='50%'/> <Skeleton height={40} width={150} /></HStack>), value: '5' },
+    // ];
     const [listBoxValue, setListBoxValue] = useState('Alan_Masti');
 
 
@@ -76,22 +147,7 @@ export const UITest2 = memo(() => {
     return (
         <VStack max gap="8" className={cls.UITest2}>
             <Disclosure
-                items={[
-                    {
-                    title: 'The rule #1', 
-                    description: (<Text>Sometnhing very looooooooooooooooong </Text>),
-                    },
-                    {
-                    title: 'The rule #2 [main rule]', 
-                    description: (<VStack gap='8' max>
-                        <Skeleton width={150} height={40}/>
-                        <Skeleton width={250} height={30}/>
-                        <Skeleton width={250} height={30}/>
-                        <Skeleton width={250} height={250}/>
-                        <Skeleton width={250} height={30}/>
-                    </VStack>),
-                    }
-                ]}
+                items={disclosureItems}
                 maxWidth="300px"
             />
 
@@ -149,20 +205,56 @@ export const UITest2 = memo(() => {
 
             <HStack gap="8" max>
                 <Dropdown 
-                    trigger={<Button addonRight={<Icon Svg={ArrowBottom} width={24} height={24} />}><Text>Dropdown</Text></Button>}
+                    trigger={
+                        <Button 
+                            addonRight = {
+                                <Icon Svg={ArrowBottom} width={24} height={24} />
+                            }
+                        >
+                            <Text>Dropdown</Text>
+                        </Button>
+                    }
                     items={dropdownItems}
                 />
 
                 <ListBox 
                     value={listBoxValue}
                     onChange={setListBoxValue}
-                    items={listItems}
-                    label="Select"
+                    items={listBoxItems}
+                    label="Choose the player"
                     defaultValue="Alan_Masti"
                 />
 
                 <Popover
-                    trigger={<Button addonRight={<Icon Svg={ArrowBottom} width={24} height={24} />}><Text>Trigger</Text></Button>}
+                    trigger={
+                        <Button 
+                            addonRight={
+                                <Icon Svg={ArrowBottom} width={24} height={24} />
+                            }
+                        >
+                            <Text>Account</Text>
+                        </Button>
+                    }
+                >
+                    <VStack max gap="16">
+                        <HStack max gap='8'>
+                            <Skeleton height={70} width={70} border='50%' />
+                            <Button>Avatar</Button>
+                        </HStack>
+                        <Button variant='cancel' fullWidth>Выйти</Button>
+                    </VStack>
+                </Popover>
+
+                {/* <Popover
+                    trigger={
+                        <Button 
+                            addonRight={
+                                <Icon Svg={ArrowBottom} width={24} height={24} />
+                            }
+                        >
+                            <Text>Trigger</Text>
+                        </Button>
+                    }
                 >
                     <>
                         {popoverItems.map(item => (
@@ -171,7 +263,7 @@ export const UITest2 = memo(() => {
                             </div>
                         ))}
                     </>
-                </Popover>
+                </Popover> */}
             </HStack>
 
             <VStack max align="center" gap="4">

@@ -1,13 +1,13 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export type ButtonTheme = 'primary' | 'outline' | 'clear' | 'cancel' | 'accept';
+export type ButtonVariant = 'primary' | 'outline' | 'clear' | 'cancel' | 'accept';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
 
     disabled?: boolean;
     square?: boolean;
-    variant?: ButtonTheme;
+    variant?: ButtonVariant;
     fullWidth?: boolean;
     className?: string;
     addonLeft?: ReactNode;

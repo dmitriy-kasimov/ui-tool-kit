@@ -7,6 +7,8 @@ import { Portal } from 'ui/utils/Portal/Portal';
 import { Overlay } from 'ui/utils/Overlay/Overlay';
 import { Sidebar } from 'ui/widgets/navigation/Sidebar';
 import { AlignContent, JustifyContent, WindowProps } from '../types/WindowProps';
+import { useModal } from 'lib/hooks/useModal/useModal';
+import { ANIMATION_DELAY } from 'styles/effects/anims';
 
 const mapJustifyContentToClass: Record<JustifyContent, string> = {
     center: 'justify_center',
@@ -33,20 +35,17 @@ export const Window: FC<WindowProps> = memo((props) => {
         justifyContent = 'center',
         sidebar,
         portalElement,
-        close,
-        isClosing=false,
-        isMounted
     } = props;
   
-    // const {
-    //     isClosing,
-    //     isMounted,
-    //     close,
-    // } = useModal({
-    //     animationDelay: ANIMATION_DELAY,
-    //     onClose,
-    //     isOpen,
-    // });
+    const {
+        isClosing,
+        isMounted,
+        close,
+    } = useModal({
+        animationDelay: ANIMATION_DELAY,
+        onClose,
+        isOpen,
+    });
 
     const mods: Mods = {
         [cls.opened]: isOpen,
