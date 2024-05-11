@@ -4,4 +4,5 @@ export interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
     lazy?:boolean;
+    portalElement?: HTMLElement;
 }

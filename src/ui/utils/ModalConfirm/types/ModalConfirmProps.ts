@@ -9,4 +9,5 @@ export interface ModalConfirmProps{
 
     lazy?: boolean;
     className?: string;
+    portalElement?: HTMLElement;
 }

@@ -232,13 +232,20 @@ export const UITest = memo(({className}: UITestProps) => {
                         { desciption: <Text font="xl">Link 3</Text>, onClick: () => console.log('Click on item 3') },
                     ]}
                     fullscreen
+                    portalElement={document.getElementById('storybook-root') ?? document.body} 
                 />
 
-                <Alert 
+                <Alert
+                    portalElement={document.getElementById('storybook-root') ?? document.body} 
                     alert={alerts[0]}
                 />
 
-                <Modal isOpen={modal} lazy onClose={onCloseModal}>
+                <Modal 
+                    isOpen={modal} 
+                    lazy 
+                    onClose={onCloseModal}
+                    portalElement={document.getElementById('storybook-root') ?? document.body} 
+                >
                     <Text>
                         <VStack gap="8" align="center">
                             <Skeleton width={100} height={100} border="50%"/>

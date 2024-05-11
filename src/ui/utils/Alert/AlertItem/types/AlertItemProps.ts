@@ -14,4 +14,5 @@ export interface AlertItemProps{
     className?: string;
     lazy?:boolean;
     onClose?: () => void;
+    portalElement?: HTMLElement;
 }

@@ -63,3 +63,9 @@ export {NotificationList} from './ui/utils/Notification/index';
 export type {NotificationItemType} from './ui/utils/Notification/index';
 
 export {Window} from './ui/utils/Window/index';
+
+
+
+// other
+export {classNames} from './lib/classNames/classNames';
+export {useModal} from './lib/hooks/useModal/useModal';

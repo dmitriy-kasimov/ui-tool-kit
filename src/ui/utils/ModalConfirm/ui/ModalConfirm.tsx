@@ -18,7 +18,8 @@ export const ModalConfirm: FC<ModalConfirmProps> = (props) => {
         title = 'Подтверждение действия',
         children,
         lazy = true,
-        className = ''
+        className,
+        portalElement
     } = props;
 
     const {
@@ -45,7 +46,7 @@ export const ModalConfirm: FC<ModalConfirmProps> = (props) => {
         onConfirm();
     }
     return (
-        <Portal>
+        <Portal element={portalElement}>
              <div className={classNames(cls.Modal, mods, [className])}>
                 <Overlay onClick={close} />
                 <div

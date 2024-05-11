@@ -9,12 +9,14 @@ export const Alert: FC<AlertProps> = memo((props) => {
     const {
         className, 
         alert,
+        portalElement
     } = props;
 
     const Alert = useMemo(() => {
        if(alert === undefined) return null;
        return (
-        <AlertItem 
+        <AlertItem
+            portalElement={portalElement} 
             item={alert}
             lazy
         />)

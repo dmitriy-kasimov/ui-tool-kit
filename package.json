@@ -2,8 +2,8 @@
   "name": "@tr271v0r/ui-tool-kit",
   "version": "1.0.4",
   "description": "ui tool kit for the server GTA V",
-  "main": "./build/index.js",
-  "types": "./build/src",
+  "main": "./build/esm/index.js",
+  "types": "./build/types/src",
   "scripts": {
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",

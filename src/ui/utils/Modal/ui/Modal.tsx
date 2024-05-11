@@ -14,6 +14,7 @@ export const Modal: FC<ModalProps> = (props) => {
         isOpen=true,
         onClose,
         lazy,
+        portalElement
     } = props;
 
     const {
@@ -36,7 +37,7 @@ export const Modal: FC<ModalProps> = (props) => {
     }
 
     return (
-        <Portal>
+        <Portal element={portalElement}>
             <div className={classNames(cls.Modal, mods, [className])}>
                 <Overlay onClick={close} />
                 <div

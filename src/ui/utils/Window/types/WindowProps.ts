@@ -16,4 +16,9 @@ export interface WindowProps {
     justifyContent?: JustifyContent; 
     alignContent?: AlignContent;
     className?: string;
+    portalElement?: HTMLElement;
+
+    isClosing?: boolean;
+    isMounted?: boolean;
+    close?: () => void;
 };

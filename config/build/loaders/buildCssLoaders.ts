@@ -10,7 +10,7 @@ export function buildCssLoaders(isDev: boolean) {
         exclude: /node_modules/,
         use: [
             // Creates `style` nodes from JS strings
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'style-loader',
             // Translates CSS into CommonJS
             // "css-loader",
             {

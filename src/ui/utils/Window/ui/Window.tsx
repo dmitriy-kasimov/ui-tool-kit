@@ -3,11 +3,9 @@ import { Mods, classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Window.module.scss';
 import { Portal } from 'ui/utils/Portal/Portal';
-import { useModal } from 'lib/hooks/useModal/useModal';
-import { ANIMATION_DELAY } from 'styles/effects/anims';
+
 import { Overlay } from 'ui/utils/Overlay/Overlay';
-import { HStack } from 'ui/components/shared/Stack';
-import { Sidebar, SidebarItemType } from 'ui/widgets/navigation/Sidebar';
+import { Sidebar } from 'ui/widgets/navigation/Sidebar';
 import { AlignContent, JustifyContent, WindowProps } from '../types/WindowProps';
 
 const mapJustifyContentToClass: Record<JustifyContent, string> = {
@@ -33,18 +31,22 @@ export const Window: FC<WindowProps> = memo((props) => {
         fullscreen = false,
         alignContent = 'center',
         justifyContent = 'center',
-        sidebar
+        sidebar,
+        portalElement,
+        close,
+        isClosing=false,
+        isMounted
     } = props;
   
-    const {
-        isClosing,
-        isMounted,
-        close,
-    } = useModal({
-        animationDelay: ANIMATION_DELAY,
-        onClose,
-        isOpen,
-    });
+    // const {
+    //     isClosing,
+    //     isMounted,
+    //     close,
+    // } = useModal({
+    //     animationDelay: ANIMATION_DELAY,
+    //     onClose,
+    //     isOpen,
+    // });
 
     const mods: Mods = {
         [cls.opened]: isOpen,
@@ -59,7 +61,7 @@ export const Window: FC<WindowProps> = memo((props) => {
     const alignContentClass = mapAlignContentToClass[alignContent];
 
     return (
-        <Portal>
+        <Portal element={portalElement}>
             <div className={classNames(cls.Window, mods, [className, ])}>
                 <Overlay onClick={close} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>

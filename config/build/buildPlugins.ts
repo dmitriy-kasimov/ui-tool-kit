@@ -11,15 +11,15 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new ForkTsCheckerWebpackPlugin({
-            typescript: {
-                diagnosticOptions: {
-                    semantic: true,
-                    syntactic: true,
-                },
-                mode: 'write-references',
-            },
-        }),
+        // new ForkTsCheckerWebpackPlugin({
+        //     typescript: {
+        //         diagnosticOptions: {
+        //             semantic: true,
+        //             syntactic: true,
+        //         },
+        //         mode: 'write-references',
+        //     },
+        // }),
     ];
 
     if (isDev) {
