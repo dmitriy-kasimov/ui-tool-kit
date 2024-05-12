@@ -8,15 +8,20 @@
     "url": "https://github.com/tr271v0r/ui-tool-kit",
     "type": "git"
   },
+  "keywords": [
+    "ui toolkit",
+    "GTA 5",
+    "alt:V",
+    "CEF"
+  ],
+  "author": "Trevor Phillips <tr271v0r.phillips.industries@gmail.com>",
+  "license": "ISC",
   "scripts": {
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
-  "keywords": [],
-  "author": "Trevor Phillips",
-  "license": "ISC",
   "devDependencies": {
     "@babel/preset-typescript": "^7.23.2",
     "@storybook/addon-essentials": "^7.5.0",

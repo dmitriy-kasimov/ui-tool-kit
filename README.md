@@ -55,6 +55,6 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Notification](/docs/ui-components/utils/Notification.md)
 - [Window](/docs/ui-components/utils/Window.md)
 
-## Dynamic names classes for elements
+## Dynamic names of classes for elements
 
 - [classNames](/docs/libs/classNames.md)
