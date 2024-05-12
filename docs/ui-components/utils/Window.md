@@ -12,9 +12,9 @@ import {
 } from '@tr271v0r/ui-tool-kit'
 
  const sidebarItems: SidebarItemType[] = [
-    { desciption: <Text font="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
-    { desciption: <Text font="xl">Link2</Text>, onClick: () => console.log('Click on item 2') },
-    { desciption: <Text font="xl">Link3</Text>, onClick: () => console.log('Click on item 3') },
+    { desciption: <Text size="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
+    { desciption: <Text size="xl">Link2</Text>, onClick: () => console.log('Click on item 2') },
+    { desciption: <Text size="xl">Link3</Text>, onClick: () => console.log('Click on item 3') },
 ]
 
 export function App(){

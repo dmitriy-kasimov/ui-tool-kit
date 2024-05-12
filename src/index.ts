@@ -37,18 +37,18 @@ import './styles/index.scss'
 
 
 // widgets
-    export {ProgressBar} from './ui/widgets/information/ProgressBar';
+    export {ProgressBar} from './ui/widgets/ProgressBar';
 
-    export {Table} from './ui/widgets/information/Table';
-    export type {TableBodyRow} from './ui/widgets/information/Table';
+    export {Table} from './ui/widgets/Table';
+    export type {TableBodyRow} from './ui/widgets/Table';
 
-    export {Tape} from './ui/widgets/information/Tape';
-    export type {PostType} from './ui/widgets/information/Tape';
+    export {Tape} from './ui/widgets/Tape';
+    export type {PostType} from './ui/widgets/Tape';
 
-    export {Sidebar} from './ui/widgets/navigation/Sidebar';
-    export type {SidebarItemType} from './ui/widgets/navigation/Sidebar';
+    export {Sidebar} from './ui/widgets/Sidebar';
+    export type {SidebarItemType} from './ui/widgets/Sidebar';
 
-    export {Card} from './ui/widgets/shared/Card';
+    export {Card} from './ui/widgets/Card';
 
 
 

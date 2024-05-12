@@ -16,7 +16,7 @@ const warnAlert: AlertItemType = {
     showTime: 1500,
     type: "warning",
     body: (
-        <Text font="m">Текст предупреждения!</Text>
+        <Text size="m">Текст предупреждения!</Text>
     )
 }
 
@@ -25,7 +25,7 @@ const errorAlert: AlertItemType = {
     showTime: 2500,
     type: "error",
     body: (
-        <Text font="m">Невозможно совершить действие!</Text>
+        <Text size="m">Невозможно совершить действие!</Text>
     )
 }
 
@@ -34,7 +34,7 @@ const successAlert: AlertItemType = {
     showTime: 1000,
     type: "success",
     body: (
-        <Text font="m">Успешно совершено действие!</Text>
+        <Text size="m">Успешно совершено действие!</Text>
     )
 }
 
@@ -43,7 +43,7 @@ const infoAlert: AlertItemType = {
     showTime: 4000,
     type: "info",
     body: (
-        <Text font="m">Some information</Text>
+        <Text size="m">Some information</Text>
     )
 }
 
@@ -52,7 +52,7 @@ const defaultAlert: AlertItemType = {
     showTime: 3000,
     type: "default",
     body: (
-        <Text font="m">I dont know why it is...</Text>
+        <Text size="m">I dont know why it is...</Text>
     )
 }
 

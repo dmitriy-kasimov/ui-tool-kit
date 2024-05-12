@@ -65,7 +65,7 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     className={cls.label}
                     htmlFor={label}
                 >
-                    <Text font="s">
+                    <Text size="s">
                         {label}
                     </Text>
                 </label>

@@ -29,21 +29,21 @@ const defaultStr: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing e
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const FontS: Story = {
     args: {
-       font: 's',
+       size: 's',
        children: (defaultStr)
     },  
 };
 
 export const FontM: Story = {
     args: {
-       font: 'm',
+       size: 'm',
        children: (defaultStr)
     },  
 };
 
 export const FontL: Story = {
     args: {
-        font: 'l',
+        size: 'l',
         children: (defaultStr)
     },  
 };
@@ -51,7 +51,7 @@ export const FontL: Story = {
 
 export const FontXL: Story = {
     args: {
-        font: 'xl',
+        size: 'xl',
         children: (defaultStr)
     },  
 };

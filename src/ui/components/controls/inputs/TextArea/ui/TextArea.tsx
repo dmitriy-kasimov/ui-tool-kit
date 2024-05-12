@@ -40,7 +40,7 @@ export const TextArea: FC<TextAreaProps> = memo(props => {
                 className={cls.label} 
                 htmlFor={label}
             >
-                <Text font="s">
+                <Text size="s">
                     {label}
                 </Text>
             </label>

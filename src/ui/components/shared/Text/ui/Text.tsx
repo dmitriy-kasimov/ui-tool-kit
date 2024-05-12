@@ -6,7 +6,7 @@ import { classNames } from "lib/classNames/classNames";
 export const Text: FC<TextProps> = memo((props) => {
     const {
         color='main',  
-        font='m', 
+        size='m', 
         className='',
         bold=false,
 
@@ -15,7 +15,7 @@ export const Text: FC<TextProps> = memo((props) => {
 
     return (
         <span className={classNames(cls.Text, {[cls.bold]: bold}, [
-            cls[font], 
+            cls[size], 
             cls[color], 
             className
         ])}>

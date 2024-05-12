@@ -16,7 +16,7 @@ export const Post: FC<PostProps> = (props) => {
     return(
         <div className={classNames(cls.Post, {}, [className])} style={{maxWidth: post.maxWidth ?? '500px'}}>
             <HStack max justify="between" align="end" className={cls.header}>
-                <Text font="l">
+                <Text size="l">
                     {post.title}
                 </Text>
                 <Text color='secondary'>

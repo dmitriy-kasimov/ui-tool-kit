@@ -1,13 +1,10 @@
-.Card {
-    padding: 24px;
-}
-
 .normal {
     background: var(--uikit-widgets-bg-color);
 }
 
 .outlined {
-    border: 1px solid var(--uikit-text-color-main);
+    background: none;
+    border: 1px solid var(--uikit-theme-main-color);
 }
 
 

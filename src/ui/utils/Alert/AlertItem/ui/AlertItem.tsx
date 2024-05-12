@@ -47,7 +47,7 @@ export const AlertItem: FC<AlertItemProps> = (props) => {
     <Portal element={portalElement}>
       <div className={classNames(cls.Alert, mods, [className])} onClick={close}>
         <VStack className={classNames(cls.wrapper, {}, [cls[item.type]])} gap='8'>
-            <Text font='l' className={cls.title}>{item.title ?? 'Alert'}</Text>
+            <Text size='l' className={cls.title}>{item.title ?? 'Alert'}</Text>
             {item.body}
         </VStack>
       </div>

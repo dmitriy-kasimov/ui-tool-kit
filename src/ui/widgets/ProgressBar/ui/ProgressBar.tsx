@@ -37,7 +37,7 @@ const ProgressBar: FC<ProgressBarProps> = memo((props) => {
       >
           <div className={classNames(cls.bar, {}, classBar)}>
             <span className={cls.progressValue}>
-              <Text font="s">{value}%</Text>
+              <Text size="s">{value}%</Text>
             </span>
           </div>
       </div>

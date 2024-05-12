@@ -1,5 +1,5 @@
 export interface TextProps{
-    font?: textFont;
+    size?: textSize;
     color?: textColor;
     bold?: boolean;
 
@@ -11,7 +11,7 @@ export interface TextProps{
 // Элементам этих enum есть СООТВЕТСТВУЮЩИЕ css перменные в конфигах шрифтов
 
 // Перечисление размеров шрифтов
-export type textFont = 's' | 'm' | 'l' | 'xl';
+export type textSize = 's' | 'm' | 'l' | 'xl';
 
 // Типы шрифтов по цвету
 export type textColor = 'main' | 'secondary' | 'warning' | 'error' | 'success' | 'info';

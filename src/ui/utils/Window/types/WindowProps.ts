@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { SidebarItemType } from "ui/widgets/navigation/Sidebar";
+import { SidebarItemType } from "ui/widgets/Sidebar";
 
 export type JustifyContent = 'start' | 'center' | 'end'| 'between';
 export type AlignContent = 'start' | 'center' | 'end' | 'stretch';

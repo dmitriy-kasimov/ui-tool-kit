@@ -2,24 +2,18 @@ import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
+import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Table, TableBodyRow } from '../index';
 
 import { Text } from 'ui/components/shared/Text';
-import { TableBody } from '../components/TableBody';
-import { TableRow } from '../components/TableRow';
-import { TableData } from '../components/TableData';
-import { TableCaption } from '../components/TableCaption';
-import { TableHead } from '../components/TableHead';
-import { TableContent } from '../components/TableContent';
 import { Skeleton } from 'ui/components/shared/Skeleton';
 
 
 
 
 const meta: Meta<typeof Table> = {
-    title: 'widgets/information/Table',
+    title: 'widgets/Table',
     component: Table,
     decorators: [
         (Story) => (
@@ -55,7 +49,7 @@ const onlinePlayers = [
 
 export const ScrollableHorizontalVertical: Story = {
     args: {
-      caption: <Text font='xl' >Online players</Text>,
+      caption: <Text size='xl' >Online players</Text>,
       heads:[
         {columnId: 'id', columnName: 'ID', width: 50},
         {columnId: 'avatar', columnName: 'Ava', width: 30},
@@ -83,7 +77,7 @@ export const ScrollableHorizontalVertical: Story = {
 
 export const ScrollableHorizontal: Story = {
   args: {
-    caption: <Text font='xl' >Online players</Text>,
+    caption: <Text size='xl' >Online players</Text>,
     heads:[
       {columnId: 'id', columnName: 'ID', width: 50},
       {columnId: 'avatar', columnName: 'Ava', width: 30},
@@ -111,7 +105,7 @@ export const ScrollableHorizontal: Story = {
 
 export const ScrollableVertical: Story = {
   args: {
-    caption: <Text font='xl' >Online players</Text>,
+    caption: <Text size='xl' >Online players</Text>,
     heads:[
       {columnId: 'id', columnName: 'ID', width: 50},
       {columnId: 'avatar', columnName: 'Ava', width: 30},

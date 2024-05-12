@@ -2,14 +2,14 @@ import React from 'react';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
+import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 
 import { Sidebar } from './Sidebar';
 import { Icon } from 'ui/components/shared/Icon';
 import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Sidebar> = {
-    title: 'widgets/information/Sidebar',
+    title: 'widgets/Sidebar',
     component: Sidebar,
     decorators: [
         (Story) => (

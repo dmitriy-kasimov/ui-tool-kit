@@ -32,7 +32,7 @@ export const Tape: FC<TapeProps> = (props) => {
     return (
         <VStack justify="start" className={classNames(cls.Tape, {}, [className])}>
             <HStack max justify="center" className={cls.header}>
-                <Text font='xl'>
+                <Text size='xl'>
                     {title}
                 </Text>
             </HStack>

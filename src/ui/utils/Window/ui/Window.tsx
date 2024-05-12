@@ -5,7 +5,7 @@ import  cls  from './Window.module.scss';
 import { Portal } from 'ui/utils/Portal/Portal';
 
 import { Overlay } from 'ui/utils/Overlay/Overlay';
-import { Sidebar } from 'ui/widgets/navigation/Sidebar';
+import { Sidebar } from 'ui/widgets/Sidebar';
 import { AlignContent, JustifyContent, WindowProps } from '../types/WindowProps';
 import { useModal } from 'lib/hooks/useModal/useModal';
 import { ANIMATION_DELAY } from 'styles/effects/anims';
