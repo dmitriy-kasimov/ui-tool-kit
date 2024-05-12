@@ -7,7 +7,6 @@ import { decoratorBackground } from '../../../../../.storybook/decorators/decora
 import { Window } from './Window';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { HStack, VStack } from 'ui/components/shared/Stack';
-import TestIcon from 'styles/assets/icons/success.svg'
 import { Icon } from 'ui/components/shared/Icon';
 import { Text } from 'ui/components/shared/Text';
 
@@ -49,9 +48,9 @@ export const SmallWithSidebar: Story = {
   args: {
       isOpen:true,
       sidebar: [
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
+        {desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+        {desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+        {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
         <VStack gap='32'>
@@ -107,9 +106,9 @@ export const FullscreenWithSidebar: Story = {
       isOpen:true,
       fullscreen: true,
       sidebar: [
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
-        {Icon: (<Icon Svg={TestIcon}/>), desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
+        {desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+        {desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+        {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
           <VStack gap='32'>
