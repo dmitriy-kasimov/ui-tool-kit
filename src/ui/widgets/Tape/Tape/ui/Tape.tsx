@@ -1,8 +1,5 @@
 import React, {FC, useMemo} from "react"
 import { TapeProps } from "../types/TapeProps"
-import { Text } from "ui/components/shared/Text"
-
-
 import cls from './Tape.module.scss'
 import { classNames } from "lib/classNames/classNames"
 import { HStack, VStack } from "ui/components/shared/Stack"
@@ -11,7 +8,7 @@ import Post from "../../Post/ui/Post"
 export const Tape: FC<TapeProps> = (props) => {
     
     const {
-        title, 
+        header, 
         posts, 
         className = '',
         maxHeightContent = '700px',
@@ -32,9 +29,7 @@ export const Tape: FC<TapeProps> = (props) => {
     return (
         <VStack justify="start" className={classNames(cls.Tape, {}, [className])}>
             <HStack max justify="center" className={cls.header}>
-                <Text size='xl'>
-                    {title}
-                </Text>
+               {header}
             </HStack>
             <div  
                 className={cls.content} 

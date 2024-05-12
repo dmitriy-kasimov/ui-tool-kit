@@ -5,7 +5,9 @@ Usage example:
 ```typescript jsx
 import { 
     Table,
-    TableBodyRow
+    TableBodyRow,
+    Skeleton,
+    Text
 } from '@tr271v0r/ui-tool-kit'
 
 const onlinePlayers = [

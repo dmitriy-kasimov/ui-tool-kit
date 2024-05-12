@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import { PostType } from "../../Post/types/PostProps";
 
 export interface TapeProps{
-    title: string;
+    header: ReactElement;
     posts: PostType[];
 
     maxHeightContent?: string;

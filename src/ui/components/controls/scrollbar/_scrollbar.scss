@@ -11,9 +11,7 @@
 }
 
 ::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 2.5px rgba(0,0,0,0.5);
-
-    border: 2px solid rgba(255,255,255, 0.25);
+    background-color: var(--uikit-controls-bg-color);
     border-radius: var(--uikit-border-radius);
 }
 
@@ -21,7 +19,7 @@
     @include controls.defaultStyles;
 
     border-radius: var(--uikit-border-radius);
-    background: var(-uikit-controls-bg);
+    background-color: var(--uikit-theme-main-color);
 }
 
 ::-webkit-scrollbar-corner {

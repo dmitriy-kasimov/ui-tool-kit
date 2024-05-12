@@ -70,14 +70,14 @@ const posts: PostType[] = [
 
 export const Default: Story = {
     args: {
-      title: 'The latest news',
+      header: <Text size='xl'>The latest news</Text>,
       posts: posts
     },
 };
 
 export const Empty: Story = {
   args: {
-    title: 'The latest news',
+    header: <Text size='xl'>The latest news</Text>,
     posts: []
   },
 };
