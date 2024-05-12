@@ -1,6 +1,6 @@
 ## Button
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { Button } from '@tr271v0r/ui-tool-kit'

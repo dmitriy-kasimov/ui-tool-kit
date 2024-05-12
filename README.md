@@ -1,56 +1,60 @@
-## Сборка проекта
+## The purpose of this library
 
-```
+This library was created for using it inside frontend apps of servers GTA 5.
 
-npm install - установка всех зависимостей
-npm run build:prod - сборка в production режиме
-npm run build:dev - сборка в development режиме (+ запускается bundle analyzer)
-npm run storybook:build - сборка всех *.stories.tsx
+## Setup
 
-```
+- `npm install --save-dev @tr271v0r/ui-tool-kit@latest` - add the lib into your react app.
 
-----
+## Build of the project
 
-## Запуск проекта
+- `npm install` - install the all node modules from package.json;
+- `npm run build:prod` - build in production mode;
+- `npm run build:dev` - build in development mode (+ run parallel process bundle analyzer);
+- `npm run storybook:build` - build the all stories for each UI-component.
 
-- `npm run storybook` - запуск storybook (витрина UI-компонентов)
+## Run the storybook
 
-## Архитектура проекта
+- `npm run storybook` - run the showcase for all UI-components.
 
-Все UI-компоненты подразделяются на:
+## UI-components
 
-## компоненты
+### components
 
-- [Disclosure](/src/ui/components/controls/accordions/Disclousure/readme.md)
-- [Button](/src/ui/components/controls/buttons/Button/readme.md)
-- [Checkbox](/src/ui/components/controls/inputs/Checkbox/readme.md)
-- [RadioGroup](/src/ui/components/controls/inputs/RadioGroup/readme.md)
-- [Slider](/src/ui/components/controls/inputs/Slider/readme.md)
-- [Switcher](/src/ui/components/controls/inputs/Switcher/readme.md)
-- [TextArea](/src/ui/components/controls/inputs/TextArea/readme.md)
-- [TextField](/src/ui/components/controls/inputs/TextField/readme.md)
-- [Link](/src/ui/components/controls/links/Link/readme.md)
-- [Dropdown](/src/ui/components/controls/popups/components/Dropdown/readme.md)
-- [ListBox](/src/ui/components/controls/popups/components/ListBox/readme.md)
-- [Popover](/src/ui/components/controls/popups/components/Popover/readme.md)
-- [AppImage](/src/ui/components/shared/AppImage/readme.md)
-- [Icon](/src/ui/components/shared/Icon/readme.md)
-- [Skeleton](/src/ui/components/shared/Skeleton/readme.md)
-- [Stack](/src/ui/components/shared/Stack/readme.md)
-- [Text](/src/ui/components/shared/Text/readme.md)
+- [Disclosure](/docs/ui-components/controls/Disclosure.md)
+- [Button](/docs/ui-components/controls/Button.md)
+- [Checkbox](/docs/ui-components/controls/Checkbox.md)
+- [RadioGroup](/docs/ui-components/controls/RadioGroup.md)
+- [Slider](/docs/ui-components/controls/Slider.md)
+- [Switcher](/docs/ui-components/controls/Switcher.md)
+- [TextArea](/docs/ui-components/controls/TextArea.md)
+- [TextField](/docs/ui-components/controls/TextField.md)
+- [Link](/docs/ui-components/controls/Link.md)
+- [Dropdown](/docs/ui-components/controls/Dropdown.md)
+- [ListBox](/docs/ui-components/controls/ListBox.md)
+- [Popover](/docs/ui-components/controls/Popover.md)
+- [AppImage](/docs/ui-components/shared/AppImage.md)
+- [Icon](/docs/ui-components/shared/Icon.md)
+- [Skeleton](/docs/ui-components/shared/Skeleton.md)
+- [Stack](/docs/ui-components/shared/Stack.md)
+- [Text](/docs/ui-components/shared/Text.md)
 
-## виджеты
+### widgets
 
-- [ProgressBar](/src/ui/widgets/information/ProgressBar/readme.md)
-- [Table](/src/ui/widgets/information/Table/readme.md)
-- [Tape](/src/ui/widgets/information/Tape/readme.md)
-- [Sidebar](/src/ui/widgets/navigation/Sidebar/readme.md)
-- [Card](/src/ui/widgets/shared/Card/readme.md)
+- [ProgressBar](/docs/ui-components/widgets/ProgressBar.md)
+- [Table](/docs/ui-components/widgets/Table.md)
+- [Tape](/docs/ui-components/widgets/Tape.md)
+- [Sidebar](/docs/ui-components/widgets/Sidebar.md)
+- [Card](/docs/ui-components/widgets/Card.md)
 
-## утилиты
+### utils
 
-- [Alert](/src/ui/utils/Alert/readme.md)
-- [Modal](/src/ui/utils/Modal/readme.md)
-- [ModalConfirm](/src/ui/utils/ModalConfirm/readme.md)
-- [Notification](/src/ui/utils/Notification/readme.md)
-- [Window](/src/ui/utils/Window/readme.md)
+- [Alert](/docs/ui-components/utils/Alert.md)
+- [Modal](/docs/ui-components/utils/Modal.md)
+- [ModalConfirm](/docs/ui-components/utils/ModalConfirm.md)
+- [Notification](/docs/ui-components/utils/Notification.md)
+- [Window](/docs/ui-components/utils/Window.md)
+
+## Dynamic names classes for elements
+
+- [classNames](/docs/libs/classNames.md)

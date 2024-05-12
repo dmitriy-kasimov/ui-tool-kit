@@ -1,6 +1,6 @@
 ## ProgressBar
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { 

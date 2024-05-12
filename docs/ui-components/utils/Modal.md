@@ -1,10 +1,10 @@
 ## Modal
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { 
-    ModalConfirm,
+    Modal,
     Text,
     VStack,
     Skeleton
@@ -21,13 +21,21 @@ export function App(){
     }
 
     return (
-       <ModalConfirm 
+       <Modal 
             isOpen={modal} 
             lazy 
             onClose={onCloseModal}
             portalElement={document.getElementById('root') ?? document.body} 
         >
-            <Text>Вы уверены, что хотите выполнить данное действие?</Text>
+            <Text>
+                <VStack gap="8" align="center">
+                    <Skeleton width={100} height={100} border="50%"/>
+                    <Skeleton width={150} height={40}/>
+                    <Skeleton width={150} height={40}/>
+                    <Skeleton width={150} height={40}/>
+                    <div style={{width:'100px', height: '100px', background: 'red'}}></div>
+                </VStack>
+            </Text>
         </Modal>
     )
 }

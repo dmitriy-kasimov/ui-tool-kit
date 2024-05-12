@@ -1,6 +1,6 @@
 ## Tape
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { 

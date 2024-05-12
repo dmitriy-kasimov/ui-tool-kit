@@ -1,6 +1,6 @@
 ## Window
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { 
@@ -8,7 +8,14 @@ import {
     Text,
     VStack,
     Skeleton,
+    SidebarItemType
 } from '@tr271v0r/ui-tool-kit'
+
+ const sidebarItems: SidebarItemType[] = [
+    { desciption: <Text font="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
+    { desciption: <Text font="xl">Link2</Text>, onClick: () => console.log('Click on item 2') },
+    { desciption: <Text font="xl">Link3</Text>, onClick: () => console.log('Click on item 3') },
+]
 
 export function App(){
     const [openWindow, setWindowIsOpen] = useState(false);
@@ -33,11 +40,7 @@ export function App(){
             </VStack>
             }
             lazy
-            sidebar={ [
-                { desciption: <Text font="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
-                { desciption: <Text font="xl">Link2</Text>, onClick: () => console.log('Click on item 2') },
-                { desciption: <Text font="xl">Link3</Text>, onClick: () => console.log('Click on item 3') },
-            ]}
+            sidebar={sidebarItems}
             fullscreen
             portalElement={document.getElementById('root') ?? document.body} 
         />

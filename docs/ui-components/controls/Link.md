@@ -1,6 +1,6 @@
 ## Link
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { Text, Link } from '@tr271v0r/ui-tool-kit'

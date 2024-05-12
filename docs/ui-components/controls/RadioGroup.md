@@ -1,6 +1,6 @@
 ## RadioGroup
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { useState } from "react";

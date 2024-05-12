@@ -1,6 +1,6 @@
 ## Alert
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { MutableRefObject, useEffect, useRef, useState } from "react";

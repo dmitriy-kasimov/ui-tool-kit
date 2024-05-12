@@ -1,6 +1,6 @@
 ## classNames
 
-Пример использования:
+Usage example:
 
 (CustomButton.tsx)
 

@@ -1,6 +1,6 @@
 ## Disclosure
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";

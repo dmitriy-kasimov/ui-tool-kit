@@ -1,6 +1,6 @@
 ## Table
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { 

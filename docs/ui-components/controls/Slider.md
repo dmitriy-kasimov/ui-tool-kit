@@ -1,6 +1,6 @@
 ## Slider
 
-Пример использования:
+Usage example:
 
 ```typescript jsx
 import { Slider } from '@tr271v0r/ui-tool-kit'
