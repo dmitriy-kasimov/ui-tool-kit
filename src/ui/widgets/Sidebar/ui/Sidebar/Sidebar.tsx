@@ -22,7 +22,7 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
 
   return (
     <div className={classNames(cls.Sidebar, {}, [className])}>
-        <VStack role="navigation" gap="16" max>
+        <VStack role="navigation" gap="m" max>
             {itemsList}
         </VStack>
     </div>

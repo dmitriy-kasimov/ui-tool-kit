@@ -20,7 +20,7 @@ import {
     {
         title: 'The rule #2 [main rule]', 
         description: (
-            <VStack gap='8' max>
+            <VStack gap='s' max>
                 <Skeleton width={150} height={40}/>
                 <Skeleton width={250} height={30}/>
                 <Skeleton width={250} height={30}/>

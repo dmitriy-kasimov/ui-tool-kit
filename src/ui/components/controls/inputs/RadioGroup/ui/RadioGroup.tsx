@@ -17,7 +17,7 @@ const RadioGroup: FC<RadioGroupProps> = memo(({
         [cls.disabled]: disabled
     }
     return (
-        <VStack gap={'8'} className={classNames(cls.RadioGroup, mods, [className])}>
+        <VStack gap="s" className={classNames(cls.RadioGroup, mods, [className])}>
             {options?.map(option => 
                 <RadioGroupOption 
                     key={option.value}

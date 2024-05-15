@@ -34,7 +34,7 @@ export const Warninng: Story = {
        item: {
         title: 'Test',
         body: (
-            <VStack max gap='8'>
+            <VStack max gap='s'>
                 <Skeleton width={400} height={16}/>
                 <Skeleton width={400} height={16}/>
             </VStack>

@@ -29,6 +29,7 @@ export const Window: FC<WindowProps> = memo((props) => {
         content,
         isOpen=true,
         onClose,
+        closable = true,
         lazy = true,
         fullscreen = false,
         alignContent = 'center',
@@ -45,6 +46,7 @@ export const Window: FC<WindowProps> = memo((props) => {
         animationDelay: ANIMATION_DELAY,
         onClose,
         isOpen,
+        closable
     });
 
     const mods: Mods = {
@@ -62,7 +64,7 @@ export const Window: FC<WindowProps> = memo((props) => {
     return (
         <Portal element={portalElement}>
             <div className={classNames(cls.Window, mods, [className, ])}>
-                <Overlay onClick={close} />
+                <Overlay onClick={closable ? close : () => {}} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
                     {sidebar ?
                         (<Sidebar 

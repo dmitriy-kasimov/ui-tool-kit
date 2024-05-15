@@ -34,7 +34,7 @@ export const Normal: Story = {
     args: {
       onClose: () => {},
       item:  {title: 'Title', id: '1', body: (
-        <VStack gap='8' align='center'>
+        <VStack gap='s' align='center'>
             <Skeleton width={60} height={60} border='50%'/>
             <Skeleton width={200} height={30}/>
             <Skeleton width={200} height={30}/>

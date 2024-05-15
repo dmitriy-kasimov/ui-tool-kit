@@ -27,7 +27,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
             <HStack 
                 className={classNames(cls.SidebarItem, {}, [className])} 
                 max 
-                gap='8'
+                gap='s'
             >
                 {item.Icon}
                 {item.desciption}

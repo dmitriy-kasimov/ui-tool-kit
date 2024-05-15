@@ -5,10 +5,11 @@ import {
 interface UseModalProps{
     isOpen?: boolean;
     onClose?: () => void;
+    closable?: boolean;
     animationDelay: number;
 }
 
-export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
+export function useModal({ animationDelay, isOpen, onClose, closable }: UseModalProps) {
     const [isClosing, setIsClosing] = useState<boolean>(false);
     const [isMounted, setIsMounted] = useState<boolean>(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
@@ -38,13 +39,15 @@ export function useModal({ animationDelay, isOpen, onClose }: UseModalProps) {
     }, [close]);
 
     useEffect(() => {
-        if (isOpen) {
-            window.addEventListener('keydown', onKeyDown);
+        if(closable){
+            if (isOpen) {
+                window.addEventListener('keydown', onKeyDown);
+            }
+            return () => {
+                clearTimeout(timerRef.current);
+                window.removeEventListener('keydown', onKeyDown);
+            };
         }
-        return () => {
-            clearTimeout(timerRef.current);
-            window.removeEventListener('keydown', onKeyDown);
-        };
     }, [isOpen, onKeyDown]);
 
     return {

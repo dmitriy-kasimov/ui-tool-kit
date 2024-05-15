@@ -32,7 +32,7 @@ export const Popover: FC<PopoverProps> = memo((props) => {
             <HPopover.Panel
                 className={classNames(cls.panel, {}, menuClasses)}
             >
-                <VStack gap='8' max>
+                <VStack gap='s' max>
                     {children}
                 </VStack>
                 

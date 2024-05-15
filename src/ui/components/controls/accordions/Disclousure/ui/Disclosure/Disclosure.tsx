@@ -19,13 +19,13 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
     } = props;
     return (
         <div className={classNames(cls.Disclosure, {}, [className])} style={{maxWidth}}>
-            <VStack gap="8" max>
+            <VStack gap="s" max>
                 {items.map((item, index) => (
                     <HDisclosure key={index}>
                         {({ open }) => (
                             <>
                                 <HDisclosure.Button as={DisclosureButton} disabled={item.disabled} className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}>
-                                    <HStack gap="8" align="center" max justify="between">
+                                    <HStack gap="s" align="center" max justify="between">
                                         <Text bold size="m">{item.title}</Text>
                                         <Icon 
                                             Svg={ArrowBottom}

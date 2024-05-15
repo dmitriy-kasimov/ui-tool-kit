@@ -19,7 +19,7 @@ const RadioGroupOption: FC<RadioGroupOptionProps> = (props) => {
     }
 
     return (
-        <HStack gap="8" className={classNames(cls.RadioGroupOption, mods, [])}>
+        <HStack gap="s" className={classNames(cls.RadioGroupOption, mods, [])}>
             <input
                 className={cls.input} 
                 type="radio" 

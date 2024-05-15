@@ -27,8 +27,8 @@ export function App(){
                 </Button>
             }
         >
-            <VStack max gap="16">
-                <HStack max gap='8'>
+            <VStack max gap="m">
+                <HStack max gap='s'>
                     <Skeleton height={70} width={70} border='50%' />
                     <Button>Avatar</Button>
                 </HStack>

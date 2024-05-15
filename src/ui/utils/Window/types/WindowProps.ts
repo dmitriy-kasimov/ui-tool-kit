@@ -11,6 +11,7 @@ export interface WindowProps {
 
     sidebar?: SidebarItemType[];
     fullscreen?: boolean;
+    closable?: boolean;
     lazy?: boolean;
 
     justifyContent?: JustifyContent; 

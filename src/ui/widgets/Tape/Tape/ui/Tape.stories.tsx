@@ -33,7 +33,7 @@ type Story = StoryObj<typeof Tape>;
 
 const posts: PostType[] = [
   {id: '1', title: 'Основной шрифт', subtitle: '04/29/2024', description: (
-    <VStack max gap="4">
+    <VStack max gap="xs">
       <Text size='m' >Шрифт Roboto основной, размер: TITLE</Text>
       <Text size='m' >Шрифт Roboto основной, размер: SUBTITLE</Text>
       <Text size='m' >Шрифт Roboto основной, размер: IMPORTANT</Text>
@@ -49,7 +49,7 @@ const posts: PostType[] = [
     </VStack>
   )},
   {id: '2', title: 'Шрифт для заголовков', subtitle: '04/29/2024', description: (
-      <VStack max gap="4">
+      <VStack max gap="xs">
         <Text size='xl' >Шрифт Roboto для заголовоков, размер: TITLE</Text>
         <Text size='xl' >Шрифт Roboto для заголовоков, размер: SUBTITLE</Text>
         <Text size='xl' >Шрифт Roboto для заголовоков, размер: IMPORTANT</Text>

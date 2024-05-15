@@ -36,7 +36,7 @@ export const SmallWithoutSidebar: Story = {
         isOpen:true,
        
         content: (
-          <VStack gap='32'>
+          <VStack gap='l'>
               <Skeleton width={300} height={200}/>
               <Skeleton width={300} height={200}/>
           </VStack>
@@ -53,7 +53,7 @@ export const SmallWithSidebar: Story = {
         {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
-        <VStack gap='32'>
+        <VStack gap='l'>
             <Skeleton width={300} height={200}/>
             <Skeleton width={300} height={200}/>
         </VStack>
@@ -66,32 +66,32 @@ export const FullscreenWithoutSidebar: Story = {
       isOpen:true,
       fullscreen: true,
       content: (
-          <VStack gap='32'>
-            <HStack gap='32'>
-              <VStack gap='32'>
+          <VStack gap='l'>
+            <HStack gap='l'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
             </HStack>
             
-            <HStack gap='32'>
-              <VStack gap='32'>
+            <HStack gap='l'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
@@ -111,32 +111,32 @@ export const FullscreenWithSidebar: Story = {
         {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
       ],
       content: (
-          <VStack gap='32'>
-            <HStack gap='32'>
-              <VStack gap='32'>
+          <VStack gap='l'>
+            <HStack gap='l'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
             </HStack>
             
-            <HStack gap='32'>
-              <VStack gap='32'>
+            <HStack gap='l'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>
-              <VStack gap='32'>
+              <VStack gap='l'>
                   <Skeleton width={300} height={200}/>
                   <Skeleton width={300} height={200}/>
               </VStack>

@@ -52,14 +52,14 @@ export const ModalConfirm: FC<ModalConfirmProps> = (props) => {
                 <div
                     className={cls.content}
                 >
-                    <VStack gap="32">
+                    <VStack gap="l">
                         <HStack max justify="center">
                             <Text>{title}</Text>
                         </HStack>
                         <HStack max align="center">
                             {children}
                         </HStack>
-                        <HStack max justify="center" gap="32">
+                        <HStack max justify="center" gap="l">
                             <Button variant="cancel" onClick={close}>
                                 <Text>Отменить</Text>
                             </Button>

@@ -28,7 +28,7 @@ export function App(){
             portalElement={document.getElementById('root') ?? document.body} 
         >
             <Text>
-                <VStack gap="8" align="center">
+                <VStack gap="s" align="center">
                     <Skeleton width={100} height={100} border="50%"/>
                     <Skeleton width={150} height={40}/>
                     <Skeleton width={150} height={40}/>

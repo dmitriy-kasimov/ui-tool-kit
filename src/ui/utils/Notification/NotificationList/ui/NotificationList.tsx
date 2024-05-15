@@ -33,7 +33,7 @@ export const NotificationList:FC<NotificationListProps> = memo((props) => {
     return (
         <VStack 
             className={classNames(cls.NotificationList, {}, [className])}
-            gap="16"
+            gap="m"
             justify="end"
         >
             {notifList()}

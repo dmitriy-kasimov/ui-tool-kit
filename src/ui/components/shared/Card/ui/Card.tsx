@@ -6,13 +6,13 @@ import cls from './Card.module.scss';
 import { CardPadding, CardProps } from '../types/CardProps';
 
 const mapPaddingToClass: Record<CardPadding, string> = {
-    '0': 'gap_0',
-    'xxs': 'gap_xxs',
-    'xs': 'gap_xs',
-    's': 'gap_s',
-    'm': 'gap_m',
-    'l': 'gap_l',
-    'xl': 'gap_xl',
+    '0': 'padding_0',
+    'xxs': 'padding_xxs',
+    'xs': 'padding_xs',
+    's': 'padding_s',
+    'm': 'padding_m',
+    'l': 'padding_l',
+    'xl': 'padding_xl',
 };
 
 export const Card = memo((props: CardProps) => {

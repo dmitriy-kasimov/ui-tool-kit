@@ -77,7 +77,7 @@ export function App(){
 
     return (
         <>
-            <VStack gap="16">
+            <VStack gap="m">
                 <Button onClick={() => {
                     setAlerts([...alerts, warnAlert]);
                 }}>

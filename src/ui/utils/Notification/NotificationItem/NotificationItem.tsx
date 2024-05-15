@@ -46,7 +46,7 @@ export const NotificationItem: FC<NotificationItemProps> = memo((props) => {
         >
             <VStack 
                 className={cls.content}
-                gap="8"
+                gap="s"
                 align="center"
             >
                 <Text size="l">{item.title ?? 'Уведомление'}</Text>

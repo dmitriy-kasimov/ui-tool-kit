@@ -15,7 +15,7 @@ import {
 const listBoxItems: ListBoxItem<string>[] = [
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
                 <Text>M1RoN</Text>
             </HStack>
         ), 
@@ -23,7 +23,7 @@ const listBoxItems: ListBoxItem<string>[] = [
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
                 <Text>Alan_Masti</Text>
             </HStack>
         ), 
@@ -31,7 +31,7 @@ const listBoxItems: ListBoxItem<string>[] = [
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
                 <Text>Le[G]ion_kirov_43rus</Text>
             </HStack>
         ), 
@@ -39,7 +39,7 @@ const listBoxItems: ListBoxItem<string>[] = [
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
                 <Text>LaRGo</Text>
             </HStack>
         ), 
@@ -47,7 +47,7 @@ const listBoxItems: ListBoxItem<string>[] = [
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
                 <Text>KonfeTK@</Text>
             </HStack>
         ), 

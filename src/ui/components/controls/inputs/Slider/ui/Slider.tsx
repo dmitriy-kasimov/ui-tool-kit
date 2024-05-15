@@ -17,7 +17,7 @@ const Slider: FC<SliderProps> = memo(({
                                 }) => {
     
   return (
-    <HStack gap="4" className={classNames('', {}, [className])}>
+    <HStack gap="xs" className={classNames('', {}, [className])}>
       <input
           className={classNames(cls.input)}
           value={value}

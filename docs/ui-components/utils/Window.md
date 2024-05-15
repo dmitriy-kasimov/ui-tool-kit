@@ -31,7 +31,7 @@ export function App(){
             isOpen={openWindow}
             onClose={onCloseWindow}
             content={
-            <VStack gap="16">
+            <VStack gap="m">
                 <HStack justify="center" max><Skeleton width={100} height={100} border="50%"/></HStack>
                 <Skeleton width={300} height={35} />
                 <Skeleton width={400} height={35} />

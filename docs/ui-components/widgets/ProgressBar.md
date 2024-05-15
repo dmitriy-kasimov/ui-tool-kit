@@ -11,7 +11,7 @@ import {
 
 export function App(){
     return (
-        <HStack max gap="16">
+        <HStack max gap="m">
             <ProgressBar 
                 max={100}
                 value={100}

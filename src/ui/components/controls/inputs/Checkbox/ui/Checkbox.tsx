@@ -15,7 +15,7 @@ const Checkbox: FC<CheckboxProps> = memo(({
                                     }) => {
    
     return(
-        <HStack gap="4" className={classNames('', {}, [className])}>
+        <HStack gap="xs" className={classNames('', {}, [className])}>
             <input
                 className={classNames(cls.input, {}, [])}
                 type="checkbox" 

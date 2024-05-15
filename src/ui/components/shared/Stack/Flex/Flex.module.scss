@@ -42,20 +42,32 @@
     flex-direction: column-reverse;
 }
 
-.gap4 {
-    gap: 4px;
+.gap0 {
+    gap: 0;
 }
 
-.gap8 {
-    gap: 8px;
+.gap_xxs {
+    gap: var(--uikit-gap-xxs);
 }
 
-.gap16 {
-    gap: 16px;
+.gap_xs {
+    gap: var(--uikit-gap-xs);
 }
 
-.gap32 {
-    gap: 32px;
+.gap_s {
+    gap: var(--uikit-gap-s);
+}
+
+.gap_m {
+    gap: var(--uikit-gap-m);
+}
+
+.gap_l {
+    gap: var(--uikit-gap-l);
+}
+
+.gap_xl {
+    gap: var(--uikit-gap-xl);
 }
 
 .max {

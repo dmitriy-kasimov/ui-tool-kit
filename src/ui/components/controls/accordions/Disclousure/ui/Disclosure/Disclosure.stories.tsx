@@ -52,7 +52,7 @@ export const TwoElem: Story = {
       },
       {
         title: 'The rule #2 [main rule]',
-        description: (<VStack gap='8' max>
+        description: (<VStack gap='s' max>
           <Skeleton width={150} height={40}/>
           <Skeleton width={250} height={30}/>
           <Skeleton width={250} height={30}/>
@@ -74,7 +74,7 @@ export const TwoElemWithDisable: Story = {
       {
         title: 'The rule #2 [main rule]',
         disabled: true,
-        description: (<VStack gap='8' max>
+        description: (<VStack gap='s' max>
           <Skeleton width={150} height={40}/>
           <Skeleton width={250} height={30}/>
           <Skeleton width={250} height={30}/>

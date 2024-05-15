@@ -35,7 +35,7 @@ export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
 
     return (
         <HStack
-            gap="4"
+            gap="xs"
         >
             {label && <Text>{label}</Text>}
             <HListBox

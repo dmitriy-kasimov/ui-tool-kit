@@ -3,7 +3,7 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Card } from './Card';
-import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
+import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Skeleton } from 'ui/components/shared/Skeleton';
 
 const meta: Meta<typeof Card> = {

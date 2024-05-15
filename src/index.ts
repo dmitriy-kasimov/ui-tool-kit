@@ -48,7 +48,7 @@ import './styles/index.scss'
     export {Sidebar} from './ui/widgets/Sidebar';
     export type {SidebarItemType} from './ui/widgets/Sidebar';
 
-    export {Card} from './ui/widgets/Card';
+    export {Card} from './ui/components/shared/Card';
 
 
 

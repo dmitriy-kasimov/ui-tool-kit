@@ -14,7 +14,7 @@ import {
 
 let firstNotification: NotificationItemType = {
     title: 'Уведомление 1', showTime: 1500, id: 'first', body: (
-        <VStack gap='8' align='center'>
+        <VStack gap='s' align='center'>
             <Skeleton width={60} height={60} border='50%'/>
             <Skeleton width={200} height={30}/>
             <Skeleton width={200} height={30}/>
@@ -25,7 +25,7 @@ let firstNotification: NotificationItemType = {
 
 let secondNotification: NotificationItemType = {
     title: 'Уведомление 2', showTime: 2500, id: 'second', body: (
-        <VStack gap='8' align='center'>
+        <VStack gap='s' align='center'>
             <Skeleton width={60} height={60} border='50%'/>
             <Skeleton width={200} height={30}/>
             <Skeleton width={200} height={30}/>
@@ -36,7 +36,7 @@ let secondNotification: NotificationItemType = {
 
 let thirdNotification: NotificationItemType = {
     title: 'Уведомление 3', showTime: 3500, id: 'third', body: (
-        <VStack gap='8' align='center'>
+        <VStack gap='s' align='center'>
             <Skeleton width={60} height={60} border='50%'/>
             <Skeleton width={200} height={30}/>
             <Skeleton width={200} height={30}/>
@@ -64,7 +64,7 @@ export function App(){
     }, [notifications])
 
     return (
-        <VStack gap="16">
+        <VStack gap="m">
             <Button onClick={() => {
                 setNotifications([...notifications, firstNotification]);
             }}>

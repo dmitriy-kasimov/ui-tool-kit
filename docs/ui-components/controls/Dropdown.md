@@ -17,7 +17,7 @@ import {
 const dropdownItems: DropdownItem[] = [
     { 
         content: (
-            <HStack gap="8">
+            <HStack gap="s">
                 <Skeleton height={30} width={30} border='50%'/> 
                 <Text>Добавить</Text>
             </HStack>
@@ -26,14 +26,14 @@ const dropdownItems: DropdownItem[] = [
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
             <Text>Изменить</Text></HStack>
         ), 
         onClick: () => console.log('Changed') 
     },
     { 
         content: (
-            <HStack gap="8"><Skeleton height={30} width={30} border='50%'/> 
+            <HStack gap="s"><Skeleton height={30} width={30} border='50%'/> 
             <Text color="error">Удалить</Text></HStack>
         ), 
         onClick: () => console.log('Removed') 
