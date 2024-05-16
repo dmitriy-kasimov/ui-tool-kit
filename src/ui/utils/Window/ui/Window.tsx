@@ -5,7 +5,6 @@ import  cls  from './Window.module.scss';
 import { Portal } from 'ui/utils/Portal/Portal';
 
 import { Overlay } from 'ui/utils/Overlay/Overlay';
-import { Sidebar } from 'ui/widgets/Sidebar';
 import { AlignContent, JustifyContent, WindowProps } from '../types/WindowProps';
 import { useModal } from 'lib/hooks/useModal/useModal';
 import { ANIMATION_DELAY } from 'styles/effects/anims';
@@ -66,13 +65,7 @@ export const Window: FC<WindowProps> = memo((props) => {
             <div className={classNames(cls.Window, mods, [className, ])}>
                 <Overlay onClick={closable ? close : () => {}} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
-                    {sidebar ?
-                        (<Sidebar 
-                            items={sidebar}
-                        />) :
-                        null
-                    }
-                    
+                    {sidebar}
                     <div className={classNames(cls.content, {}, [cls[justifyContentClass], cls[alignContentClass]])}>
                         {content}
                     </div>

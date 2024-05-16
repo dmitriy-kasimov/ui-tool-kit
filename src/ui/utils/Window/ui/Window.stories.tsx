@@ -9,6 +9,7 @@ import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { HStack, VStack } from 'ui/components/shared/Stack';
 import { Icon } from 'ui/components/shared/Icon';
 import { Text } from 'ui/components/shared/Text';
+import { Sidebar, SidebarItemType } from 'ui/widgets/Sidebar';
 
 const meta: Meta<typeof Window> = {
     title: 'utils/modal/Window',
@@ -27,6 +28,12 @@ const meta: Meta<typeof Window> = {
 
     },
 };
+
+const sidebarItems: SidebarItemType[] = [
+  {desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
+  {desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
+  {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
+];
 
 export default meta;
 type Story = StoryObj<typeof Window>;
@@ -47,11 +54,7 @@ export const SmallWithoutSidebar: Story = {
 export const SmallWithSidebar: Story = {
   args: {
       isOpen:true,
-      sidebar: [
-        {desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
-        {desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
-        {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
-      ],
+      sidebar: <Sidebar items={sidebarItems}/>,
       content: (
         <VStack gap='l'>
             <Skeleton width={300} height={200}/>
@@ -105,11 +108,7 @@ export const FullscreenWithSidebar: Story = {
   args: {
       isOpen:true,
       fullscreen: true,
-      sidebar: [
-        {desciption: <Text>Link1</Text>, onClick: ()=>{console.log('link 1 has worked!')}},
-        {desciption: <Text>Link2</Text>, onClick: ()=>{console.log('link 2 has worked!')}},
-        {desciption: <Text>Link3</Text>, onClick: ()=>{console.log('link 3 has worked!')}}
-      ],
+      sidebar: <Sidebar items={sidebarItems}/>,
       content: (
           <VStack gap='l'>
             <HStack gap='l'>
