@@ -64,6 +64,38 @@ export const TwoElem: Story = {
   },
 };
 
+export const TreeElemWithDefaultOpen: Story = {
+  args: {
+    items: [
+      {
+        title: 'The rule #1', 
+        description: (<Text>Sometnhing very looooooooooooooooong </Text>),
+        defaultOpen: true
+      },
+      {
+        title: 'The rule #2 [the main rule]',
+        description: (<VStack gap='s' max>
+          <Skeleton width={150} height={40}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={250}/>
+          <Skeleton width={250} height={30}/>
+        </VStack>),
+      },
+      {
+        title: 'The rule #3 [the second rule]',
+        description: (<VStack gap='s' max>
+          <Skeleton width={150} height={40}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={30}/>
+          <Skeleton width={250} height={250}/>
+          <Skeleton width={250} height={30}/>
+        </VStack>),
+      }
+    ]
+  },
+};
+
 export const TwoElemWithDisable: Story = {
   args: {
     items: [

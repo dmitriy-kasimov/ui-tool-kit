@@ -21,23 +21,24 @@ This library was created for using it inside frontend apps of servers GTA 5.
 
 ### components
 
-- [Disclosure](/docs/ui-components/controls/Disclosure.md)
 - [Button](/docs/ui-components/controls/Button.md)
+- [TextField](/docs/ui-components/controls/TextField.md)
+- [TextArea](/docs/ui-components/controls/TextArea.md)
 - [Checkbox](/docs/ui-components/controls/Checkbox.md)
 - [RadioGroup](/docs/ui-components/controls/RadioGroup.md)
-- [Slider](/docs/ui-components/controls/Slider.md)
 - [Switcher](/docs/ui-components/controls/Switcher.md)
-- [TextArea](/docs/ui-components/controls/TextArea.md)
-- [TextField](/docs/ui-components/controls/TextField.md)
+- [Slider](/docs/ui-components/controls/Slider.md)
 - [Link](/docs/ui-components/controls/Link.md)
+- [Disclosure](/docs/ui-components/controls/Disclosure.md)
 - [Dropdown](/docs/ui-components/controls/Dropdown.md)
 - [ListBox](/docs/ui-components/controls/ListBox.md)
 - [Popover](/docs/ui-components/controls/Popover.md)
+- [Skeleton](/docs/ui-components/shared/Skeleton.md)
+- [Text](/docs/ui-components/shared/Text.md)
+- [Card](/docs/ui-components/shared/Card.md)
+- [Stack](/docs/ui-components/shared/Stack.md)
 - [AppImage](/docs/ui-components/shared/AppImage.md)
 - [Icon](/docs/ui-components/shared/Icon.md)
-- [Skeleton](/docs/ui-components/shared/Skeleton.md)
-- [Stack](/docs/ui-components/shared/Stack.md)
-- [Text](/docs/ui-components/shared/Text.md)
 
 ### widgets
 
@@ -45,7 +46,6 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Table](/docs/ui-components/widgets/Table.md)
 - [Tape](/docs/ui-components/widgets/Tape.md)
 - [Sidebar](/docs/ui-components/widgets/Sidebar.md)
-- [Card](/docs/ui-components/widgets/Card.md)
 
 ### utils
 

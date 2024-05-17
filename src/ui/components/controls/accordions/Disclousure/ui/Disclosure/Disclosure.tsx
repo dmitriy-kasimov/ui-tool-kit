@@ -15,16 +15,21 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
     const {
         className,
         items,
-        maxWidth = '500px'
+        maxWidth = '500px',
+        minWidth = '300px',
     } = props;
     return (
-        <div className={classNames(cls.Disclosure, {}, [className])} style={{maxWidth}}>
+        <div className={classNames(cls.Disclosure, {}, [className])} style={{maxWidth, minWidth}}>
             <VStack gap="s" max>
                 {items.map((item, index) => (
-                    <HDisclosure key={index}>
+                    <HDisclosure key={index} defaultOpen={item.defaultOpen}>
                         {({ open }) => (
                             <>
-                                <HDisclosure.Button as={DisclosureButton} disabled={item.disabled} className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}>
+                                <HDisclosure.Button 
+                                    as={DisclosureButton} 
+                                    disabled={item.disabled} 
+                                    className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}
+                                >
                                     <HStack gap="s" align="center" max justify="between">
                                         <Text bold size="m">{item.title}</Text>
                                         <Icon 
