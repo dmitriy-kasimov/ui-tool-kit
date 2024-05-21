@@ -29,7 +29,6 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Switcher](/docs/ui-components/controls/Switcher.md)
 - [Slider](/docs/ui-components/controls/Slider.md)
 - [Link](/docs/ui-components/controls/Link.md)
-- [Disclosure](/docs/ui-components/controls/Disclosure.md)
 - [Dropdown](/docs/ui-components/controls/Dropdown.md)
 - [ListBox](/docs/ui-components/controls/ListBox.md)
 - [Popover](/docs/ui-components/controls/Popover.md)
@@ -46,6 +45,7 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Table](/docs/ui-components/widgets/Table.md)
 - [Tape](/docs/ui-components/widgets/Tape.md)
 - [Sidebar](/docs/ui-components/widgets/Sidebar.md)
+- [Disclosure](/docs/ui-components/widgets/Disclosure.md)
 
 ### utils
 

@@ -3,13 +3,13 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Disclosure } from './Disclosure';
-import { decoratorBackground } from '../../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
+import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { VStack } from 'ui/components/shared/Stack';
 
 const meta: Meta<typeof Disclosure> = {
-    title: 'components/controls/Disclosure',
+    title: 'widgets/Disclosure',
     component: Disclosure,
     decorators: [
       (Story) => (

@@ -1,9 +1,19 @@
-import React, {FC, memo} from "react";
+import React, {FC, ForwardedRef, forwardRef, memo} from "react";
 import cls from './Button.module.scss'
-import { ButtonProps } from "../types/ButtonProps";
+import { ButtonPadding, ButtonProps } from "../types/ButtonProps";
 import { Mods, classNames } from "lib/classNames/classNames";
 
-export const Button: FC<ButtonProps> = memo((props) => {
+const mapPaddingToClass: Record<ButtonPadding, string> = {
+    '0': 'padding_0',
+    'xxs': 'padding_xxs',
+    'xs': 'padding_xs',
+    's': 'padding_s',
+    'm': 'padding_m',
+    'l': 'padding_l',
+    'xl': 'padding_xl',
+};
+
+export const Button: FC<ButtonProps> = forwardRef((props, ref: ForwardedRef<HTMLButtonElement>) => {
     const {
         children,
         square=false,
@@ -13,6 +23,7 @@ export const Button: FC<ButtonProps> = memo((props) => {
         className = '',
         addonLeft,
         addonRight,
+        padding = 's',
         ...otherProps
     } = props;
 
@@ -22,11 +33,15 @@ export const Button: FC<ButtonProps> = memo((props) => {
         [cls.square]: square,
         [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
     }
+
+    const paddingClass = mapPaddingToClass[padding];
+
     return(
         <button 
-            className={ classNames(cls.Button, mods, [className, cls[variant]])}
+            className={ classNames(cls.Button, mods, [className, cls[variant], cls[paddingClass]])}
             type="button"
             {...otherProps}
+            ref={ref}
         >
             <div className={cls.addonLeft}>{addonLeft}</div>
             {children}

@@ -17,7 +17,7 @@ export const Dropdown:FC<DropdownProps> = memo((props) => {
 
     return (
         <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
-            <Menu.Button className={popupCls.trigger}>
+            <Menu.Button className={popupCls.trigger} as='div'>
                 {trigger}
             </Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>

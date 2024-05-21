@@ -3,7 +3,7 @@
 	@include controls.defaultStyles;
 
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 
 	padding: var(--uikit-padding-s) var(--uikit-padding-m);
@@ -77,4 +77,32 @@
 
 .square {
 	padding: 0;
+}
+
+.padding_0 {
+    padding: 0 var(--uikit-padding-xxs);
+}
+
+.padding_xxs {
+    padding: var(--uikit-padding-xxs) var(--uikit-padding-xs);
+}
+
+.padding_xs {
+    padding: var(--uikit-padding-xs) var(--uikit-padding-s);
+}
+
+.padding_s {
+    padding: var(--uikit-padding-s) var(--uikit-padding-m);
+}
+
+.padding_m {
+    padding: var(--uikit-padding-m) var(--uikit-padding-l);
+}
+
+.padding_l {
+    padding: var(--uikit-padding-l) var(--uikit-padding-xl);
+}
+
+.padding_xl {
+    padding: var(--uikit-padding-xl) var(--uikit-padding-xl);
 }

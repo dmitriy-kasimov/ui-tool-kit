@@ -1,0 +1,23 @@
+.Disclosure{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    background: var(--uikit-widgets-bg);
+    border-radius: var(--uikit-border-radius);
+
+    padding: var(--uikit-padding-s);
+}
+
+.arrow {
+    transition: all 0.3s ease-out;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+.panel {
+    padding-bottom: var(--uikit-padding-m);
+}

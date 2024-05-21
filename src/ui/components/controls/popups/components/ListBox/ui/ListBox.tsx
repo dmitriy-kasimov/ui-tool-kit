@@ -47,11 +47,11 @@ export const ListBox = memo(<T extends string>(props: ListBoxProps<T>) => {
             >
                 <HListBox.Button
                     className={cls.trigger}
+                    as={Button}
+                    addonRight={<Icon Svg={ArrowBottom} 
+                    width={24} height={24}/>}
                 >
-                    <Button disabled={readonly} addonRight={<Icon Svg={ArrowBottom} width={24} height={24}/>}>
-                        {selectedItem?.content ?? defaultValue}
-                    </Button>
-
+                    {selectedItem?.content ?? defaultValue}
                 </HListBox.Button>
                 <HListBox.Options
                     className={classNames(cls.options, {}, optionsClasses)}

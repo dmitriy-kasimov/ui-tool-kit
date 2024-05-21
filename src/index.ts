@@ -2,8 +2,8 @@ import './styles/index.scss'
 
 // components
     // controls
-    export {Disclosure} from './ui/components/controls/accordions/Disclousure';
-    export type {DisclousureItem} from './ui/components/controls/accordions/Disclousure';
+    export {Disclosure} from './ui/widgets/Disclousure';
+    export type {DisclousureItem} from './ui/widgets/Disclousure';
 
     export {Button} from './ui/components/controls/buttons/Button';
 

@@ -2,14 +2,13 @@ import React, { FC } from "react";
 import { classNames } from "lib/classNames/classNames";
 import { memo } from "react";
 import  cls  from './Disclosure.module.scss';
-import { DisclousureProps } from "../../types/DisclosureProps";
+import { DisclousureProps } from "../types/DisclosureProps";
 import { Disclosure as HDisclosure } from '@headlessui/react'
-import { HStack, VStack } from "ui/components/shared/Stack";
+import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { Icon } from "ui/components/shared/Icon/Icon";
-import ArrowDown from 'styles/assets/icons/arrowDown.svg'
-import { DisclosureButton } from "../DisclosureButton/DisclosureButton";
 import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
+import { Button } from "ui/components/controls/buttons/Button";
 
 export const Disclosure: FC<DisclousureProps> = memo((props) => {
     const {
@@ -26,19 +25,21 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                         {({ open }) => (
                             <>
                                 <HDisclosure.Button 
-                                    as={DisclosureButton} 
+                                    as={Button} 
                                     disabled={item.disabled} 
-                                    className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}
-                                >
-                                    <HStack gap="s" align="center" max justify="between">
-                                        <Text bold size="m">{item.title}</Text>
+                                    addonRight={
                                         <Icon 
                                             Svg={ArrowBottom}
                                             className={classNames(cls.arrow, {[cls.open]: open}, [])}
                                             width={32}
                                             height={32}
                                         />
-                                    </HStack>
+                                    }
+                                    padding="xxs"
+                                    fullWidth
+                                    className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}
+                                >
+                                    <Text bold size="m">{item.title}</Text>
                                 </HDisclosure.Button>
                                 <HDisclosure.Panel className={cls.panel}>
                                     {item.description}
