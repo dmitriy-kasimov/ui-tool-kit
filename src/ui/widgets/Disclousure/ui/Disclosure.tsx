@@ -7,7 +7,7 @@ import { Disclosure as HDisclosure } from '@headlessui/react'
 import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
 import { Icon } from "ui/components/shared/Icon/Icon";
-import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg'
+import ArrowBottom from 'styles/assets/icons/arrow-bottom.svg';
 import { Button } from "ui/components/controls/buttons/Button";
 
 export const Disclosure: FC<DisclousureProps> = memo((props) => {
@@ -27,6 +27,9 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                                 <HDisclosure.Button 
                                     as={Button} 
                                     disabled={item.disabled} 
+                                    addonLeft={
+                                        <Text bold size="m">{item.title}</Text>
+                                    }
                                     addonRight={
                                         <Icon 
                                             Svg={ArrowBottom}
@@ -35,11 +38,11 @@ export const Disclosure: FC<DisclousureProps> = memo((props) => {
                                             height={32}
                                         />
                                     }
-                                    padding="xxs"
+                                    padding="xs"
                                     fullWidth
                                     className={classNames(cls.DisclosureButton, {[cls.disabled]: item.disabled ?? false}, [])}
                                 >
-                                    <Text bold size="m">{item.title}</Text>
+                                    {null}
                                 </HDisclosure.Button>
                                 <HDisclosure.Panel className={cls.panel}>
                                     {item.description}

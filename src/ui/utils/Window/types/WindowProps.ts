@@ -17,4 +17,9 @@ export interface WindowProps {
     alignContent?: AlignContent;
     className?: string;
     portalElement?: HTMLElement;
+
+    minContentWidth?: string;
+    maxContentWidth?: string;
+    minContentHeight?: string;
+    maxContentHeight?: string;
 };

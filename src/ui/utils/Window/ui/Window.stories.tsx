@@ -144,3 +144,18 @@ export const FullscreenWithSidebar: Story = {
       )
   },
 };
+
+export const FixedContentSize: Story = {
+  args: {
+      isOpen:true,
+      sidebar: <Sidebar items={sidebarItems}/>,
+      minContentHeight: '600px',
+      minContentWidth: '600px',
+      content: (
+        <VStack gap='l'>
+            <Skeleton width={300} height={200}/>
+            <Skeleton width={300} height={200}/>
+        </VStack>
+     )
+  },
+};

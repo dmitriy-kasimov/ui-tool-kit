@@ -35,6 +35,10 @@ export const Window: FC<WindowProps> = memo((props) => {
         justifyContent = 'center',
         sidebar,
         portalElement,
+        minContentWidth,
+        maxContentWidth,
+        minContentHeight,
+        maxContentHeight,
     } = props;
   
     const {
@@ -66,7 +70,15 @@ export const Window: FC<WindowProps> = memo((props) => {
                 <Overlay onClick={closable ? close : () => {}} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
                     {sidebar}
-                    <div className={classNames(cls.content, {}, [cls[justifyContentClass], cls[alignContentClass]])}>
+                    <div
+                        style={{
+                            minWidth: minContentWidth, 
+                            maxWidth: maxContentWidth,
+                            minHeight: minContentHeight, 
+                            maxHeight: maxContentHeight
+                        }} 
+                        className={classNames(cls.content, {}, [cls[justifyContentClass], cls[alignContentClass]])}
+                    >
                         {content}
                     </div>
                 </div>
