@@ -67,7 +67,15 @@ export const WithoutPaddings: Story = {
 
 export const PaddingXL: Story = {
     args: {
-        padding: 'xl',
+        contentMargin: 'xl',
+        children,
+    },
+};
+
+export const Overflowed: Story = {
+    args: {
+        maxHeight: '200px',
+        maxWidth: '200px',
         children,
     },
 };

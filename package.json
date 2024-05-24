@@ -1,6 +1,6 @@
 {
   "name": "@tr271v0r/ui-tool-kit",
-  "version": "2.1.5",
+  "version": "2.1.7",
   "description": "ui tool kit for the server GTA V",
   "main": "./build/esm/index.js",
   "types": "./build/types/src",

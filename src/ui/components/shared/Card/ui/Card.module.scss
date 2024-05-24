@@ -1,3 +1,10 @@
+
+
+.Card {
+    overflow: auto;
+    margin: var(--uikit-margin-xs);
+}
+
 .normal {
     background: var(--uikit-widgets-bg-color);
 }
@@ -32,26 +39,26 @@
     padding: 0;
 }
 
-.padding_xxs {
-    padding: var(--uikit-padding-xxs);
+.margin_xxs {
+    margin: var(--uikit-margin-xxs);
 }
 
-.padding_xs {
-    padding: var(--uikit-padding-xs);
+.margin_xs {
+    margin: var(--uikit-margin-xs);
 }
 
-.padding_s {
-    padding: var(--uikit-padding-s);
+.margin_s {
+    margin: var(--uikit-margin-s);
 }
 
-.padding_m {
-    padding: var(--uikit-padding-m);
+.margin_m {
+    margin: var(--uikit-margin-m);
 }
 
-.padding_l {
-    padding: var(--uikit-padding-l);
+.margin_l {
+    margin: var(--uikit-margin-l);
 }
 
-.padding_xl {
-    padding: var(--uikit-padding-xl);
+.margin_xl {
+    margin: var(--uikit-margin-xl);
 }

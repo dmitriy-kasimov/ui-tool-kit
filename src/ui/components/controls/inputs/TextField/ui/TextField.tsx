@@ -1,14 +1,17 @@
-import React, {ChangeEvent, FC, memo, useState} from "react";
-import { TextFieldProps } from "../types/TextFieldProps";
+import React, {FC, memo, useState} from "react";
+import {TextFieldProps} from "../types/TextFieldProps";
 import cls from './TextField.module.scss'
-import { Text } from "ui/components/shared/Text";
+import {Text} from "ui/components/shared/Text";
 
 import UnmaskText from "styles/assets/icons/unmaskText.svg"
 import MaskText from "styles/assets/icons/maskText.svg"
-import { classNames } from "lib/classNames/classNames";
-import { Button } from "ui/components/controls/buttons/Button";
-import { HStack, VStack } from "ui/components/shared/Stack";
-import { Icon } from "ui/components/shared/Icon";
+import {classNames} from "lib/classNames/classNames";
+import {HStack, VStack} from "ui/components/shared/Stack";
+import {Icon} from "ui/components/shared/Icon";
+
+const sumPixels = (valuePx: string, value: number) => {
+    return (parseInt(valuePx.replace(/px/, ""))+value)+"px";
+}
 
 export const TextField: FC<TextFieldProps> = memo(props => {
     
@@ -58,7 +61,10 @@ export const TextField: FC<TextFieldProps> = memo(props => {
                     autoComplete="off"
                     spellCheck={false}
                     disabled={disabled}
-                    style={{width: inputWidth}}
+                    style={{width: masked?
+                            inputWidth :
+                            sumPixels(inputWidth, 24)
+                    }}
                     {...otherProps}
                 />
                 <label 
