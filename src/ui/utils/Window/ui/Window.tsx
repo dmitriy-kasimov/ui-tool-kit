@@ -39,6 +39,7 @@ export const Window: FC<WindowProps> = memo((props) => {
         maxContentWidth,
         minContentHeight,
         maxContentHeight,
+        blur = false
     } = props;
   
     const {
@@ -68,7 +69,7 @@ export const Window: FC<WindowProps> = memo((props) => {
         <Portal element={portalElement}>
             <div className={classNames(cls.Window, mods, [className, ])}>
                 <Overlay onClick={closable ? close : () => {}} />
-                <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen}, [])}>
+                <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen, [cls.blur]: blur}, [])}>
                     {sidebar}
                     <div
                         style={{

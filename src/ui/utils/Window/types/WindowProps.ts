@@ -22,4 +22,6 @@ export interface WindowProps {
     maxContentWidth?: string;
     minContentHeight?: string;
     maxContentHeight?: string;
+
+    blur?: boolean;
 };
