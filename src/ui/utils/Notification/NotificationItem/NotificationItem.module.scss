@@ -4,6 +4,7 @@
     z-index: -1;
     opacity: 0;
     pointer-events: none;
+
 }
 
 .content {
@@ -18,8 +19,12 @@
     z-index: var(--uikit-utils-notification-z-index);
     //z-index: var(--uikit-utils-z-index);
 
+
     .content {
         @include anims.utilOpened;
+        padding: var(--uikit-padding-xs) var(--uikit-padding-m);
+        max-width: 420px;
+        width: 100%;
     }
 }
 

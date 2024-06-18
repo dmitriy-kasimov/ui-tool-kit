@@ -8,6 +8,7 @@ import {NotificationItem} from './NotificationItem';
 import TestIcon from 'styles/assets/icons/success.svg'
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { VStack } from 'ui/components/shared/Stack';
+import {Text} from "ui/components/shared/Text";
 
 const meta: Meta<typeof NotificationItem> = {
     title: 'utils/notify/NotificationItem',
@@ -30,7 +31,7 @@ const meta: Meta<typeof NotificationItem> = {
 export default meta;
 type Story = StoryObj<typeof NotificationItem>;
 
-export const Normal: Story = {
+export const WithContent: Story = {
     args: {
       onClose: () => {},
       item:  {title: 'Title', id: '1', body: (
@@ -41,5 +42,14 @@ export const Normal: Story = {
             <Skeleton width={200} height={30}/>
         </VStack>
       )}
+    },
+};
+
+export const WithText: Story = {
+    args: {
+        onClose: () => {},
+        item:  {title: 'Title', id: '1', body: (
+               <Text>You are successfully logged! Date: 19:55 06/18/2024</Text>
+        )}
     },
 };
