@@ -8,6 +8,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: var(--uikit-utils-overlay-z-index);
     cursor: pointer;
+}
+.z-index_modal{
+    z-index: var(--uikit-utils-modal-overlay-z-index);
+}
+.z-index_window{
+    z-index: var(--uikit-utils-overlay-z-index);
 }

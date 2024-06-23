@@ -68,7 +68,7 @@ export const Window: FC<WindowProps> = memo((props) => {
     return (
         <Portal element={portalElement}>
             <div className={classNames(cls.Window, mods, [className, ])}>
-                <Overlay onClick={closable ? close : () => {}} />
+                <Overlay type={'window'} onClick={closable ? close : () => {}} />
                 <div className={classNames(cls.layout, {[cls.fullscreen]: fullscreen, [cls.blur]: blur}, [])}>
                     {sidebar}
                     <div
