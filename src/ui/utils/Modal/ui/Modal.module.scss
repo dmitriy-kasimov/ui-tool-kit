@@ -30,7 +30,7 @@
 .opened {
     pointer-events: auto;
     opacity: 1;
-    z-index: var(--uikit-utils-z-index);
+    z-index: var(--uikit-utils-modal-z-index);
 
     .content {
         @include anims.utilOpened;
