@@ -27,16 +27,39 @@ const meta: Meta<typeof TextField> = {
 export default meta;
 type Story = StoryObj<typeof TextField>;
 
-export const TextAreaDefault: Story = {
+export const Default: Story = {
+    args: {
+        label: 'Describe your problem',
+        placeholder: 'Placeholder',
+    },
+};
+
+export const WithLeftAddon: Story = {
     args: {
         label: 'Describe your problem',
         placeholder: 'Suus',
+        addonLeft: (<Skeleton width={32} height={32} border={'50%'}/>),
+    },
+};
+
+export const WithRightAddon: Story = {
+    args: {
+        label: 'Describe your problem',
+        placeholder: 'Placeholder',
+        addonRight: (<Skeleton width={32} height={32} border={'50%'}/>),
+    },
+};
+
+export const WithBothAddons: Story = {
+    args: {
+        label: 'Describe your problem',
+        placeholder: 'Placeholder',
         addonLeft: (<Skeleton width={32} height={32} border={'50%'}/>),
         addonRight: (<Skeleton width={32} height={32} border={'50%'}/>),
     },
 };
 
-export const TextAreaDisabled: Story = {
+export const Disabled: Story = {
     args: {
         label: 'Describe your problem',
         disabled: true
