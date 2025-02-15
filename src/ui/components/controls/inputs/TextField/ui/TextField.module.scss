@@ -1,76 +1,36 @@
-// @use 'styles/effects/shadows';
 @use '../../../controls';
 
-.eyeButton{
-    fill: var(--uikit-theme-main-color);
-
-    &:hover{
-        @include controls.hover;
-    }
-    &:active{
-        @include controls.active;
-    }
+.fullWidth {
+    width: 100%;
 }
 
-.disabled{
-    @include controls.disabled;
+.disabled,
+.readonly {
+    opacity: 0.7;
 }
 
-.background{
+.wrapper {
     @include controls.defaultStyles;
     &:hover{
-        @include controls.hover;
+        @include controls.hover
     }
-
+    background-clip: padding-box;
+    padding: 0.25rem 0.25rem;
     border-radius: var(--uikit-border-radius);
-    background: var(--uikit-controls-bg);
-    padding: var(--uikit-padding-xxs) var(--uikit-padding-s);
-}
 
-.field {
-    position: relative;
-
-    .label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        padding-top: 0.2rem;
-        pointer-events: none;
-        border: 1px solid transparent;
-        transform-origin: 0 0;
-        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
-    }
-}
-
-.input{
-    background-color: transparent;
-
-    border: none;
-
-    height: calc(3rem);
-    //line-height: 2.25;
-
-   
-    &:focus{
+    .input {
+        background-color: transparent;
+        border: none;
         outline: none;
+        display: block;
+        padding: 0.15rem 0.35rem;
+        appearance: none;
+        border-radius: 4px;
+        box-shadow: inset -1em 0 0.5em rgba(0,0,0, 0.2);
     }
-}
 
-
-.input::-moz-placeholder {
-    color: transparent;
-}
-.input::placeholder {
-    color: transparent;
-}
-.input:focus,
-.input:not(:placeholder-shown) {
-    // padding-top: 1.625rem;
-    padding-top: 1rem;
-}
-.input:focus~.label,
-.input:not(:placeholder-shown)~.label {
-    opacity: .65;
-    transform: scale(.85) translateY(-.2rem) translateX(.15rem);
+    .input::placeholder {
+        color: #212529;
+        opacity: 0.4;
+    }
 }

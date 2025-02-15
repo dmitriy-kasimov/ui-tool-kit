@@ -53,14 +53,8 @@ import './styles/index.scss'
 
 
 // utils
-export {Alert} from './ui/utils/Alert/index';
-export type {AlertItemType} from './ui/utils/Alert/index';
-
 export {Modal} from './ui/utils/Modal/index';
 export {ModalConfirm} from './ui/utils/ModalConfirm/index';
-
-export {NotificationList} from './ui/utils/Notification/index';
-export type {NotificationItemType} from './ui/utils/Notification/index';
 
 export {Window} from './ui/utils/Window/index';
 

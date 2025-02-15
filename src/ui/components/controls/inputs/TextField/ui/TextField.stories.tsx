@@ -4,15 +4,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextField } from '../index';
 import { decoratorBackground } from '../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Text } from 'ui/components/shared/Text';
+import {Skeleton} from "ui/components/shared/Skeleton";
 
 const meta: Meta<typeof TextField> = {
     title: 'components/controls/TextField',
     component: TextField,
     decorators: [
-      (Story) => (
-        decoratorBackground(Story)
-      )
+        (Story) => (
+            decoratorBackground(Story)
+        )
     ],
     parameters: {
         layout: 'centered',
@@ -27,26 +27,18 @@ const meta: Meta<typeof TextField> = {
 export default meta;
 type Story = StoryObj<typeof TextField>;
 
-export const TextFieldDefault: Story = {
+export const TextAreaDefault: Story = {
     args: {
-        label: 'Ur name',
-        limit: 10,
-        
+        label: 'Describe your problem',
+        placeholder: 'Suus',
+        addonLeft: (<Skeleton width={32} height={32} border={'50%'}/>),
+        addonRight: (<Skeleton width={32} height={32} border={'50%'}/>),
     },
 };
 
-export const TextFieldDisabled: Story = {
-  args: {
-      label: 'Ur name',
-      limit: 10,
-      disabled: true
-  },
-};
-
-export const TextFieldMask: Story = {
-  args: {
-      label: 'Ur pass',
-      limit: 32,
-      masked: true,
-  },
+export const TextAreaDisabled: Story = {
+    args: {
+        label: 'Describe your problem',
+        disabled: true
+    },
 };

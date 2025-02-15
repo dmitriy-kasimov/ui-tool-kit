@@ -1,86 +1,46 @@
-import React, {FC, memo, useState} from "react";
-import {TextFieldProps} from "../types/TextFieldProps";
+import React, { FC, memo } from 'react'
+
 import cls from './TextField.module.scss'
-import {Text} from "ui/components/shared/Text";
-
-import UnmaskText from "styles/assets/icons/unmaskText.svg"
-import MaskText from "styles/assets/icons/maskText.svg"
-import {classNames} from "lib/classNames/classNames";
-import {HStack, VStack} from "ui/components/shared/Stack";
-import {Icon} from "ui/components/shared/Icon";
-
-const sumPixels = (valuePx: string, value: number) => {
-    return (parseInt(valuePx.replace(/px/, ""))+value)+"px";
-}
+import { TextFieldProps } from '../model/types/index'
+import {classNames, Mods} from "lib/classNames/classNames";
+import {HStack} from "ui/components/shared/Stack";
 
 export const TextField: FC<TextFieldProps> = memo(props => {
-    
     const {
-        value,     
+        value,
         onChange,
-        
+
         label,
-        limit,
+        placeholder,
 
-        disabled=false,
-        masked = false,
+        disabled = false,
+        readOnly= false,
+        addonLeft,
+        addonRight,
 
-        inputWidth = '200px',
-
-        className = '',
+        className,
+        fullWidth = false,
         ...otherProps
-    } = props;
+    } = props
 
-    const [type, setType] = useState<string>(masked ? 'password' : 'text');
-    const switchMask = () =>{
-        setType( type === 'text' ? 'password' : 'text');
+    const mods: Mods = {
+        [cls.fullWidth!]: fullWidth,
+        [cls.disabled!]: disabled,
+        [cls.readonly!]: readOnly
     }
 
-    const EyeButtonProps = {
-        clickable: true, 
-        onClick: switchMask, 
-        width: 24, 
-        height:24, 
-    };
-
-    return(
-        <HStack 
-            justify="between"
-            align="center"
-            className={classNames(cls.background, {[cls.disabled]: disabled}, [className])}
-        >
-            <VStack className={cls.field}>
-                <input 
-                    className={cls.input}
-                    value={value}
-                    onChange={e => onChange(e.target.value)}
-                    type={type} 
-                    maxLength={limit}
-                    id={label}
-                    placeholder=''
-                    autoComplete="off"
-                    spellCheck={false}
-                    disabled={disabled}
-                    style={{width: masked?
-                            inputWidth :
-                            sumPixels(inputWidth, 24)
-                    }}
-                    {...otherProps}
-                />
-                <label 
-                    className={cls.label}
-                    htmlFor={label}
-                >
-                    <Text size="s">
-                        {label}
-                    </Text>
-                </label>
-            </VStack>
-            {masked && (
-                type === 'text' ?
-                    <Icon Svg={MaskText} className={cls.eyeButton} {...EyeButtonProps}/> :
-                    <Icon Svg={UnmaskText} className={cls.eyeButton}  {...EyeButtonProps}/>        
-            )}
+    return (
+        <HStack gap={'xs'} className={classNames(cls.wrapper, mods, [className])}>
+            {addonLeft}
+            <input
+                value={value}
+                disabled={disabled}
+                onChange={e => onChange(e.target.value)}
+                className={cls.input}
+                placeholder={placeholder}
+                {...otherProps}
+            />
+            {addonRight}
         </HStack>
     )
-});
+})
