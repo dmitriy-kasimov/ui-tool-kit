@@ -22,7 +22,7 @@ This library was created for using it inside frontend apps of servers GTA 5.
 ### components
 
 - [Button](/docs/ui-components/controls/Button.md)
-- [TextField](/docs/ui-components/controls/TextField.md)
+- [TextFieldPassword](/docs/ui-components/controls/TextField.md)
 - [TextArea](/docs/ui-components/controls/TextArea.md)
 - [Checkbox](/docs/ui-components/controls/Checkbox.md)
 - [RadioGroup](/docs/ui-components/controls/RadioGroup.md)

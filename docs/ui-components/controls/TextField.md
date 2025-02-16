@@ -1,11 +1,11 @@
-## TextField
+## TextFieldPassword
 
 Usage example:
 
 ```typescript jsx
 import { useState } from "react";
 
-import { TextField } from '@tr271v0r/ui-tool-kit'
+import { TextFieldPassword } from '@tr271v0r/ui-tool-kit'
 
 export function App(){
     const [login, setLogin] = useState('');
@@ -13,13 +13,13 @@ export function App(){
 
     return (
         <>
-            <TextField 
+            <TextFieldPassword 
                 value={login}
                 onChange={setLogin}
                 label="Login"
                 limit={64}
             />
-            <TextField 
+            <TextFieldPassword 
                 value={password}
                 onChange={setPassword}
                 label="Password"
