@@ -1,4 +1,4 @@
-## Disclosure
+## Accordion
 
 Usage example:
 

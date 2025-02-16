@@ -45,7 +45,7 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Table](/docs/ui-components/widgets/Table.md)
 - [Tape](/docs/ui-components/widgets/Tape.md)
 - [Sidebar](/docs/ui-components/widgets/Sidebar.md)
-- [Disclosure](/docs/ui-components/widgets/Disclosure.md)
+- [Accordion](/docs/ui-components/widgets/Disclosure.md)
 
 ### utils
 

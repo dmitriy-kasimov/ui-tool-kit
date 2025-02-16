@@ -1,4 +1,4 @@
-## Disclosure
+## Accordion
 
 Usage example:
 
@@ -6,7 +6,7 @@ Usage example:
 import { 
     VStack,
     Skeleton,
-    Disclosure, 
+    Accordion, 
     DisclousureItem
 } from '@tr271v0r/ui-tool-kit'
 
@@ -40,7 +40,7 @@ import {
 
 export function App(){
     return (
-        <Disclosure
+        <Accordion
             items={disclosureItems}
             maxWidth="300px"
         />
