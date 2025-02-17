@@ -4,7 +4,6 @@ import { memo } from "react";
 import  cls  from './Sidebar.module.scss';
 import { SidebarProps } from "../../types/SidebarProps";
 import { VStack } from "ui/components/shared/Stack";
-import { Text } from "ui/components/shared/Text";
 import { SidebarItem } from "../SidebarItem/SidebarItem";
 
 export const Sidebar: FC<SidebarProps> = memo((props) => {

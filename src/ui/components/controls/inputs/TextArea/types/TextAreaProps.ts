@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 
 type HTMLTextAreaProps = Omit<InputHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 export interface TextAreaProps extends HTMLTextAreaProps{

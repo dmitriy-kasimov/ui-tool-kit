@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from "react";
+import React, {FC} from "react";
 import { RadioGroupOptionProps } from "./types/RadioGroupOptionProps";
 import { Text } from "ui/components/shared/Text";
 

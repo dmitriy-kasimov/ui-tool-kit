@@ -4,7 +4,7 @@ import { PostProps } from "../types/PostProps"
 import cls from './Post.module.scss'
 import { Text } from "ui/components/shared/Text"
 import { classNames } from "lib/classNames/classNames"
-import { HStack, VStack } from "ui/components/shared/Stack"
+import { HStack } from "ui/components/shared/Stack"
 
 export const Post: FC<PostProps> = (props) => {
     

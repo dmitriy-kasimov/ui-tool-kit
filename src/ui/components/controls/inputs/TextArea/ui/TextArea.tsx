@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC, TextareaHTMLAttributes, memo, useState} from "react";
+import React, { FC, memo} from "react";
 import { TextAreaProps } from "../types/TextAreaProps";
 import cls from './TextArea.module.scss'
 import { Text } from "ui/components/shared/Text";

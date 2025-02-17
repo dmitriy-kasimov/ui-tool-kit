@@ -13,11 +13,9 @@
     z-index: var(--uikit-controls-menu-z-index);
     border-radius: 12px;
     overflow: hidden;
-    //box-shadow: 4px 4px 8px var(--uikit-background-control);
 }
 
 .item {
     padding: var(--uikit-padding-s) var(--uikit-padding-m);
-
     cursor: pointer;
 }

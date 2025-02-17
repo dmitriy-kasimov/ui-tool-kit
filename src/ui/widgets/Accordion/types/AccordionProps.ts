@@ -1,9 +1,5 @@
 import {ReactNode} from "react";
 
-export type DisclousureItem = {
-
-}
-
 export interface AccordionProps {
     title: ReactNode;
     description: ReactNode;

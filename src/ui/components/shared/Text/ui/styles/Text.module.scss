@@ -1,15 +1,6 @@
 @use '../styles/classes/text_size';
-
 @use '../styles/classes/text_color';
 
-.bold{
+.bold {
     font-weight: 700;
-}
-
-//@use 'styles/effects/shadows';
-
-
-
-.Text{
-    // @include shadows.text;
 }

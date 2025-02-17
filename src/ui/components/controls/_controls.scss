@@ -1,9 +1,9 @@
 @use 'styles/effects/shadows';
 @use 'styles/effects/anims';
 
-@mixin defaultStyles{
+@mixin default-styles {
     @include anims.control;
-    
+
     user-select: none;
     cursor: pointer;
     background: var(--uikit-controls-bg);
@@ -11,20 +11,19 @@
 
 // Ивенты для элементов управления
 
-@mixin hover{
-    //background: var(--uikit-controls-bg-hover-color);
+@mixin hover {
     opacity: 0.87;
 }
 
-@mixin focus{
+@mixin focus {
     // @include shadows.control;
 }
 
-@mixin active{
-	transform: scale(0.95);
+@mixin active {
+    transform: scale(0.95);
 }
 
-@mixin disabled{
+@mixin disabled {
     pointer-events: none;
-	opacity: 0.5;
+    opacity: 0.5;
 }

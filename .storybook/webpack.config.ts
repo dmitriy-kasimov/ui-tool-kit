@@ -14,7 +14,7 @@ export default ({ config }: {config: webpack.Configuration }) => {
     config.resolve?.extensions?.push('.ts', '.tsx');
 
     if (config.module?.rules) {
-        // eslint-disable-next-line no-param-reassign
+         
         config.module.rules = config?.module?.rules?.map((rule) => {
             if (rule && typeof rule !== 'string') {
                 if (/svg/.test(rule.test as string)) {

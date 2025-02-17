@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { memo } from 'react';
 import { classNames } from 'lib/classNames/classNames';
 import cls from './Icon.module.scss';

@@ -2,25 +2,25 @@
 @use '../../../controls';
 
 .Link {
-	transition: .3s ease;
-	text-transform: uppercase;
-	cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
 
-	outline: none;
-	background: transparent;
-	box-shadow: none;
-	border: none;
+    &:hover {
+        @include controls.hover;
 
-	&:hover {
-		@include controls.hover;
-		box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
-	};
+        box-shadow: 0 2px 0 0 var(--uikit-text-color-main);
+    }
 }
 
 .Link:disabled {
-	@include controls.disabled;
+    @include controls.disabled;
 }
 
 .Link:active {
-	@include controls.active;
+    @include controls.active;
 }

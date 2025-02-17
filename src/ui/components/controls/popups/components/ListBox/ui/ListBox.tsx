@@ -1,4 +1,4 @@
-import React, { FC, memo, useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { Fragment } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import cls from './ListBox.module.scss';

@@ -1,30 +1,22 @@
-.Tape{
+.Tape {
     background: var(--uikit-widgets-bg);
-    
     border-radius: var(--uikit-border-radius);
 
-    
-
-
-    .header{
+    .header {
         border-radius: var(--uikit-border-radius);
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-
         padding: var(--uikit-padding-xs);
-    };
-    
-    .content{
+    }
+
+    .content {
         display: flex;
         flex-direction: column;
         gap: 8px;
-
         border-radius: var(--uikit-border-radius);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-
         overflow-y: auto;
-
         padding: var(--uikit-padding-xs);
-    };
-};
+    }
+}

@@ -1,18 +1,14 @@
-.Post{
+.Post {
     display: flex;
     flex-direction: column;
     gap: 8px;
-
     border: none;
-
     border-radius: var(--uikit-border-radius);
-
     background: var(--uikit-widgets-items-bg);
-
     padding: var(--uikit-padding-s);
 }
 
-.body{
+.body {
     padding: var(--uikit-padding-xxs);
 }
 

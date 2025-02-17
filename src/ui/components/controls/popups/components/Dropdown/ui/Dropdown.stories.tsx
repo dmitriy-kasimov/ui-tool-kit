@@ -3,8 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { decoratorBackground } from '../../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Dropdown } from './Dropdown';
 import { Button } from 'ui/components/controls/buttons/Button';
-import { HStack } from 'ui/components/shared/Stack';
-import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { Text } from 'ui/components/shared/Text';
 
 const meta: Meta<typeof Dropdown> = {

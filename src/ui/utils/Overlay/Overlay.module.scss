@@ -10,9 +10,11 @@
     left: 0;
     cursor: pointer;
 }
-.z-index_modal{
+
+.z-index_modal {
     z-index: var(--uikit-utils-modal-overlay-z-index);
 }
-.z-index_window{
+
+.z-index_window {
     z-index: var(--uikit-utils-overlay-z-index);
 }

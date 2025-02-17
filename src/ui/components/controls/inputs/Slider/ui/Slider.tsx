@@ -3,7 +3,7 @@ import cls from './Slider.module.scss'
 import { Text } from "ui/components/shared/Text";
 import { SliderProps } from "../types/SliderProps";
 import { classNames } from "lib/classNames/classNames";
-import { HStack, VStack } from "ui/components/shared/Stack";
+import { HStack } from "ui/components/shared/Stack";
 
 const Slider: FC<SliderProps> = memo(({
                                   value, 

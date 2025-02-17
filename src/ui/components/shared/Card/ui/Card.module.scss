@@ -1,5 +1,5 @@
-.CardLayout{
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+.CardLayout {
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 60%);
 }
 
 .Card {
@@ -7,7 +7,7 @@
     margin: var(--uikit-margin-xs);
 }
 
-.normal {
+.filled {
     background: var(--uikit-widgets-bg-color);
 }
 
@@ -15,7 +15,6 @@
     background: none;
     border: 1px solid var(--uikit-theme-main-color);
 }
-
 
 .normal {
     border-radius: var(--uikit-border-radius);
@@ -25,8 +24,6 @@
     border-radius: 40px;
 }
 
-
-
 .fullWidth {
     width: 100%;
 }
@@ -34,8 +31,6 @@
 .fullHeight {
     height: 100%;
 }
-
-
 
 .padding_0 {
     padding: 0;

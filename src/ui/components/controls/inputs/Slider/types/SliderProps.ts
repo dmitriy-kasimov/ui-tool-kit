@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 export interface SliderProps extends HTMLInputProps{

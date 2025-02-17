@@ -1,0 +1,10 @@
+# Ignore artifacts:
+dist
+coverage
+node_modules
+coverage
+.vscode
+.idea
+*.html
+*.css
+*.scss

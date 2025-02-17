@@ -3,48 +3,47 @@
 .input {
     display: none;
 }
+
 .radioButton,
-.label{
-  cursor: pointer;
+.label {
+    cursor: pointer;
 }
 
 .radioButton {
-    //@include controls.defaultStyles;
-
-    display: inline-block; 
-  
+    display: inline-block;
     border-radius: 50%;
-  
     width: 16px;
-    height: 16px; 
-
+    height: 16px;
     border: 1px solid white;
-  
     content: '';
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% 100%;   
+    background-size: 100% 100%;
 }
-  /* стили при наведении курсора на радио */
-.input:not(:disabled):not(:checked)+label:hover::before {
+
+/* стили при наведении курсора на радио */
+.input:not(:disabled):not(:checked) + label:hover::before {
     // TODO
     @include controls.hover;
 }
-  /* стили для активной радиокнопки (при нажатии на неё) */
-.input:not(:disabled):active+.radioButton {
-    @include controls.active;
-}
-  /* стили для радиокнопки, находящейся в фокусе */
-.input:focus+.radioButton {
-    // TODO  
+
+/* стили для радиокнопки, находящейся в фокусе */
+.input:focus + .radioButton {
+    // TODO
     @include controls.focus;
 }
 
-  /* стили для радиокнопки, находящейся в состоянии checked */
-.input:checked+.radioButton {
+/* стили для радиокнопки, находящейся в состоянии checked */
+.input:checked + .radioButton {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
-  /* стили для радиокнопки, находящейся в состоянии disabled */
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.input:not(:disabled):active + .radioButton {
+    @include controls.active;
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
 .disabled {
     @include controls.disabled;
 }

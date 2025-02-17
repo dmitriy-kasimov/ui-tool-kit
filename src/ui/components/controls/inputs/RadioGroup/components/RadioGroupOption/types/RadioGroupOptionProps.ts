@@ -1,4 +1,3 @@
-import { ChangeEvent } from "react";
 
 export type RadioGroupOptionType = {
     value: string;

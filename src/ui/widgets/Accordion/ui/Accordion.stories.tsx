@@ -5,8 +5,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from './Accordion';
 import { decoratorBackground } from '../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Text } from 'ui/components/shared/Text';
-import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
-import { VStack } from 'ui/components/shared/Stack';
 
 const meta: Meta<typeof Accordion> = {
     title: 'widgets/Accordion',

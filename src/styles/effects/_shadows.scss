@@ -1,51 +1,41 @@
-@mixin window{
+@mixin window {
     $shadow-color: var(--uikit-color-shadow-window);
     $indent: 10px;
-    $dispersia: 15px;
+    $dispersion: 15px;
 
-    box-shadow: 
-                0   $indent     $dispersia $shadow-color,
-                0   -1*$indent  $dispersia $shadow-color,
-                $indent     0   $dispersia $shadow-color,
-                -1*$indent  0   $dispersia $shadow-color;
+    box-shadow:
+        0   $indent     $dispersion $shadow-color,
+        0   -1 * $indent  $dispersion $shadow-color,
+        $indent     0   $dispersion $shadow-color,
+        -1 * $indent  0   $dispersion $shadow-color;
 }
 
-@mixin section{
+@mixin section {
     box-shadow: 0 10px 20px var(--uikit-color-shadow-section);
 }
-@mixin sectionBlock{
-    box-shadow: 0 8px 17px var(--uikit-color-shadow-section);
-}
-@mixin sectionElement{
-    box-shadow: 0 6px 13px var(--uikit-color-shadow-section);
-}
-@mixin sectionModificator{
-    box-shadow: 0 4px 10px var(--uikit-color-shadow-section);
-}
 
-@mixin control{
+@mixin control {
     $shadow-color: var(--uikit-color-shadow-control);
     $indent: 3px;
-    $dispersia: 5px;
+    $dispersion: 5px;
 
-    box-shadow: 
-                0   $indent     $dispersia $shadow-color,
-                0   -1*$indent  $dispersia $shadow-color,
-                $indent     0   $dispersia $shadow-color,
-                -1*$indent  0   $dispersia $shadow-color;
-
+    box-shadow:
+        0   $indent     $dispersion $shadow-color,
+        0   -1 * $indent  $dispersion $shadow-color,
+        $indent     0   $dispersion $shadow-color,
+        -1 * $indent  0   $dispersion $shadow-color;
 }
 
-@mixin text{
-    $shadow-color: rgb(0, 0, 0);
+@mixin text {
+    $shadow-color: rgb(0 0 0);
     $indent: 3px;
-    $dispersia: 3px;
+    $dispersion: 3px;
 
-    // text-shadow: 
-    //             0   $indent     $dispersia $shadow-color,
-    //             0   -1*$indent  $dispersia $shadow-color,
-    //             $indent     0   $dispersia $shadow-color,
-    //             -1*$indent  0   $dispersia $shadow-color;
+    // text-shadow:
+    //             0   $indent     $dispersion $shadow-color,
+    //             0   -1*$indent  $dispersion $shadow-color,
+    //             $indent     0   $dispersion $shadow-color,
+    //             -1*$indent  0   $dispersion $shadow-color;
 
-    text-shadow: $indent $indent $dispersia $shadow-color;
+    text-shadow: $indent $indent $dispersion $shadow-color;
 }

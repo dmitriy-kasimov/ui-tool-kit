@@ -1,81 +1,73 @@
-import React from 'react';
+import React from 'react'
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Card } from './Card';
+import { Card } from './Card'
 import { decoratorBackground } from '../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
-import { Skeleton } from 'ui/components/shared/Skeleton';
+import { Skeleton } from 'ui/components/shared/Skeleton'
 
 const meta: Meta<typeof Card> = {
     title: 'widgets/Card',
     component: Card,
-    decorators: [
-      (Story) => (
-        decoratorBackground(Story)
-      )
-    ],
+    decorators: [Story => decoratorBackground(Story)],
     parameters: {
-        layout: 'fullscreen',
+        layout: 'fullscreen'
     },
 
     tags: ['autodocs'],
-    argTypes: {
+    argTypes: {}
+}
 
-    },
-};
+export default meta
+type Story = StoryObj<typeof Card>
 
-export default meta;
-type Story = StoryObj<typeof Card>;
+const children = <Skeleton width={300} height={300} />
 
-const children = (
-    <Skeleton width={300} height={300}/>
-)
-
-export const VariantNormal: Story = {
+export const VariantFilled: Story = {
     args: {
-        variant: 'normal',
-        children,
-    },
-};
+        variant: 'filled',
+        children
+    }
+}
 
 export const VariantOutlined: Story = {
     args: {
         variant: 'outlined',
-        children,
-    },
-};
+        children
+    }
+}
 
 export const BorderNormal: Story = {
     args: {
         border: 'normal',
-        children,
-    },
-};
+        children
+    }
+}
 
 export const BorderRound: Story = {
     args: {
         border: 'round',
-        children,
-    },
-};
+        children
+    }
+}
 
 export const WithoutPaddings: Story = {
     args: {
-        children,
-    },
-};
+        children
+    }
+}
 
 export const PaddingXL: Story = {
     args: {
         contentMargin: 'xl',
-        children,
-    },
-};
+        children
+    }
+}
 
 export const Overflowed: Story = {
     args: {
         maxHeight: '200px',
         maxWidth: '200px',
-        children,
-    },
-};
+        children
+    }
+}

@@ -1,16 +1,17 @@
 // @use 'styles/effects/shadows';
 @use '../../../controls';
 
-.disabled{
+.disabled {
     @include controls.disabled;
 }
 
 .field {
-    @include controls.defaultStyles;
-    &:hover{
-        @include controls.hover
+    @include controls.default-styles;
+
+    &:hover {
+        @include controls.hover;
     }
-    
+
     border-radius: var(--uikit-border-radius);
     position: relative;
 
@@ -18,45 +19,33 @@
         position: absolute;
         top: 0;
         left: 0;
-        //height: 100%;
-        padding: 1rem .75rem;
+        padding: 1rem 0.75rem;
         pointer-events: none;
         border: 1px solid transparent;
         transform-origin: 0 0;
-        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
 }
-.input{
+
+.input {
     resize: none;
-
     background-color: transparent;
-
     border: none;
-
-    //height: calc(3.5rem + 2px);
     line-height: 1.25;
-    padding:0 0.5rem;
 
-    &:focus{
+    &:focus {
         outline: none;
     }
+
     padding-top: 1.625rem;
-    
 }
 
-
-.input::-moz-placeholder {
-    color: transparent;
-}
 .input::placeholder {
     color: transparent;
 }
-.input:focus,
-.input:not(:placeholder-shown) {
-    
-}
-.input:focus~.label,
-.input:not(:placeholder-shown)~.label {
-    opacity: .65;
-    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
 }

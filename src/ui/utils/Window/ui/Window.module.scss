@@ -18,20 +18,18 @@
     @include anims.util;
 
     display: flex;
-
     background: var(--uikit-utils-bg);
     border-radius: var(--uikit-border-radius);
-
     min-width: 30%;
     min-height: 30vh;
-
     z-index: var(--uikit-utils-z-index);
 }
+
 .blur {
     backdrop-filter: blur(7px);
 }
 
-.fullscreen{
+.fullscreen {
     width: 100%;
     height: 100vh;
 }
@@ -39,9 +37,7 @@
 .content {
     display: flex;
     width: 100%;
-
     overflow: auto;
-
     margin: var(--uikit-margin-xs);
 }
 
@@ -51,44 +47,44 @@
     z-index: var(--uikit-utils-z-index);
 
     .layout {
-        @include anims.utilOpened;
+        @include anims.util-opened;
     }
 }
 
 .isClosing {
     .layout {
-        @include anims.utilClosing;
+        @include anims.util-closing;
     }
 }
 
-.justify_start{
+.justify_start {
     justify-content: start;
 }
 
-.justify_center{
+.justify_center {
     justify-content: center;
 }
 
-.justify_end{
+.justify_end {
     justify-content: end;
 }
 
-.justify_between{
+.justify_between {
     justify-content: space-between;
 }
 
-.align_start{
+.align_start {
     align-items: start;
 }
 
-.align_center{
+.align_center {
     align-items: center;
 }
 
-.align_end{
+.align_end {
     align-items: end;
 }
 
-.align_stretch{
+.align_stretch {
     align-items: stretch;
 }

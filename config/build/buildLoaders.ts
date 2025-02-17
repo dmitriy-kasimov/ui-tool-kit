@@ -1,4 +1,3 @@
-import path from 'path';
 import webpack from 'webpack';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
 import { BuildOptions } from './types/config';

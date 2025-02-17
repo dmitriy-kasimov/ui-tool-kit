@@ -7,7 +7,6 @@ import { decoratorBackground } from '../../../../../.storybook/decorators/decora
 import { Window } from './Window';
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
 import { HStack, VStack } from 'ui/components/shared/Stack';
-import { Icon } from 'ui/components/shared/Icon';
 import { Text } from 'ui/components/shared/Text';
 import { Sidebar, SidebarItemType } from 'ui/widgets/Sidebar';
 

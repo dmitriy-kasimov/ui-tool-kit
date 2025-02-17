@@ -5,7 +5,7 @@ import { Text } from 'ui/components/shared/Text';
 import { Button } from 'ui/components/controls/buttons/Button';
 import { decoratorBackground } from '../../../../../../../../.storybook/decorators/decoratorBackground/decoratorBackground'
 import { Skeleton } from 'ui/components/shared/Skeleton/Skeleton';
-import { HStack, VStack } from 'ui/components/shared/Stack';
+import { HStack } from 'ui/components/shared/Stack';
 
 const meta: Meta<typeof Popover> = {
     title: 'components/controls/Popover',

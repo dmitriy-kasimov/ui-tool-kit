@@ -2,7 +2,7 @@ import React, { FC, memo } from 'react'
 
 import cls from './TextField.module.scss'
 import { TextFieldProps } from '../model/types/index'
-import {classNames, Mods} from "lib/classNames/classNames";
+import {Mods, classNames} from "lib/classNames/classNames";
 import {HStack} from "ui/components/shared/Stack";
 
 export const TextField: FC<TextFieldProps> = memo(props => {

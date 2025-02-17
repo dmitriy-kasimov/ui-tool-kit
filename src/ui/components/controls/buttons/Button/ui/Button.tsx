@@ -1,4 +1,4 @@
-import React, {FC, ForwardedRef, forwardRef, memo} from "react";
+import React, {FC, ForwardedRef, forwardRef} from "react";
 import cls from './Button.module.scss'
 import { ButtonPadding, ButtonProps } from "../types/ButtonProps";
 import { Mods, classNames } from "lib/classNames/classNames";

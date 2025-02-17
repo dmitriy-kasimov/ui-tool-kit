@@ -1,6 +1,5 @@
 @use 'styles/effects/anims';
 
-
 .Modal {
     position: fixed;
     top: 0;
@@ -20,11 +19,8 @@
 
     background: var(--uikit-utils-bg);
     border-radius: var(--uikit-border-radius);
-
     max-width: 60%;
-
     z-index: var(--uikit-utils-modal-z-index);
-
     padding: var(--uikit-padding-s);
 }
 
@@ -34,12 +30,12 @@
     z-index: var(--uikit-utils-modal-z-index);
 
     .content {
-        @include anims.utilOpened;
+        @include anims.util-opened;
     }
 }
 
 .isClosing {
     .content {
-        @include anims.utilClosing;
+        @include anims.util-closing;
     }
 }

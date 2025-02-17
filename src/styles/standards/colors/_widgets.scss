@@ -1,21 +1,21 @@
-:root{
-// widgets
-    --uikit-widgets-bg-color: rgba(6, 6, 6, 0.4);
-    --uikit-widgets-items-bg-color: rgba(6, 6, 6, 0.5);
-    // navigation
-        //Navbar
-        //Sidebar
-    // information
-        // Table
-    --uikit-table-row-bg-color: rgba(6, 6, 6, 0.5);
-        // Tape
-    --uikit-tape-item-bg-color: rgba(6, 6, 6, 0.5);
-        // Accordion
-    --uikit-disclosure-item-bg-color: rgba(6, 6, 6, 0.5);
-        // ProgressBar
-    --uikit-bar-bg-color-f: rgba(231, 0, 0, 0.7);
-    --uikit-bar-bg-color-d: rgba(255, 136, 0, 0.7);
-    --uikit-bar-bg-color-c: rgba(235, 235, 0, 0.7);
-    --uikit-bar-bg-color-b: rgba(123, 255, 0, 0.7);
-    --uikit-bar-bg-color-a: rgba(0, 255, 0, 0.7);
+:root {
+    // widgets
+    --uikit-widgets-bg-color: rgb(6 6 6 / 40%);
+    --uikit-widgets-items-bg-color: rgb(6 6 6 / 50%);
+
+    // Table
+    --uikit-table-row-bg-color: rgb(6 6 6 / 50%);
+
+    // Tape
+    --uikit-tape-item-bg-color: rgb(6 6 6 / 50%);
+
+    // Accordion
+    --uikit-disclosure-item-bg-color: rgb(6 6 6 / 50%);
+
+    // ProgressBar
+    --uikit-bar-bg-color-f: rgb(231 0 0 / 70%);
+    --uikit-bar-bg-color-d: rgb(255 136 0 / 70%);
+    --uikit-bar-bg-color-c: rgb(235 235 0 / 70%);
+    --uikit-bar-bg-color-b: rgb(123 255 0 / 70%);
+    --uikit-bar-bg-color-a: rgb(0 255 0 / 70%);
 }

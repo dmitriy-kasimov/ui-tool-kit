@@ -1,5 +1,5 @@
 import React, {FC, memo} from "react";
-import { ProgressBarProps, ProgressBarType } from "../types/ProgressBarProps";
+import { ProgressBarProps } from "../types/ProgressBarProps";
 import cls from './ProgressBar.module.scss';
 import { Text } from "ui/components/shared/Text";
 import { classNames } from "lib/classNames/classNames";

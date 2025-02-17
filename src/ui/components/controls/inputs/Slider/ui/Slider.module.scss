@@ -1,45 +1,36 @@
 @use '../../../controls';
 
 .input {
-    @include controls.defaultStyles;
+    @include controls.default-styles;
+
     background: var(--uikit-controls-bg);
-
-    border-radius: var(--uikit-border-radius);
-
-
     height: 15px;
     border-radius: 50px;
-
     padding: 3px;
-
     appearance: none !important;
-    -webkit-appearance: none !important;
-    &:hover{
-		@include controls.hover;
-	}
+
+    &:hover {
+        @include controls.hover;
+    }
 }
+
 .input::-webkit-slider-thumb {
-    
-    &:hover{
-		// @include controls.hover;
-	}
-    &:active{
-		@include controls.active;
-	}
+    &:hover {
+        // @include controls.hover;
+    }
+
+    &:active {
+        @include controls.active;
+    }
+
     cursor: ew-resize;
     appearance: none !important;
-    -webkit-appearance: none !important;
-    
-
     width: 24px;
     height: 24px;
-
-
     border-radius: 50%;
-
     background-color: var(--uikit-theme-main-color);
 }
 
 .input:disabled {
-	@include controls.disabled;
+    @include controls.disabled;
 }

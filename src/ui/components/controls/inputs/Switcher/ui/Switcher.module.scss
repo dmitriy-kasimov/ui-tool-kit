@@ -1,42 +1,37 @@
 @use '../../../controls';
 
-
-.disabled{
+.disabled {
     @include controls.disabled;
 }
 
-.input{
+.input {
     display: none;
 }
-  
+
 .label {
-    @include controls.defaultStyles;
-    &:hover{
-		@include controls.hover;
-	}
+    @include controls.default-styles;
+
+    &:hover {
+        @include controls.hover;
+    }
+
     width: 60px;
     height: 30px;
-
     display: block;
     border-radius: 50px;
     position: relative;
-
     text-indent: -9999px;
 }
-  
-.label:after {
-    border-radius: 24px;
 
-    
+.label::after {
+    border-radius: 24px;
     position: absolute;
     top: 3px;
     left: 3px;
     width: 24px;
     height: 24px;
-
     transition: 0.3s;
     content: '';
-
     background-color: var(--uikit-theme-main-color);
 }
 
@@ -44,11 +39,11 @@
     background: var(--uikit-switcher-bg-color-active);
 }
 
-.checked + .label:after {
+.checked + .label::after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
 }
 
-.label:active:after {
+.label:active::after {
     width: 30px;
 }

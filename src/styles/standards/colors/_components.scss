@@ -1,32 +1,34 @@
-:root{
-// controls
-    --uikit-controls-bg-color: rgba(222, 225, 228, 0.445);
-    --uikit-controls-bg-hover-color: rgba(0, 0, 0, 0.6);
-
+:root {
+    // controls
+    --uikit-controls-bg-color: rgb(222 225 228 / 44.5%);
+    --uikit-controls-bg-hover-color: rgb(0 0 0 / 60%);
     --uikit-controls-opacity-disabled: 0.7;
+
     // buttons
-    --uikit-button-border-color: rgba(0, 0, 0, 0.6);
-    --uikit-button-bg-color-cancel: rgba(255, 0, 0, 0.6);
-    --uikit-button-bg-color-accept: rgba(0, 255, 0, 0.39); 
+    --uikit-button-border-color: rgb(0 0 0 / 60%);
+    --uikit-button-bg-color-cancel: rgb(255 0 0 / 60%);
+    --uikit-button-bg-color-accept: rgb(0 255 0 / 39%);
+
     // inputs
-        // Checkbox
-        // RadioGroup
-        // Slider
-        // Switcher
-    --uikit-switcher-bg-color-active: rgba(0, 255, 0, 0.39); 
-        // TextArea
-        // TextFieldPassword
+    // Checkbox
+    // RadioGroup
+    // Slider
+    // Switcher
+    --uikit-switcher-bg-color-active: rgb(0 255 0 / 39%);
+
+    // TextArea
+    // TextFieldPassword
     // popups
     // scroll
     // links
-// shared
+    // shared
     // Stack
     // Skeleton
     // Text
-     --uikit-text-color-main: rgba(255, 255, 255, 1);
-     --uikit-text-color-secondary: rgb(163, 163, 163);
-     --uikit-text-color-warning: rgb(255, 162, 41);
-     --uikit-text-color-error: rgb(255, 72, 26);
-     --uikit-text-color-successfully: rgb(0, 199, 0);
-     --uikit-text-color-information: rgb(37, 168, 255);
+    --uikit-text-color-main: rgb(255 255 255 / 100%);
+    --uikit-text-color-secondary: rgb(163 163 163);
+    --uikit-text-color-warning: rgb(255 162 41);
+    --uikit-text-color-error: rgb(255 72 26);
+    --uikit-text-color-successfully: rgb(0 199 0);
+    --uikit-text-color-information: rgb(37 168 255);
 }

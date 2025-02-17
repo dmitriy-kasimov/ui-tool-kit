@@ -1,107 +1,97 @@
-//Прячем нативный элемент
-.ProgressBar
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// Прячем нативный элемент
+.ProgressBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ProgressBar progress
-{
-  display: none;
+.ProgressBar progress {
+    display: none;
 }
 
-.bar
-{
-  border-radius: var(--uikit-border-radius);
-
-  top: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: center;
-}
-.barHorizontal{
-  width: 0;
-  height: 100%;
-}
-.barVertical{
-  width: 100%;
-  height: 0;
-  .progressValue
-  {
-    transform: rotate(-90deg);
-  }
-}
-.progressValue
-{
-  //position: absolute;
-
-  display: flex;
-  align-self: center;
+.bar {
+    border-radius: var(--uikit-border-radius);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.bg
-{
-  padding: 1px;
-
-  display: flex;
-  justify-content: center;
-
-  border-radius: var(--uikit-border-radius);
-
-  background: var(--uikit-widgets-bg);
-
-  overflow: hidden;
+.barHorizontal {
+    width: 0;
+    height: 100%;
 }
-.bgHorizontal{
-  // height: 20px;
-  // width: 150px;
+
+.progressValue {
+    display: flex;
+    align-self: center;
 }
-.bgVertical{
-  // height: 150px;
-  // width: 20px;
-  display: flex;
-  align-items: center;
+
+.barVertical {
+    width: 100%;
+    height: 0;
+
+    .progressValue {
+        transform: rotate(-90deg);
+    }
+}
+
+.bg {
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    border-radius: var(--uikit-border-radius);
+    background: var(--uikit-widgets-bg);
+    overflow: hidden;
+}
+
+.bgHorizontal {
+    // height: 20px;
+    // width: 150px;
+}
+
+.bgVertical {
+    // height: 150px;
+    // width: 20px;
+    display: flex;
+    align-items: center;
 }
 
 // Заполнение прогресса
-.ProgressBar progress[value="1"] ~ .bgHorizontal .barHorizontal
-{
-  width: 1%; 
-}
-.ProgressBar progress[value="1"] ~ .bgVertical .barVertical
-{
-  height: 1%; 
+.ProgressBar progress[value='1'] ~ .bgHorizontal .barHorizontal {
+    width: 1%;
 }
 
-@mixin progressBarBackground($i){
-  @if $i <= 33 {
-    background-color: var(--uikit-bar-bg-color-f); 
-  }
-  @else if $i > 33 and $i <= 50 {
-    background-color: var(--uikit-bar-bg-color-d); 
-  }
-  @else if $i > 50 and $i <= 66 {
-    background-color: var(--uikit-bar-bg-color-c); 
-  }
-  @else if $i > 66 and $i <= 85 {
-    background-color: var(--uikit-bar-bg-color-b); 
-  }
-  @else{
-    background-color: var(--uikit-bar-bg-color-a); 
-  }
+.ProgressBar progress[value='1'] ~ .bgVertical .barVertical {
+    height: 1%;
 }
+
+@mixin progress-bar-background($i) {
+    @if $i <= 33 {
+        background-color: var(--uikit-bar-bg-color-f);
+    } @else if $i > 33 and $i <= 50 {
+        background-color: var(--uikit-bar-bg-color-d);
+    } @else if $i > 50 and $i <= 66 {
+        background-color: var(--uikit-bar-bg-color-c);
+    } @else if $i > 66 and $i <= 85 {
+        background-color: var(--uikit-bar-bg-color-b);
+    } @else {
+        background-color: var(--uikit-bar-bg-color-a);
+    }
+}
+
 @for $i from 0 through 100 {
-  .ProgressBar progress[value="#{$i}"]
-  {
-      & ~ .bgHorizontal .barHorizontal { 
-        @include progressBarBackground($i);
-        width: $i * 1%; 
-      } 
-      & ~ .bgVertical .barVertical { 
-        @include progressBarBackground($i);
-        height: $i * 1%; 
-      }   
-  }
+    .ProgressBar progress[value="#{$i}"] {
+        & ~ .bgHorizontal .barHorizontal {
+            @include progress-bar-background($i);
+
+            width: $i * 1%;
+        }
+
+        & ~ .bgVertical .barVertical {
+            @include progress-bar-background($i);
+
+            height: $i * 1%;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 import React, {FC, memo, useMemo} from "react";
-import { TableBodyRow, TableProps } from "../types/TableProps";
+import { TableProps } from "../types/TableProps";
 import { classNames } from "lib/classNames/classNames";
 import { VStack } from "ui/components/shared/Stack";
 import { Text } from "ui/components/shared/Text";
