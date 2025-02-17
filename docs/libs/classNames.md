@@ -5,7 +5,7 @@ Usage example:
 (CustomButton.tsx)
 
 ```typescript jsx
-import { Button, classNames } from '@tr271v0r/ui-tool-kit';
+import { Button, classNames } from '@project-1114/ui-kit';
 import cls from './CustomButton.module.css';
 
 type ButtonVariant = 'cancel' | 'accept';

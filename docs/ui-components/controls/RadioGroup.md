@@ -8,7 +8,7 @@ import { useState } from "react";
 import { 
     RadioGroupOptionType,
     RadioGroup
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const radioGroupOptions: RadioGroupOptionType[] = [
     {value: 'admin', description: 'Администратор'},

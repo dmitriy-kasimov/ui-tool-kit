@@ -8,7 +8,7 @@ import {
     Text,
     VStack,
     Skeleton
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 export function App(){
     

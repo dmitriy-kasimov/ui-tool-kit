@@ -12,7 +12,7 @@ import {
     HStack,
     Skeleton,
     ArrowBottom
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const dropdownItems: DropdownItem[] = [
     { 

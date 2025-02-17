@@ -4,7 +4,7 @@ Usage example:
 
 ```typescript jsx
 import { useState } from "react";
-import { Checbox } from '@tr271v0r/ui-tool-kit'
+import { Checbox } from '@project-1114/ui-kit'
 
 
 export function App(){

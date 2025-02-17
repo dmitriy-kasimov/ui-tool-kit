@@ -7,7 +7,7 @@ import {
     Tape,
     PostType,
     Text
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const posts: PostType[] = [
   {id: '1', title: 'The types of sizes', subtitle: '04/29/2024', description: (

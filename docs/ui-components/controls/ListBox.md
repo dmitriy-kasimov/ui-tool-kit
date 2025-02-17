@@ -10,7 +10,7 @@ import {
     ListBoxItem,
     HStack,
     Text
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const listBoxItems: ListBoxItem<string>[] = [
     { 

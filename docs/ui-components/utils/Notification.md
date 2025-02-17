@@ -10,7 +10,7 @@ import {
     NotificationItemType,
     VStack,
     Button,
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 let firstNotification: NotificationItemType = {
     title: 'Уведомление 1', showTime: 1500, id: 'first', body: (

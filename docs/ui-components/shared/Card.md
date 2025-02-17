@@ -5,7 +5,7 @@ Usage example:
 ```typescript jsx
 import { 
     Card
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 export function App(){
     return (

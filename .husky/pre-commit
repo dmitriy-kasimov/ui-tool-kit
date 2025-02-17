@@ -1,0 +1,4 @@
+npx lint-staged
+npm run lint:ts
+npm run lint:scss
+npm run build:prod

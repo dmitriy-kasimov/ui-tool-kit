@@ -4,7 +4,7 @@ This library was created for using it inside frontend apps of servers GTA 5.
 
 ## Setup
 
-- `npm install --save-dev @tr271v0r/ui-tool-kit@latest` - add the lib into your react app.
+- `npm install --save-dev @project-1114/ui-kit@latest` - add the lib into your react app.
 
 ## Build of the project
 
@@ -22,7 +22,8 @@ This library was created for using it inside frontend apps of servers GTA 5.
 ### components
 
 - [Button](/docs/ui-components/controls/Button.md)
-- [TextFieldPassword](/docs/ui-components/controls/TextField.md)
+- [TextField](/docs/ui-components/controls/TextField.md)
+- [TextFieldPassword](/docs/ui-components/controls/TextFieldPassword.md)
 - [TextArea](/docs/ui-components/controls/TextArea.md)
 - [Checkbox](/docs/ui-components/controls/Checkbox.md)
 - [RadioGroup](/docs/ui-components/controls/RadioGroup.md)
@@ -45,7 +46,7 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - [Table](/docs/ui-components/widgets/Table.md)
 - [Tape](/docs/ui-components/widgets/Tape.md)
 - [Sidebar](/docs/ui-components/widgets/Sidebar.md)
-- [Accordion](/docs/ui-components/widgets/Disclosure.md)
+- [Accordion](/docs/ui-components/widgets/Accordion)
 
 ### utils
 

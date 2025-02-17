@@ -9,7 +9,7 @@ import {
     Alert,
     AlertItemType,
     VStack
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const warnAlert: AlertItemType = {
     title: 'Alert 1',

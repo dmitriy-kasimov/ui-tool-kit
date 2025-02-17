@@ -3,7 +3,7 @@
 Usage example:
 
 ```typescript jsx
-import { Slider } from '@tr271v0r/ui-tool-kit'
+import { Slider } from '@project-1114/ui-kit'
 
 export function App(){
     const [sliderValue, setSliderValue] = useState(0);

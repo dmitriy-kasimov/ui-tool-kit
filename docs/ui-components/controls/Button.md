@@ -3,7 +3,7 @@
 Usage example:
 
 ```typescript jsx
-import { Button } from '@tr271v0r/ui-tool-kit'
+import { Button } from '@project-1114/ui-kit'
 
 export function App(){
     return (

@@ -3,7 +3,7 @@
 Usage example:
 
 ```typescript jsx
-import { Text, Link } from '@tr271v0r/ui-tool-kit'
+import { Text, Link } from '@project-1114/ui-kit'
 
 
 export function App(){

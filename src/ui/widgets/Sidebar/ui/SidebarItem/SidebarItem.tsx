@@ -1,5 +1,4 @@
 import React from 'react'
-import { classNames } from 'lib/classNames/classNames'
 import { memo } from 'react'
 import { HStack } from 'ui/components/shared/Stack'
 import { SidebarItemType } from '../../types/SidebarProps'

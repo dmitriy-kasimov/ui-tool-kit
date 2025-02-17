@@ -8,7 +8,7 @@ import {
     TableBodyRow,
     Skeleton,
     Text
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
 const onlinePlayers = [
     {id: 0, nickname: 'TR271V0R', rank: 'Crazy', score: 1488, status: 'Architector', ping: 24},

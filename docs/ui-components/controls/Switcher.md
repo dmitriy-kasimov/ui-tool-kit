@@ -5,7 +5,7 @@ Usage example:
 ```typescript jsx
 import { useState } from "react";
 
-import { Switcher } from '@tr271v0r/ui-tool-kit'
+import { Switcher } from '@project-1114/ui-kit'
 
 export function App(){
     

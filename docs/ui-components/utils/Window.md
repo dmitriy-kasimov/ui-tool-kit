@@ -9,7 +9,7 @@ import {
     VStack,
     Skeleton,
     SidebarItemType
-} from '@tr271v0r/ui-tool-kit'
+} from '@project-1114/ui-kit'
 
  const sidebarItems: SidebarItemType[] = [
     { desciption: <Text size="xl">Link1</Text>, onClick: () => console.log('Click on item 1') },
