@@ -1,20 +1,22 @@
 {
-  "name": "@tr271v0r/ui-tool-kit",
+  "name": "project-1114.ui-kit",
   "version": "2.2.5",
-  "description": "ui-kit for Project-1114",
+  "description": "ui-kit for project-1114",
   "main": "./build/esm/index.js",
   "types": "./build/types/src",
   "repository": {
-    "url": "https://github.com/tr271v0r/ui-tool-kit",
+    "url": "https://github.com/dmitriy-kasimov/project-1114.ui-kit",
     "type": "git"
   },
   "keywords": [
-    "ui toolkit",
+    "ui-kit",
     "GTA 5",
-    "alt:V",
+    "GTA V",
+    "altv",
+    "ragemp",
     "CEF"
   ],
-  "author": "Trevor Phillips <tr271v0r.phillips.industries@gmail.com>",
+  "author": "Dmitriy Kasimov <its.dmitriy.kasimov@gmail.com>",
   "license": "ISC",
   "scripts": {
     "build:prod": "webpack --env mode=production",
