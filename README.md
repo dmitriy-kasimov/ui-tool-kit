@@ -1,6 +1,6 @@
 ## The purpose of this library
 
-This library was created for using it inside frontend apps of servers GTA 5.
+ui-kit for the Project-1114
 
 ## Setup
 
@@ -11,7 +11,9 @@ This library was created for using it inside frontend apps of servers GTA 5.
 - `npm install` - install the all node modules from package.json;
 - `npm run build:prod` - build in production mode;
 - `npm run build:dev` - build in development mode (+ run parallel process bundle analyzer);
-- `npm run storybook:build` - build the all stories for each UI-component.
+- `npm run storybook:build` - build the all stories for each UI-component;
+- `npm run lint:ts:fix` - check and fix all ESLint errors;
+- `npm run lint:scss:fix` - check and fix all Stylelint errors.
 
 ## Run the storybook
 
